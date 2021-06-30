@@ -2,7 +2,7 @@
 A portable, scalable eukaryotic genome annotation pipeline implemented in Nextflow.
 
 [![Build Status](https://travis-ci.org/sanger-pathogens/companion.svg?branch=master)](https://travis-ci.org/sanger-pathogens/companion)  
-[![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen.svg)](https://github.com/sanger-pathogens/companion/blob/master/LICENSE)  
+[![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen.svg)](https://github.com/iii-companion/companion/blob/master/LICENSE)  
 [![status](https://img.shields.io/badge/NAR-10.1093%2Fnar.gkw292-brightgreen.svg)](https://doi.org/10.1093/nar/gkw292)
 
 This software is a comprehensive computational pipeline for the annotation of eukaryotic genomes (like protozoan parasites). It performs the following tasks:
@@ -228,7 +228,7 @@ usermod -aG docker <username>
 
 ### Installation
 
-There are a number of ways to install Companion; details for an installation using Docker are described below. If you encounter an issue when installing Companion please contact your local system administrator. If you encounter a bug please log it [here](https://github.com/sanger-pathogens/companion/issues) or email us at path-help@sanger.ac.uk.
+There are a number of ways to install Companion; details for an installation using Docker are described below. If you encounter an issue when installing Companion please contact your local system administrator. If you encounter a bug please log it [here](https://github.com/iii-companion/companion/issues) or email us at iii-companion@glasgow.ac.uk.
 
 The easiest way to use the pipeline is to use the prepared [Docker image](https://hub.docker.com/r/sangerpathogens/companion/) which contains all external dependencies.
 ```
