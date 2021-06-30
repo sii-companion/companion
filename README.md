@@ -70,6 +70,11 @@ usermod -aG docker <username>
 ```
 Log out and log back in again for this to take effect.
 
+On Linux, you can also run the following command to activate the changes to groups:
+```
+ newgrp docker
+```
+
 #### Checks
 
   - `java -version` should say you have Java 1.8 or greater
