@@ -165,11 +165,13 @@ for _,cl in ipairs(global_core_clusters) do
   local seen_species = {}
   if cl.specidx[speciesprefix] then
     for _,m in ipairs(cl.members) do
-      local seq = prots[m[2]][m[1]]
-      if not seen_species[m[2]] and seq then
-        seen_species[m[2]] = true
-        treegenes:write(m[1] .. "\t")
-        specseqs[m[2]] = specseqs[m[2]] .. seq
+      if prots[m[2]] then
+        local seq = prots[m[2]][m[1]]
+        if not seen_species[m[2]] and seq then
+          seen_species[m[2]] = true
+          treegenes:write(m[1] .. "\t")
+          specseqs[m[2]] = specseqs[m[2]] .. seq
+        end
       end
     end
     treegenes:write("\n")
