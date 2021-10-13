@@ -6,7 +6,7 @@ FROM debian:testing
 #
 #  Authorship
 #
-MAINTAINER ss34@sanger.ac.uk
+MAINTAINER William.Haese-Hill@glasgow.ac.uk
 
 #
 # Pull in packages from testing
@@ -28,15 +28,15 @@ RUN apt-get install build-essential hmmer lua5.1 ncbi-blast+ blast2 snap \
 RUN ln -fs /usr/bin/fasttree /usr/bin/FastTree
 RUN ln -s /usr/lib/snap/snap /usr/local/bin/snap
 
-# 
+#
 # Install AUGUSTUS
-# 
+#
 RUN apt-get install augustus --yes
 
 
-# 
+#
 # Install GenomeTools
-# 
+#
 RUN apt-get install genometools --yes
 
 
@@ -84,7 +84,7 @@ RUN cd /opt/pfam && \
     hmmpress Pfam-A.hmm && \
     rm -f Pfam-A.hmm
 
-# 
+#
 # copy data dir
 #
 RUN mkdir -p /opt/data
