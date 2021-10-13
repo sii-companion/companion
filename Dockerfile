@@ -1,12 +1,17 @@
 #
 #  From this base-image / starting-point
 #
-FROM debian:testing
+FROM ubuntu:20.04
 
 #
 #  Authorship
 #
 MAINTAINER William.Haese-Hill@glasgow.ac.uk
+
+#
+# Install packages without interactive dialogue 
+#
+ARG DEBIAN_FRONTEND=noninteractive
 
 #
 # Pull in packages from testing
