@@ -230,9 +230,9 @@ usermod -aG docker <username>
 
 There are a number of ways to install Companion; details for an installation using Docker are described below. If you encounter an issue when installing Companion please contact your local system administrator. If you encounter a bug please log it [here](https://github.com/iii-companion/companion/issues) or email us at iii-companion@glasgow.ac.uk.
 
-The easiest way to use the pipeline is to use the prepared [Docker image](https://hub.docker.com/r/sangerpathogens/companion/) which contains all external dependencies.
+The easiest way to use the pipeline is to use the prepared [Docker image](https://hub.docker.com/repository/docker/uofgiii/companion/) which contains all external dependencies.
 ```
-docker pull sangerpathogens/companion
+docker pull uofgiii/companion
 ```
 
 ### Usage
@@ -252,7 +252,7 @@ to get started just run:
 ```
 nextflow run my-companion-project -profile docker
 ```
-The argument `-profile docker` instructs nextflow to run the sangerpathogens/companion docker image for the dependencies;
+The argument `-profile docker` instructs nextflow to run the uofgiii/companion docker image for the dependencies;
 the `nextflow.config` file (and files referenced within it) define the docker profile and the docker image to be used.
 
 #### Running Companion direct from a repository
@@ -260,10 +260,10 @@ the `nextflow.config` file (and files referenced within it) define the docker pr
 If you run nextflow with the name of a github repository, it will pull (download) the contents of the repository and run with those.
 For example, the following command will do the same as the "local copy" example above:
 ```
-nextflow run sanger-pathogens/companion -profile docker
+nextflow run iii-companion/companion -profile docker
 ```
 It is best to use this with some caution.  After the command above is
-run, nextflow will have stored a local copy of the repository in `.nextflow/assets/sanger-pathogens`
+run, nextflow will have stored a local copy of the repository in `.nextflow/assets/iii-companion`
 (note that `.nextflow` is a hidden directory, and will not usually be visible; use the command `ls -la .nextflow` to see it).
 
 If you run the same command again it will this time use the _local_ copy instead of pulling a copy from the repository.  You can
