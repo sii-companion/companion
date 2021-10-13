@@ -1298,7 +1298,7 @@ if (params.do_contiguation && params.do_circos) {
         tag { chromosome[0] }
 
         input:
-        file 'links.txt' from circos_input_links_chr.first()
+        file 'links_full.txt' from circos_input_links_chr.first()
         file 'karyotype.txt' from circos_input_karyotype_chr.first()
         file 'genes.txt' from circos_input_genes_chr.first()
         file 'gaps.txt' from circos_input_gaps_chr.first()
@@ -1310,6 +1310,7 @@ if (params.do_contiguation && params.do_circos) {
         set file('image.png'), val(chromosome) into circos_output
 
         """
+        egrep ${chromosome[2]}.*${chromosome[1]} links_full.txt | awk ' (\$3-\$2) > 5000 ' > links.txt
         circos  -conf ${circos_conffile} -param image/file=image.png  \
                 -param chromosomes='${chromosome[1]};${chromosome[2]}' \
                 -param chromosomes_reverse=${chromosome[1]}
