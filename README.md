@@ -2,7 +2,7 @@
 A portable, scalable eukaryotic genome annotation pipeline implemented in Nextflow.
 
 [![Build Status](https://travis-ci.org/sanger-pathogens/companion.svg?branch=master)](https://travis-ci.org/sanger-pathogens/companion)  
-[![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen.svg)](https://github.com/sanger-pathogens/companion/blob/master/LICENSE)  
+[![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen.svg)](https://github.com/iii-companion/companion/blob/master/LICENSE)  
 [![status](https://img.shields.io/badge/NAR-10.1093%2Fnar.gkw292-brightgreen.svg)](https://doi.org/10.1093/nar/gkw292)
 
 This software is a comprehensive computational pipeline for the annotation of eukaryotic genomes (like protozoan parasites). It performs the following tasks:
@@ -70,6 +70,11 @@ usermod -aG docker <username>
 ```
 Log out and log back in again for this to take effect.
 
+On Linux, you can also run the following command to activate the changes to groups:
+```
+ newgrp docker
+```
+
 #### Checks
 
   - `java -version` should say you have Java 1.8 or greater
@@ -82,9 +87,9 @@ Log out and log back in again for this to take effect.
 Execute these commands in the directory you want to keep your _Companion_ work in.  Do this as a normal user, i.e. not as root or using sudo.
 Use a name that is meaningful to you in place of `<my-companion-project>`
 ```
-curl -L -o companion-master.zip https://github.com/sanger-pathogens/companion/archive/master.zip && \
+curl -L -o companion-master.zip https://github.com/iii-companion/companion/archive/master.zip && \
    unzip companion-master.zip && \
-   mv companion <my-companion-project>
+   mv companion-master <my-companion-project>
 docker pull sangerpathogens/companion
 ```
 
@@ -223,7 +228,7 @@ usermod -aG docker <username>
 
 ### Installation
 
-There are a number of ways to install Companion; details for an installation using Docker are described below. If you encounter an issue when installing Companion please contact your local system administrator. If you encounter a bug please log it [here](https://github.com/sanger-pathogens/companion/issues) or email us at path-help@sanger.ac.uk.
+There are a number of ways to install Companion; details for an installation using Docker are described below. If you encounter an issue when installing Companion please contact your local system administrator. If you encounter a bug please log it [here](https://github.com/iii-companion/companion/issues) or email us at iii-companion@glasgow.ac.uk.
 
 The easiest way to use the pipeline is to use the prepared [Docker image](https://hub.docker.com/r/sangerpathogens/companion/) which contains all external dependencies.
 ```
@@ -237,7 +242,7 @@ docker pull sangerpathogens/companion
 To create a local copy of companion, you can download this repo from github (if you are familiar with github, you may
 of course prefer to _clone_ or _fork_ it).
 ```
-curl -L -o companion-master.zip https://github.com/sanger-pathogens/companion/archive/master.zip  # or click the green button on the guthub web page
+curl -L -o companion-master.zip https://github.com/iii-companion/companion/archive/master.zip  # or click the green button on the guthub web page
 unzip companion-master.zip
 mv companion-master my-companion-project # renaming it to something meaningful to you is a good idea
 ```
@@ -273,14 +278,14 @@ If you are not familiar with git repositories, it can become quite confusing, an
 #### Preparing reference annotations
 
 Further documentation on preparing reference data can be found in the
-[GitHub wiki](https://github.com/sanger-pathogens/companion/wiki/Preparing-reference-data-sets).
+[GitHub wiki](https://github.com/iii-companion/companion/wiki/Preparing-reference-data-sets).
 
 
 ## License
-Companion is free software, licensed under [ISC](https://github.com/sanger-pathogens/companion/blob/master/LICENSE).
+Companion is free software, licensed under [ISC](https://github.com/iii-companion/companion/blob/master/LICENSE).
 
 ## Feedback/Issues
-Please report any issues to the [issues page](https://github.com/sanger-pathogens/companion/issues)
+Please report any issues to the [issues page](https://github.com/iii-companion/companion/issues)
 ## Citation
 If you use this software please cite:
 __Companion: a web server for annotation and analysis of parasite genomes.__
