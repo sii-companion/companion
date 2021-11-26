@@ -1,0 +1,16 @@
+* Now using the faster and more efficient MUMmer4 (v4.0.0rc1)
+* abacas2.nonparallel.sh:
+  - Removed MemBig option. Rewrote usage page. Number of cores is a new argument
+  - Explicitly added export of PERL5LIB
+  - Blasting of each contig for ACT inspection is now done by default
+  - Added new environmental variables to provide new parameters, defined their default values and exported them:
+    + ABA_COMPARISON=nucmer; export ABA_COMPARISON # This sets nucmer as the comparison method to use (default). It can be changed to 'promer'
+    + ABA_SPLIT_PARTS=10; export ABA_SPLIT_PARTS # The files will be processed in parallel and using this number of simultaneous processes when possible. By default, 10
+    + ABA_LOW_MEM=yes; export ABA_LOW_MEM # This sets low memory mode and no parallel processing is going to be performed, by default is deactivated
+  - abacas2.doTilingGraph.pl is applied simultaneously to the *.coords file (one per contig created by abacas2.runComparison.sh). One file is allocated per core, up to the provided number of cores. This is deactivated if low memory mode is activated (and abacas2.doTilingGraph.pl is applied sequentially, as originally)
+  - There was an error message when running abacas2.bin.sh due to a non-existent file. Amended
+  - Improved performance of blasting:
+    + Megablast can now be multithreaded (-a argument)
+    + The blasting of the different contigs is done simultaneously (at most $ABA_SPLIT_PARTS simultaneous processes). The number of cores is automatically adjusted. This is deactivated if low memory mode is activated (and abacas2.doTilingGraph.pl is applied sequentially, as originally)
+* abacas2.runComparison.sh:
+  - Running nucmer in multithreaded mode as per MUMmer4 (v4.0.0rc1)
