@@ -82,6 +82,8 @@ if [ -z "$ABA_SPLIT_PARTS" ] ; then
 fi
 if [ "$cores" -eq 0 ]; then
 	cores=$(nproc) # If cores=0, use all cores available by default
+elif [ "$cores" -eq 1 ]; then
+	ABA_LOW_MEM="yes"
 fi
 if [ -z "$ABA_LOW_MEM" ] ; then
         ABA_LOW_MEM="no"; export ABA_LOW_MEM
