@@ -90,7 +90,7 @@ Use a name that is meaningful to you in place of `<my-companion-project>`
 curl -L -o companion-master.zip https://github.com/iii-companion/companion/archive/master.zip && \
    unzip companion-master.zip && \
    mv companion-master <my-companion-project>
-docker pull sangerpathogens/companion
+docker pull uofgiii/companion
 ```
 
 ### 3. Run _Companion_ test job
