@@ -223,7 +223,7 @@ stat_visitor.stats.nof_regions = 0
 stat_visitor.stats.nof_chromosomes = 0
 function stat_visitor:visit_feature(fn)
   local seqid = fn:get_seqid()
-  if fn:get_type() == 'gene' then
+  if fn:get_type() == 'gene' or fn:get_type() == 'protein_coding_gene' then
     local coding = false
     self.stats.nof_genes = self.stats.nof_genes + 1
     for n in fn:get_children() do
