@@ -497,6 +497,7 @@ process run_augustus_contigs {
     file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
     file 'pseudo.pseudochr.agp' from pseudochr_agp_augustus
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
+    val extrinsic_cfg
     file augustus_modeldir
 
     output:
@@ -510,6 +511,7 @@ process run_augustus_contigs {
             --protein=off --codingseq=off --strand=both --genemodel=partial \
             --gff3=on \
             --noInFrameStop=true \
+            --extrinsicCfgFile=${extrinsic_cfg} \
             pseudo.contigs.fasta > augustus.ctg.tmp
     augustus_to_gff3.lua < augustus.ctg.tmp \
         | gt gff3 -sort -tidy -retainids > 1
