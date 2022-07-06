@@ -1244,10 +1244,11 @@ if (params.use_reference) {
 // ============
 
 if (params.do_contiguation && params.do_circos) {
+    ref_individual_sequence = ref_seq.splitFasta( file: true )
     process blast_for_circos {
         input:
         set file('pseudo.fasta.gz'), file('scaf.fasta.gz') from circos_inseq
-        file 'refseq.fasta' from ref_seq
+        file 'refseq.fasta' from ref_individual_sequence
 
         output:
         file 'blastout.txt' into circos_blastout
@@ -1264,7 +1265,7 @@ if (params.do_contiguation && params.do_circos) {
         input:
         set file('pseudo.gff3'), file('scaf.gff3') from circos_gff3
         file 'refannot.gff3' from ref_annot
-        file 'blast.in' from circos_blastout
+        file 'blast.in' from circos_blastout.collectFile()
         file ref_dir
 
         output:
