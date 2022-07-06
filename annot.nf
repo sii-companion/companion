@@ -1108,7 +1108,7 @@ process make_distribution_seqs {
     file 'scafs.in' from scaffolds_seq_make_dist_2
 
     output:
-    set file('pseudochr.fasta.gz'),
+    tuple file('pseudochr.fasta.gz'),
         file('scafs.fasta.gz') into result_seq
 
     """
@@ -1247,7 +1247,7 @@ if (params.do_contiguation && params.do_circos) {
     ref_individual_sequence = ref_seq.splitFasta( file: true )
     process blast_for_circos {
         input:
-        set file('pseudo.fasta.gz'), file('scaf.fasta.gz') from circos_inseq
+        tuple file('pseudo.fasta.gz'), file('scaf.fasta.gz') from circos_inseq
         file 'refseq.fasta' from ref_individual_sequence
 
         output:
@@ -1422,7 +1422,7 @@ if (params.make_embl) {
 
 specfile = file(params.SPECFILE)
 process make_report {
-    validExitStatus 0,1,2
+    // validExitStatus 0,1,2
 
     input:
     set file('pseudo.fasta.gz'), file('scaf.fasta.gz') from report_inseq
