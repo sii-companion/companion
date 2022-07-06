@@ -12,3 +12,5 @@ example-data/ts24*test*.fasta
 .nextflow
 # vagrant stuff
 ubuntu-xenial-*-cloudimg-console.log
+# example data outputs
+example-data-*
