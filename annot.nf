@@ -376,6 +376,20 @@ if (params.run_ratt) {
         fi
         """
     }
+} else if (params.run_liftoff) {
+    process run_liftoff {
+        input:
+        file ref_annot
+        file ref_seq
+        file 'pseudo.pseudochr.fasta' from pseudochr_seq_ratt
+
+        output:
+        file 'liftoff.gff3' into ratt_gff3
+
+        """
+        liftoff -g ${ref_annot} pseudo.pseudochr.fasta ${ref_seq} -o liftoff.gff3 -exclude_partial
+        """
+    }
 } else {
     process ratt_empty_models {
     output:

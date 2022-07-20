@@ -101,6 +101,30 @@ ADD ./data /opt/data
 ADD ./RATT /opt/RATT
 
 #
+# install python
+#
+RUN apt-get install software-properties-common --yes
+RUN add-apt-repository ppa:deadsnakes/ppa --yes
+RUN apt-get install python3.9 python3-setuptools libpython3.9-dev libz-dev libbz2-dev \
+                    liblzma-dev libcurl4-openssl-dev pkg-config \
+                    --yes
+
+#
+# install Liftoff
+#
+ADD https://github.com/lh3/minimap2/releases/download/v2.17/minimap2-2.17_x64-linux.tar.bz2 /opt/minimap2.tar.bz2
+RUN cd /opt && \
+    tar -jxvf minimap2.tar.bz2 && \
+    rm -rf minimap2.tar.bz2&& \
+    cp minimap2-2.17_x64-linux/minimap2 /usr/local/bin/minimap2 && \
+    chmod 755 /usr/local/bin/minimap2
+RUN apt-get install git --yes
+RUN cd /opt && \
+    git clone https://github.com/agshumate/Liftoff liftoff && \
+    cd liftoff && \
+    python3.9 setup.py install
+
+#
 # install ABACAS (keep up to date from build directory)
 #
 ADD ./ABACAS2 /opt/ABACAS2
