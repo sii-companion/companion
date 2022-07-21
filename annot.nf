@@ -1259,19 +1259,20 @@ if (params.use_reference) {
 
 if (params.do_contiguation && params.do_circos) {
     ref_individual_sequence = ref_seq.splitFasta( file: true )
-    process blast_for_circos {
+    process nucmer_for_circos {
         input:
         tuple file('pseudo.fasta.gz'), file('scaf.fasta.gz') from circos_inseq
         file 'refseq.fasta' from ref_individual_sequence
 
         output:
-        file 'blastout.txt' into circos_blastout
+        file 'nucmerout.txt' into circos_nucmerout
 
         """
         gunzip -f pseudo.fasta.gz
-        makeblastdb -dbtype nucl -in refseq.fasta
-        blastn -db refseq.fasta -query pseudo.fasta -evalue 1e-6 -outfmt 6 \
-          -out blastout.txt
+        nucmer --batch 1 refseq.fasta pseudo.fasta
+        show-coords -B out.delta | \
+          awk 'BEGIN{OFS="\t"}{ print \$1, \$8, \$13, \$15, 0, 0, \$9, \$10, \$11, \$12, 0, 0}' \
+          > nucmerout.txt
         """
     }
 
@@ -1279,7 +1280,7 @@ if (params.do_contiguation && params.do_circos) {
         input:
         set file('pseudo.gff3'), file('scaf.gff3') from circos_gff3
         file 'refannot.gff3' from ref_annot
-        file 'blast.in' from circos_blastout.collectFile()
+        file 'nucmer.in' from circos_nucmerout.collectFile()
         file ref_dir
 
         output:
@@ -1291,7 +1292,7 @@ if (params.do_contiguation && params.do_circos) {
         file 'bin.txt' into bin_target_mapping
 
         """
-        prepare_circos_inputs.lua refannot.gff3 pseudo.gff3 blast.in . \
+        prepare_circos_inputs.lua refannot.gff3 pseudo.gff3 nucmer.in . \
            "${params.CHR_PATTERN}" "${params.ABACAS_BIN_CHR}" "${ref_dir}" \
            "${params.ref_species}"
         """
