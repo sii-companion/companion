@@ -899,7 +899,12 @@ process make_ref_input_for_orthomcl {
     script:
     """
     truncate_header.lua < ${omcl_pepfile} > pepfile.trunc
-    ln -s pepfile.trunc mapped.fasta
+    samtools faidx pepfile.trunc
+    cut -f1-2 pepfile.trunc.fai | sort -k 2 -nr | \
+     awk 'BEGIN{OFS="\t"}{split(\$1, array, "_"); print \$1,array[1]}' | \
+     awk '!_[\$2]++' | cut -f1 > largest_transcripts
+    samtools faidx pepfile.trunc `cat largest_transcripts` > pepfile.trunc.filtered
+    ln -s pepfile.trunc.filtered mapped.fasta
     make_gg_line.lua ${params.ref_species} mapped.fasta > out.gg
     """
 }
@@ -914,7 +919,12 @@ process make_target_input_for_orthomcl {
 
     """
     truncate_header.lua < pepfile.fas > pepfile.trunc
-    ln -s pepfile.trunc mapped.fasta
+    samtools faidx pepfile.trunc
+    cut -f1-2 pepfile.trunc.fai | sort -k 2 -nr | \
+     awk 'BEGIN{OFS="\t"}{split(\$1, array, "."); print \$1,array[1]}' | \
+     awk '!_[\$2]++' | cut -f1 > largest_transcripts
+    samtools faidx pepfile.trunc `cat largest_transcripts` > pepfile.trunc.filtered
+    ln -s pepfile.trunc.filtered mapped.fasta
     make_gg_line.lua ${params.GENOME_PREFIX} mapped.fasta  > out.gg
     """
 }
