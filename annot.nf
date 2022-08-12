@@ -894,7 +894,6 @@ process make_ref_input_for_orthomcl {
 
     output:
     file 'out.gg' into gg_file
-    file 'shortname' into shortname
     file 'mapped.fasta' into mapped_fasta
 
     script:
@@ -902,7 +901,6 @@ process make_ref_input_for_orthomcl {
     truncate_header.lua < ${omcl_pepfile} > pepfile.trunc
     ln -s pepfile.trunc mapped.fasta
     make_gg_line.lua ${params.ref_species} mapped.fasta > out.gg
-    echo "${params.ref_species}" > shortname
     """
 }
 
@@ -912,19 +910,16 @@ process make_target_input_for_orthomcl {
 
     output:
     file 'out.gg' into gg_file_ref
-    file 'shortname' into shortname_ref
     file 'mapped.fasta' into mapped_fasta_ref
 
     """
     truncate_header.lua < pepfile.fas > pepfile.trunc
     ln -s pepfile.trunc mapped.fasta
     make_gg_line.lua ${params.GENOME_PREFIX} mapped.fasta  > out.gg
-    echo "${params.GENOME_PREFIX}" > shortname
     """
 }
 
 gg_file.mix(gg_file_ref).collectFile().set { full_gg }
-shortname.mix(shortname_ref).collectFile().set { full_shortnames }
 mapped_fasta.mix(mapped_fasta_ref).collectFile().set { full_mapped_fasta }
 
 full_mapped_fasta.into{ full_mapped_fasta_for_index; full_mapped_fasta_for_query }
