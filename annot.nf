@@ -1475,7 +1475,8 @@ process make_genelist {
     file 'genelist.csv' into genelist_csv_out
 
     """
-    genes_gff3_to_csv.lua pseudo.gff3 > genelist.csv
+    genes_gff3_to_csv.lua pseudo.gff3 > genelist.tmp
+    cat genelist.tmp | awk '{ print length, $0 }' | sort -n -s -r | cut -d" " -f2- | sort -k1 | awk -F"\t" '!_[$1]++' > genelist.csv
     """
 }
 
