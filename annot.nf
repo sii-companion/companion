@@ -1058,6 +1058,16 @@ process parse_blastout_for_orthomcl {
     """
 }
 
+orthomcl_conffile = file(params.ORTHOMCL_CONFIG_FILE)
+
+process drop_orthomcl_schema {
+    errorStrategy 'ignore'
+
+    input:
+    val orthomcl_conffile
+
+    """
+    orthomclDropSchema ${orthomcl_conffile}
     """
 }
 
@@ -1065,17 +1075,20 @@ process run_orthomcl {
     cache 'deep'
 
     input:
-    file 'blastout' from orthomcl_blastout.collectFile()
-    file 'ggfile' from full_gg
+    file 'similarSequences.txt' from similar_sequences
+    val orthomcl_conffile
 
     output:
     file 'orthomcl_out' into orthomcl_cluster_out
 
     """
-    orthomcl.pl --inflation 1.5 --mode 3 \
-      --blast_file blastout \
-      --gg_file ggfile
-    cp `find . -mindepth 1 -name all_orthomcl.out` orthomcl_out
+    orthomclInstallSchema ${orthomcl_conffile} install_schema.log
+    orthomclLoadBlast ${orthomcl_conffile} similarSequences.txt
+    orthomclPairs ${orthomcl_conffile} orthomcl_pairs.log cleanup=yes
+    orthomclDumpPairsFiles ${orthomcl_conffile}
+
+    mcl mclInput --abc -I 1.5 -o mclOutput
+    orthomclMclToGroups ORTHOMCL 0 < mclOutput > orthomcl_out
     """
 }
 
