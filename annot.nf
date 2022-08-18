@@ -965,16 +965,13 @@ process make_ref_input_for_orthomcl {
     file omcl_pepfile
 
     output:
-    file 'out.gg' into gg_file
-    file 'shortname' into shortname
-    file 'mapped.fasta' into mapped_fasta
+    path "${params.ref_species}.fasta" into adjusted_fasta_ref
 
     script:
     """
     truncate_header.lua < ${omcl_pepfile} > pepfile.trunc
     ln -s pepfile.trunc mapped.fasta
-    make_gg_line.lua ${params.ref_species} mapped.fasta > out.gg
-    echo "${params.ref_species}" > shortname
+    orthomclAdjustFasta ${params.ref_species} mapped.fasta 1
     """
 }
 
@@ -983,23 +980,32 @@ process make_target_input_for_orthomcl {
     file 'pepfile.fas' from proteins_orthomcl
 
     output:
-    file 'out.gg' into gg_file_ref
-    file 'shortname' into shortname_ref
-    file 'mapped.fasta' into mapped_fasta_ref
+    path "${params.GENOME_PREFIX}.fasta" into adjusted_fasta
 
     """
     truncate_header.lua < pepfile.fas > pepfile.trunc
     ln -s pepfile.trunc mapped.fasta
-    make_gg_line.lua ${params.GENOME_PREFIX} mapped.fasta  > out.gg
-    echo "${params.GENOME_PREFIX}" > shortname
+    orthomclAdjustFasta ${params.GENOME_PREFIX} mapped.fasta 1
     """
 }
 
-gg_file.mix(gg_file_ref).collectFile().set { full_gg }
-shortname.mix(shortname_ref).collectFile().set { full_shortnames }
-mapped_fasta.mix(mapped_fasta_ref).collectFile().set { full_mapped_fasta }
+adjusted_fasta.into{ adjusted_fasta_for_filter; adjusted_fasta_for_blast_parser}
+adjusted_fasta_ref.into{ adjusted_fasta_ref_for_filter; adjusted_fasta_ref_for_blast_parser}
 
-full_mapped_fasta.into{ full_mapped_fasta_for_index; full_mapped_fasta_for_query }
+process filter_fasta_for_orthomcl {
+    input:
+    file "compliantFasta/${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_filter
+    file "compliantFasta/${params.ref_species}.fasta" from adjusted_fasta_ref_for_filter
+    
+    output:
+    file 'goodProteins.fasta' into good_proteins_fasta
+
+    """
+    orthomclFilterFasta compliantFasta/ 10 20
+    """
+}
+
+good_proteins_fasta.into{ good_proteins_fasta_for_index; good_proteins_fasta_for_query}
 
 process blast_for_orthomcl_formatdb {
     cache 'deep'
