@@ -1011,36 +1011,39 @@ process blast_for_orthomcl_formatdb {
     cache 'deep'
 
     input:
-    file 'mapped.fasta' from full_mapped_fasta_for_index
+    file 'goodProteins.fasta' from good_proteins_fasta_for_index
 
     output:
-    file 'mapped.fasta' into full_mapped_fasta_indexed
-    file 'mapped.fasta.phr' into full_mapped_fasta_indexed_phr
-    file 'mapped.fasta.psq' into full_mapped_fasta_indexed_psq
-    file 'mapped.fasta.pin' into full_mapped_fasta_indexed_pin
+    file 'goodProteins.fasta' into good_proteins_fasta_indexed
+    file 'goodProteins.fasta.phr' into good_proteins_fasta_indexed_phr
+    file 'goodProteins.fasta.psq' into good_proteins_fasta_indexed_psq
+    file 'goodProteins.fasta.pin' into good_proteins_fasta_indexed_pin
 
     """
-    makeblastdb -dbtype prot -in mapped.fasta
+    makeblastdb -dbtype prot -in goodProteins.fasta
     """
 }
 
-proteins_orthomcl_blast_chunk = full_mapped_fasta_for_query.splitFasta( by: 50, file: true)
+proteins_orthomcl_blast_chunk = good_proteins_fasta_for_query.splitFasta( by: 50, file: true)
 process blast_for_orthomcl {
     cache 'deep'
 
     input:
-    file 'mapped_chunk.fasta' from proteins_orthomcl_blast_chunk
-    file 'mapped.fasta' from full_mapped_fasta_indexed.first()
-    file 'mapped.fasta.phr' from full_mapped_fasta_indexed_phr.first()
-    file 'mapped.fasta.psq' from full_mapped_fasta_indexed_psq.first()
-    file 'mapped.fasta.pin' from full_mapped_fasta_indexed_pin.first()
+    file 'prot_chunk.fasta' from proteins_orthomcl_blast_chunk
+    file 'goodProteins.fasta' from good_proteins_fasta_indexed.first()
+    file 'goodProteins.fasta.phr' from good_proteins_fasta_indexed_phr.first()
+    file 'goodProteins.fasta.psq' from good_proteins_fasta_indexed_psq.first()
+    file 'goodProteins.fasta.pin' from good_proteins_fasta_indexed_pin.first()
 
     output:
     file 'blastout' into orthomcl_blastout
 
     """
-    blastall -p blastp -W 4 -F 'm S' -v 100000 -b 100000 -d mapped.fasta -m 8 \
-      -i mapped_chunk.fasta > blastout
+    blastall -p blastp -W 4 -F 'm S' -v 100000 -b 100000 -d goodProteins.fasta -m 8 \
+      -i prot_chunk.fasta > blastout
+    """
+}
+
     """
 }
 
