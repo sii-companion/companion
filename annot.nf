@@ -1044,6 +1044,20 @@ process blast_for_orthomcl {
     """
 }
 
+process parse_blastout_for_orthomcl {
+    input:
+    file 'blastout' from orthomcl_blastout.collectFile()
+    file "compliantFasta/${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_blast_parser
+    file "compliantFasta/${params.ref_species}.fasta" from adjusted_fasta_ref_for_blast_parser
+
+    output:
+    file 'similarSequences.txt' into similar_sequences
+
+    """
+    orthomclBlastParser blastout compliantFasta/ >> similarSequences.txt  
+    """
+}
+
     """
 }
 
