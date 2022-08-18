@@ -95,14 +95,12 @@ end
 -- build cluster index
 clindex = {}
 for l in io.lines(arg[2]) do
-  local name, nofgenes, members = string.match(l,
-                                  "^(ORTHOMCL%d+)%((%d+) genes[^)]+%):%s+(.+)")
+  local name, members = string.match(l, "^(ORTHOMCL%d+):%s+(.+)")
   if not name or not members then
     error("could not parse cluster or members from line " .. l)
   end
-  local n = 0
   thisclust = {name = name, members = {}}
-  for mname, mspecies in members:gmatch("([^(]+)%(([^)]+)%)%s?") do
+  for mspecies, mname in members:gmatch("([^|]+)%|([^%s]+)%s?") do
     if map_new_old then
       if not map_new_old[mname] then
         error("missing mapping for member " .. mname .. " from cluster " .. name)
@@ -115,11 +113,6 @@ for l in io.lines(arg[2]) do
       table.insert(thisclust.members, genename)
       clindex[genename] = thisclust
     end
-    n = n + 1
-  end
-  if n ~= tonumber(nofgenes) then
-    error("parsed " .. n .. " members from cluster " .. name
-            .. ", but expected " .. nofgenes)
   end
 end
 
