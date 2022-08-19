@@ -129,6 +129,18 @@ RUN cd /opt && \
 #
 ADD ./ABACAS2 /opt/ABACAS2
 
+#
+# install nucmer v4
+#
+ADD https://github.com/mummer4/mummer/releases/download/v4.0.0rc1/mummer-4.0.0rc1.tar.gz /opt/mummer-4.0.0rc1.tar.gz
+RUN cd /opt && \
+    tar xzf mummer-4.0.0rc1.tar.gz && \
+    cd mummer-4.0.0rc1/ && \
+    ./configure --prefix=/usr && \
+    make && \
+    make install && \
+    rm -f mummer-4.0.0rc1.tar.gz
+
 ENV AUGUSTUS_CONFIG_PATH /usr/share/augustus/config
 ENV RATT_HOME /opt/RATT
 ENV GT_RETAINIDS yes
