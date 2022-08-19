@@ -2,6 +2,7 @@
 .nextflow.history
 work
 trace.csv*
+trace.txt*
 *.[eo]
 *.i1*
 *_out/
