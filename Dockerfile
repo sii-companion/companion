@@ -6,7 +6,7 @@ FROM ubuntu:20.04
 #
 #  Authorship
 #
-MAINTAINER William.Haese-Hill@glasgow.ac.uk
+LABEL org.opencontainers.image.authors="William.Haese-Hill@glasgow.ac.uk"
 
 #
 # Install packages without interactive dialogue 
