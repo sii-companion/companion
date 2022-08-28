@@ -496,6 +496,8 @@ if (params.run_braker) {
   }
 
   process run_braker_contigs {
+    cpus config.poolSize
+
     input:
     file 'pseudo.contigs.fasta' from contigs_seq
     file 'ann_prot.fasta' from ref_ann_prot
