@@ -478,14 +478,12 @@ if (params.run_braker) {
     input:
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
     file 'ann_prot.fasta' from ref_ann_prot
-    file augustus_modeldir
 
     output:
     file 'braker.gff3' into augustus_pseudo_gff3
 
     """
     echo "##gff-version 3\n" > braker.tmp;
-    AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
     braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
       --species=augustus_species --useexisting --gff3 --cores ${task.cpus}
     gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
@@ -507,14 +505,12 @@ if (params.run_braker) {
     file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
     file 'pseudo.pseudochr.agp' from pseudochr_agp_augustus
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
-    file augustus_modeldir
 
     output:
     file 'braker.scaf.pseudo.mapped.gff3' into augustus_ctg_gff3
 
     """
     echo "##gff-version 3\n" > braker.ctg.tmp;
-    AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
     braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
       --species=augustus_species --useexisting --gff3 --cores ${task.cpus}
     gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
