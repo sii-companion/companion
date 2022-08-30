@@ -22,6 +22,7 @@ VERSION = "1.0.2"
 genome_file = file(params.inseq)
 ref_annot = file(params.ref_dir + "/" + params.ref_species + "/annotation.gff3")
 ref_seq = file(params.ref_dir + "/" + params.ref_species + "/genome.fasta")
+ref_ann_prot = file(params.ref_dir + "/" + params.ref_species + "/ann_prot.fasta")
 ref_dir = file(params.ref_dir)
 go_obo = file(params.GO_OBO)
 ncrna_models = file(params.NCRNA_MODELS)
@@ -470,7 +471,77 @@ process merge_hints {
 // AUGUSTUS
 // ========
 
-process run_augustus_pseudo {
+if (params.run_braker) {
+  process run_braker_pseudo {   
+    cpus config.poolSize
+
+    input:
+    file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
+    file 'ann_prot.fasta' from ref_ann_prot
+
+    output:
+    file 'braker.gff3' into augustus_pseudo_gff3
+
+    """
+    echo "##gff-version 3\n" > braker.tmp;
+    braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
+      --species=augustus_species --useexisting --gff3 --cores ${task.cpus}
+    gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
+    if [ -s 1 ]; then
+        gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
+        > braker.tmp;
+    fi
+    augustus_mark_partial.lua braker.tmp > braker.gff3
+    """
+  }
+
+  process run_braker_contigs {
+    cpus config.poolSize
+
+    input:
+    file 'pseudo.contigs.fasta' from contigs_seq
+    file 'ann_prot.fasta' from ref_ann_prot
+    file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
+    file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
+    file 'pseudo.pseudochr.agp' from pseudochr_agp_augustus
+    file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
+
+    output:
+    file 'braker.scaf.pseudo.mapped.gff3' into augustus_ctg_gff3
+
+    """
+    echo "##gff-version 3\n" > braker.ctg.tmp;
+    braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
+      --species=augustus_species --useexisting --gff3 --cores ${task.cpus}
+    gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
+    if [ -s 1 ]; then
+        gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
+        > braker.ctg.tmp;
+    fi
+    augustus_mark_partial.lua braker.ctg.tmp > braker.ctg.gff3
+
+    transform_gff_with_agp.lua \
+        braker.ctg.gff3 \
+        pseudo.scaffolds.agp \
+        pseudo.contigs.fasta \
+        pseudo.scaffolds.fasta | \
+        gt gff3 -sort -tidy -retainids > \
+        braker.ctg.scaf.mapped.gff3
+    transform_gff_with_agp.lua \
+        braker.ctg.scaf.mapped.gff3 \
+        pseudo.pseudochr.agp \
+        pseudo.scaffolds.fasta \
+        pseudo.pseudochr.fasta | \
+        gt gff3 -sort -tidy -retainids > \
+        braker.scaf.pseudo.mapped.gff3
+    
+    if [ ! -s braker.scaf.pseudo.mapped.gff3 ]; then
+      echo '##gff-version 3' > braker.scaf.pseudo.mapped.gff3
+    fi
+    """
+  }
+} else {
+  process run_augustus_pseudo {
     cache 'deep'
 
     input:
@@ -502,9 +573,9 @@ process run_augustus_pseudo {
     fi
     augustus_mark_partial.lua augustus.full.tmp.2 > augustus.gff3
     """
-}
+  }
 
-process run_augustus_contigs {
+  process run_augustus_contigs {
     input:
     file 'pseudo.contigs.fasta' from contigs_seq
     file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
@@ -554,6 +625,7 @@ process run_augustus_contigs {
       echo '##gff-version 3' > augustus.scaf.pseudo.mapped.gff3
     fi
     """
+  }
 }
 
 if (params.run_snap) {

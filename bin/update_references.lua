@@ -376,6 +376,14 @@ for name, values in pairs(refs.species) do
   end
   values.gaf = nil
 
+  -- prepare Annotated Proteins FASTA
+  if values.proteins and file_exists(values.proteins) then
+    os.execute("cp " .. values.proteins .. " " .. name .. "/ann_prot.fasta")
+  else
+    io.stderr:write("warning: Annotated Proteins FASTA for " .. name .. " does not exist in " .. tostring(values.proteins) .. "\n")
+  end
+  values.proteins = nil
+
   -- prepare models
   -- SNAP
   if values.snap_model and file_exists(values.snap_model) then
