@@ -204,7 +204,7 @@ ENV AUGUSTUS_SCRIPTS_PATH /opt/Augustus/scripts
 ENV RATT_HOME /opt/RATT
 ENV GT_RETAINIDS yes
 ENV PERL5LIB /opt/RATT/:/opt/ABACAS2/:$PERL5LIB
-ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/scripts:/opt/ORTHOMCLV1.4:/opt/RATT:/opt/ABACAS2:$PATH
+ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/bin:/usr/share/augustus/scripts:/opt/orthomclSoftware-v2.0.9/bin:/opt/RATT:/opt/ABACAS2:$PATH
 ENV GENEMARK_PATH /opt/gmes_linux_64_4
 ENV PYTHON3_PATH /usr/bin
 ENV BAMTOOLS_PATH /opt/bamtools/build/src
