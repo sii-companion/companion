@@ -473,7 +473,7 @@ process merge_hints {
 
 if (params.run_braker) {
   cpus = config.poolSize / 2
-  process run_braker_pseudo {   
+  process run_braker_pseudo {
     input:
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
     file 'ann_prot.fasta' from ref_ann_prot
@@ -483,6 +483,7 @@ if (params.run_braker) {
 
     """
     echo "##gff-version 3\n" > braker.tmp;
+    AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
     braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
       --species=augustus_species --useexisting --gff3 --cores ${cpus}
     gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
@@ -508,6 +509,7 @@ if (params.run_braker) {
 
     """
     echo "##gff-version 3\n" > braker.ctg.tmp;
+    AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
     braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
       --species=augustus_species --useexisting --gff3 --cores ${cpus}
     gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
