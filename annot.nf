@@ -472,9 +472,8 @@ process merge_hints {
 // ========
 
 if (params.run_braker) {
+  cpus = config.poolSize / 2
   process run_braker_pseudo {   
-    cpus config.poolSize
-
     input:
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
     file 'ann_prot.fasta' from ref_ann_prot
@@ -485,7 +484,7 @@ if (params.run_braker) {
     """
     echo "##gff-version 3\n" > braker.tmp;
     braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
-      --species=augustus_species --useexisting --gff3 --cores ${task.cpus}
+      --species=augustus_species --useexisting --gff3 --cores ${cpus}
     gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
     if [ -s 1 ]; then
         gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
@@ -496,8 +495,6 @@ if (params.run_braker) {
   }
 
   process run_braker_contigs {
-    cpus config.poolSize
-
     input:
     file 'pseudo.contigs.fasta' from contigs_seq
     file 'ann_prot.fasta' from ref_ann_prot
@@ -512,7 +509,7 @@ if (params.run_braker) {
     """
     echo "##gff-version 3\n" > braker.ctg.tmp;
     braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
-      --species=augustus_species --useexisting --gff3 --cores ${task.cpus}
+      --species=augustus_species --useexisting --gff3 --cores ${cpus}
     gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
     if [ -s 1 ]; then
         gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
