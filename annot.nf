@@ -147,6 +147,7 @@ pseudochr_seq.into{ pseudochr_seq_tRNA
                     pseudochr_seq_integrate
                     pseudochr_seq_tmhmm
                     pseudochr_seq_orthomcl
+                    pseudochr_seq_circos
                     pseudochr_seq_exonerate }
 
 scaffolds_seq.into{ scaffolds_seq_augustus
@@ -1239,7 +1240,6 @@ process make_distribution_seqs {
 }
 
 result_seq.into{ stats_inseq
-				 circos_inseq
 				 report_inseq
 				 out_seq
 				 embl_inseq }
@@ -1368,14 +1368,13 @@ if (params.do_contiguation && params.do_circos) {
     ref_individual_sequence = ref_seq.splitFasta( file: true )
     process nucmer_for_circos {
         input:
-        tuple file('pseudo.fasta.gz'), file('scaf.fasta.gz') from circos_inseq
+        path 'pseudo.fasta' from pseudochr_seq_circos
         file 'refseq.fasta' from ref_individual_sequence
 
         output:
         file 'nucmerout.txt' into circos_nucmerout
 
         """
-        gunzip -f pseudo.fasta.gz
         nucmer --batch 1 refseq.fasta pseudo.fasta
         show-coords -B out.delta | \
           awk 'BEGIN{OFS="\t"}{ print \$1, \$8, \$13, \$15, 0, 0, \$9, \$10, \$11, \$12, 0, 0}' \
