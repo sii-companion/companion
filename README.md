@@ -93,6 +93,19 @@ curl -L -o companion-master.zip https://github.com/iii-companion/companion/archi
 docker pull uofgiii/companion
 ```
 
+### 2a. Create MySQL container
+OrthoMCL v2, a dependency of _Companion_, requires a relational database for storing outputs. The simplest approach to handle this requires setting up a [Multi container app](https://docs.docker.com/get-started/07_multi_container/)
+```
+docker network create companion-app
+docker run -d \
+     --network companion-app --network-alias mysql \
+     -v mysql-data:/var/lib/mysql \
+     -e MYSQL_ROOT_PASSWORD=secret \
+     -e MYSQL_DATABASE=orthomcl \
+     mysql:5.7
+```
+The _docker_ scope in `loc_docker.config` handles connections between the two docker containers.
+
 ### 3. Run _Companion_ test job
 
 _Companion_ is distributed with configuration and data (including a few pregenerated reference annotations) for a small test run.  Run
