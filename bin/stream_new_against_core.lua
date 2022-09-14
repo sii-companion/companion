@@ -206,7 +206,7 @@ end
 
 -- searching for group core clusters with missing members in new species
 for refgroup,members in pairs(refs.groups) do
-  for _,cluster in ipairs(group_core_clusters[refgroup]) do
+  for _,cluster in ipairs(group_core_clusters[refgroup] or {}) do
     if not cluster.specidx[speciesprefix] then
       for _, v in ipairs(cluster.members) do
         global_outfile:write(refgroup .. "\t" .. cluster.name .. "\t" .. v[1] ..

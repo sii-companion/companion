@@ -346,27 +346,20 @@ function get_clusters(filename)
     error("file " .. filename .. " can not be loaded")
   end
   for l in io.lines(filename) do
-    local name, nofgenes, noftaxa, members = string.match(l,
-                             "^([^(]+)%((%d+) genes,(%d+) taxa%):%s+(.+)")
+    local name, members = string.match(l, "^(ORTHOMCL%d+):%s+(.+)")
     if not name or not members then
       error("could not parse cluster or members from line '" .. l .. "'")
     end
     clusters[name] = {}
-    local n = 0
     local thisclust = {name = name, members = {}, specidx = {}, species = {}}
-    for mname, mspecies in members:gmatch("([^(]+)%(([^)]+)%)%s?") do
+    for mspecies, mname in members:gmatch("([^|]+)%|([^%s]+)%s?") do
       table.insert(thisclust.members, {mname, mspecies})
       thisclust.specidx[mspecies] = true
       table.insert(thisclust.species, mspecies)
       clindex[mname] = thisclust
       clindex[make_gene_name(mname)] = thisclust
-      n = n + 1
     end
     thisclust.species = table_unique(thisclust.species)
-    if n ~= tonumber(nofgenes) then
-      error("parsed " .. n .. " members from cluster " .. name
-              .. ", but expected " .. nofgenes)
-    end
     clusters[name] = thisclust
   end
   return clindex, clusters

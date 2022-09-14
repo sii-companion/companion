@@ -57,21 +57,20 @@ RUN apt-get install genometools --yes
 #
 # Install and configure OrthoMCL
 #
-ADD http://www.orthomcl.org/common/downloads/software/unsupported/v1.4/ORTHOMCL_V1.4_mcl-02-063.tar /opt/omcl.tar
+ADD https://orthomcl.org/common/downloads/software/v2.0/orthomclSoftware-v2.0.9.tar.gz /opt/omcl.tar.gz
 RUN cd /opt && \
-    tar -xvf omcl.tar && \
-    tar -xzvf mcl-02-063.tar.gz && \
-    rm -f omcl.tar mcl-02-063.tar.gz && \
+    tar -xf omcl.tar.gz && \
+    rm -f omcl.tar.gz
+
+ADD http://www.micans.org/mcl/src/mcl-latest.tar.gz /opt/mcl-latest.tar.gz
+RUN cd /opt && \
+    tar -xf mcl-latest.tar.gz && \
     cd /opt/mcl-* && \
     ./configure && \
-    make -j3 && \
+    make && \
     make install && \
     cd / && \
     rm -rf /opt/mcl*
-RUN sed -i 's/our .PATH_TO_ORTHOMCL.*=.*/our $PATH_TO_ORTHOMCL = ".\/";/' /opt/ORTHOMCLV1.4/orthomcl_module.pm && \
-    sed -i 's/our .BLASTALL.*=.*/our $BLASTALL = "\/usr\/bin\/blastall";/' /opt/ORTHOMCLV1.4/orthomcl_module.pm && \
-    sed -i 's/our .FORMATDB.*=.*/our $FORMATDB = "\/usr\/bin\/formatdb";/' /opt/ORTHOMCLV1.4/orthomcl_module.pm && \
-    sed -i 's/our .MCL.*=.*/our $MCL = "\/usr\/local\/bin\/mcl";/' /opt/ORTHOMCLV1.4/orthomcl_module.pm
 
 #
 # Install Gblocks
@@ -204,8 +203,8 @@ ENV AUGUSTUS_BIN_PATH /opt/Augustus/bin
 ENV AUGUSTUS_SCRIPTS_PATH /opt/Augustus/scripts
 ENV RATT_HOME /opt/RATT
 ENV GT_RETAINIDS yes
-ENV PERL5LIB /opt/ORTHOMCLV1.4/:/opt/RATT/:/opt/ABACAS2/:$PERL5LIB
-ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/scripts:/opt/ORTHOMCLV1.4:/opt/RATT:/opt/ABACAS2:$PATH
+ENV PERL5LIB /opt/RATT/:/opt/ABACAS2/:$PERL5LIB
+ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/bin:/usr/share/augustus/scripts:/opt/orthomclSoftware-v2.0.9/bin:/opt/RATT:/opt/ABACAS2:$PATH
 ENV GENEMARK_PATH /opt/gmes_linux_64_4
 ENV PYTHON3_PATH /usr/bin
 ENV BAMTOOLS_PATH /opt/bamtools/build/src

@@ -147,6 +147,7 @@ pseudochr_seq.into{ pseudochr_seq_tRNA
                     pseudochr_seq_integrate
                     pseudochr_seq_tmhmm
                     pseudochr_seq_orthomcl
+                    pseudochr_seq_circos
                     pseudochr_seq_exonerate }
 
 scaffolds_seq.into{ scaffolds_seq_augustus
@@ -472,9 +473,8 @@ process merge_hints {
 // ========
 
 if (params.run_braker) {
-  process run_braker_pseudo {   
-    cpus config.poolSize
-
+  cpus = config.poolSize / 2
+  process run_braker_pseudo {
     input:
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
     file 'ann_prot.fasta' from ref_ann_prot
@@ -484,8 +484,9 @@ if (params.run_braker) {
 
     """
     echo "##gff-version 3\n" > braker.tmp;
+    AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
     braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
-      --species=augustus_species --useexisting --gff3 --cores ${task.cpus}
+      --species=augustus_species --useexisting --gff3 --cores ${cpus}
     gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
     if [ -s 1 ]; then
         gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
@@ -496,8 +497,6 @@ if (params.run_braker) {
   }
 
   process run_braker_contigs {
-    cpus config.poolSize
-
     input:
     file 'pseudo.contigs.fasta' from contigs_seq
     file 'ann_prot.fasta' from ref_ann_prot
@@ -511,8 +510,9 @@ if (params.run_braker) {
 
     """
     echo "##gff-version 3\n" > braker.ctg.tmp;
+    AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
     braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
-      --species=augustus_species --useexisting --gff3 --cores ${task.cpus}
+      --species=augustus_species --useexisting --gff3 --cores ${cpus}
     gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
     if [ -s 1 ]; then
         gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
@@ -965,16 +965,13 @@ process make_ref_input_for_orthomcl {
     file omcl_pepfile
 
     output:
-    file 'out.gg' into gg_file
-    file 'shortname' into shortname
-    file 'mapped.fasta' into mapped_fasta
+    path "${params.ref_species}.fasta" into adjusted_fasta_ref
 
     script:
     """
     truncate_header.lua < ${omcl_pepfile} > pepfile.trunc
     ln -s pepfile.trunc mapped.fasta
-    make_gg_line.lua ${params.ref_species} mapped.fasta > out.gg
-    echo "${params.ref_species}" > shortname
+    orthomclAdjustFasta ${params.ref_species} mapped.fasta 1
     """
 }
 
@@ -983,58 +980,94 @@ process make_target_input_for_orthomcl {
     file 'pepfile.fas' from proteins_orthomcl
 
     output:
-    file 'out.gg' into gg_file_ref
-    file 'shortname' into shortname_ref
-    file 'mapped.fasta' into mapped_fasta_ref
+    path "${params.GENOME_PREFIX}.fasta" into adjusted_fasta
 
     """
     truncate_header.lua < pepfile.fas > pepfile.trunc
     ln -s pepfile.trunc mapped.fasta
-    make_gg_line.lua ${params.GENOME_PREFIX} mapped.fasta  > out.gg
-    echo "${params.GENOME_PREFIX}" > shortname
+    orthomclAdjustFasta ${params.GENOME_PREFIX} mapped.fasta 1
     """
 }
 
-gg_file.mix(gg_file_ref).collectFile().set { full_gg }
-shortname.mix(shortname_ref).collectFile().set { full_shortnames }
-mapped_fasta.mix(mapped_fasta_ref).collectFile().set { full_mapped_fasta }
+adjusted_fasta.into{ adjusted_fasta_for_filter; adjusted_fasta_for_blast_parser}
+adjusted_fasta_ref.into{ adjusted_fasta_ref_for_filter; adjusted_fasta_ref_for_blast_parser}
 
-full_mapped_fasta.into{ full_mapped_fasta_for_index; full_mapped_fasta_for_query }
+process filter_fasta_for_orthomcl {
+    input:
+    file "compliantFasta/${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_filter
+    file "compliantFasta/${params.ref_species}.fasta" from adjusted_fasta_ref_for_filter
+    
+    output:
+    file 'goodProteins.fasta' into good_proteins_fasta
+
+    """
+    orthomclFilterFasta compliantFasta/ 10 20
+    """
+}
+
+good_proteins_fasta.into{ good_proteins_fasta_for_index; good_proteins_fasta_for_query}
 
 process blast_for_orthomcl_formatdb {
     cache 'deep'
 
     input:
-    file 'mapped.fasta' from full_mapped_fasta_for_index
+    file 'goodProteins.fasta' from good_proteins_fasta_for_index
 
     output:
-    file 'mapped.fasta' into full_mapped_fasta_indexed
-    file 'mapped.fasta.phr' into full_mapped_fasta_indexed_phr
-    file 'mapped.fasta.psq' into full_mapped_fasta_indexed_psq
-    file 'mapped.fasta.pin' into full_mapped_fasta_indexed_pin
+    file 'goodProteins.fasta' into good_proteins_fasta_indexed
+    file 'goodProteins.fasta.phr' into good_proteins_fasta_indexed_phr
+    file 'goodProteins.fasta.psq' into good_proteins_fasta_indexed_psq
+    file 'goodProteins.fasta.pin' into good_proteins_fasta_indexed_pin
 
     """
-    makeblastdb -dbtype prot -in mapped.fasta
+    makeblastdb -dbtype prot -in goodProteins.fasta
     """
 }
 
-proteins_orthomcl_blast_chunk = full_mapped_fasta_for_query.splitFasta( by: 50, file: true)
+proteins_orthomcl_blast_chunk = good_proteins_fasta_for_query.splitFasta( by: 50, file: true)
 process blast_for_orthomcl {
     cache 'deep'
 
     input:
-    file 'mapped_chunk.fasta' from proteins_orthomcl_blast_chunk
-    file 'mapped.fasta' from full_mapped_fasta_indexed.first()
-    file 'mapped.fasta.phr' from full_mapped_fasta_indexed_phr.first()
-    file 'mapped.fasta.psq' from full_mapped_fasta_indexed_psq.first()
-    file 'mapped.fasta.pin' from full_mapped_fasta_indexed_pin.first()
+    file 'prot_chunk.fasta' from proteins_orthomcl_blast_chunk
+    file 'goodProteins.fasta' from good_proteins_fasta_indexed.first()
+    file 'goodProteins.fasta.phr' from good_proteins_fasta_indexed_phr.first()
+    file 'goodProteins.fasta.psq' from good_proteins_fasta_indexed_psq.first()
+    file 'goodProteins.fasta.pin' from good_proteins_fasta_indexed_pin.first()
 
     output:
     file 'blastout' into orthomcl_blastout
 
     """
-    blastall -p blastp -W 4 -F 'm S' -v 100000 -b 100000 -d mapped.fasta -m 8 \
-      -i mapped_chunk.fasta > blastout
+    blastall -p blastp -W 4 -F 'm S' -v 100000 -b 100000 -d goodProteins.fasta -m 8 \
+      -i prot_chunk.fasta > blastout
+    """
+}
+
+process parse_blastout_for_orthomcl {
+    input:
+    file 'blastout' from orthomcl_blastout.collectFile()
+    file "compliantFasta/${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_blast_parser
+    file "compliantFasta/${params.ref_species}.fasta" from adjusted_fasta_ref_for_blast_parser
+
+    output:
+    file 'similarSequences.txt' into similar_sequences
+
+    """
+    orthomclBlastParser blastout compliantFasta/ >> similarSequences.txt  
+    """
+}
+
+orthomcl_conffile = file(params.ORTHOMCL_CONFIG_FILE)
+
+process drop_orthomcl_schema {
+    errorStrategy 'ignore'
+
+    input:
+    val orthomcl_conffile
+
+    """
+    orthomclDropSchema ${orthomcl_conffile}
     """
 }
 
@@ -1042,17 +1075,20 @@ process run_orthomcl {
     cache 'deep'
 
     input:
-    file 'blastout' from orthomcl_blastout.collectFile()
-    file 'ggfile' from full_gg
+    file 'similarSequences.txt' from similar_sequences
+    val orthomcl_conffile
 
     output:
     file 'orthomcl_out' into orthomcl_cluster_out
 
     """
-    orthomcl.pl --inflation 1.5 --mode 3 \
-      --blast_file blastout \
-      --gg_file ggfile
-    cp `find . -mindepth 1 -name all_orthomcl.out` orthomcl_out
+    orthomclInstallSchema ${orthomcl_conffile} install_schema.log
+    orthomclLoadBlast ${orthomcl_conffile} similarSequences.txt
+    orthomclPairs ${orthomcl_conffile} orthomcl_pairs.log cleanup=yes
+    orthomclDumpPairsFiles ${orthomcl_conffile}
+
+    mcl mclInput --abc -I 1.5 -o mclOutput
+    orthomclMclToGroups ORTHOMCL 0 < mclOutput > orthomcl_out
     """
 }
 
@@ -1204,7 +1240,6 @@ process make_distribution_seqs {
 }
 
 result_seq.into{ stats_inseq
-				 circos_inseq
 				 report_inseq
 				 out_seq
 				 embl_inseq }
@@ -1333,14 +1368,13 @@ if (params.do_contiguation && params.do_circos) {
     ref_individual_sequence = ref_seq.splitFasta( file: true )
     process nucmer_for_circos {
         input:
-        tuple file('pseudo.fasta.gz'), file('scaf.fasta.gz') from circos_inseq
+        path 'pseudo.fasta' from pseudochr_seq_circos
         file 'refseq.fasta' from ref_individual_sequence
 
         output:
         file 'nucmerout.txt' into circos_nucmerout
 
         """
-        gunzip -f pseudo.fasta.gz
         nucmer --batch 1 refseq.fasta pseudo.fasta
         show-coords -B out.delta | \
           awk 'BEGIN{OFS="\t"}{ print \$1, \$8, \$13, \$15, 0, 0, \$9, \$10, \$11, \$12, 0, 0}' \
