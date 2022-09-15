@@ -1,22 +1,10 @@
 {
   "groups":{
-    "Trypanosoma":["Tb927.1"],
-    "Leishmania":["LmjF.1","LbrM.1"]
+    "Trypanosoma":["Tb927_01"],
+    "Leishmania":["LmjF_01","LbrM_01"]
   },
   "species":{
-    "LbrM.1":{
-      "chr_mapping":{
-        "LbrM.01":"01"
-      },
-      "augustus_model":true,
-      "name":"Leishmania braziliensis chromosome 1",
-      "nof_chromosomes":1,
-      "nof_coding_genes":76,
-      "nof_genes":76,
-      "nof_regions":1,
-      "chromosome_pattern":"LbrM.([0-9.]+)$"
-    },
-    "LmjF.1":{
+    "LmjF_01":{
       "chr_mapping":{
         "LmjF.01":"01"
       },
@@ -29,17 +17,29 @@
       "nof_regions":1,
       "chromosome_pattern":"LmjF.(%d+)"
     },
-    "Tb927.1":{
+    "Tb927_01":{
       "chr_mapping":{
         "Tb927_01_v5.1":"01"
       },
-      "augustus_model":true,
+      "chromosome_pattern":"Tb927_(%d+)_v%d",
       "name":"Trypanosoma brucei TREU927 chromosome 1",
       "nof_chromosomes":1,
-      "nof_coding_genes":471,
-      "nof_genes":480,
+      "nof_coding_genes":286,
+      "nof_genes":298,
       "nof_regions":1,
-      "chromosome_pattern":"Tb927_(%d+)_v%d"
+      "augustus_model":true
+    },
+    "LbrM_01":{
+      "chr_mapping":{
+        "LbrM.01":"01"
+      },
+      "chromosome_pattern":"LbrM.([0-9.]+)$",
+      "name":"Leishmania braziliensis chromosome 1",
+      "nof_chromosomes":1,
+      "nof_coding_genes":76,
+      "nof_genes":76,
+      "nof_regions":1,
+      "augustus_model":true
     }
   }
 }

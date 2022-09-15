@@ -1,0 +1,351 @@
+##sequence-region   LmjF.01 3704 260867
+LmjF.01	.	gene	3704	4702	.	-	.	ID=LmjF.01.0010
+LmjF.01	.	mRNA	3704	4702	.	-	.	ID=LmjF.01.0010:mRNA;Parent=LmjF.01.0010
+LmjF.01	.	CDS	3704	4702	.	-	0	Parent=LmjF.01.0010:mRNA
+LmjF.01	.	polypeptide	3704	4702	.	-	.	ID=LmjF.01.0010:mRNA:pep;Derives_from=LmjF.01.0010:mRNA;product=term%3DProtein of unknown function %28DUF2946%29%2C putative
+LmjF.01	.	gene	5790	7439	.	-	.	ID=LmjF.01.0020
+LmjF.01	.	mRNA	5790	7439	.	-	.	ID=LmjF.01.0020:mRNA;Parent=LmjF.01.0020
+LmjF.01	.	CDS	5790	7439	.	-	0	Parent=LmjF.01.0020:mRNA
+LmjF.01	.	polypeptide	5790	7439	.	-	.	ID=LmjF.01.0020:mRNA:pep;Derives_from=LmjF.01.0020:mRNA;product=term%3DEndonuclease%2FExonuclease%2Fphosphatase family%2C putative
+LmjF.01	.	gene	9061	11067	.	-	.	ID=LmjF.01.0030;Name=KIN13-1
+LmjF.01	.	mRNA	9061	11067	.	-	.	ID=LmjF.01.0030:mRNA;Parent=LmjF.01.0030
+LmjF.01	.	CDS	9061	11067	.	-	0	Parent=LmjF.01.0030:mRNA
+LmjF.01	.	polypeptide	9061	11067	.	-	.	ID=LmjF.01.0030:mRNA:pep;Derives_from=LmjF.01.0030:mRNA;product=term%3DKinesin-13 1%2C putative
+LmjF.01	.	gene	12073	12642	.	-	.	ID=LmjF.01.0040
+LmjF.01	.	mRNA	12073	12642	.	-	.	ID=LmjF.01.0040:mRNA;Parent=LmjF.01.0040
+LmjF.01	.	CDS	12073	12642	.	-	0	Parent=LmjF.01.0040:mRNA
+LmjF.01	.	polypeptide	12073	12642	.	-	.	ID=LmjF.01.0040:mRNA:pep;Derives_from=LmjF.01.0040:mRNA;product=term%3Dhypothetical protein%2C unknown function
+LmjF.01	.	gene	15025	17022	.	-	.	ID=LmjF.01.0050
+LmjF.01	.	mRNA	15025	17022	.	-	.	ID=LmjF.01.0050:mRNA;Parent=LmjF.01.0050
+LmjF.01	.	CDS	15025	17022	.	-	0	Parent=LmjF.01.0050:mRNA
+LmjF.01	.	polypeptide	15025	17022	.	-	.	ID=LmjF.01.0050:mRNA:pep;Derives_from=LmjF.01.0050:mRNA;product=term%3Dcarboxylase%2C putative
+LmjF.01	.	gene	18137	18886	.	-	.	ID=LmjF.01.0060
+LmjF.01	.	mRNA	18137	18886	.	-	.	ID=LmjF.01.0060:mRNA;Parent=LmjF.01.0060
+LmjF.01	.	CDS	18137	18886	.	-	0	Parent=LmjF.01.0060:mRNA
+LmjF.01	.	polypeptide	18137	18886	.	-	.	ID=LmjF.01.0060:mRNA:pep;Derives_from=LmjF.01.0060:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	19951	21747	.	-	.	ID=LmjF.01.0070
+LmjF.01	.	mRNA	19951	21747	.	-	.	ID=LmjF.01.0070:mRNA;Parent=LmjF.01.0070
+LmjF.01	.	CDS	19951	21747	.	-	0	Parent=LmjF.01.0070:mRNA
+LmjF.01	.	polypeptide	19951	21747	.	-	.	ID=LmjF.01.0070:mRNA:pep;Derives_from=LmjF.01.0070:mRNA;product=term%3DBSD domain containing protein%2C putative
+LmjF.01	.	gene	22613	23326	.	-	.	ID=LmjF.01.0080
+LmjF.01	.	mRNA	22613	23326	.	-	.	ID=LmjF.01.0080:mRNA;Parent=LmjF.01.0080
+LmjF.01	.	CDS	22613	23326	.	-	0	Parent=LmjF.01.0080:mRNA
+LmjF.01	.	polypeptide	22613	23326	.	-	.	ID=LmjF.01.0080:mRNA:pep;Derives_from=LmjF.01.0080:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	24859	25683	.	-	.	ID=LmjF.01.0090
+LmjF.01	.	mRNA	24859	25683	.	-	.	ID=LmjF.01.0090:mRNA;Parent=LmjF.01.0090
+LmjF.01	.	CDS	24859	25683	.	-	0	Parent=LmjF.01.0090:mRNA
+LmjF.01	.	polypeptide	24859	25683	.	-	.	ID=LmjF.01.0090:mRNA:pep;Derives_from=LmjF.01.0090:mRNA;product=term%3DUMP-CMP kinase%2C mitochondrial%2C putative
+LmjF.01	.	gene	26405	27451	.	-	.	ID=LmjF.01.0100
+LmjF.01	.	mRNA	26405	27451	.	-	.	ID=LmjF.01.0100:mRNA;Parent=LmjF.01.0100
+LmjF.01	.	CDS	26405	27451	.	-	0	Parent=LmjF.01.0100:mRNA
+LmjF.01	.	polypeptide	26405	27451	.	-	.	ID=LmjF.01.0100:mRNA:pep;Derives_from=LmjF.01.0100:mRNA;product=term%3DGlycosyl transferase family 11%2C putative
+LmjF.01	.	gene	28521	29108	.	-	.	ID=LmjF.01.0110
+LmjF.01	.	mRNA	28521	29108	.	-	.	ID=LmjF.01.0110:mRNA;Parent=LmjF.01.0110
+LmjF.01	.	CDS	28521	29108	.	-	0	Parent=LmjF.01.0110:mRNA
+LmjF.01	.	polypeptide	28521	29108	.	-	.	ID=LmjF.01.0110:mRNA:pep;Derives_from=LmjF.01.0110:mRNA;product=term%3Dmonothiol glutaredoxin%2C putative
+LmjF.01	.	gene	30278	32251	.	-	.	ID=LmjF.01.0120
+LmjF.01	.	mRNA	30278	32251	.	-	.	ID=LmjF.01.0120:mRNA;Parent=LmjF.01.0120
+LmjF.01	.	CDS	30278	32251	.	-	0	Parent=LmjF.01.0120:mRNA
+LmjF.01	.	polypeptide	30278	32251	.	-	.	ID=LmjF.01.0120:mRNA:pep;Derives_from=LmjF.01.0120:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	33630	34826	.	-	.	ID=LmjF.01.0130
+LmjF.01	.	mRNA	33630	34826	.	-	.	ID=LmjF.01.0130:mRNA;Parent=LmjF.01.0130
+LmjF.01	.	CDS	33630	34826	.	-	0	Parent=LmjF.01.0130:mRNA
+LmjF.01	.	polypeptide	33630	34826	.	-	.	ID=LmjF.01.0130:mRNA:pep;Derives_from=LmjF.01.0130:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	36878	37126	.	-	.	ID=LmjF.01.0140
+LmjF.01	.	mRNA	36878	37126	.	-	.	ID=LmjF.01.0140:mRNA;Parent=LmjF.01.0140
+LmjF.01	.	CDS	36878	37126	.	-	0	Parent=LmjF.01.0140:mRNA
+LmjF.01	.	polypeptide	36878	37126	.	-	.	ID=LmjF.01.0140:mRNA:pep;Derives_from=LmjF.01.0140:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	37714	38064	.	-	.	ID=LmjF.01.0150
+LmjF.01	.	mRNA	37714	38064	.	-	.	ID=LmjF.01.0150:mRNA;Parent=LmjF.01.0150
+LmjF.01	.	CDS	37714	38064	.	-	0	Parent=LmjF.01.0150:mRNA
+LmjF.01	.	polypeptide	37714	38064	.	-	.	ID=LmjF.01.0150:mRNA:pep;Derives_from=LmjF.01.0150:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	38940	39182	.	-	.	ID=LmjF.01.0160
+LmjF.01	.	mRNA	38940	39182	.	-	.	ID=LmjF.01.0160:mRNA;Parent=LmjF.01.0160
+LmjF.01	.	CDS	38940	39182	.	-	0	Parent=LmjF.01.0160:mRNA
+LmjF.01	.	polypeptide	38940	39182	.	-	.	ID=LmjF.01.0160:mRNA:pep;Derives_from=LmjF.01.0160:mRNA;product=term%3DLSM domain containing protein%2C putative
+LmjF.01	.	gene	41273	42649	.	-	.	ID=LmjF.01.0170
+LmjF.01	.	mRNA	41273	42649	.	-	.	ID=LmjF.01.0170:mRNA;Parent=LmjF.01.0170
+LmjF.01	.	CDS	41273	42649	.	-	0	Parent=LmjF.01.0170:mRNA
+LmjF.01	.	polypeptide	41273	42649	.	-	.	ID=LmjF.01.0170:mRNA:pep;Derives_from=LmjF.01.0170:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	44148	46466	.	-	.	ID=LmjF.01.0180
+LmjF.01	.	mRNA	44148	46466	.	-	.	ID=LmjF.01.0180:mRNA;Parent=LmjF.01.0180
+LmjF.01	.	CDS	44148	46466	.	-	0	Parent=LmjF.01.0180:mRNA
+LmjF.01	.	polypeptide	44148	46466	.	-	.	ID=LmjF.01.0180:mRNA:pep;Derives_from=LmjF.01.0180:mRNA;product=term%3DCLC-type chloride channel%2C putative
+LmjF.01	.	gene	47548	48138	.	-	.	ID=LmjF.01.0190
+LmjF.01	.	mRNA	47548	48138	.	-	.	ID=LmjF.01.0190:mRNA;Parent=LmjF.01.0190
+LmjF.01	.	CDS	47548	48138	.	-	0	Parent=LmjF.01.0190:mRNA
+LmjF.01	.	polypeptide	47548	48138	.	-	.	ID=LmjF.01.0190:mRNA:pep;Derives_from=LmjF.01.0190:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	48851	49651	.	-	.	ID=LmjF.01.0200
+LmjF.01	.	mRNA	48851	49651	.	-	.	ID=LmjF.01.0200:mRNA;Parent=LmjF.01.0200
+LmjF.01	.	CDS	48851	49651	.	-	0	Parent=LmjF.01.0200:mRNA
+LmjF.01	.	polypeptide	48851	49651	.	-	.	ID=LmjF.01.0200:mRNA:pep;Derives_from=LmjF.01.0200:mRNA;product=term%3DLow molecular weight phosphotyrosine protein phosphatase%2C putative
+LmjF.01	.	gene	50677	53370	.	-	.	ID=LmjF.01.0210
+LmjF.01	.	mRNA	50677	53370	.	-	.	ID=LmjF.01.0210:mRNA;Parent=LmjF.01.0210
+LmjF.01	.	CDS	50677	53370	.	-	0	Parent=LmjF.01.0210:mRNA
+LmjF.01	.	polypeptide	50677	53370	.	-	.	ID=LmjF.01.0210:mRNA:pep;Derives_from=LmjF.01.0210:mRNA;product=term%3DCUE domain%2FDomain of unknown function %28DUF1771%29%2FSmr domain containing protein%2C putative
+LmjF.01	.	gene	57026	58033	.	-	.	ID=LmjF.01.0220;Name=CYP12
+LmjF.01	.	mRNA	57026	58033	.	-	.	ID=LmjF.01.0220:mRNA;Parent=LmjF.01.0220
+LmjF.01	.	CDS	57026	58033	.	-	0	Parent=LmjF.01.0220:mRNA
+LmjF.01	.	polypeptide	57026	58033	.	-	.	ID=LmjF.01.0220:mRNA:pep;Derives_from=LmjF.01.0220:mRNA;product=term%3Dcyclophilin 12%2C putative
+LmjF.01	.	gene	58837	59253	.	-	.	ID=LmjF.01.0230
+LmjF.01	.	mRNA	58837	59253	.	-	.	ID=LmjF.01.0230:mRNA;Parent=LmjF.01.0230
+LmjF.01	.	CDS	58837	59253	.	-	0	Parent=LmjF.01.0230:mRNA
+LmjF.01	.	polypeptide	58837	59253	.	-	.	ID=LmjF.01.0230:mRNA:pep;Derives_from=LmjF.01.0230:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	60056	62833	.	-	.	ID=LmjF.01.0240
+LmjF.01	.	mRNA	60056	62833	.	-	.	ID=LmjF.01.0240:mRNA;Parent=LmjF.01.0240
+LmjF.01	.	CDS	60056	62833	.	-	0	Parent=LmjF.01.0240:mRNA
+LmjF.01	.	polypeptide	60056	62833	.	-	.	ID=LmjF.01.0240:mRNA:pep;Derives_from=LmjF.01.0240:mRNA;product=term%3DDNA excision%2Frepair protein SNF2%2C putative
+LmjF.01	.	gene	63619	66090	.	-	.	ID=LmjF.01.0250
+LmjF.01	.	mRNA	63619	66090	.	-	.	ID=LmjF.01.0250:mRNA;Parent=LmjF.01.0250
+LmjF.01	.	CDS	63619	66090	.	-	0	Parent=LmjF.01.0250:mRNA
+LmjF.01	.	polypeptide	63619	66090	.	-	.	ID=LmjF.01.0250:mRNA:pep;Derives_from=LmjF.01.0250:mRNA;product=term%3DRight handed beta helix region%2C putative
+LmjF.01	.	gene	67443	68288	.	-	.	ID=LmjF.01.0260
+LmjF.01	.	mRNA	67443	68288	.	-	.	ID=LmjF.01.0260:mRNA;Parent=LmjF.01.0260
+LmjF.01	.	CDS	67443	68288	.	-	0	Parent=LmjF.01.0260:mRNA
+LmjF.01	.	polypeptide	67443	68288	.	-	.	ID=LmjF.01.0260:mRNA:pep;Derives_from=LmjF.01.0260:mRNA;product=term%3DCalmodulin-binding%2C putative
+LmjF.01	.	gene	69584	69907	.	-	.	ID=LmjF.01.0270
+LmjF.01	.	mRNA	69584	69907	.	-	.	ID=LmjF.01.0270:mRNA;Parent=LmjF.01.0270
+LmjF.01	.	CDS	69584	69907	.	-	0	Parent=LmjF.01.0270:mRNA
+LmjF.01	.	polypeptide	69584	69907	.	-	.	ID=LmjF.01.0270:mRNA:pep;Derives_from=LmjF.01.0270:mRNA;product=term%3Dthioredoxin%2C putative
+LmjF.01	.	gene	71546	72787	.	-	.	ID=LmjF.01.0280
+LmjF.01	.	mRNA	71546	72787	.	-	.	ID=LmjF.01.0280:mRNA;Parent=LmjF.01.0280
+LmjF.01	.	CDS	71546	72787	.	-	0	Parent=LmjF.01.0280:mRNA
+LmjF.01	.	polypeptide	71546	72787	.	-	.	ID=LmjF.01.0280:mRNA:pep;Derives_from=LmjF.01.0280:mRNA;product=term%3Dpseudouridylate synthase-like protein
+LmjF.01	.	gene	74034	74552	.	-	.	ID=LmjF.01.0290
+LmjF.01	.	mRNA	74034	74552	.	-	.	ID=LmjF.01.0290:mRNA;Parent=LmjF.01.0290
+LmjF.01	.	CDS	74034	74552	.	-	0	Parent=LmjF.01.0290:mRNA
+LmjF.01	.	polypeptide	74034	74552	.	-	.	ID=LmjF.01.0290:mRNA:pep;Derives_from=LmjF.01.0290:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	75474	75653	.	-	.	ID=LmjF.01.0300
+LmjF.01	.	mRNA	75474	75653	.	-	.	ID=LmjF.01.0300:mRNA;Parent=LmjF.01.0300
+LmjF.01	.	CDS	75474	75653	.	-	0	Parent=LmjF.01.0300:mRNA
+LmjF.01	.	polypeptide	75474	75653	.	-	.	ID=LmjF.01.0300:mRNA:pep;Derives_from=LmjF.01.0300:mRNA;product=term%3D4F5 protein family%2C putative
+LmjF.01	.	gene	76217	77383	.	-	.	ID=LmjF.01.0310
+LmjF.01	.	mRNA	76217	77383	.	-	.	ID=LmjF.01.0310:mRNA;Parent=LmjF.01.0310
+LmjF.01	.	CDS	76217	77383	.	-	0	Parent=LmjF.01.0310:mRNA
+LmjF.01	.	polypeptide	76217	77383	.	-	.	ID=LmjF.01.0310:mRNA:pep;Derives_from=LmjF.01.0310:mRNA;product=term%3Dacidocalcisomal exopolyphosphatase%2C putative
+LmjF.01	.	gene	77741	78172	.	-	.	ID=LmjF.01.0315
+LmjF.01	.	mRNA	77741	78172	.	-	.	ID=LmjF.01.0315:mRNA;Parent=LmjF.01.0315
+LmjF.01	.	CDS	77741	78172	.	-	0	Parent=LmjF.01.0315:mRNA
+LmjF.01	.	polypeptide	77741	78172	.	-	.	ID=LmjF.01.0315:mRNA:pep;Derives_from=LmjF.01.0315:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	79049	80068	.	+	.	ID=LmjF.01.0320
+LmjF.01	.	mRNA	79049	80068	.	+	.	ID=LmjF.01.0320:mRNA;Parent=LmjF.01.0320
+LmjF.01	.	CDS	79049	80068	.	+	0	Parent=LmjF.01.0320:mRNA
+LmjF.01	.	polypeptide	79049	80068	.	+	.	ID=LmjF.01.0320:mRNA:pep;Derives_from=LmjF.01.0320:mRNA;product=term%3Dpoly%28A%29 export protein%2C putative
+LmjF.01	.	gene	80472	81164	.	+	.	ID=LmjF.01.0330
+LmjF.01	.	mRNA	80472	81164	.	+	.	ID=LmjF.01.0330.2:mRNA;Parent=LmjF.01.0330
+LmjF.01	.	five_prime_UTR	80472	80534	.	+	.	Parent=LmjF.01.0330.2:mRNA
+LmjF.01	.	CDS	80535	81164	.	+	0	Parent=LmjF.01.0330.2:mRNA
+LmjF.01	.	mRNA	80472	81164	.	+	.	ID=LmjF.01.0330.1:mRNA;Parent=LmjF.01.0330
+LmjF.01	.	five_prime_UTR	80583	80963	.	+	.	Parent=LmjF.01.0330.1:mRNA
+LmjF.01	.	CDS	80964	81164	.	+	0	Parent=LmjF.01.0330.1:mRNA
+LmjF.01	.	polypeptide	80472	81164	.	+	.	ID=LmjF.01.0330.2:mRNA:pep;Derives_from=LmjF.01.0330.2:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	polypeptide	80472	81164	.	+	.	ID=LmjF.01.0330.1:mRNA:pep;Derives_from=LmjF.01.0330.1:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	81749	82042	.	+	.	ID=LmjF.01.0335;Name=MPC1
+LmjF.01	.	mRNA	81749	82042	.	+	.	ID=LmjF.01.0335:mRNA;Parent=LmjF.01.0335
+LmjF.01	.	CDS	81749	82042	.	+	0	Parent=LmjF.01.0335:mRNA
+LmjF.01	.	polypeptide	81749	82042	.	+	.	ID=LmjF.01.0335:mRNA:pep;Derives_from=LmjF.01.0335:mRNA;product=term%3DMitochondrial pyruvate carrier 1
+LmjF.01	.	gene	83341	84117	.	+	.	ID=LmjF.01.0340
+LmjF.01	.	mRNA	83341	84117	.	+	.	ID=LmjF.01.0340:mRNA;Parent=LmjF.01.0340
+LmjF.01	.	CDS	83341	84117	.	+	0	Parent=LmjF.01.0340:mRNA
+LmjF.01	.	polypeptide	83341	84117	.	+	.	ID=LmjF.01.0340:mRNA:pep;Derives_from=LmjF.01.0340:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	85901	88105	.	+	.	ID=LmjF.01.0350
+LmjF.01	.	mRNA	85901	88105	.	+	.	ID=LmjF.01.0350:mRNA;Parent=LmjF.01.0350
+LmjF.01	.	CDS	85901	88105	.	+	0	Parent=LmjF.01.0350:mRNA
+LmjF.01	.	polypeptide	85901	88105	.	+	.	ID=LmjF.01.0350:mRNA:pep;Derives_from=LmjF.01.0350:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	88974	89543	.	+	.	ID=LmjF.01.0360
+LmjF.01	.	mRNA	88974	89543	.	+	.	ID=LmjF.01.0360:mRNA;Parent=LmjF.01.0360
+LmjF.01	.	CDS	88974	89543	.	+	0	Parent=LmjF.01.0360:mRNA
+LmjF.01	.	polypeptide	88974	89543	.	+	.	ID=LmjF.01.0360:mRNA:pep;Derives_from=LmjF.01.0360:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	90100	90666	.	+	.	ID=LmjF.01.0370
+LmjF.01	.	mRNA	90100	90666	.	+	.	ID=LmjF.01.0370:mRNA;Parent=LmjF.01.0370
+LmjF.01	.	CDS	90100	90666	.	+	0	Parent=LmjF.01.0370:mRNA
+LmjF.01	.	polypeptide	90100	90666	.	+	.	ID=LmjF.01.0370:mRNA:pep;Derives_from=LmjF.01.0370:mRNA;product=term%3DProtein of unknown function %28DUF788%29%2C putative
+LmjF.01	.	gene	91351	93807	.	+	.	ID=LmjF.01.0380
+LmjF.01	.	mRNA	91351	93807	.	+	.	ID=LmjF.01.0380:mRNA;Parent=LmjF.01.0380
+LmjF.01	.	CDS	91351	93807	.	+	0	Parent=LmjF.01.0380:mRNA
+LmjF.01	.	polypeptide	91351	93807	.	+	.	ID=LmjF.01.0380:mRNA:pep;Derives_from=LmjF.01.0380:mRNA;product=term%3DDyggve-Melchior-Clausen syndrome protein%2C putative
+LmjF.01	.	gene	94762	97230	.	+	.	ID=LmjF.01.0390
+LmjF.01	.	mRNA	94762	97230	.	+	.	ID=LmjF.01.0390:mRNA;Parent=LmjF.01.0390
+LmjF.01	.	CDS	94762	97230	.	+	0	Parent=LmjF.01.0390:mRNA
+LmjF.01	.	polypeptide	94762	97230	.	+	.	ID=LmjF.01.0390:mRNA:pep;Derives_from=LmjF.01.0390:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	98194	99873	.	+	.	ID=LmjF.01.0400
+LmjF.01	.	mRNA	98194	99873	.	+	.	ID=LmjF.01.0400:mRNA;Parent=LmjF.01.0400
+LmjF.01	.	CDS	98194	99873	.	+	0	Parent=LmjF.01.0400:mRNA
+LmjF.01	.	polypeptide	98194	99873	.	+	.	ID=LmjF.01.0400:mRNA:pep;Derives_from=LmjF.01.0400:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	100528	101130	.	+	.	ID=LmjF.01.0410
+LmjF.01	.	mRNA	100528	101130	.	+	.	ID=LmjF.01.0410:mRNA;Parent=LmjF.01.0410
+LmjF.01	.	CDS	100528	101130	.	+	0	Parent=LmjF.01.0410:mRNA
+LmjF.01	.	polypeptide	100528	101130	.	+	.	ID=LmjF.01.0410:mRNA:pep;Derives_from=LmjF.01.0410:mRNA;product=term%3Dribosomal protein S7%2C putative
+LmjF.01	.	gene	102444	103046	.	+	.	ID=LmjF.01.0420
+LmjF.01	.	mRNA	102444	103046	.	+	.	ID=LmjF.01.0420:mRNA;Parent=LmjF.01.0420
+LmjF.01	.	CDS	102444	103046	.	+	0	Parent=LmjF.01.0420:mRNA
+LmjF.01	.	polypeptide	102444	103046	.	+	.	ID=LmjF.01.0420:mRNA:pep;Derives_from=LmjF.01.0420:mRNA;product=term%3Dribosomal protein S7%2C putative
+LmjF.01	.	gene	103842	106073	.	+	.	ID=LmjF.01.0430
+LmjF.01	.	mRNA	103842	106073	.	+	.	ID=LmjF.01.0430:mRNA;Parent=LmjF.01.0430
+LmjF.01	.	CDS	103842	106073	.	+	0	Parent=LmjF.01.0430:mRNA
+LmjF.01	.	polypeptide	103842	106073	.	+	.	ID=LmjF.01.0430:mRNA:pep;Derives_from=LmjF.01.0430:mRNA;product=term%3DRing finger domain%2FZn-finger in ubiquitin-hydrolases and other protein%2C putative
+LmjF.01	.	gene	107438	109201	.	+	.	ID=LmjF.01.0440
+LmjF.01	.	mRNA	107438	109201	.	+	.	ID=LmjF.01.0440:mRNA;Parent=LmjF.01.0440
+LmjF.01	.	CDS	107438	109201	.	+	0	Parent=LmjF.01.0440:mRNA
+LmjF.01	.	polypeptide	107438	109201	.	+	.	ID=LmjF.01.0440:mRNA:pep;Derives_from=LmjF.01.0440:mRNA;product=term%3DProtein of unknown function %28DUF791%29%2C putative
+LmjF.01	.	gene	112139	112795	.	+	.	ID=LmjF.01.0450;Name=PNC1
+LmjF.01	.	mRNA	112139	112795	.	+	.	ID=LmjF.01.0450:mRNA;Parent=LmjF.01.0450
+LmjF.01	.	CDS	112139	112795	.	+	0	Parent=LmjF.01.0450:mRNA
+LmjF.01	.	polypeptide	112139	112795	.	+	.	ID=LmjF.01.0450:mRNA:pep;Derives_from=LmjF.01.0450:mRNA;product=term%3Dnicotinamidase%2C putative
+LmjF.01	.	gene	114558	119183	.	+	.	ID=LmjF.01.0460
+LmjF.01	.	mRNA	114558	119183	.	+	.	ID=LmjF.01.0460:mRNA;Parent=LmjF.01.0460
+LmjF.01	.	CDS	114558	119183	.	+	0	Parent=LmjF.01.0460:mRNA
+LmjF.01	.	polypeptide	114558	119183	.	+	.	ID=LmjF.01.0460:mRNA:pep;Derives_from=LmjF.01.0460:mRNA;product=term%3Dconserved protein
+LmjF.01	.	gene	121759	123849	.	+	.	ID=LmjF.01.0470
+LmjF.01	.	mRNA	121759	123849	.	+	.	ID=LmjF.01.0470:mRNA;Parent=LmjF.01.0470
+LmjF.01	.	CDS	121759	123849	.	+	0	Parent=LmjF.01.0470:mRNA
+LmjF.01	.	polypeptide	121759	123849	.	+	.	ID=LmjF.01.0470:mRNA:pep;Derives_from=LmjF.01.0470:mRNA;product=term%3Dfatty acyl CoA syntetase 1%2C putative
+LmjF.01	.	gene	124711	125790	.	+	.	ID=LmjF.01.0480
+LmjF.01	.	mRNA	124711	125790	.	+	.	ID=LmjF.01.0480:mRNA;Parent=LmjF.01.0480
+LmjF.01	.	CDS	124711	125790	.	+	0	Parent=LmjF.01.0480:mRNA
+LmjF.01	.	polypeptide	124711	125790	.	+	.	ID=LmjF.01.0480:mRNA:pep;Derives_from=LmjF.01.0480:mRNA;product=term%3Dbeta eliminating lyase%2Cputative
+LmjF.01	.	gene	127704	129800	.	+	.	ID=LmjF.01.0490
+LmjF.01	.	mRNA	127704	129800	.	+	.	ID=LmjF.01.0490:mRNA;Parent=LmjF.01.0490
+LmjF.01	.	CDS	127704	129800	.	+	0	Parent=LmjF.01.0490:mRNA
+LmjF.01	.	polypeptide	127704	129800	.	+	.	ID=LmjF.01.0490:mRNA:pep;Derives_from=LmjF.01.0490:mRNA;product=term%3Dlong-chain-fatty-acid-CoA ligase%2C putative
+LmjF.01	.	gene	130947	133070	.	+	.	ID=LmjF.01.0500
+LmjF.01	.	mRNA	130947	133070	.	+	.	ID=LmjF.01.0500:mRNA;Parent=LmjF.01.0500
+LmjF.01	.	CDS	130947	133070	.	+	0	Parent=LmjF.01.0500:mRNA
+LmjF.01	.	polypeptide	130947	133070	.	+	.	ID=LmjF.01.0500:mRNA:pep;Derives_from=LmjF.01.0500:mRNA;product=term%3Dfatty acyl CoA synthetase 2%2C putative
+LmjF.01	.	gene	136526	137110	.	+	.	ID=LmjF.01.0510
+LmjF.01	.	mRNA	136526	137110	.	+	.	ID=LmjF.01.0510:mRNA;Parent=LmjF.01.0510
+LmjF.01	.	CDS	136526	137110	.	+	0	Parent=LmjF.01.0510:mRNA
+LmjF.01	.	polypeptide	136526	137110	.	+	.	ID=LmjF.01.0510:mRNA:pep;Derives_from=LmjF.01.0510:mRNA;product=term%3Dfatty acyl CoA synthetase 2%2C putative
+LmjF.01	.	gene	137710	139857	.	+	.	ID=LmjF.01.0520
+LmjF.01	.	mRNA	137710	139857	.	+	.	ID=LmjF.01.0520:mRNA;Parent=LmjF.01.0520
+LmjF.01	.	CDS	137710	139857	.	+	0	Parent=LmjF.01.0520:mRNA
+LmjF.01	.	polypeptide	137710	139857	.	+	.	ID=LmjF.01.0520:mRNA:pep;Derives_from=LmjF.01.0520:mRNA;product=term%3Dlong-chain-fatty-acid-CoA ligase%2C putative
+LmjF.01	.	gene	143750	148573	.	+	.	ID=LmjF.01.0530
+LmjF.01	.	mRNA	143750	148573	.	+	.	ID=LmjF.01.0530:mRNA;Parent=LmjF.01.0530
+LmjF.01	.	CDS	143750	148573	.	+	0	Parent=LmjF.01.0530:mRNA
+LmjF.01	.	polypeptide	143750	148573	.	+	.	ID=LmjF.01.0530:mRNA:pep;Derives_from=LmjF.01.0530:mRNA;product=term%3Dlong-chain-fatty-acid-CoA ligase%2C putative
+LmjF.01	.	gene	149673	151652	.	+	.	ID=LmjF.01.0540
+LmjF.01	.	mRNA	149673	151652	.	+	.	ID=LmjF.01.0540:mRNA;Parent=LmjF.01.0540
+LmjF.01	.	CDS	149673	151652	.	+	0	Parent=LmjF.01.0540:mRNA
+LmjF.01	.	polypeptide	149673	151652	.	+	.	ID=LmjF.01.0540:mRNA:pep;Derives_from=LmjF.01.0540:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	152788	153657	.	+	.	ID=LmjF.01.0550
+LmjF.01	.	mRNA	152788	153657	.	+	.	ID=LmjF.01.0550:mRNA;Parent=LmjF.01.0550
+LmjF.01	.	CDS	152788	153657	.	+	0	Parent=LmjF.01.0550:mRNA
+LmjF.01	.	polypeptide	152788	153657	.	+	.	ID=LmjF.01.0550:mRNA:pep;Derives_from=LmjF.01.0550:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	154977	156839	.	+	.	ID=LmjF.01.0560
+LmjF.01	.	mRNA	154977	156839	.	+	.	ID=LmjF.01.0560:mRNA;Parent=LmjF.01.0560
+LmjF.01	.	CDS	154977	156839	.	+	0	Parent=LmjF.01.0560:mRNA
+LmjF.01	.	polypeptide	154977	156839	.	+	.	ID=LmjF.01.0560:mRNA:pep;Derives_from=LmjF.01.0560:mRNA;product=term%3Dpre-mRNA processing factor 3 %28PRP3%29%2FProtein of unknown function %28DUF1115%29%2C putative
+LmjF.01	.	gene	157437	158417	.	+	.	ID=LmjF.01.0570
+LmjF.01	.	mRNA	157437	158417	.	+	.	ID=LmjF.01.0570:mRNA;Parent=LmjF.01.0570
+LmjF.01	.	CDS	157437	158417	.	+	0	Parent=LmjF.01.0570:mRNA
+LmjF.01	.	polypeptide	157437	158417	.	+	.	ID=LmjF.01.0570:mRNA:pep;Derives_from=LmjF.01.0570:mRNA;product=term%3Dtricarboxylate carrier%2C putative
+LmjF.01	.	gene	159196	162105	.	+	.	ID=LmjF.01.0580
+LmjF.01	.	mRNA	159196	162105	.	+	.	ID=LmjF.01.0580:mRNA;Parent=LmjF.01.0580
+LmjF.01	.	CDS	159196	162105	.	+	0	Parent=LmjF.01.0580:mRNA
+LmjF.01	.	polypeptide	159196	162105	.	+	.	ID=LmjF.01.0580:mRNA:pep;Derives_from=LmjF.01.0580:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	162904	164482	.	+	.	ID=LmjF.01.0590;Name=KREL1
+LmjF.01	.	mRNA	162904	164482	.	+	.	ID=LmjF.01.0590.1:mRNA;Parent=LmjF.01.0590
+LmjF.01	.	five_prime_UTR	162904	163009	.	+	.	Parent=LmjF.01.0590.1:mRNA
+LmjF.01	.	CDS	163010	164482	.	+	0	Parent=LmjF.01.0590.1:mRNA
+LmjF.01	.	mRNA	162904	164482	.	+	.	ID=LmjF.01.0590.2:mRNA;Parent=LmjF.01.0590
+LmjF.01	.	five_prime_UTR	163009	163207	.	+	.	Parent=LmjF.01.0590.2:mRNA
+LmjF.01	.	CDS	163208	164482	.	+	0	Parent=LmjF.01.0590.2:mRNA
+LmjF.01	.	polypeptide	162904	164482	.	+	.	ID=LmjF.01.0590.1:mRNA:pep;Derives_from=LmjF.01.0590.1:mRNA;product=term%3Dmitochondrial RNA editing ligase 1
+LmjF.01	.	polypeptide	162904	164482	.	+	.	ID=LmjF.01.0590.2:mRNA:pep;Derives_from=LmjF.01.0590.2:mRNA;product=term%3Dmitochondrial RNA editing ligase 1
+LmjF.01	.	gene	165535	171000	.	+	.	ID=LmjF.01.0600
+LmjF.01	.	mRNA	165535	171000	.	+	.	ID=LmjF.01.0600:mRNA;Parent=LmjF.01.0600
+LmjF.01	.	CDS	165535	171000	.	+	0	Parent=LmjF.01.0600:mRNA
+LmjF.01	.	polypeptide	165535	171000	.	+	.	ID=LmjF.01.0600:mRNA:pep;Derives_from=LmjF.01.0600:mRNA;product=term%3DRab-GTPase-TBC domain containing protein%2C putative
+LmjF.01	.	gene	171562	172734	.	+	.	ID=LmjF.01.0610
+LmjF.01	.	mRNA	171562	172734	.	+	.	ID=LmjF.01.0610:mRNA;Parent=LmjF.01.0610
+LmjF.01	.	CDS	171562	172734	.	+	0	Parent=LmjF.01.0610:mRNA
+LmjF.01	.	polypeptide	171562	172734	.	+	.	ID=LmjF.01.0610:mRNA:pep;Derives_from=LmjF.01.0610:mRNA;product=term%3DDNA-damage inducible protein DDI1-like protein
+LmjF.01	.	gene	173376	175259	.	+	.	ID=LmjF.01.0620
+LmjF.01	.	mRNA	173376	175259	.	+	.	ID=LmjF.01.0620:mRNA;Parent=LmjF.01.0620
+LmjF.01	.	CDS	173376	175259	.	+	0	Parent=LmjF.01.0620:mRNA
+LmjF.01	.	polypeptide	173376	175259	.	+	.	ID=LmjF.01.0620:mRNA:pep;Derives_from=LmjF.01.0620:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	177152	179605	.	+	.	ID=LmjF.01.0630
+LmjF.01	.	mRNA	177152	179605	.	+	.	ID=LmjF.01.0630:mRNA;Parent=LmjF.01.0630
+LmjF.01	.	CDS	177152	179605	.	+	0	Parent=LmjF.01.0630:mRNA
+LmjF.01	.	polypeptide	177152	179605	.	+	.	ID=LmjF.01.0630:mRNA:pep;Derives_from=LmjF.01.0630:mRNA;product=term%3Dhypothetical protein%2C unknown function
+LmjF.01	.	gene	181458	184796	.	+	.	ID=LmjF.01.0640;Name=HSP70.a
+LmjF.01	.	mRNA	181458	184796	.	+	.	ID=LmjF.01.0640:mRNA;Parent=LmjF.01.0640
+LmjF.01	.	CDS	181458	184796	.	+	0	Parent=LmjF.01.0640:mRNA
+LmjF.01	.	polypeptide	181458	184796	.	+	.	ID=LmjF.01.0640:mRNA:pep;Derives_from=LmjF.01.0640:mRNA;product=term%3DHSP70-like protein
+LmjF.01	.	gene	185785	187269	.	+	.	ID=LmjF.01.0650;Name=MPPB
+LmjF.01	.	mRNA	185785	187269	.	+	.	ID=LmjF.01.0650:mRNA;Parent=LmjF.01.0650
+LmjF.01	.	CDS	185785	187269	.	+	0	Parent=LmjF.01.0650:mRNA
+LmjF.01	.	polypeptide	185785	187269	.	+	.	ID=LmjF.01.0650:mRNA:pep;Derives_from=LmjF.01.0650:mRNA;product=term%3Dmitochondrial-processing peptidase subunit beta%2C putative
+LmjF.01	.	gene	188417	193030	.	+	.	ID=LmjF.01.0660
+LmjF.01	.	mRNA	188417	193030	.	+	.	ID=LmjF.01.0660:mRNA;Parent=LmjF.01.0660
+LmjF.01	.	CDS	188417	193030	.	+	0	Parent=LmjF.01.0660:mRNA
+LmjF.01	.	polypeptide	188417	193030	.	+	.	ID=LmjF.01.0660:mRNA:pep;Derives_from=LmjF.01.0660:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	194045	194962	.	+	.	ID=LmjF.01.0670
+LmjF.01	.	mRNA	194045	194962	.	+	.	ID=LmjF.01.0670:mRNA;Parent=LmjF.01.0670
+LmjF.01	.	CDS	194045	194962	.	+	0	Parent=LmjF.01.0670:mRNA
+LmjF.01	.	polypeptide	194045	194962	.	+	.	ID=LmjF.01.0670:mRNA:pep;Derives_from=LmjF.01.0670:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	198854	201256	.	+	.	ID=LmjF.01.0680
+LmjF.01	.	mRNA	198854	201256	.	+	.	ID=LmjF.01.0680:mRNA;Parent=LmjF.01.0680
+LmjF.01	.	CDS	198854	201256	.	+	0	Parent=LmjF.01.0680:mRNA
+LmjF.01	.	polypeptide	198854	201256	.	+	.	ID=LmjF.01.0680:mRNA:pep;Derives_from=LmjF.01.0680:mRNA;product=term%3Dhypothetical protein%2C unknown function
+LmjF.01	.	gene	202894	203586	.	+	.	ID=LmjF.01.0690
+LmjF.01	.	mRNA	202894	203586	.	+	.	ID=LmjF.01.0690:mRNA;Parent=LmjF.01.0690
+LmjF.01	.	CDS	202894	203586	.	+	0	Parent=LmjF.01.0690:mRNA
+LmjF.01	.	polypeptide	202894	203586	.	+	.	ID=LmjF.01.0690:mRNA:pep;Derives_from=LmjF.01.0690:mRNA;product=term%3DPLAC8 family%2C putative
+LmjF.01	.	gene	206309	207073	.	+	.	ID=LmjF.01.0700
+LmjF.01	.	mRNA	206309	207073	.	+	.	ID=LmjF.01.0700:mRNA;Parent=LmjF.01.0700
+LmjF.01	.	CDS	206309	207073	.	+	0	Parent=LmjF.01.0700:mRNA
+LmjF.01	.	polypeptide	206309	207073	.	+	.	ID=LmjF.01.0700:mRNA:pep;Derives_from=LmjF.01.0700:mRNA;product=term%3Dhypothetical protein%2C unknown function
+LmjF.01	.	gene	208464	210089	.	+	.	ID=LmjF.01.0710
+LmjF.01	.	mRNA	208464	210089	.	+	.	ID=LmjF.01.0710:mRNA;Parent=LmjF.01.0710
+LmjF.01	.	CDS	208464	210089	.	+	0	Parent=LmjF.01.0710:mRNA
+LmjF.01	.	polypeptide	208464	210089	.	+	.	ID=LmjF.01.0710:mRNA:pep;Derives_from=LmjF.01.0710:mRNA;product=term%3Dubiquitin activating enzyme%2C putative
+LmjF.01	.	gene	210558	215417	.	+	.	ID=LmjF.01.0720
+LmjF.01	.	mRNA	210558	215417	.	+	.	ID=LmjF.01.0720:mRNA;Parent=LmjF.01.0720
+LmjF.01	.	CDS	210558	215417	.	+	0	Parent=LmjF.01.0720:mRNA
+LmjF.01	.	polypeptide	210558	215417	.	+	.	ID=LmjF.01.0720:mRNA:pep;Derives_from=LmjF.01.0720:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	216579	223304	.	+	.	ID=LmjF.01.0730;Name=mks6
+LmjF.01	.	mRNA	216579	223304	.	+	.	ID=LmjF.01.0730:mRNA;Parent=LmjF.01.0730
+LmjF.01	.	CDS	216579	223304	.	+	0	Parent=LmjF.01.0730:mRNA
+LmjF.01	.	polypeptide	216579	223304	.	+	.	ID=LmjF.01.0730:mRNA:pep;Derives_from=LmjF.01.0730:mRNA;product=term%3DMeckel syndrome type 6 protein%2C putative
+LmjF.01	.	gene	223998	226253	.	+	.	ID=LmjF.01.0740
+LmjF.01	.	mRNA	223998	226253	.	+	.	ID=LmjF.01.0740:mRNA;Parent=LmjF.01.0740
+LmjF.01	.	CDS	223998	226253	.	+	0	Parent=LmjF.01.0740:mRNA
+LmjF.01	.	polypeptide	223998	226253	.	+	.	ID=LmjF.01.0740:mRNA:pep;Derives_from=LmjF.01.0740:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	227560	231813	.	+	.	ID=LmjF.01.0750
+LmjF.01	.	mRNA	227560	231813	.	+	.	ID=LmjF.01.0750:mRNA;Parent=LmjF.01.0750
+LmjF.01	.	CDS	227560	231813	.	+	0	Parent=LmjF.01.0750:mRNA
+LmjF.01	.	polypeptide	227560	231813	.	+	.	ID=LmjF.01.0750:mRNA:pep;Derives_from=LmjF.01.0750:mRNA;product=term%3DCMGC family protein kinase%2C putative
+LmjF.01	.	gene	232419	233438	.	+	.	ID=LmjF.01.0760
+LmjF.01	.	mRNA	232419	233438	.	+	.	ID=LmjF.01.0760:mRNA;Parent=LmjF.01.0760
+LmjF.01	.	CDS	232419	233438	.	+	0	Parent=LmjF.01.0760:mRNA
+LmjF.01	.	polypeptide	232419	233438	.	+	.	ID=LmjF.01.0760:mRNA:pep;Derives_from=LmjF.01.0760:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	234392	235603	.	+	.	ID=LmjF.01.0770;Name=EIF4A1
+LmjF.01	.	mRNA	234392	235603	.	+	.	ID=LmjF.01.0770:mRNA;Parent=LmjF.01.0770
+LmjF.01	.	CDS	234392	235603	.	+	0	Parent=LmjF.01.0770:mRNA
+LmjF.01	.	polypeptide	234392	235603	.	+	.	ID=LmjF.01.0770:mRNA:pep;Derives_from=LmjF.01.0770:mRNA;product=term%3DEukaryotic initiation factor 4A-1
+LmjF.01	.	gene	237389	238600	.	+	.	ID=LmjF.01.0780;Name=EIF4A1
+LmjF.01	.	mRNA	237389	238600	.	+	.	ID=LmjF.01.0780:mRNA;Parent=LmjF.01.0780
+LmjF.01	.	CDS	237389	238600	.	+	0	Parent=LmjF.01.0780:mRNA
+LmjF.01	.	polypeptide	237389	238600	.	+	.	ID=LmjF.01.0780:mRNA:pep;Derives_from=LmjF.01.0780:mRNA;product=term%3DEukaryotic initiation factor 4A-1
+LmjF.01	.	gene	240769	242355	.	+	.	ID=LmjF.01.0790
+LmjF.01	.	mRNA	240769	242355	.	+	.	ID=LmjF.01.0790:mRNA;Parent=LmjF.01.0790
+LmjF.01	.	CDS	240769	242355	.	+	0	Parent=LmjF.01.0790:mRNA
+LmjF.01	.	polypeptide	240769	242355	.	+	.	ID=LmjF.01.0790:mRNA:pep;Derives_from=LmjF.01.0790:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	244534	246063	.	+	.	ID=LmjF.01.0800
+LmjF.01	.	mRNA	244534	246063	.	+	.	ID=LmjF.01.0800:mRNA;Parent=LmjF.01.0800
+LmjF.01	.	CDS	244534	246063	.	+	0	Parent=LmjF.01.0800:mRNA
+LmjF.01	.	polypeptide	244534	246063	.	+	.	ID=LmjF.01.0800:mRNA:pep;Derives_from=LmjF.01.0800:mRNA;product=term%3Dhypothetical protein%2C conserved
+LmjF.01	.	gene	247550	250603	.	+	.	ID=LmjF.01.0810
+LmjF.01	.	mRNA	247550	250603	.	+	.	ID=LmjF.01.0810:mRNA;Parent=LmjF.01.0810
+LmjF.01	.	CDS	247550	250603	.	+	0	Parent=LmjF.01.0810:mRNA
+LmjF.01	.	polypeptide	247550	250603	.	+	.	ID=LmjF.01.0810:mRNA:pep;Derives_from=LmjF.01.0810:mRNA;product=term%3Dcalcium%2Fpotassium channel %28CAKC%29%2C putative
+LmjF.01	.	gene	252411	255890	.	+	.	ID=LmjF.01.0820
+LmjF.01	.	mRNA	252411	255890	.	+	.	ID=LmjF.01.0820:mRNA;Parent=LmjF.01.0820
+LmjF.01	.	CDS	252411	255890	.	+	0	Parent=LmjF.01.0820:mRNA
+LmjF.01	.	polypeptide	252411	255890	.	+	.	ID=LmjF.01.0820:mRNA:pep;Derives_from=LmjF.01.0820:mRNA;product=term%3Dpotassium channel subunit-like protein
+LmjF.01	.	gene	258831	260867	.	+	.	ID=LmjF.01.0830
+LmjF.01	.	mRNA	258831	260867	.	+	.	ID=LmjF.01.0830:mRNA;Parent=LmjF.01.0830
+LmjF.01	.	CDS	258831	260867	.	+	0	Parent=LmjF.01.0830:mRNA
+LmjF.01	.	polypeptide	258831	260867	.	+	.	ID=LmjF.01.0830:mRNA:pep;Derives_from=LmjF.01.0830:mRNA;product=term%3Dmetallo-peptidase%2C Clan MA%28E%29%2C Family M3

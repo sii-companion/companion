@@ -1,0 +1,308 @@
+##sequence-region   LbrM.01 1268 230988
+LbrM.01	.	gene	1268	4162	.	-	.	ID=LbrM.01.0010
+LbrM.01	.	mRNA	1268	4162	.	-	.	ID=LbrM.01.0010:mRNA;Parent=LbrM.01.0010
+LbrM.01	.	CDS	1268	4162	.	-	0	Parent=LbrM.01.0010:mRNA
+LbrM.01	.	polypeptide	1268	4162	.	-	.	ID=LbrM.01.0010:mRNA:pep;Derives_from=LbrM.01.0010:mRNA;product=term%3Dhypothetical protein%2C unknown function
+LbrM.01	.	gene	6225	8078	.	-	.	ID=LbrM.01.0020
+LbrM.01	.	mRNA	6225	8078	.	-	.	ID=LbrM.01.0020:mRNA;Parent=LbrM.01.0020
+LbrM.01	.	CDS	6225	8078	.	-	0	Parent=LbrM.01.0020:mRNA
+LbrM.01	.	polypeptide	6225	8078	.	-	.	ID=LbrM.01.0020:mRNA:pep;Derives_from=LbrM.01.0020:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	8606	9871	.	-	.	ID=LbrM.01.0030
+LbrM.01	.	mRNA	8606	9871	.	-	.	ID=LbrM.01.0030:mRNA;Parent=LbrM.01.0030
+LbrM.01	.	CDS	8606	9871	.	-	0	Parent=LbrM.01.0030:mRNA
+LbrM.01	.	polypeptide	8606	9871	.	-	.	ID=LbrM.01.0030:mRNA:pep;Derives_from=LbrM.01.0030:mRNA;product=term%3DDNA-damage inducible protein DDI1-like protein
+LbrM.01	.	gene	15500	16498	.	-	.	ID=LbrM.01.0040
+LbrM.01	.	mRNA	15500	16498	.	-	.	ID=LbrM.01.0040:mRNA;Parent=LbrM.01.0040
+LbrM.01	.	CDS	15500	16498	.	-	0	Parent=LbrM.01.0040:mRNA
+LbrM.01	.	polypeptide	15500	16498	.	-	.	ID=LbrM.01.0040:mRNA:pep;Derives_from=LbrM.01.0040:mRNA;product=term%3DProtein of unknown function %28DUF2946%29%2C putative
+LbrM.01	.	gene	17549	19210	.	-	.	ID=LbrM.01.0050
+LbrM.01	.	mRNA	17549	19210	.	-	.	ID=LbrM.01.0050:mRNA;Parent=LbrM.01.0050
+LbrM.01	.	CDS	17549	19210	.	-	0	Parent=LbrM.01.0050:mRNA
+LbrM.01	.	polypeptide	17549	19210	.	-	.	ID=LbrM.01.0050:mRNA:pep;Derives_from=LbrM.01.0050:mRNA;product=term%3DEndonuclease%2FExonuclease%2Fphosphatase family%2C putative
+LbrM.01	.	gene	20762	22753	.	-	.	ID=LbrM.01.0060;Name=KIN13-1
+LbrM.01	.	mRNA	20762	22753	.	-	.	ID=LbrM.01.0060:mRNA;Parent=LbrM.01.0060
+LbrM.01	.	CDS	20762	22753	.	-	0	Parent=LbrM.01.0060:mRNA
+LbrM.01	.	polypeptide	20762	22753	.	-	.	ID=LbrM.01.0060:mRNA:pep;Derives_from=LbrM.01.0060:mRNA;product=term%3DKinesin-13 1%2C putative
+LbrM.01	.	gene	23732	24292	.	-	.	ID=LbrM.01.0070
+LbrM.01	.	mRNA	23732	24292	.	-	.	ID=LbrM.01.0070:mRNA;Parent=LbrM.01.0070
+LbrM.01	.	CDS	23732	24292	.	-	0	Parent=LbrM.01.0070:mRNA
+LbrM.01	.	polypeptide	23732	24292	.	-	.	ID=LbrM.01.0070:mRNA:pep;Derives_from=LbrM.01.0070:mRNA;product=term%3Dhypothetical protein%2C unknown function
+LbrM.01	.	gene	26495	28492	.	-	.	ID=LbrM.01.0080
+LbrM.01	.	mRNA	26495	28492	.	-	.	ID=LbrM.01.0080:mRNA;Parent=LbrM.01.0080
+LbrM.01	.	CDS	26495	28492	.	-	0	Parent=LbrM.01.0080:mRNA
+LbrM.01	.	polypeptide	26495	28492	.	-	.	ID=LbrM.01.0080:mRNA:pep;Derives_from=LbrM.01.0080:mRNA;product=term%3Dcarboxylase%2C putative
+LbrM.01	.	gene	29747	30463	.	-	.	ID=LbrM.01.0090
+LbrM.01	.	mRNA	29747	30463	.	-	.	ID=LbrM.01.0090:mRNA;Parent=LbrM.01.0090
+LbrM.01	.	CDS	29747	30463	.	-	0	Parent=LbrM.01.0090:mRNA
+LbrM.01	.	polypeptide	29747	30463	.	-	.	ID=LbrM.01.0090:mRNA:pep;Derives_from=LbrM.01.0090:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	31606	33450	.	-	.	ID=LbrM.01.0100
+LbrM.01	.	mRNA	31606	33450	.	-	.	ID=LbrM.01.0100:mRNA;Parent=LbrM.01.0100
+LbrM.01	.	CDS	31606	33450	.	-	0	Parent=LbrM.01.0100:mRNA
+LbrM.01	.	polypeptide	31606	33450	.	-	.	ID=LbrM.01.0100:mRNA:pep;Derives_from=LbrM.01.0100:mRNA;product=term%3DBSD domain containing protein%2C putative
+LbrM.01	.	gene	34308	35000	.	-	.	ID=LbrM.01.0110
+LbrM.01	.	mRNA	34308	35000	.	-	.	ID=LbrM.01.0110:mRNA;Parent=LbrM.01.0110
+LbrM.01	.	CDS	34308	35000	.	-	0	Parent=LbrM.01.0110:mRNA
+LbrM.01	.	polypeptide	34308	35000	.	-	.	ID=LbrM.01.0110:mRNA:pep;Derives_from=LbrM.01.0110:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	36538	37356	.	-	.	ID=LbrM.01.0120
+LbrM.01	.	mRNA	36538	37356	.	-	.	ID=LbrM.01.0120:mRNA;Parent=LbrM.01.0120
+LbrM.01	.	CDS	36538	37356	.	-	0	Parent=LbrM.01.0120:mRNA
+LbrM.01	.	polypeptide	36538	37356	.	-	.	ID=LbrM.01.0120:mRNA:pep;Derives_from=LbrM.01.0120:mRNA;product=term%3DUMP-CMP kinase%2C mitochondrial%2C putative
+LbrM.01	.	gene	38087	39049	.	-	.	ID=LbrM.01.0130
+LbrM.01	.	mRNA	38087	39049	.	-	.	ID=LbrM.01.0130:mRNA;Parent=LbrM.01.0130
+LbrM.01	.	CDS	38087	39049	.	-	0	Parent=LbrM.01.0130:mRNA
+LbrM.01	.	polypeptide	38087	39049	.	-	.	ID=LbrM.01.0130:mRNA:pep;Derives_from=LbrM.01.0130:mRNA;product=term%3DGlycosyl transferase family 11%2C putative
+LbrM.01	.	gene	40154	40741	.	-	.	ID=LbrM.01.0140
+LbrM.01	.	mRNA	40154	40741	.	-	.	ID=LbrM.01.0140:mRNA;Parent=LbrM.01.0140
+LbrM.01	.	CDS	40154	40741	.	-	0	Parent=LbrM.01.0140:mRNA
+LbrM.01	.	polypeptide	40154	40741	.	-	.	ID=LbrM.01.0140:mRNA:pep;Derives_from=LbrM.01.0140:mRNA;product=term%3Dmonothiol glutaredoxin%2C putative
+LbrM.01	.	gene	42197	43918	.	-	.	ID=LbrM.01.0150
+LbrM.01	.	mRNA	42197	43918	.	-	.	ID=LbrM.01.0150:mRNA;Parent=LbrM.01.0150
+LbrM.01	.	CDS	42197	43918	.	-	0	Parent=LbrM.01.0150:mRNA
+LbrM.01	.	polypeptide	42197	43918	.	-	.	ID=LbrM.01.0150:mRNA:pep;Derives_from=LbrM.01.0150:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	45303	46397	.	-	.	ID=LbrM.01.0160
+LbrM.01	.	mRNA	45303	46397	.	-	.	ID=LbrM.01.0160:mRNA;Parent=LbrM.01.0160
+LbrM.01	.	CDS	45303	46397	.	-	0	Parent=LbrM.01.0160:mRNA
+LbrM.01	.	polypeptide	45303	46397	.	-	.	ID=LbrM.01.0160:mRNA:pep;Derives_from=LbrM.01.0160:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	48376	48624	.	-	.	ID=LbrM.01.0170
+LbrM.01	.	mRNA	48376	48624	.	-	.	ID=LbrM.01.0170:mRNA;Parent=LbrM.01.0170
+LbrM.01	.	CDS	48376	48624	.	-	0	Parent=LbrM.01.0170:mRNA
+LbrM.01	.	polypeptide	48376	48624	.	-	.	ID=LbrM.01.0170:mRNA:pep;Derives_from=LbrM.01.0170:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	49352	49702	.	-	.	ID=LbrM.01.0180
+LbrM.01	.	mRNA	49352	49702	.	-	.	ID=LbrM.01.0180:mRNA;Parent=LbrM.01.0180
+LbrM.01	.	CDS	49352	49702	.	-	0	Parent=LbrM.01.0180:mRNA
+LbrM.01	.	polypeptide	49352	49702	.	-	.	ID=LbrM.01.0180:mRNA:pep;Derives_from=LbrM.01.0180:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	50535	50777	.	-	.	ID=LbrM.01.0190
+LbrM.01	.	mRNA	50535	50777	.	-	.	ID=LbrM.01.0190:mRNA;Parent=LbrM.01.0190
+LbrM.01	.	CDS	50535	50777	.	-	0	Parent=LbrM.01.0190:mRNA
+LbrM.01	.	polypeptide	50535	50777	.	-	.	ID=LbrM.01.0190:mRNA:pep;Derives_from=LbrM.01.0190:mRNA;product=term%3DLSM domain containing protein%2C putative
+LbrM.01	.	gene	53196	54599	.	-	.	ID=LbrM.01.0200
+LbrM.01	.	mRNA	53196	54599	.	-	.	ID=LbrM.01.0200:mRNA;Parent=LbrM.01.0200
+LbrM.01	.	CDS	53196	54599	.	-	0	Parent=LbrM.01.0200:mRNA
+LbrM.01	.	polypeptide	53196	54599	.	-	.	ID=LbrM.01.0200:mRNA:pep;Derives_from=LbrM.01.0200:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	55880	58186	.	-	.	ID=LbrM.01.0210
+LbrM.01	.	mRNA	55880	58186	.	-	.	ID=LbrM.01.0210:mRNA;Parent=LbrM.01.0210
+LbrM.01	.	CDS	55880	58186	.	-	0	Parent=LbrM.01.0210:mRNA
+LbrM.01	.	polypeptide	55880	58186	.	-	.	ID=LbrM.01.0210:mRNA:pep;Derives_from=LbrM.01.0210:mRNA;product=term%3DCLC-type chloride channel%2C putative
+LbrM.01	.	gene	59244	59822	.	-	.	ID=LbrM.01.0220
+LbrM.01	.	mRNA	59244	59822	.	-	.	ID=LbrM.01.0220:mRNA;Parent=LbrM.01.0220
+LbrM.01	.	CDS	59244	59822	.	-	0	Parent=LbrM.01.0220:mRNA
+LbrM.01	.	polypeptide	59244	59822	.	-	.	ID=LbrM.01.0220:mRNA:pep;Derives_from=LbrM.01.0220:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	60419	61219	.	-	.	ID=LbrM.01.0230
+LbrM.01	.	mRNA	60419	61219	.	-	.	ID=LbrM.01.0230:mRNA;Parent=LbrM.01.0230
+LbrM.01	.	CDS	60419	61219	.	-	0	Parent=LbrM.01.0230:mRNA
+LbrM.01	.	polypeptide	60419	61219	.	-	.	ID=LbrM.01.0230:mRNA:pep;Derives_from=LbrM.01.0230:mRNA;product=term%3DLow molecular weight phosphotyrosine protein phosphatase%2C putative
+LbrM.01	.	gene	61932	64592	.	-	.	ID=LbrM.01.0240
+LbrM.01	.	mRNA	61932	64592	.	-	.	ID=LbrM.01.0240:mRNA;Parent=LbrM.01.0240
+LbrM.01	.	CDS	61932	64592	.	-	0	Parent=LbrM.01.0240:mRNA
+LbrM.01	.	polypeptide	61932	64592	.	-	.	ID=LbrM.01.0240:mRNA:pep;Derives_from=LbrM.01.0240:mRNA;product=term%3DCUE domain%2FDomain of unknown function %28DUF1771%29%2FSmr domain containing protein%2C putative
+LbrM.01	.	gene	68275	69288	.	-	.	ID=LbrM.01.0250;Name=CYP12
+LbrM.01	.	mRNA	68275	69288	.	-	.	ID=LbrM.01.0250:mRNA;Parent=LbrM.01.0250
+LbrM.01	.	CDS	68275	69288	.	-	0	Parent=LbrM.01.0250:mRNA
+LbrM.01	.	polypeptide	68275	69288	.	-	.	ID=LbrM.01.0250:mRNA:pep;Derives_from=LbrM.01.0250:mRNA;product=term%3Dcyclophilin 12%2C putative
+LbrM.01	.	gene	70121	71490	.	+	.	ID=LbrM.01.0260
+LbrM.01	.	mRNA	70121	71490	.	+	.	ID=LbrM.01.0260:mRNA;Parent=LbrM.01.0260
+LbrM.01	.	CDS	70121	71488	.	+	0	Parent=LbrM.01.0260:mRNA
+LbrM.01	.	three_prime_UTR	71489	71490	.	+	.	Parent=LbrM.01.0260:mRNA
+LbrM.01	.	polypeptide	70121	71490	.	+	.	ID=LbrM.01.0260:mRNA:pep;Derives_from=LbrM.01.0260:mRNA;product=term%3Dlong-chain-fatty-acid-CoA ligase%2C putative %28fragment%29
+LbrM.01	.	gene	73026	73469	.	-	.	ID=LbrM.01.0270
+LbrM.01	.	mRNA	73026	73469	.	-	.	ID=LbrM.01.0270:mRNA;Parent=LbrM.01.0270
+LbrM.01	.	CDS	73026	73469	.	-	0	Parent=LbrM.01.0270:mRNA
+LbrM.01	.	polypeptide	73026	73469	.	-	.	ID=LbrM.01.0270:mRNA:pep;Derives_from=LbrM.01.0270:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	74652	76847	.	-	.	ID=LbrM.01.0280
+LbrM.01	.	mRNA	74652	76847	.	-	.	ID=LbrM.01.0280:mRNA;Parent=LbrM.01.0280
+LbrM.01	.	CDS	74652	76847	.	-	0	Parent=LbrM.01.0280:mRNA
+LbrM.01	.	polypeptide	74652	76847	.	-	.	ID=LbrM.01.0280:mRNA:pep;Derives_from=LbrM.01.0280:mRNA;product=term%3DDNA excision%2Frepair protein SNF2%2C putative
+LbrM.01	.	gene	78191	80689	.	-	.	ID=LbrM.01.0290
+LbrM.01	.	mRNA	78191	80689	.	-	.	ID=LbrM.01.0290:mRNA;Parent=LbrM.01.0290
+LbrM.01	.	CDS	78191	80689	.	-	0	Parent=LbrM.01.0290:mRNA
+LbrM.01	.	polypeptide	78191	80689	.	-	.	ID=LbrM.01.0290:mRNA:pep;Derives_from=LbrM.01.0290:mRNA;product=term%3DRight handed beta helix region%2C putative
+LbrM.01	.	gene	83583	83906	.	-	.	ID=LbrM.01.0300
+LbrM.01	.	mRNA	83583	83906	.	-	.	ID=LbrM.01.0300:mRNA;Parent=LbrM.01.0300
+LbrM.01	.	CDS	83583	83906	.	-	0	Parent=LbrM.01.0300:mRNA
+LbrM.01	.	polypeptide	83583	83906	.	-	.	ID=LbrM.01.0300:mRNA:pep;Derives_from=LbrM.01.0300:mRNA;product=term%3Dthioredoxin%2C putative
+LbrM.01	.	gene	85706	86947	.	-	.	ID=LbrM.01.0310
+LbrM.01	.	mRNA	85706	86947	.	-	.	ID=LbrM.01.0310:mRNA;Parent=LbrM.01.0310
+LbrM.01	.	CDS	85706	86947	.	-	0	Parent=LbrM.01.0310:mRNA
+LbrM.01	.	polypeptide	85706	86947	.	-	.	ID=LbrM.01.0310:mRNA:pep;Derives_from=LbrM.01.0310:mRNA;product=term%3Dpseudouridylate synthase-like protein
+LbrM.01	.	gene	88642	89160	.	-	.	ID=LbrM.01.0320
+LbrM.01	.	mRNA	88642	89160	.	-	.	ID=LbrM.01.0320:mRNA;Parent=LbrM.01.0320
+LbrM.01	.	CDS	88642	89160	.	-	0	Parent=LbrM.01.0320:mRNA
+LbrM.01	.	polypeptide	88642	89160	.	-	.	ID=LbrM.01.0320:mRNA:pep;Derives_from=LbrM.01.0320:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	89935	90114	.	-	.	ID=LbrM.01.0330
+LbrM.01	.	mRNA	89935	90114	.	-	.	ID=LbrM.01.0330:mRNA;Parent=LbrM.01.0330
+LbrM.01	.	CDS	89935	90114	.	-	0	Parent=LbrM.01.0330:mRNA
+LbrM.01	.	polypeptide	89935	90114	.	-	.	ID=LbrM.01.0330:mRNA:pep;Derives_from=LbrM.01.0330:mRNA;product=term%3D4F5 protein family%2C putative
+LbrM.01	.	gene	90679	91842	.	-	.	ID=LbrM.01.0340
+LbrM.01	.	mRNA	90679	91842	.	-	.	ID=LbrM.01.0340:mRNA;Parent=LbrM.01.0340
+LbrM.01	.	CDS	90679	91842	.	-	0	Parent=LbrM.01.0340:mRNA
+LbrM.01	.	polypeptide	90679	91842	.	-	.	ID=LbrM.01.0340:mRNA:pep;Derives_from=LbrM.01.0340:mRNA;product=term%3Dacidocalcisomal exopolyphosphatase%2C putative
+LbrM.01	.	gene	92185	92637	.	-	.	ID=LbrM.01.0350
+LbrM.01	.	mRNA	92185	92637	.	-	.	ID=LbrM.01.0350:mRNA;Parent=LbrM.01.0350
+LbrM.01	.	CDS	92185	92637	.	-	0	Parent=LbrM.01.0350:mRNA
+LbrM.01	.	polypeptide	92185	92637	.	-	.	ID=LbrM.01.0350:mRNA:pep;Derives_from=LbrM.01.0350:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	93780	94520	.	+	.	ID=LbrM.01.0360
+LbrM.01	.	mRNA	93780	94520	.	+	.	ID=LbrM.01.0360:mRNA;Parent=LbrM.01.0360
+LbrM.01	.	CDS	93780	94520	.	+	0	Parent=LbrM.01.0360:mRNA
+LbrM.01	.	polypeptide	93780	94520	.	+	.	ID=LbrM.01.0360:mRNA:pep;Derives_from=LbrM.01.0360:mRNA;product=term%3Dpoly%28A%29 export protein%2C putative
+LbrM.01	.	gene	94934	95569	.	+	.	ID=LbrM.01.0370
+LbrM.01	.	mRNA	94934	95569	.	+	.	ID=LbrM.01.0370:mRNA;Parent=LbrM.01.0370
+LbrM.01	.	CDS	94934	95569	.	+	0	Parent=LbrM.01.0370:mRNA
+LbrM.01	.	polypeptide	94934	95569	.	+	.	ID=LbrM.01.0370:mRNA:pep;Derives_from=LbrM.01.0370:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	96168	96461	.	+	.	ID=LbrM.01.0380;Name=MPC1
+LbrM.01	.	mRNA	96168	96461	.	+	.	ID=LbrM.01.0380:mRNA;Parent=LbrM.01.0380
+LbrM.01	.	CDS	96168	96461	.	+	0	Parent=LbrM.01.0380:mRNA
+LbrM.01	.	polypeptide	96168	96461	.	+	.	ID=LbrM.01.0380:mRNA:pep;Derives_from=LbrM.01.0380:mRNA;product=term%3DMitochondrial pyruvate carrier 1
+LbrM.01	.	gene	97506	98282	.	+	.	ID=LbrM.01.0390
+LbrM.01	.	mRNA	97506	98282	.	+	.	ID=LbrM.01.0390:mRNA;Parent=LbrM.01.0390
+LbrM.01	.	CDS	97506	98282	.	+	0	Parent=LbrM.01.0390:mRNA
+LbrM.01	.	polypeptide	97506	98282	.	+	.	ID=LbrM.01.0390:mRNA:pep;Derives_from=LbrM.01.0390:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	101384	103603	.	+	.	ID=LbrM.01.0400
+LbrM.01	.	mRNA	101384	103603	.	+	.	ID=LbrM.01.0400:mRNA;Parent=LbrM.01.0400
+LbrM.01	.	CDS	101384	103603	.	+	0	Parent=LbrM.01.0400:mRNA
+LbrM.01	.	polypeptide	101384	103603	.	+	.	ID=LbrM.01.0400:mRNA:pep;Derives_from=LbrM.01.0400:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	104624	105049	.	+	.	ID=LbrM.01.0410
+LbrM.01	.	mRNA	104624	105049	.	+	.	ID=LbrM.01.0410:mRNA;Parent=LbrM.01.0410
+LbrM.01	.	CDS	104624	105049	.	+	0	Parent=LbrM.01.0410:mRNA
+LbrM.01	.	polypeptide	104624	105049	.	+	.	ID=LbrM.01.0410:mRNA:pep;Derives_from=LbrM.01.0410:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	105773	106339	.	+	.	ID=LbrM.01.0420
+LbrM.01	.	mRNA	105773	106339	.	+	.	ID=LbrM.01.0420:mRNA;Parent=LbrM.01.0420
+LbrM.01	.	CDS	105773	106339	.	+	0	Parent=LbrM.01.0420:mRNA
+LbrM.01	.	polypeptide	105773	106339	.	+	.	ID=LbrM.01.0420:mRNA:pep;Derives_from=LbrM.01.0420:mRNA;product=term%3DProtein of unknown function %28DUF788%29%2C putative
+LbrM.01	.	gene	106922	109399	.	+	.	ID=LbrM.01.0430
+LbrM.01	.	mRNA	106922	109399	.	+	.	ID=LbrM.01.0430:mRNA;Parent=LbrM.01.0430
+LbrM.01	.	CDS	106922	109399	.	+	0	Parent=LbrM.01.0430:mRNA
+LbrM.01	.	polypeptide	106922	109399	.	+	.	ID=LbrM.01.0430:mRNA:pep;Derives_from=LbrM.01.0430:mRNA;product=term%3DDyggve-Melchior-Clausen syndrome protein%2C putative
+LbrM.01	.	gene	110257	112701	.	+	.	ID=LbrM.01.0440
+LbrM.01	.	mRNA	110257	112701	.	+	.	ID=LbrM.01.0440:mRNA;Parent=LbrM.01.0440
+LbrM.01	.	CDS	110257	112701	.	+	0	Parent=LbrM.01.0440:mRNA
+LbrM.01	.	polypeptide	110257	112701	.	+	.	ID=LbrM.01.0440:mRNA:pep;Derives_from=LbrM.01.0440:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	114009	115739	.	+	.	ID=LbrM.01.0450
+LbrM.01	.	mRNA	114009	115739	.	+	.	ID=LbrM.01.0450:mRNA;Parent=LbrM.01.0450
+LbrM.01	.	CDS	114009	115739	.	+	0	Parent=LbrM.01.0450:mRNA
+LbrM.01	.	polypeptide	114009	115739	.	+	.	ID=LbrM.01.0450:mRNA:pep;Derives_from=LbrM.01.0450:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	116319	117047	.	+	.	ID=LbrM.01.0460
+LbrM.01	.	mRNA	116319	117047	.	+	.	ID=LbrM.01.0460:mRNA;Parent=LbrM.01.0460
+LbrM.01	.	CDS	116319	117047	.	+	0	Parent=LbrM.01.0460:mRNA
+LbrM.01	.	polypeptide	116319	117047	.	+	.	ID=LbrM.01.0460:mRNA:pep;Derives_from=LbrM.01.0460:mRNA;product=term%3Dribosomal protein S7%2C putative
+LbrM.01	.	gene	118403	119005	.	+	.	ID=LbrM.01.0470
+LbrM.01	.	mRNA	118403	119005	.	+	.	ID=LbrM.01.0470:mRNA;Parent=LbrM.01.0470
+LbrM.01	.	CDS	118403	119005	.	+	0	Parent=LbrM.01.0470:mRNA
+LbrM.01	.	polypeptide	118403	119005	.	+	.	ID=LbrM.01.0470:mRNA:pep;Derives_from=LbrM.01.0470:mRNA;product=term%3Dribosomal protein S7%2C putative
+LbrM.01	.	gene	120286	122193	.	+	.	ID=LbrM.01.0480
+LbrM.01	.	mRNA	120286	122193	.	+	.	ID=LbrM.01.0480:mRNA;Parent=LbrM.01.0480
+LbrM.01	.	CDS	120286	122193	.	+	0	Parent=LbrM.01.0480:mRNA
+LbrM.01	.	polypeptide	120286	122193	.	+	.	ID=LbrM.01.0480:mRNA:pep;Derives_from=LbrM.01.0480:mRNA;product=term%3DRing finger domain%2FZn-finger in ubiquitin-hydrolases and other protein%2C putative
+LbrM.01	.	gene	123418	125166	.	+	.	ID=LbrM.01.0490
+LbrM.01	.	mRNA	123418	125166	.	+	.	ID=LbrM.01.0490:mRNA;Parent=LbrM.01.0490
+LbrM.01	.	CDS	123418	125166	.	+	0	Parent=LbrM.01.0490:mRNA
+LbrM.01	.	polypeptide	123418	125166	.	+	.	ID=LbrM.01.0490:mRNA:pep;Derives_from=LbrM.01.0490:mRNA;product=term%3DProtein of unknown function %28DUF791%29%2C putative
+LbrM.01	.	gene	128440	129108	.	+	.	ID=LbrM.01.0500
+LbrM.01	.	mRNA	128440	129108	.	+	.	ID=LbrM.01.0500:mRNA;Parent=LbrM.01.0500
+LbrM.01	.	CDS	128440	129108	.	+	0	Parent=LbrM.01.0500:mRNA
+LbrM.01	.	polypeptide	128440	129108	.	+	.	ID=LbrM.01.0500:mRNA:pep;Derives_from=LbrM.01.0500:mRNA;product=term%3Dalpha%2Fbeta-hydrolase-like protein
+LbrM.01	.	gene	129749	133837	.	+	.	ID=LbrM.01.0510
+LbrM.01	.	mRNA	129749	133837	.	+	.	ID=LbrM.01.0510:mRNA;Parent=LbrM.01.0510
+LbrM.01	.	CDS	129749	133837	.	+	0	Parent=LbrM.01.0510:mRNA
+LbrM.01	.	polypeptide	129749	133837	.	+	.	ID=LbrM.01.0510:mRNA:pep;Derives_from=LbrM.01.0510:mRNA;product=term%3Dconserved protein
+LbrM.01	.	gene	138374	140461	.	+	.	ID=LbrM.01.0520
+LbrM.01	.	mRNA	138374	140461	.	+	.	ID=LbrM.01.0520:mRNA;Parent=LbrM.01.0520
+LbrM.01	.	CDS	138374	140461	.	+	0	Parent=LbrM.01.0520:mRNA
+LbrM.01	.	polypeptide	138374	140461	.	+	.	ID=LbrM.01.0520:mRNA:pep;Derives_from=LbrM.01.0520:mRNA;product=term%3Dfatty acyl CoA syntetase 1%2C putative
+LbrM.01	.	pseudogene	141458	142996	.	+	.	ID=LbrM.01.0530
+LbrM.01	.	gene	144600	146696	.	+	.	ID=LbrM.01.0540
+LbrM.01	.	mRNA	144600	146696	.	+	.	ID=LbrM.01.0540:mRNA;Parent=LbrM.01.0540
+LbrM.01	.	CDS	144600	146696	.	+	0	Parent=LbrM.01.0540:mRNA
+LbrM.01	.	polypeptide	144600	146696	.	+	.	ID=LbrM.01.0540:mRNA:pep;Derives_from=LbrM.01.0540:mRNA;product=term%3Dlong-chain-fatty-acid-CoA ligase%2C putative
+LbrM.01	.	gene	150248	152278	.	+	.	ID=LbrM.01.0550
+LbrM.01	.	mRNA	150248	152278	.	+	.	ID=LbrM.01.0550:mRNA;Parent=LbrM.01.0550
+LbrM.01	.	CDS	150248	152278	.	+	0	Parent=LbrM.01.0550:mRNA
+LbrM.01	.	polypeptide	150248	152278	.	+	.	ID=LbrM.01.0550:mRNA:pep;Derives_from=LbrM.01.0550:mRNA;product=term%3Dlong-chain-fatty-acid-CoA ligase%2C putative %28fragment%29
+LbrM.01	.	gene	152466	154691	.	+	.	ID=LbrM.01.0560
+LbrM.01	.	mRNA	152466	154691	.	+	.	ID=LbrM.01.0560:mRNA;Parent=LbrM.01.0560
+LbrM.01	.	CDS	152466	154691	.	+	0	Parent=LbrM.01.0560:mRNA
+LbrM.01	.	polypeptide	152466	154691	.	+	.	ID=LbrM.01.0560:mRNA:pep;Derives_from=LbrM.01.0560:mRNA;product=term%3Dlong-chain-fatty-acid-CoA ligase%2C putative
+LbrM.01	.	gene	155794	157923	.	+	.	ID=LbrM.01.0570
+LbrM.01	.	mRNA	155794	157923	.	+	.	ID=LbrM.01.0570:mRNA;Parent=LbrM.01.0570
+LbrM.01	.	CDS	155794	157923	.	+	0	Parent=LbrM.01.0570:mRNA
+LbrM.01	.	polypeptide	155794	157923	.	+	.	ID=LbrM.01.0570:mRNA:pep;Derives_from=LbrM.01.0570:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	159259	160842	.	+	.	ID=LbrM.01.0580
+LbrM.01	.	mRNA	159259	160842	.	+	.	ID=LbrM.01.0580:mRNA;Parent=LbrM.01.0580
+LbrM.01	.	CDS	159259	160842	.	+	0	Parent=LbrM.01.0580:mRNA
+LbrM.01	.	polypeptide	159259	160842	.	+	.	ID=LbrM.01.0580:mRNA:pep;Derives_from=LbrM.01.0580:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	162090	163682	.	+	.	ID=LbrM.01.0590
+LbrM.01	.	mRNA	162090	163682	.	+	.	ID=LbrM.01.0590:mRNA;Parent=LbrM.01.0590
+LbrM.01	.	CDS	162090	163682	.	+	0	Parent=LbrM.01.0590:mRNA
+LbrM.01	.	polypeptide	162090	163682	.	+	.	ID=LbrM.01.0590:mRNA:pep;Derives_from=LbrM.01.0590:mRNA;product=term%3Dpre-mRNA processing factor 3 %28PRP3%29%2FProtein of unknown function %28DUF1115%29%2C putative
+LbrM.01	.	gene	164309	165289	.	+	.	ID=LbrM.01.0600
+LbrM.01	.	mRNA	164309	165289	.	+	.	ID=LbrM.01.0600:mRNA;Parent=LbrM.01.0600
+LbrM.01	.	CDS	164309	165289	.	+	0	Parent=LbrM.01.0600:mRNA
+LbrM.01	.	polypeptide	164309	165289	.	+	.	ID=LbrM.01.0600:mRNA:pep;Derives_from=LbrM.01.0600:mRNA;product=term%3Dtricarboxylate carrier%2C putative
+LbrM.01	.	gene	165996	168869	.	+	.	ID=LbrM.01.0610
+LbrM.01	.	mRNA	165996	168869	.	+	.	ID=LbrM.01.0610:mRNA;Parent=LbrM.01.0610
+LbrM.01	.	CDS	165996	168869	.	+	0	Parent=LbrM.01.0610:mRNA
+LbrM.01	.	polypeptide	165996	168869	.	+	.	ID=LbrM.01.0610:mRNA:pep;Derives_from=LbrM.01.0610:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	171291	172565	.	+	.	ID=LbrM.01.0620
+LbrM.01	.	mRNA	171291	172565	.	+	.	ID=LbrM.01.0620:mRNA;Parent=LbrM.01.0620
+LbrM.01	.	CDS	171291	172565	.	+	0	Parent=LbrM.01.0620:mRNA
+LbrM.01	.	polypeptide	171291	172565	.	+	.	ID=LbrM.01.0620:mRNA:pep;Derives_from=LbrM.01.0620:mRNA;product=term%3DKREL1
+LbrM.01	.	gene	173295	178598	.	+	.	ID=LbrM.01.0630
+LbrM.01	.	mRNA	173295	178598	.	+	.	ID=LbrM.01.0630:mRNA;Parent=LbrM.01.0630
+LbrM.01	.	CDS	173295	178598	.	+	0	Parent=LbrM.01.0630:mRNA
+LbrM.01	.	polypeptide	173295	178598	.	+	.	ID=LbrM.01.0630:mRNA:pep;Derives_from=LbrM.01.0630:mRNA;product=term%3DRab-GTPase-TBC domain containing protein%2C putative
+LbrM.01	.	gene	178948	179286	.	+	.	ID=LbrM.01.0640
+LbrM.01	.	mRNA	178948	179286	.	+	.	ID=LbrM.01.0640:mRNA;Parent=LbrM.01.0640
+LbrM.01	.	CDS	178948	179286	.	+	0	Parent=LbrM.01.0640:mRNA
+LbrM.01	.	polypeptide	178948	179286	.	+	.	ID=LbrM.01.0640:mRNA:pep;Derives_from=LbrM.01.0640:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	180826	181668	.	+	.	ID=LbrM.01.0650
+LbrM.01	.	mRNA	180826	181668	.	+	.	ID=LbrM.01.0650:mRNA;Parent=LbrM.01.0650
+LbrM.01	.	CDS	180826	181668	.	+	0	Parent=LbrM.01.0650:mRNA
+LbrM.01	.	polypeptide	180826	181668	.	+	.	ID=LbrM.01.0650:mRNA:pep;Derives_from=LbrM.01.0650:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	184446	186977	.	+	.	ID=LbrM.01.0660
+LbrM.01	.	mRNA	184446	186977	.	+	.	ID=LbrM.01.0660:mRNA;Parent=LbrM.01.0660
+LbrM.01	.	CDS	184446	186977	.	+	0	Parent=LbrM.01.0660:mRNA
+LbrM.01	.	polypeptide	184446	186977	.	+	.	ID=LbrM.01.0660:mRNA:pep;Derives_from=LbrM.01.0660:mRNA;product=term%3Dhypothetical protein%2C unknown function
+LbrM.01	.	gene	187662	188366	.	+	.	ID=LbrM.01.0670
+LbrM.01	.	mRNA	187662	188366	.	+	.	ID=LbrM.01.0670:mRNA;Parent=LbrM.01.0670
+LbrM.01	.	CDS	187662	188366	.	+	0	Parent=LbrM.01.0670:mRNA
+LbrM.01	.	polypeptide	187662	188366	.	+	.	ID=LbrM.01.0670:mRNA:pep;Derives_from=LbrM.01.0670:mRNA;product=term%3DPLAC8 family%2C putative
+LbrM.01	.	gene	189600	190892	.	+	.	ID=LbrM.01.0680
+LbrM.01	.	mRNA	189600	190892	.	+	.	ID=LbrM.01.0680:mRNA;Parent=LbrM.01.0680
+LbrM.01	.	CDS	189600	190892	.	+	0	Parent=LbrM.01.0680:mRNA
+LbrM.01	.	polypeptide	189600	190892	.	+	.	ID=LbrM.01.0680:mRNA:pep;Derives_from=LbrM.01.0680:mRNA;product=term%3Dhypothetical protein%2C unknown function
+LbrM.01	.	gene	191725	193356	.	+	.	ID=LbrM.01.0690
+LbrM.01	.	mRNA	191725	193356	.	+	.	ID=LbrM.01.0690:mRNA;Parent=LbrM.01.0690
+LbrM.01	.	CDS	191725	193356	.	+	0	Parent=LbrM.01.0690:mRNA
+LbrM.01	.	polypeptide	191725	193356	.	+	.	ID=LbrM.01.0690:mRNA:pep;Derives_from=LbrM.01.0690:mRNA;product=term%3Dubiquitin activating enzyme%2C putative
+LbrM.01	.	gene	194025	198794	.	+	.	ID=LbrM.01.0700
+LbrM.01	.	mRNA	194025	198794	.	+	.	ID=LbrM.01.0700:mRNA;Parent=LbrM.01.0700
+LbrM.01	.	CDS	194025	198794	.	+	0	Parent=LbrM.01.0700:mRNA
+LbrM.01	.	polypeptide	194025	198794	.	+	.	ID=LbrM.01.0700:mRNA:pep;Derives_from=LbrM.01.0700:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	202802	205021	.	+	.	ID=LbrM.01.0710
+LbrM.01	.	mRNA	202802	205021	.	+	.	ID=LbrM.01.0710:mRNA;Parent=LbrM.01.0710
+LbrM.01	.	CDS	202802	205021	.	+	0	Parent=LbrM.01.0710:mRNA
+LbrM.01	.	polypeptide	202802	205021	.	+	.	ID=LbrM.01.0710:mRNA:pep;Derives_from=LbrM.01.0710:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	pseudogene	206948	209767	.	+	.	ID=LbrM.01.0720
+LbrM.01	.	gene	210933	212324	.	+	.	ID=LbrM.01.0730
+LbrM.01	.	mRNA	210933	212324	.	+	.	ID=LbrM.01.0730:mRNA;Parent=LbrM.01.0730
+LbrM.01	.	CDS	210933	212324	.	+	0	Parent=LbrM.01.0730:mRNA
+LbrM.01	.	polypeptide	210933	212324	.	+	.	ID=LbrM.01.0730:mRNA:pep;Derives_from=LbrM.01.0730:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	212878	214089	.	+	.	ID=LbrM.01.0740;Name=EIF4A1
+LbrM.01	.	mRNA	212878	214089	.	+	.	ID=LbrM.01.0740:mRNA;Parent=LbrM.01.0740
+LbrM.01	.	CDS	212878	214089	.	+	0	Parent=LbrM.01.0740:mRNA
+LbrM.01	.	polypeptide	212878	214089	.	+	.	ID=LbrM.01.0740:mRNA:pep;Derives_from=LbrM.01.0740:mRNA;product=term%3DEukaryotic initiation factor 4A-1
+LbrM.01	.	gene	215569	217059	.	+	.	ID=LbrM.01.0750
+LbrM.01	.	mRNA	215569	217059	.	+	.	ID=LbrM.01.0750:mRNA;Parent=LbrM.01.0750
+LbrM.01	.	CDS	215569	217059	.	+	0	Parent=LbrM.01.0750:mRNA
+LbrM.01	.	polypeptide	215569	217059	.	+	.	ID=LbrM.01.0750:mRNA:pep;Derives_from=LbrM.01.0750:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	218963	220210	.	+	.	ID=LbrM.01.0760
+LbrM.01	.	mRNA	218963	220210	.	+	.	ID=LbrM.01.0760:mRNA;Parent=LbrM.01.0760
+LbrM.01	.	CDS	218963	220210	.	+	0	Parent=LbrM.01.0760:mRNA
+LbrM.01	.	polypeptide	218963	220210	.	+	.	ID=LbrM.01.0760:mRNA:pep;Derives_from=LbrM.01.0760:mRNA;product=term%3Dhypothetical protein%2C conserved
+LbrM.01	.	gene	221827	224781	.	+	.	ID=LbrM.01.0770
+LbrM.01	.	mRNA	221827	224781	.	+	.	ID=LbrM.01.0770:mRNA;Parent=LbrM.01.0770
+LbrM.01	.	CDS	221827	224781	.	+	0	Parent=LbrM.01.0770:mRNA
+LbrM.01	.	polypeptide	221827	224781	.	+	.	ID=LbrM.01.0770:mRNA:pep;Derives_from=LbrM.01.0770:mRNA;product=term%3Dcalcium%2Fpotassium channel %28CAKC%29%2C putative
+LbrM.01	.	gene	227650	230988	.	+	.	ID=LbrM.01.0780
+LbrM.01	.	mRNA	227650	230988	.	+	.	ID=LbrM.01.0780:pseudogenic_transcript;Parent=LbrM.01.0780
+LbrM.01	.	CDS	227650	230988	.	+	0	Parent=LbrM.01.0780:pseudogenic_transcript
+LbrM.01	.	polypeptide	227650	230988	.	+	.	ID=LbrM.01.0780:pseudogenic_transcript:pep;Derives_from=LbrM.01.0780:pseudogenic_transcript;product=term%3Dpotassium channel subunit-like protein
