@@ -487,7 +487,8 @@ if (params.run_braker) {
     AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
     braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
       --species=augustus_species --useexisting --gff3 --cores ${cpus}
-    gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
+    gffread braker/braker.gff3 | awk '\$3=="transcript"' > missing_transcripts
+    cat missing_transcripts braker/braker.gff3 | gt gff3 -sort -tidy -retainids > 1
     if [ -s 1 ]; then
         gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
         > braker.tmp;
@@ -513,7 +514,8 @@ if (params.run_braker) {
     AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
     braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
       --species=augustus_species --useexisting --gff3 --cores ${cpus}
-    gt gff3 -sort -tidy -retainids braker/braker.gff3 > 1
+    gffread braker/braker.gff3 | awk '\$3=="transcript"' > missing_transcripts
+    cat missing_transcripts braker/braker.gff3 | gt gff3 -sort -tidy -retainids > 1
     if [ -s 1 ]; then
         gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
         > braker.ctg.tmp;

@@ -167,7 +167,7 @@ function mark_partial_visitor:visit_feature(fn)
           end
         end
         -- set corresponding attributes
-        if not has_start then
+        if not has_start and not fn:get_attribute("fiveEndPartial") then
           fn:add_attribute("fiveEndPartial","true")
           if fn:get_strand() == "+" then
             fn:add_attribute("Start_range",".,.")
@@ -175,7 +175,7 @@ function mark_partial_visitor:visit_feature(fn)
             fn:add_attribute("End_range",".,.")
           end
         end
-        if not has_stop then
+        if not has_stop and not fn:get_attribute("threeEndPartial") then
           fn:add_attribute("threeEndPartial","true")
           if fn:get_strand() == "-" then
             fn:add_attribute("Start_range",".,.")
