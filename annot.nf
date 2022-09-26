@@ -480,15 +480,26 @@ if (params.run_braker) {
     file 'ann_prot.fasta' from ref_ann_prot
 
     output:
-    file 'braker.gff3' into augustus_pseudo_gff3
+    file 'braker/braker.gff3' into braker_pseudo_gff3
 
     """
-    echo "##gff-version 3\n" > braker.tmp;
     AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
     braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
       --species=augustus_species --useexisting --gff3 --cores ${cpus}
-    gffread braker/braker.gff3 | awk '\$3=="transcript"' > missing_transcripts
-    cat missing_transcripts braker/braker.gff3 | gt gff3 -sort -tidy -retainids > 1
+    """
+  }
+
+  process parse_braker_pseudo {
+    input:
+      path "braker_out.gff3" from braker_pseudo_gff3
+
+    output:
+      path "braker.gff3" into augustus_pseudo_gff3
+
+    """
+    echo "##gff-version 3\n" > braker.tmp;
+    gffread braker_out.gff3 | awk '\$3=="transcript" || \$3=="gene"' > missing_transcripts
+    cat missing_transcripts braker_out.gff3 | gt gff3 -sort -tidy | gt uniq > 1
     if [ -s 1 ]; then
         gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
         > braker.tmp;
@@ -497,25 +508,39 @@ if (params.run_braker) {
     """
   }
 
+  contigs_seq.into{ contigs_seq_in
+                    contigs_seq_out }
   process run_braker_contigs {
     input:
-    file 'pseudo.contigs.fasta' from contigs_seq
-    file 'ann_prot.fasta' from ref_ann_prot
-    file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
-    file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
-    file 'pseudo.pseudochr.agp' from pseudochr_agp_augustus
-    file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
+      file 'pseudo.contigs.fasta' from contigs_seq_in
+      file 'ann_prot.fasta' from ref_ann_prot
 
     output:
-    file 'braker.scaf.pseudo.mapped.gff3' into augustus_ctg_gff3
+      file 'braker/braker.gff3' into braker_ctg_gff3
 
     """
-    echo "##gff-version 3\n" > braker.ctg.tmp;
     AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
     braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
       --species=augustus_species --useexisting --gff3 --cores ${cpus}
-    gffread braker/braker.gff3 | awk '\$3=="transcript"' > missing_transcripts
-    cat missing_transcripts braker/braker.gff3 | gt gff3 -sort -tidy -retainids > 1
+    """
+  }
+
+  process parse_braker_contigs {
+    input:
+      path "braker_out.gff3" from braker_ctg_gff3
+      file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
+      file 'pseudo.contigs.fasta' from contigs_seq_out
+      file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
+      file 'pseudo.pseudochr.agp' from pseudochr_agp_augustus
+      file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
+
+    output:
+      file 'braker.scaf.pseudo.mapped.gff3' into augustus_ctg_gff3
+
+    """
+    echo "##gff-version 3\n" > braker.ctg.tmp;
+    gffread braker_out.gff3 | awk '\$3=="transcript" || \$3=="gene"' > missing_transcripts
+    cat missing_transcripts braker_out.gff3 | gt gff3 -sort -tidy | gt uniq > 1
     if [ -s 1 ]; then
         gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
         > braker.ctg.tmp;
@@ -542,6 +567,7 @@ if (params.run_braker) {
     fi
     """
   }
+
 } else {
   process run_augustus_pseudo {
     cache 'deep'
