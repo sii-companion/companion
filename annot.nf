@@ -80,7 +80,7 @@ process sanitize_input {
     file 'sanitized.fasta' into sanitized_genome_file
 
     """
-    sed 's/['\\''+&= ]/_/g' truncated.fasta | trim_wildcards.lua > sanitized.fasta
+    sed 's/['\\''+&= ]/_/g' truncated.fasta | prinseq-lite.pl -fasta stdin -trim_ns_left 1 -trim_ns_right 1 -out_good sanitized
     """
 }
 
