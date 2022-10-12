@@ -327,7 +327,7 @@ if (params.run_exonerate) {
 // RATT
 // ====
 
-if (params.run_ratt) {
+if (params.transfer_tool == "ratt") {
     process ratt_make_ref_embl {
         input:
         file ref_annot
@@ -378,7 +378,7 @@ if (params.run_ratt) {
         fi
         """
     }
-} else if (params.run_liftoff) {
+} else if (params.transfer_tool == "liftoff") {
     process run_liftoff {
         input:
         file ref_annot
