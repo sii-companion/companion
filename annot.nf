@@ -487,7 +487,7 @@ if (params.run_braker) {
       """
       AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
       braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
-        --species=augustus_species --useexisting --fungi --gff3 --cores ${cpus}
+        --species=augustus_species --useexisting --fungus --gff3 --cores ${cpus}
       """
     } else {
       """
@@ -532,7 +532,7 @@ if (params.run_braker) {
       """
       AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
       braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
-        --species=augustus_species --useexisting --fungi --gff3 --cores ${cpus}
+        --species=augustus_species --useexisting --fungus --gff3 --cores ${cpus}
       """
     } else {
       """
