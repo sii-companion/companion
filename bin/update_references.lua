@@ -361,6 +361,7 @@ for name, values in pairs(refs.species) do
       genomeoutfile:write(">" .. trans_id .. "\n")
       print_max_width(seq, genomeoutfile, 60)
     end
+    os.execute("bgzip " .. name .. "/genome.fasta")
   end
   values.genome = nil
   values.chromosomes = nil

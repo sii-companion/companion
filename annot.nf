@@ -21,7 +21,7 @@ VERSION = "1.0.2"
 
 genome_file = file(params.inseq)
 ref_annot = file(params.ref_dir + "/" + params.ref_species + "/annotation.gff3")
-ref_seq = file(params.ref_dir + "/" + params.ref_species + "/genome.fasta")
+ref_seq = file(params.ref_dir + "/" + params.ref_species + "/genome.fasta.gz")
 ref_ann_prot = file(file(params.ref_dir).getParent() + "/all_annotated_proteins.fasta")
 ref_dir = file(params.ref_dir)
 go_obo = file(params.GO_OBO)
