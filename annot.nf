@@ -22,6 +22,7 @@ VERSION = "1.0.2"
 genome_file = file(params.inseq)
 ref_annot = file(params.ref_dir + "/" + params.ref_species + "/annotation.gff3")
 ref_seq = file(params.ref_dir + "/" + params.ref_species + "/genome.fasta.gz")
+ref_chr = file(params.ref_dir + "/" + params.ref_species + "/chromosomes.fasta")
 ref_ann_prot = file(file(params.ref_dir).getParent() + "/all_annotated_proteins.fasta")
 ref_dir = file(params.ref_dir)
 go_obo = file(params.GO_OBO)
@@ -90,7 +91,7 @@ process sanitize_input {
 // =============================
 
 if (params.do_contiguation) {
-    ref_chr = file(params.ref_dir + "/" + params.ref_species + "/chromosomes.fasta")
+    
     process contiguate_pseudochromosomes {
         afterScript 'rm -rf Ref.* Res.*'
 
@@ -1416,7 +1417,7 @@ if (params.use_reference) {
 // ============
 
 if (params.do_contiguation && params.do_circos) {
-    ref_individual_sequence = ref_seq.splitFasta( file: true )
+    ref_individual_sequence = ref_chr.splitFasta( file: true )
     process nucmer_for_circos {
         input:
         path 'pseudo.fasta' from pseudochr_seq_circos
