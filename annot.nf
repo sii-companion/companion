@@ -79,8 +79,10 @@ process sanitize_input {
     output:
     file 'sanitized.fasta' into sanitized_genome_file
 
+    // TODO might need to revert this if we handle soft-masking in future
     """
-    sed 's/['\\''+&= ]/_/g' truncated.fasta | prinseq-lite.pl -fasta stdin -trim_ns_left 1 -trim_ns_right 1 -out_good sanitized
+    awk '/^>/ {print(\$0)}; /^[^>]/ {print(toupper(\$0))}' truncated.fasta > 1
+    sed 's/['\\''+&= ]/_/g' 1 | prinseq-lite.pl -fasta stdin -trim_ns_left 1 -trim_ns_right 1 -out_good sanitized
     """
 }
 
