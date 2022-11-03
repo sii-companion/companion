@@ -488,13 +488,13 @@ if (params.run_braker) {
     script:
     if (params.is_fungi){
       """
-      AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
+      AUGUSTUS_CONFIG_PATH=/home/companion/Augustus/config \
       braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
         --fungus --gff3 --cores ${cpus}
       """
     } else {
       """
-      AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
+      AUGUSTUS_CONFIG_PATH=/home/companion/Augustus/config \
       braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
         --gff3 --cores ${cpus}
       """
@@ -533,13 +533,13 @@ if (params.run_braker) {
     script:
     if (params.is_fungi){
       """
-      AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
+      AUGUSTUS_CONFIG_PATH=/home/companion/Augustus/config \
       braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
         --fungus --gff3 --cores ${cpus}
       """
     } else {
       """
-      AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
+      AUGUSTUS_CONFIG_PATH=/home/companion/Augustus/config \
       braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
         --gff3 --cores ${cpus}
       """
