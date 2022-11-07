@@ -23,4 +23,4 @@ then
     AUGUSTUS_CONFIG_PATH=$augustusModelPath; export AUGUSTUS_CONFIG_PATH 
 fi
 echo "${args[@]}"
-braker.pl --genome=$genome --prot_seq=$annProt --gff3 --cores $cores --augustus_args=\"--singlestrand=true\" "${args[@]}"
+braker.pl --genome=$genome --prot_seq=$annProt --gff3 --cores $cores  "${args[@]}"
