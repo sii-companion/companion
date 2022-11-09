@@ -487,10 +487,12 @@ if (params.run_braker) {
 
     script:    
     """
+    JOB_ID="\$(basename \"${params.dist_dir}\")"
     run_braker.sh \
       pseudo.pseudochr.fasta \
       ann_prot.fasta \
       ${augustus_modeldir} \
+      \$JOB_ID \
       ${cpus} \
       ${params.use_existing} \
       ${params.is_fungi} \
@@ -529,10 +531,12 @@ if (params.run_braker) {
 
     script:    
     """
+    JOB_ID="\$(basename \"${params.dist_dir}\")"
     run_braker.sh \
       pseudo.contigs.fasta \
       ann_prot.fasta \
       ${augustus_modeldir} \
+      "\$JOB_ID"_ctg \
       ${cpus} \
       ${params.use_existing} \
       ${params.is_fungi} \
