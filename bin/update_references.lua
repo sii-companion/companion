@@ -361,7 +361,6 @@ for name, values in pairs(refs.species) do
       genomeoutfile:write(">" .. trans_id .. "\n")
       print_max_width(seq, genomeoutfile, 60)
     end
-    os.execute("bgzip " .. name .. "/genome.fasta")
   end
   values.genome = nil
   values.chromosomes = nil
@@ -444,6 +443,9 @@ for name, values in pairs(refs.species) do
   ggfile:write("\n")
   if file_exists(name .. "/proteins_preclean.fasta") then
     os.remove(name .. "/proteins_preclean.fasta")
+  end
+  if file_exists(name .. "/genome.fasta") then
+    os.execute("bgzip " .. name .. "/genome.fasta")
   end
   values.pep = nil -- lfs.currentdir() .. "/" .. name .. "/proteins.fasta"
 
