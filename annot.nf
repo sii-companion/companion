@@ -485,20 +485,19 @@ if (params.run_braker) {
     output:
     file 'braker/braker.gff3' into braker_pseudo_gff3
 
-    script:
-    if (params.is_fungi){
-      """
-      AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
-      braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
-        --species=augustus_species --useexisting --fungus --gff3 --cores ${cpus}
-      """
-    } else {
-      """
-      AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
-      braker.pl --genome=pseudo.pseudochr.fasta --prot_seq=ann_prot.fasta \
-        --species=augustus_species --useexisting --gff3 --cores ${cpus}
-      """
-    }
+    script:    
+    """
+    JOB_ID="\$(basename \"${params.dist_dir}\")"
+    run_braker.sh \
+      pseudo.pseudochr.fasta \
+      ann_prot.fasta \
+      ${augustus_modeldir} \
+      \$JOB_ID \
+      ${cpus} \
+      ${params.use_existing} \
+      ${params.is_fungi} \
+      ${params.is_softmasked}
+    """
   }
 
   process parse_braker_pseudo {
@@ -530,20 +529,19 @@ if (params.run_braker) {
     output:
       file 'braker/braker.gff3' into braker_ctg_gff3
 
-    script:
-    if (params.is_fungi){
-      """
-      AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
-      braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
-        --species=augustus_species --useexisting --fungus --gff3 --cores ${cpus}
-      """
-    } else {
-      """
-      AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
-      braker.pl --genome=pseudo.contigs.fasta --prot_seq=ann_prot.fasta \
-        --species=augustus_species --useexisting --gff3 --cores ${cpus}
-      """
-    }
+    script:    
+    """
+    JOB_ID="\$(basename \"${params.dist_dir}\")"
+    run_braker.sh \
+      pseudo.contigs.fasta \
+      ann_prot.fasta \
+      ${augustus_modeldir} \
+      "\$JOB_ID"_ctg \
+      ${cpus} \
+      ${params.use_existing} \
+      ${params.is_fungi} \
+      ${params.is_softmasked}
+    """
   }
 
   process parse_braker_contigs {
