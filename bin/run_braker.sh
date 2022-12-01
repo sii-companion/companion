@@ -25,5 +25,13 @@ then
 else
     args+=(--species=$spId)
 fi
+
+# GeneMark-ES has been known to fail when assembly consists of lots of short contigs. See https://github.com/Gaius-Augustus/BRAKER/issues/426#issuecomment-943430561
+maxContigLength=`cat $genome | awk '$0 ~ ">" {print c; c=0;printf substr($0,2,100) "\t"; } $0 !~ ">" {c+=length($0);} END { print c; }' | sort -k2 -h | cut -f2 | tail -1`
+if [ "$maxContigLength" -lt "50000" ]
+then
+    args+=(--min_contig=1000)
+fi
+
 echo "${args[@]}"
 braker.pl --genome=$genome --prot_seq=$annProt --gff3 --cores $cores "${args[@]}"
