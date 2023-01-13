@@ -1107,34 +1107,21 @@ process parse_blastout_for_orthomcl {
 
 orthomcl_conffile = file(params.ORTHOMCL_CONFIG_FILE)
 
-process prepare_orthomcl_config {
-    input:
-    val orthomcl_conffile
-
-    output:
-    file 'orthomcl.config' into orthomcl_config
-
-    """
-    JOB_ID="\$(basename \"${params.dist_dir}\")"
-    sed -r 's@orthomcl@'orthomcl_"\$JOB_ID"'@' ${orthomcl_conffile} > orthomcl.config
-    """
-}
-
 process run_orthomcl {
     cache 'deep'
 
     input:
+    val orthomcl_conffile
     file 'similarSequences.txt' from similar_sequences
-    file 'orthomcl.config' from orthomcl_config
 
     output:
     file 'orthomcl_out' into orthomcl_cluster_out
 
     """
-    orthomclInstallSchema orthomcl.config install_schema.log
-    orthomclLoadBlast orthomcl.config similarSequences.txt
-    orthomclPairs orthomcl.config orthomcl_pairs.log cleanup=yes
-    orthomclDumpPairsFiles orthomcl.config
+    orthomclInstallSchema ${orthomcl_conffile} install_schema.log
+    orthomclLoadBlast ${orthomcl_conffile} similarSequences.txt
+    orthomclPairs ${orthomcl_conffile} orthomcl_pairs.log cleanup=yes
+    orthomclDumpPairsFiles ${orthomcl_conffile}
 
     mcl mclInput --abc -I 1.5 -o mclOutput
     orthomclMclToGroups ORTHOMCL 0 < mclOutput > orthomcl_out

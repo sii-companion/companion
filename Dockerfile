@@ -57,10 +57,8 @@ RUN apt-get install genometools --yes
 #
 # Install and configure OrthoMCL
 #
-ADD https://orthomcl.org/common/downloads/software/v2.0/orthomclSoftware-v2.0.9.tar.gz /opt/omcl.tar.gz
 RUN cd /opt && \
-    tar -xf omcl.tar.gz && \
-    rm -f omcl.tar.gz
+    git clone https://github.com/stajichlab/OrthoMCL.git
 
 ADD http://www.micans.org/mcl/src/mcl-latest.tar.gz /opt/mcl-latest.tar.gz
 RUN cd /opt && \
@@ -204,7 +202,7 @@ ENV AUGUSTUS_SCRIPTS_PATH /opt/Augustus/scripts
 ENV RATT_HOME /opt/RATT
 ENV GT_RETAINIDS yes
 ENV PERL5LIB /opt/RATT/:/opt/ABACAS2/:$PERL5LIB
-ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/bin:/usr/share/augustus/scripts:/opt/orthomclSoftware-v2.0.9/bin:/opt/RATT:/opt/ABACAS2:$PATH
+ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/bin:/usr/share/augustus/scripts:/opt/OrthoMCL/bin:/opt/RATT:/opt/ABACAS2:$PATH
 ENV GENEMARK_PATH /opt/gmes_linux_64_4
 ENV PYTHON3_PATH /usr/bin
 ENV BAMTOOLS_PATH /opt/bamtools/build/src
