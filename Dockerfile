@@ -84,6 +84,7 @@ RUN cd /opt && \
 # get GO OBO file
 #
 ADD http://geneontology.org/ontology/go.obo /opt/go.obo
+RUN chmod 755 /opt/go.obo
 
 #
 # get Pfam pHMMs
