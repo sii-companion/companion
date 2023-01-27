@@ -185,7 +185,6 @@ COPY gm_key_64.gz /tmp/gm_key_64.gz
 RUN cd /opt && \
     tar -xzvf gmes_linux_64_4.tar.gz && \
     rm -f gmes_linux_64_4.tar.gz
-RUN zcat /tmp/gm_key_64.gz > ~/.gm_key
 RUN apt-get -y install cmake
 RUN cd /opt && \
     git clone https://github.com/pezmaster31/bamtools.git && \
@@ -207,6 +206,20 @@ ADD https://genomethreader.org/distributions/gth-1.7.3-Linux_x86_64-64bit.tar.gz
 RUN cd /opt && \
     tar xzf gth-1.7.3-Linux_x86_64-64bit.tar.gz && \
     rm -f gth-1.7.3-Linux_x86_64-64bit.tar.gz
+
+ARG USER_ID
+ARG GROUP_ID
+
+RUN if [ ${USER_ID:-0} -ne 0 ] && [ ${GROUP_ID:-0} -ne 0 ]; then \
+    # userdel -f dockeruser && \
+    # if getent group dockeruser ; then groupdel dockeruser; fi && \
+    groupadd -g ${GROUP_ID} dockeruser && \
+    useradd -l -u ${USER_ID} -g dockeruser dockeruser && \
+    install -d -m 0755 -o dockeruser -g dockeruser /home/dockeruser \
+;fi
+
+USER dockeruser
+RUN zcat /tmp/gm_key_64.gz > ~/.gm_key
 
 #
 # set environment variables
