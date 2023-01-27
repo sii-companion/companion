@@ -73,12 +73,12 @@ RUN cd /opt && \
 #
 # Install Gblocks
 #
-ADD http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_Linux64_0.91b.tar.Z /opt/gblocks64.tar.Z
-RUN cd /opt && \
-    tar -xzvf gblocks64.tar.Z && \
-    rm -rf gblocks64.tar.Z && \
-    cp Gblocks_0.91b/Gblocks /usr/bin/Gblocks && \
-    chmod 755 /usr/bin/Gblocks
+# ADD http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_Linux64_0.91b.tar.Z /opt/gblocks64.tar.Z
+# RUN cd /opt && \
+#     tar -xzvf gblocks64.tar.Z && \
+#     rm -rf gblocks64.tar.Z && \
+#     cp Gblocks_0.91b/Gblocks /usr/bin/Gblocks && \
+#     chmod 755 /usr/bin/Gblocks
 
 #
 # get GO OBO file
@@ -106,6 +106,7 @@ ADD ./data /opt/data
 # install RATT (keep up to date from build directory)
 #
 ADD ./RATT /opt/RATT
+RUN apt-get install tabix --yes
 
 #
 # install python
@@ -146,6 +147,19 @@ RUN cd /opt && \
     make && \
     make install && \
     rm -f mummer-4.0.0rc1.tar.gz
+
+#
+# install prinseq-lite
+#
+RUN apt-get install wget --yes
+RUN cd /opt && \
+    wget https://sourceforge.net/projects/prinseq/files/standalone/prinseq-lite-0.20.4.tar.gz && \
+    tar xzf prinseq-lite-0.20.4.tar.gz && \
+    cd prinseq-lite-0.20.4 && \
+    chmod +x prinseq-lite.pl && \
+    cp prinseq-lite.pl /usr/local/bin/ && \
+    cd .. && \
+    rm -rf prinseq-lite*
 
 #
 # install braker
