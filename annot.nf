@@ -478,14 +478,15 @@ process merge_hints {
 if (params.run_braker) {
   cpus = config.poolSize / 2
   process run_braker_pseudo {
+    errorStrategy 'ignore'
+
     input:
-    file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
-    file 'ann_prot.fasta' from ref_ann_prot
+      file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
+      file 'ann_prot.fasta' from ref_ann_prot
 
     output:
-    file 'braker/braker.gff3' into braker_pseudo_gff3
+      file 'braker/braker.gff3' into braker_pseudo_gff3
 
-    script:    
     """
     JOB_ID="\$(basename \"${params.dist_dir}\")"
     run_braker.sh \
@@ -505,7 +506,8 @@ if (params.run_braker) {
       path "braker_out.gff3" from braker_pseudo_gff3
 
     output:
-      path "braker.gff3" into augustus_pseudo_gff3
+      path "braker.gff3" into parsed_braker_pseudo_gff3
+      val 'SUCCESS' into braker_status
 
     """
     echo "##gff-version 3\n" > braker.tmp;
@@ -519,87 +521,100 @@ if (params.run_braker) {
     """
   }
 
+  braker_status = braker_pseudo_gff3.ifEmpty('FAILED')
+
   contigs_seq.into{ contigs_seq_in
                     contigs_seq_out }
-  process run_braker_contigs {
-    input:
-      file 'pseudo.contigs.fasta' from contigs_seq_in
-      file 'ann_prot.fasta' from ref_ann_prot
-
-    output:
-      file 'braker/braker.gff3' into braker_ctg_gff3
-
-    script:    
-    """
-    JOB_ID="\$(basename \"${params.dist_dir}\")"
-    run_braker.sh \
-      pseudo.contigs.fasta \
-      ann_prot.fasta \
-      ${augustus_modeldir} \
-      "\$JOB_ID"_ctg \
-      ${cpus} \
-      ${params.use_existing} \
-      ${params.is_fungi} \
-      ${params.is_softmasked}
-    """
-  }
-
-  process parse_braker_contigs {
-    input:
-      path "braker_out.gff3" from braker_ctg_gff3
-      file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
-      file 'pseudo.contigs.fasta' from contigs_seq_out
-      file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
-      file 'pseudo.pseudochr.agp' from pseudochr_agp_augustus
-      file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
-
-    output:
-      file 'braker.scaf.pseudo.mapped.gff3' into augustus_ctg_gff3
-
-    """
-    echo "##gff-version 3\n" > braker.ctg.tmp;
-    gffread braker_out.gff3 | awk '\$3=="transcript" || \$3=="gene"' > missing_transcripts
-    cat missing_transcripts braker_out.gff3 | gt gff3 -sort -tidy | gt uniq > 1
-    if [ -s 1 ]; then
-        gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
-        > braker.ctg.tmp;
-    fi
-    augustus_mark_partial.lua braker.ctg.tmp > braker.ctg.gff3
-
-    transform_gff_with_agp.lua \
-        braker.ctg.gff3 \
-        pseudo.scaffolds.agp \
-        pseudo.contigs.fasta \
-        pseudo.scaffolds.fasta | \
-        gt gff3 -sort -tidy -retainids > \
-        braker.ctg.scaf.mapped.gff3
-    transform_gff_with_agp.lua \
-        braker.ctg.scaf.mapped.gff3 \
-        pseudo.pseudochr.agp \
-        pseudo.scaffolds.fasta \
-        pseudo.pseudochr.fasta | \
-        gt gff3 -sort -tidy -retainids > \
-        braker.scaf.pseudo.mapped.gff3
+  // process run_braker_contigs {
+  //   errorStrategy 'ignore'
     
-    if [ ! -s braker.scaf.pseudo.mapped.gff3 ]; then
-      echo '##gff-version 3' > braker.scaf.pseudo.mapped.gff3
-    fi
-    """
-  }
+  //   input:
+  //     file 'pseudo.contigs.fasta' from contigs_seq_in
+  //     file 'ann_prot.fasta' from ref_ann_prot
+
+  //   output:
+  //     file 'braker/braker.gff3' into braker_ctg_gff3
+
+  //   script:    
+  //   """
+  //   JOB_ID="\$(basename \"${params.dist_dir}\")"
+  //   run_braker.sh \
+  //     pseudo.contigs.fasta \
+  //     ann_prot.fasta \
+  //     ${augustus_modeldir} \
+  //     "\$JOB_ID"_ctg \
+  //     ${cpus} \
+  //     ${params.use_existing} \
+  //     ${params.is_fungi} \
+  //     ${params.is_softmasked}
+  //   """
+  // }
+
+  // process parse_braker_contigs {
+  //   input:
+  //     path "braker_out.gff3" from braker_ctg_gff3
+  //     file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
+  //     file 'pseudo.contigs.fasta' from contigs_seq_out
+  //     file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
+  //     file 'pseudo.pseudochr.agp' from pseudochr_agp_augustus
+  //     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
+
+  //   output:
+  //     file 'braker.scaf.pseudo.mapped.gff3' into augustus_ctg_gff3
+    
+  //   when:
+  //     braker_ctg_gff3.exists()
+
+  //   """
+  //   echo "##gff-version 3\n" > braker.ctg.tmp;
+  //   gffread braker_out.gff3 | awk '\$3=="transcript" || \$3=="gene"' > missing_transcripts
+  //   cat missing_transcripts braker_out.gff3 | gt gff3 -sort -tidy | gt uniq > 1
+  //   if [ -s 1 ]; then
+  //       gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
+  //       > braker.ctg.tmp;
+  //   fi
+  //   augustus_mark_partial.lua braker.ctg.tmp > braker.ctg.gff3
+
+  //   transform_gff_with_agp.lua \
+  //       braker.ctg.gff3 \
+  //       pseudo.scaffolds.agp \
+  //       pseudo.contigs.fasta \
+  //       pseudo.scaffolds.fasta | \
+  //       gt gff3 -sort -tidy -retainids > \
+  //       braker.ctg.scaf.mapped.gff3
+  //   transform_gff_with_agp.lua \
+  //       braker.ctg.scaf.mapped.gff3 \
+  //       pseudo.pseudochr.agp \
+  //       pseudo.scaffolds.fasta \
+  //       pseudo.pseudochr.fasta | \
+  //       gt gff3 -sort -tidy -retainids > \
+  //       braker.scaf.pseudo.mapped.gff3
+    
+  //   if [ ! -s braker.scaf.pseudo.mapped.gff3 ]; then
+  //     echo '##gff-version 3' > braker.scaf.pseudo.mapped.gff3
+  //   fi
+  //   """
+  // }
 
 } else {
-  process run_augustus_pseudo {
-    cache 'deep'
+  braker_status = Channel.value('')
+}
 
-    input:
+process run_augustus_pseudo {
+  cache 'deep'
+
+  input:
     set val(hintsline), file('augustus.hints') from all_hints
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
     val extrinsic_cfg
     file augustus_modeldir
+    val braker_status
 
-    output:
-    file 'augustus.gff3' into augustus_pseudo_gff3
-
+  output:
+    file 'augustus.gff3' into parsed_augustus_pseudo_gff3      
+  
+  script:
+  if (!params.run_braker | "${braker_status}" == 'FAILED') {
     """
     echo "##gff-version 3\n" > augustus.full.tmp.2;
     AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
@@ -620,10 +635,15 @@ if (params.run_braker) {
     fi
     augustus_mark_partial.lua augustus.full.tmp.2 > augustus.gff3
     """
+  } else {
+    """
+    echo '##gff-version 3' > augustus.gff3
+    """
   }
+}
 
-  process run_augustus_contigs {
-    input:
+process run_augustus_contigs {
+  input:
     file 'pseudo.contigs.fasta' from contigs_seq
     file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
     file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
@@ -631,10 +651,13 @@ if (params.run_braker) {
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
     val extrinsic_cfg
     file augustus_modeldir
+    val braker_status
 
-    output:
-    file 'augustus.scaf.pseudo.mapped.gff3' into augustus_ctg_gff3
+  output:
+    file 'augustus.scaf.pseudo.mapped.gff3' into parsed_augustus_ctg_gff3
 
+  script:
+  if (!params.run_braker | "${braker_status}" == 'FAILED') {
     """
     echo "##gff-version 3\n" > augustus.ctg.tmp.2;
     AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
@@ -671,6 +694,10 @@ if (params.run_braker) {
     if [ ! -s augustus.scaf.pseudo.mapped.gff3 ]; then
       echo '##gff-version 3' > augustus.scaf.pseudo.mapped.gff3
     fi
+    """
+  } else {
+    """
+    echo '##gff-version 3' > augustus.scaf.pseudo.mapped.gff3
     """
   }
 }
@@ -709,8 +736,9 @@ process merge_genemodels {
     cache 'deep'
 
     input:
-    file 'augustus.full.gff3' from augustus_pseudo_gff3
-    file 'augustus.ctg.gff3' from augustus_ctg_gff3
+    file 'braker.full.gff3' from parsed_braker_pseudo_gff3.ifEmpty('##gff-version 3')
+    file 'augustus.full.gff3' from parsed_augustus_pseudo_gff3
+    file 'augustus.ctg.gff3' from parsed_augustus_ctg_gff3
     file 'snap.full.gff3' from snap_gff3
     file 'ratt.full.gff3' from ratt_gff3
 
@@ -720,7 +748,7 @@ process merge_genemodels {
     """
     unset GT_RETAINIDS && \
     gt gff3 -fixregionboundaries -retainids no -sort -tidy \
-        augustus.full.gff3 augustus.ctg.gff3 snap.full.gff3 ratt.full.gff3 \
+        braker.full.gff3 augustus.full.gff3 augustus.ctg.gff3 snap.full.gff3 ratt.full.gff3 \
         > merged.pre.gff3 && \
     export GT_RETAINIDS=yes
     if [ ! -s merged.pre.gff3 ]; then
