@@ -476,7 +476,7 @@ process merge_hints {
 // ========
 
 if (params.run_braker) {
-  cpus = config.poolSize / 2
+  cpus = config.poolSize
   process run_braker_pseudo {
     errorStrategy 'ignore'
 
