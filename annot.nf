@@ -598,6 +598,7 @@ if (params.run_braker) {
 
 } else {
   braker_status = Channel.value('')
+  parsed_braker_pseudo_gff3 = Channel.empty()
 }
 
 process run_augustus_pseudo {
