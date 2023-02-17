@@ -166,7 +166,9 @@ function stream:process_current_cluster()
         assert(cdslist[1]:get_type() == "CDS")
         local phase = cdslist[1]:get_phase()
         local gaplen = 0
-        -- determine starting phase (mostly 0, but you never know...)
+        -- account for bug with get_phase returning non-integer phase
+        if phase == "." then phase = 0 end
+        -- determine starting phase (mostly 0, but you never know...)        
         phase = (3 - (cdslist[1]:get_range():length() - phase) % 3) % 3
         for i = 2,#cdslist do
           if cdslist[i]:get_type() == "gap" then
