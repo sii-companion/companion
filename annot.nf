@@ -1457,7 +1457,6 @@ if (params.do_contiguation && params.do_circos) {
         output:
         file 'links.txt' into circos_input_links
         file 'karyotype.txt' into circos_input_karyotype
-        file 'chromosomes.txt' into circos_input_chromosomes
         file 'genes.txt' into circos_input_genes
         file 'gaps.txt' into circos_input_gaps
         file 'bin.txt' into bin_target_mapping
@@ -1474,8 +1473,6 @@ if (params.do_contiguation && params.do_circos) {
 
     circos_input_karyotype.into{ circos_input_karyotype_chr; circos_input_karyotype_bin }
 
-    circos_input_chromosomes.into{ circos_input_chromosomes_chr; circos_input_chromosomes_bin }
-
     circos_input_genes.into{ circos_input_genes_chr; circos_input_genes_bin }
 
     circos_input_gaps.into{ circos_input_gaps_chr; circos_input_gaps_bin }
@@ -1485,6 +1482,7 @@ if (params.do_contiguation && params.do_circos) {
 
     process circos_run_chrs {
         tag { chromosome[0] }
+        errorStrategy 'ignore'
 
         input:
         file 'links_full.txt' from circos_input_links_chr.first()
