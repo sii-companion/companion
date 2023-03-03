@@ -331,6 +331,8 @@ if (params.run_exonerate) {
 
 if (params.transfer_tool == "ratt") {
     process ratt_make_ref_embl {
+        afterScript 'bgzip genome.fasta'
+
         input:
         file ref_annot
         file 'genome.fasta.gz' from ref_seq
@@ -383,16 +385,19 @@ if (params.transfer_tool == "ratt") {
     }
 } else if (params.transfer_tool == "liftoff") {
     process run_liftoff {
+        afterScript 'bgzip genome.fasta'
+
         input:
         file ref_annot
-        file ref_seq
+        file 'genome.fasta.gz' from ref_seq
         file 'pseudo.pseudochr.fasta' from pseudochr_seq_ratt
 
         output:
         file 'liftoff.gff3' into ratt_gff3
 
         """
-        liftoff -g ${ref_annot} pseudo.pseudochr.fasta ${ref_seq} -o liftoff.gff3 -exclude_partial
+        bgzip -d genome.fasta.gz
+        liftoff -g ${ref_annot} pseudo.pseudochr.fasta genome.fasta -o liftoff.gff3 -exclude_partial
         """
     }
 } else {
