@@ -126,10 +126,14 @@ RUN cd /opt && \
     rm -rf minimap2.tar.bz2&& \
     cp minimap2-2.17_x64-linux/minimap2 /usr/local/bin/minimap2 && \
     chmod 755 /usr/local/bin/minimap2
+RUN apt-get -y install python3-pip
 RUN cd /opt && \
     git clone https://github.com/agshumate/Liftoff liftoff && \
     cd liftoff && \
-    python3.9 setup.py install
+    python3 setup.py install
+# Numpy 1.24 currently breaks Liftoff
+RUN pip3 install "numpy<1.24"
+
 
 #
 # install ABACAS (keep up to date from build directory)
@@ -199,7 +203,6 @@ RUN cd /opt && \
     rm -f diamond-linux64.tar.gz
 RUN cd /opt && \
     git clone https://github.com/gatech-genemark/ProtHint.git
-RUN apt-get -y install python3-pip
 RUN pip3 install biopython
 RUN apt-get -y install cdbfasta
 ADD https://genomethreader.org/distributions/gth-1.7.3-Linux_x86_64-64bit.tar.gz /opt/gth-1.7.3-Linux_x86_64-64bit.tar.gz
@@ -207,9 +210,20 @@ RUN cd /opt && \
     tar xzf gth-1.7.3-Linux_x86_64-64bit.tar.gz && \
     rm -f gth-1.7.3-Linux_x86_64-64bit.tar.gz
 
+#
+# install orthofinder
+#
+ADD https://github.com/davidemms/OrthoFinder/releases/download/2.5.4/OrthoFinder_source.tar.gz /opt/OrthoFinder_source.tar.gz
+RUN pip3 install scipy
+RUN cd /opt && \
+    tar xzf OrthoFinder_source.tar.gz && \
+    cd OrthoFinder_source && \
+    chmod +x orthofinder.py
+
+## Make sure to build with 'docker build --build-arg USER_ID=$(id -u ${USER}) --build-arg GROUP_ID=$(id -g ${USER}) .' to populate these args.
+## THIS SHOULD BE RUN AFTER INSTALLATIONS
 ARG USER_ID
 ARG GROUP_ID
-
 RUN if [ ${USER_ID:-0} -ne 0 ] && [ ${GROUP_ID:-0} -ne 0 ]; then \
     # userdel -f dockeruser && \
     # if getent group dockeruser ; then groupdel dockeruser; fi && \
@@ -230,7 +244,7 @@ ENV AUGUSTUS_SCRIPTS_PATH /opt/Augustus/scripts
 ENV RATT_HOME /opt/RATT
 ENV GT_RETAINIDS yes
 ENV PERL5LIB /opt/RATT/:/opt/ABACAS2/:$PERL5LIB
-ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/bin:/usr/share/augustus/scripts:/opt/OrthoMCL/bin:/opt/RATT:/opt/ABACAS2:$PATH
+ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/bin:/usr/share/augustus/scripts:/opt/OrthoMCL/bin:/opt/OrthoFinder_source:/opt/RATT:/opt/ABACAS2:$PATH
 ENV GENEMARK_PATH /opt/gmes_linux_64_4
 ENV PYTHON3_PATH /usr/bin
 ENV BAMTOOLS_PATH /opt/bamtools/build/src

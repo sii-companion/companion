@@ -1073,94 +1073,111 @@ process make_target_input_for_orthomcl {
 adjusted_fasta.into{ adjusted_fasta_for_filter; adjusted_fasta_for_blast_parser}
 adjusted_fasta_ref.into{ adjusted_fasta_ref_for_filter; adjusted_fasta_ref_for_blast_parser}
 
-process filter_fasta_for_orthomcl {
+process run_orthofinder {
     input:
-    file "compliantFasta/${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_filter
-    file "compliantFasta/${params.ref_species}.fasta" from adjusted_fasta_ref_for_filter
+      file "${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_filter
+      file "${params.ref_species}.fasta" from adjusted_fasta_ref_for_filter
     
     output:
-    file 'goodProteins.fasta' into good_proteins_fasta
+      file 'orthomcl_out' into orthomcl_cluster_out
 
     """
-    orthomclFilterFasta compliantFasta/ 10 20
-    """
-}
+    orthofinder.py -f . -o results
 
-good_proteins_fasta.into{ good_proteins_fasta_for_index; good_proteins_fasta_for_query}
-
-process blast_for_orthomcl_formatdb {
-    cache 'deep'
-
-    input:
-    file 'goodProteins.fasta' from good_proteins_fasta_for_index
-
-    output:
-    file 'goodProteins.fasta' into good_proteins_fasta_indexed
-    file 'goodProteins.fasta.phr' into good_proteins_fasta_indexed_phr
-    file 'goodProteins.fasta.psq' into good_proteins_fasta_indexed_psq
-    file 'goodProteins.fasta.pin' into good_proteins_fasta_indexed_pin
-
-    """
-    makeblastdb -dbtype prot -in goodProteins.fasta
+    # filter out clusters with single gene.
+    awk 'BEGIN { FS="[ ]" }; { if (\$3) print \$0 }' results/*/Orthogroups/Orthogroups.txt > orthomcl_out
     """
 }
 
-proteins_orthomcl_blast_chunk = good_proteins_fasta_for_query.splitFasta( by: 50, file: true)
-process blast_for_orthomcl {
-    cache 'deep'
 
-    input:
-    file 'prot_chunk.fasta' from proteins_orthomcl_blast_chunk
-    file 'goodProteins.fasta' from good_proteins_fasta_indexed.first()
-    file 'goodProteins.fasta.phr' from good_proteins_fasta_indexed_phr.first()
-    file 'goodProteins.fasta.psq' from good_proteins_fasta_indexed_psq.first()
-    file 'goodProteins.fasta.pin' from good_proteins_fasta_indexed_pin.first()
+// process filter_fasta_for_orthomcl {
+//     input:
+//     file "compliantFasta/${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_filter
+//     file "compliantFasta/${params.ref_species}.fasta" from adjusted_fasta_ref_for_filter
+    
+//     output:
+//     file 'goodProteins.fasta' into good_proteins_fasta
 
-    output:
-    file 'blastout' into orthomcl_blastout
+//     """
+//     orthomclFilterFasta compliantFasta/ 10 20
+//     """
+// }
 
-    """
-    blastall -p blastp -W 4 -F 'm S' -v 100000 -b 100000 -d goodProteins.fasta -m 8 \
-      -i prot_chunk.fasta > blastout
-    """
-}
+// good_proteins_fasta.into{ good_proteins_fasta_for_index; good_proteins_fasta_for_query}
 
-process parse_blastout_for_orthomcl {
-    input:
-    file 'blastout' from orthomcl_blastout.collectFile()
-    file "compliantFasta/${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_blast_parser
-    file "compliantFasta/${params.ref_species}.fasta" from adjusted_fasta_ref_for_blast_parser
+// process blast_for_orthomcl_formatdb {
+//     cache 'deep'
 
-    output:
-    file 'similarSequences.txt' into similar_sequences
+//     input:
+//     file 'goodProteins.fasta' from good_proteins_fasta_for_index
 
-    """
-    orthomclBlastParser blastout compliantFasta/ >> similarSequences.txt  
-    """
-}
+//     output:
+//     file 'goodProteins.fasta' into good_proteins_fasta_indexed
+//     file 'goodProteins.fasta.phr' into good_proteins_fasta_indexed_phr
+//     file 'goodProteins.fasta.psq' into good_proteins_fasta_indexed_psq
+//     file 'goodProteins.fasta.pin' into good_proteins_fasta_indexed_pin
 
-orthomcl_conffile = file(params.ORTHOMCL_CONFIG_FILE)
+//     """
+//     makeblastdb -dbtype prot -in goodProteins.fasta
+//     """
+// }
 
-process run_orthomcl {
-    cache 'deep'
+// proteins_orthomcl_blast_chunk = good_proteins_fasta_for_query.splitFasta( by: 50, file: true)
+// process blast_for_orthomcl {
+//     cache 'deep'
 
-    input:
-    val orthomcl_conffile
-    file 'similarSequences.txt' from similar_sequences
+//     input:
+//     file 'prot_chunk.fasta' from proteins_orthomcl_blast_chunk
+//     file 'goodProteins.fasta' from good_proteins_fasta_indexed.first()
+//     file 'goodProteins.fasta.phr' from good_proteins_fasta_indexed_phr.first()
+//     file 'goodProteins.fasta.psq' from good_proteins_fasta_indexed_psq.first()
+//     file 'goodProteins.fasta.pin' from good_proteins_fasta_indexed_pin.first()
 
-    output:
-    file 'orthomcl_out' into orthomcl_cluster_out
+//     output:
+//     file 'blastout' into orthomcl_blastout
 
-    """
-    orthomclInstallSchema ${orthomcl_conffile} install_schema.log
-    orthomclLoadBlast ${orthomcl_conffile} similarSequences.txt
-    orthomclPairs ${orthomcl_conffile} orthomcl_pairs.log cleanup=yes
-    orthomclDumpPairsFiles ${orthomcl_conffile}
+//     """
+//     blastall -p blastp -W 4 -F 'm S' -v 100000 -b 100000 -d goodProteins.fasta -m 8 \
+//       -i prot_chunk.fasta > blastout
+//     """
+// }
 
-    mcl mclInput --abc -I 1.5 -o mclOutput
-    orthomclMclToGroups ORTHOMCL 0 < mclOutput > orthomcl_out
-    """
-}
+// process parse_blastout_for_orthomcl {
+//     input:
+//     file 'blastout' from orthomcl_blastout.collectFile()
+//     file "compliantFasta/${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_blast_parser
+//     file "compliantFasta/${params.ref_species}.fasta" from adjusted_fasta_ref_for_blast_parser
+
+//     output:
+//     file 'similarSequences.txt' into similar_sequences
+
+//     """
+//     orthomclBlastParser blastout compliantFasta/ >> similarSequences.txt  
+//     """
+// }
+
+// orthomcl_conffile = file(params.ORTHOMCL_CONFIG_FILE)
+
+// process run_orthomcl {
+//     cache 'deep'
+
+//     input:
+//     val orthomcl_conffile
+//     file 'similarSequences.txt' from similar_sequences
+
+//     output:
+//     file 'orthomcl_out' into orthomcl_cluster_out
+
+//     """
+//     orthomclInstallSchema ${orthomcl_conffile} install_schema.log
+//     orthomclLoadBlast ${orthomcl_conffile} similarSequences.txt
+//     orthomclPairs ${orthomcl_conffile} orthomcl_pairs.log cleanup=yes
+//     orthomclDumpPairsFiles ${orthomcl_conffile}
+
+//     mcl mclInput --abc -I 1.5 -o mclOutput
+//     orthomclMclToGroups ORTHOMCL 0 < mclOutput > orthomcl_out
+//     """
+// }
 
 orthomcl_cluster_out.into{ orthomcl_cluster_out_annot; result_ortho }
 
