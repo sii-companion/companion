@@ -346,7 +346,7 @@ function get_clusters(filename)
     error("file " .. filename .. " can not be loaded")
   end
   for l in io.lines(filename) do
-    local name, members = string.match(l, "^(ORTHOMCL%d+):%s+(.+)")
+    local name, members = string.match(l, "^(OG%d+):%s+(.+)")
     if not name or not members then
       error("could not parse cluster or members from line '" .. l .. "'")
     end

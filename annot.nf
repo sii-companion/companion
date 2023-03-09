@@ -331,6 +331,8 @@ if (params.run_exonerate) {
 
 if (params.transfer_tool == "ratt") {
     process ratt_make_ref_embl {
+        afterScript 'bgzip genome.fasta'
+
         input:
         file ref_annot
         file 'genome.fasta.gz' from ref_seq
@@ -383,16 +385,19 @@ if (params.transfer_tool == "ratt") {
     }
 } else if (params.transfer_tool == "liftoff") {
     process run_liftoff {
+        afterScript 'bgzip genome.fasta'
+
         input:
         file ref_annot
-        file ref_seq
+        file 'genome.fasta.gz' from ref_seq
         file 'pseudo.pseudochr.fasta' from pseudochr_seq_ratt
 
         output:
         file 'liftoff.gff3' into ratt_gff3
 
         """
-        liftoff -g ${ref_annot} pseudo.pseudochr.fasta ${ref_seq} -o liftoff.gff3 -exclude_partial
+        bgzip -d genome.fasta.gz
+        liftoff -g ${ref_annot} pseudo.pseudochr.fasta genome.fasta -o liftoff.gff3 -exclude_partial
         """
     }
 } else {
@@ -476,16 +481,17 @@ process merge_hints {
 // ========
 
 if (params.run_braker) {
-  cpus = config.poolSize / 2
+  cpus = config.poolSize
   process run_braker_pseudo {
+    errorStrategy 'ignore'
+
     input:
-    file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
-    file 'ann_prot.fasta' from ref_ann_prot
+      file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
+      file 'ann_prot.fasta' from ref_ann_prot
 
     output:
-    file 'braker/braker.gff3' into braker_pseudo_gff3
+      file 'braker/braker.gff3' into braker_pseudo_gff3
 
-    script:    
     """
     JOB_ID="\$(basename \"${params.dist_dir}\")"
     run_braker.sh \
@@ -505,7 +511,8 @@ if (params.run_braker) {
       path "braker_out.gff3" from braker_pseudo_gff3
 
     output:
-      path "braker.gff3" into augustus_pseudo_gff3
+      path "braker.gff3" into parsed_braker_pseudo_gff3
+      val 'SUCCESS' into braker_status
 
     """
     echo "##gff-version 3\n" > braker.tmp;
@@ -519,87 +526,101 @@ if (params.run_braker) {
     """
   }
 
+  braker_status = braker_pseudo_gff3.ifEmpty('FAILED')
+
   contigs_seq.into{ contigs_seq_in
                     contigs_seq_out }
-  process run_braker_contigs {
-    input:
-      file 'pseudo.contigs.fasta' from contigs_seq_in
-      file 'ann_prot.fasta' from ref_ann_prot
-
-    output:
-      file 'braker/braker.gff3' into braker_ctg_gff3
-
-    script:    
-    """
-    JOB_ID="\$(basename \"${params.dist_dir}\")"
-    run_braker.sh \
-      pseudo.contigs.fasta \
-      ann_prot.fasta \
-      ${augustus_modeldir} \
-      "\$JOB_ID"_ctg \
-      ${cpus} \
-      ${params.use_existing} \
-      ${params.is_fungi} \
-      ${params.is_softmasked}
-    """
-  }
-
-  process parse_braker_contigs {
-    input:
-      path "braker_out.gff3" from braker_ctg_gff3
-      file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
-      file 'pseudo.contigs.fasta' from contigs_seq_out
-      file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
-      file 'pseudo.pseudochr.agp' from pseudochr_agp_augustus
-      file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
-
-    output:
-      file 'braker.scaf.pseudo.mapped.gff3' into augustus_ctg_gff3
-
-    """
-    echo "##gff-version 3\n" > braker.ctg.tmp;
-    gffread braker_out.gff3 | awk '\$3=="transcript" || \$3=="gene"' > missing_transcripts
-    cat missing_transcripts braker_out.gff3 | gt gff3 -sort -tidy | gt uniq > 1
-    if [ -s 1 ]; then
-        gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
-        > braker.ctg.tmp;
-    fi
-    augustus_mark_partial.lua braker.ctg.tmp > braker.ctg.gff3
-
-    transform_gff_with_agp.lua \
-        braker.ctg.gff3 \
-        pseudo.scaffolds.agp \
-        pseudo.contigs.fasta \
-        pseudo.scaffolds.fasta | \
-        gt gff3 -sort -tidy -retainids > \
-        braker.ctg.scaf.mapped.gff3
-    transform_gff_with_agp.lua \
-        braker.ctg.scaf.mapped.gff3 \
-        pseudo.pseudochr.agp \
-        pseudo.scaffolds.fasta \
-        pseudo.pseudochr.fasta | \
-        gt gff3 -sort -tidy -retainids > \
-        braker.scaf.pseudo.mapped.gff3
+  // process run_braker_contigs {
+  //   errorStrategy 'ignore'
     
-    if [ ! -s braker.scaf.pseudo.mapped.gff3 ]; then
-      echo '##gff-version 3' > braker.scaf.pseudo.mapped.gff3
-    fi
-    """
-  }
+  //   input:
+  //     file 'pseudo.contigs.fasta' from contigs_seq_in
+  //     file 'ann_prot.fasta' from ref_ann_prot
+
+  //   output:
+  //     file 'braker/braker.gff3' into braker_ctg_gff3
+
+  //   script:    
+  //   """
+  //   JOB_ID="\$(basename \"${params.dist_dir}\")"
+  //   run_braker.sh \
+  //     pseudo.contigs.fasta \
+  //     ann_prot.fasta \
+  //     ${augustus_modeldir} \
+  //     "\$JOB_ID"_ctg \
+  //     ${cpus} \
+  //     ${params.use_existing} \
+  //     ${params.is_fungi} \
+  //     ${params.is_softmasked}
+  //   """
+  // }
+
+  // process parse_braker_contigs {
+  //   input:
+  //     path "braker_out.gff3" from braker_ctg_gff3
+  //     file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
+  //     file 'pseudo.contigs.fasta' from contigs_seq_out
+  //     file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
+  //     file 'pseudo.pseudochr.agp' from pseudochr_agp_augustus
+  //     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
+
+  //   output:
+  //     file 'braker.scaf.pseudo.mapped.gff3' into augustus_ctg_gff3
+    
+  //   when:
+  //     braker_ctg_gff3.exists()
+
+  //   """
+  //   echo "##gff-version 3\n" > braker.ctg.tmp;
+  //   gffread braker_out.gff3 | awk '\$3=="transcript" || \$3=="gene"' > missing_transcripts
+  //   cat missing_transcripts braker_out.gff3 | gt gff3 -sort -tidy | gt uniq > 1
+  //   if [ -s 1 ]; then
+  //       gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
+  //       > braker.ctg.tmp;
+  //   fi
+  //   augustus_mark_partial.lua braker.ctg.tmp > braker.ctg.gff3
+
+  //   transform_gff_with_agp.lua \
+  //       braker.ctg.gff3 \
+  //       pseudo.scaffolds.agp \
+  //       pseudo.contigs.fasta \
+  //       pseudo.scaffolds.fasta | \
+  //       gt gff3 -sort -tidy -retainids > \
+  //       braker.ctg.scaf.mapped.gff3
+  //   transform_gff_with_agp.lua \
+  //       braker.ctg.scaf.mapped.gff3 \
+  //       pseudo.pseudochr.agp \
+  //       pseudo.scaffolds.fasta \
+  //       pseudo.pseudochr.fasta | \
+  //       gt gff3 -sort -tidy -retainids > \
+  //       braker.scaf.pseudo.mapped.gff3
+    
+  //   if [ ! -s braker.scaf.pseudo.mapped.gff3 ]; then
+  //     echo '##gff-version 3' > braker.scaf.pseudo.mapped.gff3
+  //   fi
+  //   """
+  // }
 
 } else {
-  process run_augustus_pseudo {
-    cache 'deep'
+  braker_status = Channel.value('')
+  parsed_braker_pseudo_gff3 = Channel.empty()
+}
 
-    input:
+process run_augustus_pseudo {
+  cache 'deep'
+
+  input:
     set val(hintsline), file('augustus.hints') from all_hints
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
     val extrinsic_cfg
     file augustus_modeldir
+    val braker_status
 
-    output:
-    file 'augustus.gff3' into augustus_pseudo_gff3
-
+  output:
+    file 'augustus.gff3' into parsed_augustus_pseudo_gff3      
+  
+  script:
+  if (!params.run_braker | "${braker_status}" == 'FAILED') {
     """
     echo "##gff-version 3\n" > augustus.full.tmp.2;
     AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
@@ -620,10 +641,15 @@ if (params.run_braker) {
     fi
     augustus_mark_partial.lua augustus.full.tmp.2 > augustus.gff3
     """
+  } else {
+    """
+    echo '##gff-version 3' > augustus.gff3
+    """
   }
+}
 
-  process run_augustus_contigs {
-    input:
+process run_augustus_contigs {
+  input:
     file 'pseudo.contigs.fasta' from contigs_seq
     file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
     file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
@@ -631,10 +657,13 @@ if (params.run_braker) {
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
     val extrinsic_cfg
     file augustus_modeldir
+    val braker_status
 
-    output:
-    file 'augustus.scaf.pseudo.mapped.gff3' into augustus_ctg_gff3
+  output:
+    file 'augustus.scaf.pseudo.mapped.gff3' into parsed_augustus_ctg_gff3
 
+  script:
+  if (!params.run_braker | "${braker_status}" == 'FAILED') {
     """
     echo "##gff-version 3\n" > augustus.ctg.tmp.2;
     AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
@@ -671,6 +700,10 @@ if (params.run_braker) {
     if [ ! -s augustus.scaf.pseudo.mapped.gff3 ]; then
       echo '##gff-version 3' > augustus.scaf.pseudo.mapped.gff3
     fi
+    """
+  } else {
+    """
+    echo '##gff-version 3' > augustus.scaf.pseudo.mapped.gff3
     """
   }
 }
@@ -709,8 +742,9 @@ process merge_genemodels {
     cache 'deep'
 
     input:
-    file 'augustus.full.gff3' from augustus_pseudo_gff3
-    file 'augustus.ctg.gff3' from augustus_ctg_gff3
+    file 'braker.full.gff3' from parsed_braker_pseudo_gff3.ifEmpty('##gff-version 3')
+    file 'augustus.full.gff3' from parsed_augustus_pseudo_gff3
+    file 'augustus.ctg.gff3' from parsed_augustus_ctg_gff3
     file 'snap.full.gff3' from snap_gff3
     file 'ratt.full.gff3' from ratt_gff3
 
@@ -720,7 +754,7 @@ process merge_genemodels {
     """
     unset GT_RETAINIDS && \
     gt gff3 -fixregionboundaries -retainids no -sort -tidy \
-        augustus.full.gff3 augustus.ctg.gff3 snap.full.gff3 ratt.full.gff3 \
+        braker.full.gff3 augustus.full.gff3 augustus.ctg.gff3 snap.full.gff3 ratt.full.gff3 \
         > merged.pre.gff3 && \
     export GT_RETAINIDS=yes
     if [ ! -s merged.pre.gff3 ]; then
@@ -1018,7 +1052,7 @@ process make_ref_input_for_orthomcl {
     """
     truncate_header.lua < ${omcl_pepfile} > pepfile.trunc
     ln -s pepfile.trunc mapped.fasta
-    orthomclAdjustFasta ${params.ref_species} mapped.fasta 1
+    adjust_fasta_header.pl ${params.ref_species} mapped.fasta 1
     """
 }
 
@@ -1032,99 +1066,26 @@ process make_target_input_for_orthomcl {
     """
     truncate_header.lua < pepfile.fas > pepfile.trunc
     ln -s pepfile.trunc mapped.fasta
-    orthomclAdjustFasta ${params.GENOME_PREFIX} mapped.fasta 1
+    adjust_fasta_header.pl ${params.GENOME_PREFIX} mapped.fasta 1
     """
 }
 
 adjusted_fasta.into{ adjusted_fasta_for_filter; adjusted_fasta_for_blast_parser}
 adjusted_fasta_ref.into{ adjusted_fasta_ref_for_filter; adjusted_fasta_ref_for_blast_parser}
 
-process filter_fasta_for_orthomcl {
+process run_orthofinder {
     input:
-    file "compliantFasta/${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_filter
-    file "compliantFasta/${params.ref_species}.fasta" from adjusted_fasta_ref_for_filter
+      file "${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_filter
+      file "${params.ref_species}.fasta" from adjusted_fasta_ref_for_filter
     
     output:
-    file 'goodProteins.fasta' into good_proteins_fasta
+      file 'orthomcl_out' into orthomcl_cluster_out
 
     """
-    orthomclFilterFasta compliantFasta/ 10 20
-    """
-}
+    orthofinder.py -f . -o results
 
-good_proteins_fasta.into{ good_proteins_fasta_for_index; good_proteins_fasta_for_query}
-
-process blast_for_orthomcl_formatdb {
-    cache 'deep'
-
-    input:
-    file 'goodProteins.fasta' from good_proteins_fasta_for_index
-
-    output:
-    file 'goodProteins.fasta' into good_proteins_fasta_indexed
-    file 'goodProteins.fasta.phr' into good_proteins_fasta_indexed_phr
-    file 'goodProteins.fasta.psq' into good_proteins_fasta_indexed_psq
-    file 'goodProteins.fasta.pin' into good_proteins_fasta_indexed_pin
-
-    """
-    makeblastdb -dbtype prot -in goodProteins.fasta
-    """
-}
-
-proteins_orthomcl_blast_chunk = good_proteins_fasta_for_query.splitFasta( by: 50, file: true)
-process blast_for_orthomcl {
-    cache 'deep'
-
-    input:
-    file 'prot_chunk.fasta' from proteins_orthomcl_blast_chunk
-    file 'goodProteins.fasta' from good_proteins_fasta_indexed.first()
-    file 'goodProteins.fasta.phr' from good_proteins_fasta_indexed_phr.first()
-    file 'goodProteins.fasta.psq' from good_proteins_fasta_indexed_psq.first()
-    file 'goodProteins.fasta.pin' from good_proteins_fasta_indexed_pin.first()
-
-    output:
-    file 'blastout' into orthomcl_blastout
-
-    """
-    blastall -p blastp -W 4 -F 'm S' -v 100000 -b 100000 -d goodProteins.fasta -m 8 \
-      -i prot_chunk.fasta > blastout
-    """
-}
-
-process parse_blastout_for_orthomcl {
-    input:
-    file 'blastout' from orthomcl_blastout.collectFile()
-    file "compliantFasta/${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_blast_parser
-    file "compliantFasta/${params.ref_species}.fasta" from adjusted_fasta_ref_for_blast_parser
-
-    output:
-    file 'similarSequences.txt' into similar_sequences
-
-    """
-    orthomclBlastParser blastout compliantFasta/ >> similarSequences.txt  
-    """
-}
-
-orthomcl_conffile = file(params.ORTHOMCL_CONFIG_FILE)
-
-process run_orthomcl {
-    cache 'deep'
-
-    input:
-    val orthomcl_conffile
-    file 'similarSequences.txt' from similar_sequences
-
-    output:
-    file 'orthomcl_out' into orthomcl_cluster_out
-
-    """
-    orthomclInstallSchema ${orthomcl_conffile} install_schema.log
-    orthomclLoadBlast ${orthomcl_conffile} similarSequences.txt
-    orthomclPairs ${orthomcl_conffile} orthomcl_pairs.log cleanup=yes
-    orthomclDumpPairsFiles ${orthomcl_conffile}
-
-    mcl mclInput --abc -I 1.5 -o mclOutput
-    orthomclMclToGroups ORTHOMCL 0 < mclOutput > orthomcl_out
+    # filter out clusters with single gene.
+    awk 'BEGIN { FS="[ ]" }; { if (\$3) print \$0 }' results/*/Orthogroups/Orthogroups.txt > orthomcl_out
     """
 }
 
@@ -1428,7 +1389,6 @@ if (params.do_contiguation && params.do_circos) {
         output:
         file 'links.txt' into circos_input_links
         file 'karyotype.txt' into circos_input_karyotype
-        file 'chromosomes.txt' into circos_input_chromosomes
         file 'genes.txt' into circos_input_genes
         file 'gaps.txt' into circos_input_gaps
         file 'bin.txt' into bin_target_mapping
@@ -1445,8 +1405,6 @@ if (params.do_contiguation && params.do_circos) {
 
     circos_input_karyotype.into{ circos_input_karyotype_chr; circos_input_karyotype_bin }
 
-    circos_input_chromosomes.into{ circos_input_chromosomes_chr; circos_input_chromosomes_bin }
-
     circos_input_genes.into{ circos_input_genes_chr; circos_input_genes_bin }
 
     circos_input_gaps.into{ circos_input_gaps_chr; circos_input_gaps_bin }
@@ -1456,6 +1414,7 @@ if (params.do_contiguation && params.do_circos) {
 
     process circos_run_chrs {
         tag { chromosome[0] }
+        errorStrategy 'ignore'
 
         input:
         file 'links_full.txt' from circos_input_links_chr.first()

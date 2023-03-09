@@ -520,7 +520,7 @@ function embl_vis:visit_feature(fn)
         if pp and pp:get_attribute("orthologous_to") and not embl_compliant then
           for _,v in ipairs(split(pp:get_attribute("orthologous_to"), ",")) do
             io.write("FT                   /ortholog=\"" ..
-                            v .. " " .. v .. ";program=OrthoMCL;rank=0\"\n")
+                            v .. " " .. v .. ";program=OrthoFinder;rank=0\"\n")
             nof_orths = nof_orths + 1
           end
         end

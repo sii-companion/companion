@@ -18,8 +18,8 @@
 ]]
 
 function usage()
-  io.stderr:write("Annotates GFF3 files with OrthoMCL results.\n")
-  io.stderr:write(string.format("Usage: %s <GFF3_file> <orthomcl output> "
+  io.stderr:write("Annotates GFF3 files with OrthoFinder results.\n")
+  io.stderr:write(string.format("Usage: %s <GFF3_file> <orthofinder output> "
                                 .."<map_file>\n" , arg[0]))
   os.exit(1)
 end
@@ -95,7 +95,7 @@ end
 -- build cluster index
 clindex = {}
 for l in io.lines(arg[2]) do
-  local name, members = string.match(l, "^(ORTHOMCL%d+):%s+(.+)")
+  local name, members = string.match(l, "^(OG%d+):%s+(.+)")
   if not name or not members then
     error("could not parse cluster or members from line " .. l)
   end
