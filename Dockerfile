@@ -184,11 +184,13 @@ RUN cpanm File::Spec::Functions && \
 RUN cd /opt && \
     git clone https://github.com/Gaius-Augustus/BRAKER.git && \
     cd BRAKER/scripts
-COPY gmes_linux_64_4.tar.gz /opt/gmes_linux_64_4.tar.gz
-COPY gm_key_64.gz /tmp/gm_key_64.gz
+ADD http://topaz.gatech.edu/GeneMark/etp.for_braker.tar.gz /opt/etp.for_braker.tar.gz
+ADD http://topaz.gatech.edu/GeneMark/tmp/GMtool_yk3JF/gm_key_64.gz /tmp/gm_key_64.gz
+# COPY gmes_linux_64_4.tar.gz /opt/gmes_linux_64_4.tar.gz
+# COPY gm_key_64.gz /tmp/gm_key_64.gz
 RUN cd /opt && \
-    tar -xzvf gmes_linux_64_4.tar.gz && \
-    rm -f gmes_linux_64_4.tar.gz
+    tar -xzf etp.for_braker.tar.gz && \
+    rm -f etp.for_braker.tar.gz
 RUN apt-get -y install cmake
 RUN cd /opt && \
     git clone https://github.com/pezmaster31/bamtools.git && \
@@ -246,7 +248,7 @@ ENV GT_RETAINIDS yes
 ENV PERL5LIB /opt/RATT/:/opt/ABACAS2/:$PERL5LIB
 # ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/bin:/usr/share/augustus/scripts:/opt/OrthoMCL/bin:/opt/OrthoFinder_source:/opt/RATT:/opt/ABACAS2:$PATH
 ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/bin:/usr/share/augustus/scripts:/opt/OrthoFinder_source:/opt/RATT:/opt/ABACAS2:$PATH
-ENV GENEMARK_PATH /opt/gmes_linux_64_4
+ENV GENEMARK_PATH /opt/etp.for_braker/bin/gmes
 ENV PYTHON3_PATH /usr/bin
 ENV BAMTOOLS_PATH /opt/bamtools/build/src
 ENV DIAMOND_PATH /opt
