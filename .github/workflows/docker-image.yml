@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag uofgiii/companion:$(date +%s)
+      run: docker build . --file Dockerfile --tag uofgiii/companion:$(date +%s) --build-arg USER_ID=1000 --build-arg GROUP_ID=1000
