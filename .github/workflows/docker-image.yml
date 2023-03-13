@@ -20,6 +20,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag $Tag --build-arg USER_ID=1000 --build-arg GROUP_ID=1000
     - name: Create Docker container
-      run: docker run -dit -v $HOME:/tmp/companion --name companion_container $Tag /bin/bash
+      run: docker run -dit -v /tmp/companion --name companion_container $Tag /bin/bash
     - name: Run testsuite
       run: docker exec companion_container /bin/bash -c 'cd /tmp/companion/test/testsuite; ./testsuite.rb -threads 2'
