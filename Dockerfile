@@ -234,6 +234,7 @@ RUN if [ ${USER_ID:-0} -ne 0 ] && [ ${GROUP_ID:-0} -ne 0 ]; then \
     install -d -m 0755 -o dockeruser -g dockeruser /home/dockeruser \
 ;fi
 
+RUN chmod +r /tmp/gm_key_64.gz
 USER dockeruser
 RUN zcat /tmp/gm_key_64.gz > ~/.gm_key
 
