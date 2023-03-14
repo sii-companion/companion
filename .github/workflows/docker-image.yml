@@ -8,30 +8,37 @@ on:
 
 jobs:
 
-  # container-test-job:
-  #   container:
-  #     image: uofgiii/companion:latest
-  #     volumes:
-  #       -
-
-  build:
-
+  container-test-job:
     runs-on: ubuntu-20.04
-
-    env:
-      Tag: companion_image
-
+    container:
+      image: uofgiii/companion:latest
+      volumes:
+        - ${{ github.workspace }}:/tmp/companion
     steps:
-    - uses: actions/checkout@v3
-    # - name: Build the Docker image
-    #   run: docker build . --file Dockerfile --tag $Tag --build-arg USER_ID=1000 --build-arg GROUP_ID=1000
-    - name: Pull Docker image
-      run: docker pull uofgiii/companion:latest
-    - name: Create Docker container
-      run: docker run -dit -v $HOME:/tmp/companion --name companion_container uofgiii/companion:latest /bin/bash
-    - name: install tree
-      run: docker exec companion_container /bin/bash -c 'apt install tree'
-    - name: file tree
-      run: docker exec companion_container /bin/bash -c 'tree -d'
-    # - name: Run testsuite
-    #   run: docker exec companion_container /bin/bash -c 'cd /tmp/companion/work/companion/companion/test/testsuite; ./testsuite.rb -threads 2'
+      - uses: actions/checkout@v3
+      - name: install tree
+        run: apt install tree
+      - name: file tree
+        run: tree -d
+
+  # build:
+
+  #   runs-on: ubuntu-20.04
+
+  #   env:
+  #     Tag: companion_image
+
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   # - name: Build the Docker image
+  #   #   run: docker build . --file Dockerfile --tag $Tag --build-arg USER_ID=1000 --build-arg GROUP_ID=1000
+  #   - name: Pull Docker image
+  #     run: docker pull uofgiii/companion:latest
+  #   - name: Create Docker container
+  #     run: docker run -dit -v $HOME:/tmp/companion --name companion_container uofgiii/companion:latest /bin/bash
+  #   - name: install tree
+  #     run: docker exec companion_container /bin/bash -c 'apt install tree'
+  #   - name: file tree
+  #     run: docker exec companion_container /bin/bash -c 'tree -d'
+  #   # - name: Run testsuite
+  #   #   run: docker exec companion_container /bin/bash -c 'cd /tmp/companion/work/companion/companion/test/testsuite; ./testsuite.rb -threads 2'
