@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-20.04
     container:
       image: uofgiii/companion:latest
-      volumes:
-        - ${{ github.workspace }}:/tmp/companion
+      # volumes:
+      #   - ${{ github.workspace }}:/tmp/companion
     steps:
-      # - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - name: install tree
         run: apt install tree
       - name: file tree
