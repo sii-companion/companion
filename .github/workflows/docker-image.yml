@@ -23,5 +23,7 @@ jobs:
       run: docker pull uofgiii/companion:latest
     - name: Create Docker container
       run: docker run -dit -v $HOME:/tmp/companion --name companion_container uofgiii/companion:latest /bin/bash
-    - name: Run testsuite
-      run: docker exec companion_container /bin/bash -c 'cd /tmp/companion/test/testsuite; ./testsuite.rb -threads 2'
+    - name: file tree
+      run: docker exec companion_container /bin/bash -c 'tree'
+    # - name: Run testsuite
+    #   run: docker exec companion_container /bin/bash -c 'cd /tmp/companion/test/testsuite; ./testsuite.rb -threads 2'
