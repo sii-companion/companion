@@ -17,7 +17,9 @@ jobs:
       - name: Run testsuite
         run: cd test/testsuite; ./testsuite.rb -threads 2
       - name: Install nextflow
-        run: curl -fsSL get.nextflow.io | bash
+        run: |
+          apt install curl
+          curl -fsSL get.nextflow.io | bash
       - name: Run pipeline
         run: ./nextflow -c loc_web.config -c params_default.config run annot.nf --do_circos=false
 
