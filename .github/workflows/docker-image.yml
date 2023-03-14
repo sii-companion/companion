@@ -8,6 +8,12 @@ on:
 
 jobs:
 
+  # container-test-job:
+  #   container:
+  #     image: uofgiii/companion:latest
+  #     volumes:
+  #       -
+
   build:
 
     runs-on: ubuntu-20.04
@@ -23,9 +29,9 @@ jobs:
       run: docker pull uofgiii/companion:latest
     - name: Create Docker container
       run: docker run -dit -v $HOME:/tmp/companion --name companion_container uofgiii/companion:latest /bin/bash
-    # - name: install tree
-    #   run: docker exec companion_container /bin/bash -c 'apt install tree'
-    # - name: file tree
-    #   run: docker exec companion_container /bin/bash -c 'tree -d /tmp/companion'
-    - name: Run testsuite
-      run: docker exec companion_container /bin/bash -c 'cd /tmp/companion/work/companion/companion/test/testsuite; ./testsuite.rb -threads 2'
+    - name: install tree
+      run: docker exec companion_container /bin/bash -c 'apt install tree'
+    - name: file tree
+      run: docker exec companion_container /bin/bash -c 'tree -d'
+    # - name: Run testsuite
+    #   run: docker exec companion_container /bin/bash -c 'cd /tmp/companion/work/companion/companion/test/testsuite; ./testsuite.rb -threads 2'
