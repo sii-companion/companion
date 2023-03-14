@@ -18,7 +18,7 @@ jobs:
         run: cd test/testsuite; ./testsuite.rb -threads 2
       - name: Install nextflow
         run: |
-          apt install curl
+          apt-get -y update; apt-get -y install curl
           curl -fsSL get.nextflow.io | bash
       - name: Run pipeline
         run: ./nextflow -c loc_web.config -c params_default.config run annot.nf --do_circos=false
