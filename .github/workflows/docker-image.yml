@@ -26,6 +26,6 @@ jobs:
     - name: install tree
       run: docker exec companion_container /bin/bash -c 'apt install tree'
     - name: file tree
-      run: docker exec companion_container /bin/bash -c 'tree'
+      run: docker exec companion_container /bin/bash -c 'tree -d /tmp/companion'
     # - name: Run testsuite
     #   run: docker exec companion_container /bin/bash -c 'cd /tmp/companion/test/testsuite; ./testsuite.rb -threads 2'
