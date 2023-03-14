@@ -23,6 +23,8 @@ jobs:
       run: docker pull uofgiii/companion:latest
     - name: Create Docker container
       run: docker run -dit -v $HOME:/tmp/companion --name companion_container uofgiii/companion:latest /bin/bash
+    - name: install tree
+      run: docker exec companion_container /bin/bash -c 'apt install tree'
     - name: file tree
       run: docker exec companion_container /bin/bash -c 'tree'
     # - name: Run testsuite
