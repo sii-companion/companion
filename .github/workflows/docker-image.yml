@@ -16,12 +16,12 @@ jobs:
       #   - ${{ github.workspace }}:/tmp/companion
     steps:
       - uses: actions/checkout@v3
-      - name: install tree
-        run: apt install tree
-      - name: file tree
-        run: tree -da
-      # - name: Run testsuite
-      #   run: cd /tmp/companion/test/testsuite; ./testsuite.rb -threads 2
+      # - name: install tree
+      #   run: apt install tree
+      # - name: file tree
+      #   run: tree -da
+      - name: Run testsuite
+        run: cd test/testsuite; ./testsuite.rb -threads 2
 
   # build:
 
