@@ -1,8 +1,8 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ "master" ]
+  # push:
+  #   branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
@@ -10,6 +10,8 @@ jobs:
 
   container-test-job:
     runs-on: ubuntu-20.04
+    env:
+      GM_KEY: ${{ secrets.GM_KEY }}
     container:
       image: uofgiii/companion:latest
       options: --user root

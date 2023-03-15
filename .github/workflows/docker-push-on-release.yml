@@ -2,7 +2,7 @@ name: Production deploy
 
 on:
   workflow_run:
-    workflows: ["Docker Image CI"]
+    workflows: ["Tag and Release"]
     types:
       - completed
 
