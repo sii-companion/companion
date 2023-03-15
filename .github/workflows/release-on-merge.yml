@@ -46,11 +46,14 @@ jobs:
   #         version-regexp: '^VERSION = "\d+.\d+.\d+"$'
 
   write-version:
+    needs: build
     runs-on: ubuntu-latest
     name: Write version to file
     steps:
       - uses: actions/checkout@v2
       - name: Update version
-        uses: brettdorrans/write-version-to-file@master
+        uses: sebastian-muthwill/write-version-to-file@master
         with:
           filename: '.version'
+      - name: Commit change
+        uses: stefanzweifel/git-auto-commit-action@v4
