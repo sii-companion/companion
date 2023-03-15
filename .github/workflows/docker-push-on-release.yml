@@ -39,9 +39,10 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: [GM_KEY="$GM_KEY", USER_ID=1000, GROUP_ID=1000]
-
-
+          build-args:
+          - GM_KEY="$GM_KEY"
+          - USER_ID=1000
+          - GROUP_ID=1000
 
   # build:
     # if: ${{ github.event.workflow_run.conclusion == 'success' }}
