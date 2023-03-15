@@ -13,9 +13,10 @@ jobs:
     # if: ${{ github.event.label.name == 'patch' }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
       - name: Bump version and push tag
-        uses: hennejg/github-tag-action@v4.1.jh1
+        id: tag_version
+        uses: mathiedutour/github-tag-action@v6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           dry_run:
