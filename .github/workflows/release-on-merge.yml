@@ -32,13 +32,14 @@ jobs:
       #     name: Release ${{ steps.tag_version.outputs.new_tag }}
       #     body: ${{ steps.tag_version.outputs.changelog }}
   release:
-    if: ${{ jobs.build.outputs.release_type == 'minor' }}
+    needs: build
+    if: ${{ needs.build.outputs.release_type == 'minor' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
-          tag: ${{ jobs.build.outputs.new_tag }}
-          name: Release ${{ jobs.build.outputs.new_tag }}
-          body: ${{ jobs.build.outputs.changelog }}
+          tag: ${{ needs.build.outputs.new_tag }}
+          name: Release ${{ needs.build.outputs.new_tag }}
+          body: ${{ needs.build.outputs.changelog }}
