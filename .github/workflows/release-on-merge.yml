@@ -15,11 +15,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Bump version and push tag
-        # id: tag_version
+        id: tag_version
         uses: mathieudutour/github-tag-action@v6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          dry_run:
+          # dry_run:
+    outputs:
+      new_tag: ${{ steps.tag_version.outputs.new_tag }}
+      changelog: ${{ steps.tag_version.outputs.changelog }}
+      release_type: ${{ steps.tag_version.outputs.release_type }}
       # if: ${{ steps.tag_version.outputs.release_type == 'minor' }}
       # - name: Create a GitHub release
       #   uses: ncipollo/release-action@v1
