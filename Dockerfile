@@ -103,9 +103,10 @@ RUN mkdir -p /opt/data
 ADD ./data /opt/data
 
 #
-# install RATT (keep up to date from build directory)
+# install RATT
 #
-ADD ./RATT /opt/RATT
+RUN cd /opt && \
+    git clone https://github.com/ThomasDOtto/ratt RATT
 RUN apt-get install tabix --yes
 
 #
@@ -185,7 +186,7 @@ RUN cd /opt && \
     git clone https://github.com/Gaius-Augustus/BRAKER.git && \
     cd BRAKER/scripts
 ADD http://topaz.gatech.edu/GeneMark/etp.for_braker.tar.gz /opt/etp.for_braker.tar.gz
-ADD http://topaz.gatech.edu/GeneMark/tmp/GMtool_yk3JF/gm_key_64.gz /tmp/gm_key_64.gz
+# ADD http://topaz.gatech.edu/GeneMark/tmp/GMtool_yk3JF/gm_key_64.gz /tmp/gm_key_64.gz
 # COPY gmes_linux_64_4.tar.gz /opt/gmes_linux_64_4.tar.gz
 # COPY gm_key_64.gz /tmp/gm_key_64.gz
 RUN cd /opt && \
@@ -234,9 +235,10 @@ RUN if [ ${USER_ID:-0} -ne 0 ] && [ ${GROUP_ID:-0} -ne 0 ]; then \
     install -d -m 0755 -o dockeruser -g dockeruser /home/dockeruser \
 ;fi
 
-RUN chmod +r /tmp/gm_key_64.gz
+ARG GM_KEY
+# RUN chmod +r /tmp/gm_key_64.gz
 USER dockeruser
-RUN zcat /tmp/gm_key_64.gz > ~/.gm_key
+RUN echo ${GM_KEY} > ~/.gm_key
 
 #
 # set environment variables
