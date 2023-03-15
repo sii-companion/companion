@@ -15,19 +15,26 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Bump version and push tag
-        # id: tag_version
+        id: tag_version
         uses: mathieudutour/github-tag-action@v6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           dry_run:
-  release:
-    if: ${{ jobs.build.outputs.release_type == 'minor' }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+      if: ${{ steps.tag_version.outputs.release_type == 'minor' }}
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
-          tag: ${{ jobs.build.outputs.new_tag }}
-          name: Release ${{ jobs.build.outputs.new_tag }}
-          body: ${{ jobs.build.outputs.changelog }}
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
+  # release:
+  #   if: ${{ jobs.build.outputs.release_type == 'minor' }}
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Create a GitHub release
+  #       uses: ncipollo/release-action@v1
+  #       with:
+  #         tag: ${{ jobs.build.outputs.new_tag }}
+  #         name: Release ${{ jobs.build.outputs.new_tag }}
+  #         body: ${{ jobs.build.outputs.changelog }}
