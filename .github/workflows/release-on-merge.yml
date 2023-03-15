@@ -5,12 +5,11 @@ on:
     branches: [ "master" ]
   # pull_request:
   #   types: [ labeled ]
-  pull_request:
-    branches: [ "master" ]
+  # pull_request:
+  #   branches: [ "master" ]
 
 jobs:
   build:
-    # if: ${{ github.event.label.name == 'patch' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,21 +18,14 @@ jobs:
         uses: mathieudutour/github-tag-action@v6.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # dry_run:
     outputs:
       new_tag: ${{ steps.tag_version.outputs.new_tag }}
       changelog: ${{ steps.tag_version.outputs.changelog }}
       release_type: ${{ steps.tag_version.outputs.release_type }}
-      # if: ${{ steps.tag_version.outputs.release_type == 'minor' }}
-      # - name: Create a GitHub release
-      #   uses: ncipollo/release-action@v1
-      #   with:
-      #     tag: ${{ steps.tag_version.outputs.new_tag }}
-      #     name: Release ${{ steps.tag_version.outputs.new_tag }}
-      #     body: ${{ steps.tag_version.outputs.changelog }}
+
   release:
     needs: build
-    if: ${{ needs.build.outputs.release_type == 'minor' }}
+    if: ${{ contains(fromJSON('["minor", "major"]'), needs.build.outputs.release_type) }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
