@@ -31,8 +31,8 @@ jobs:
       #     tag: ${{ steps.tag_version.outputs.new_tag }}
       #     name: Release ${{ steps.tag_version.outputs.new_tag }}
       #     body: ${{ steps.tag_version.outputs.changelog }}
-  if: ${{ jobs.build.outputs.release_type == 'minor' }}
   release:
+    if: ${{ jobs.build.outputs.release_type == 'minor' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
