@@ -1,0 +1,21 @@
+name: Release
+
+on:
+  push:
+    branches: [ "master" ]
+  # pull_request:
+  #   types: [ labeled ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    # if: ${{ github.event.label.name == 'patch' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Bump version and push tag
+        uses: hennejg/github-tag-action@v4.1.jh1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          dry_run:
