@@ -183,7 +183,7 @@ RUN cpanm File::Spec::Functions && \
     cpanm File::HomeDir && \
     cpanm threads
 RUN cd /opt && \
-    git clone https://github.com/Gaius-Augustus/BRAKER.git && \
+    git clone https://github.com/Gaius-Augustus/BRAKER.git --branch v2.1.6 && \
     cd BRAKER/scripts
 ADD http://topaz.gatech.edu/GeneMark/etp.for_braker.tar.gz /opt/etp.for_braker.tar.gz
 # ADD http://topaz.gatech.edu/GeneMark/tmp/GMtool_yk3JF/gm_key_64.gz /tmp/gm_key_64.gz
