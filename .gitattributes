@@ -1,8 +1,6 @@
 data/** linguist-vendored
-RATT/** linguist-vendored
 ABACAS2/** linguist-vendored
 example-data/** linguist-vendored
-*.nf linguist-language=Groovy
 
 # We'll let Git's auto-detection algorithm infer if a file is text. If it is,
 # enforce LF line endings regardless of OS or git configurations.
