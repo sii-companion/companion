@@ -1,6 +1,6 @@
 #!/usr/bin/env nextflow
 
-VERSION = "1.0.2"
+VERSION = file("$baseDir" + "/.version").getText()
 
 /*
     Author: Sascha Steinbiss <ss34@sanger.ac.uk>
@@ -33,7 +33,7 @@ omcl_pepfile = file(params.ref_dir + "/" + params.ref_species + "/proteins.fasta
 augustus_modeldir = file(params.ref_dir + "/" + params.ref_species)
 
 log.info ""
-log.info "C O M P A N I O N  ~  version " + VERSION
+log.info "C O M P A N I O N  ~  " + VERSION
 log.info "query               : ${params.inseq}"
 log.info "reference           : ${params.ref_species}"
 log.info "reference directory : ${params.ref_dir}"

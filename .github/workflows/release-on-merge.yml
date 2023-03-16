@@ -1,11 +1,7 @@
-name: Tag and Release
+name: Tag and release
 
 on:
   push:
-    branches: [ "master" ]
-  # pull_request:
-  #   types: [ labeled ]
-  pull_request:
     branches: [ "master" ]
 
 jobs:
@@ -23,28 +19,6 @@ jobs:
       changelog: ${{ steps.tag_version.outputs.changelog }}
       release_type: ${{ steps.tag_version.outputs.release_type }}
 
-  release:
-    needs: [build, write-version]
-    if: ${{ contains(fromJSON('["minor", "major"]'), needs.build.outputs.release_type) }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Create a GitHub release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: ${{ needs.build.outputs.new_tag }}
-          name: Release ${{ needs.build.outputs.new_tag }}
-          body: ${{ needs.build.outputs.changelog }}
-
-  # upgrade-version:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: pocket-apps/action-update-version@v1
-  #       with:
-  #         files: 'annot.nf'
-  #         version-regexp: '^VERSION = "\d+.\d+.\d+"$'
-
   write-version:
     needs: build
     runs-on: ubuntu-latest
@@ -57,3 +31,16 @@ jobs:
           filename: '.version'
       - name: Commit change
         uses: stefanzweifel/git-auto-commit-action@v4
+
+  release:
+    needs: [build, write-version]
+    if: ${{ contains(fromJSON('["minor", "major"]'), needs.build.outputs.release_type) }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create a GitHub release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ needs.build.outputs.new_tag }}
+          name: Release ${{ needs.build.outputs.new_tag }}
+          body: ${{ needs.build.outputs.changelog }}
