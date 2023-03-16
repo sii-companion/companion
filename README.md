@@ -1,8 +1,8 @@
 # Companion
 A portable, scalable eukaryotic genome annotation pipeline implemented in Nextflow.
 
-[![Build Status](https://travis-ci.org/sanger-pathogens/companion.svg?branch=master)](https://travis-ci.org/sanger-pathogens/companion)  
-[![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen.svg)](https://github.com/iii-companion/companion/blob/master/LICENSE)  
+![Tests](https://github.com/iii-companion/companion/actions/workflows/test-on-pr.yml/badge.svg)
+[![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen.svg)](https://github.com/iii-companion/companion/blob/master/LICENSE)
 [![status](https://img.shields.io/badge/NAR-10.1093%2Fnar.gkw292-brightgreen.svg)](https://doi.org/10.1093/nar/gkw292)
 
 This software is a comprehensive computational pipeline for the annotation of eukaryotic genomes (like protozoan parasites). It performs the following tasks:

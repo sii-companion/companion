@@ -9,7 +9,7 @@ FROM ubuntu:20.04
 LABEL org.opencontainers.image.authors="William.Haese-Hill@glasgow.ac.uk"
 
 #
-# Install packages without interactive dialogue 
+# Install packages without interactive dialogue
 #
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -53,33 +53,6 @@ RUN cd /opt && \
 #
 RUN apt-get install genometools --yes
 
-
-#
-# Install and configure OrthoMCL
-#
-RUN cd /opt && \
-    git clone https://github.com/stajichlab/OrthoMCL.git
-
-ADD http://www.micans.org/mcl/src/mcl-latest.tar.gz /opt/mcl-latest.tar.gz
-RUN cd /opt && \
-    tar -xf mcl-latest.tar.gz && \
-    cd /opt/mcl-* && \
-    ./configure && \
-    make && \
-    make install && \
-    cd / && \
-    rm -rf /opt/mcl*
-
-#
-# Install Gblocks
-#
-# ADD http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_Linux64_0.91b.tar.Z /opt/gblocks64.tar.Z
-# RUN cd /opt && \
-#     tar -xzvf gblocks64.tar.Z && \
-#     rm -rf gblocks64.tar.Z && \
-#     cp Gblocks_0.91b/Gblocks /usr/bin/Gblocks && \
-#     chmod 755 /usr/bin/Gblocks
-
 #
 # get GO OBO file
 #
@@ -103,9 +76,10 @@ RUN mkdir -p /opt/data
 ADD ./data /opt/data
 
 #
-# install RATT (keep up to date from build directory)
+# install RATT
 #
-ADD ./RATT /opt/RATT
+RUN cd /opt && \
+    git clone https://github.com/ThomasDOtto/ratt RATT
 RUN apt-get install tabix --yes
 
 #
@@ -182,13 +156,12 @@ RUN cpanm File::Spec::Functions && \
     cpanm File::HomeDir && \
     cpanm threads
 RUN cd /opt && \
-    git clone https://github.com/Gaius-Augustus/BRAKER.git && \
+    git clone https://github.com/Gaius-Augustus/BRAKER.git --branch v2.1.6 && \
     cd BRAKER/scripts
-COPY gmes_linux_64_4.tar.gz /opt/gmes_linux_64_4.tar.gz
-COPY gm_key_64.gz /tmp/gm_key_64.gz
+ADD http://topaz.gatech.edu/GeneMark/etp.for_braker.tar.gz /opt/etp.for_braker.tar.gz
 RUN cd /opt && \
-    tar -xzvf gmes_linux_64_4.tar.gz && \
-    rm -f gmes_linux_64_4.tar.gz
+    tar -xzf etp.for_braker.tar.gz && \
+    rm -f etp.for_braker.tar.gz
 RUN apt-get -y install cmake
 RUN cd /opt && \
     git clone https://github.com/pezmaster31/bamtools.git && \
@@ -220,32 +193,20 @@ RUN cd /opt && \
     cd OrthoFinder_source && \
     chmod +x orthofinder.py
 
-## Make sure to build with 'docker build --build-arg USER_ID=$(id -u ${USER}) --build-arg GROUP_ID=$(id -g ${USER}) .' to populate these args.
-## THIS SHOULD BE RUN AFTER INSTALLATIONS
-ARG USER_ID
-ARG GROUP_ID
-RUN if [ ${USER_ID:-0} -ne 0 ] && [ ${GROUP_ID:-0} -ne 0 ]; then \
-    # userdel -f dockeruser && \
-    # if getent group dockeruser ; then groupdel dockeruser; fi && \
-    groupadd -g ${GROUP_ID} dockeruser && \
-    useradd -l -u ${USER_ID} -g dockeruser dockeruser && \
-    install -d -m 0755 -o dockeruser -g dockeruser /home/dockeruser \
-;fi
-
-USER dockeruser
-RUN zcat /tmp/gm_key_64.gz > ~/.gm_key
+## Make sure to build with 'docker build --build-arg GM_KEY=<GM_KEY> .' to populate this arg.
+ARG GM_KEY
+RUN echo ${GM_KEY} > ~/.gm_key
 
 #
 # set environment variables
 #
-ENV AUGUSTUS_CONFIG_PATH /usr/share/augustus/config
 ENV AUGUSTUS_BIN_PATH /opt/Augustus/bin
 ENV AUGUSTUS_SCRIPTS_PATH /opt/Augustus/scripts
 ENV RATT_HOME /opt/RATT
 ENV GT_RETAINIDS yes
 ENV PERL5LIB /opt/RATT/:/opt/ABACAS2/:$PERL5LIB
-ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/bin:/usr/share/augustus/scripts:/opt/OrthoMCL/bin:/opt/OrthoFinder_source:/opt/RATT:/opt/ABACAS2:$PATH
-ENV GENEMARK_PATH /opt/gmes_linux_64_4
+ENV PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin:/opt/BRAKER/scripts/:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/augustus/bin:/usr/share/augustus/scripts:/opt/OrthoFinder_source:/opt/RATT:/opt/ABACAS2:$PATH
+ENV GENEMARK_PATH /opt/etp.for_braker/bin/gmes
 ENV PYTHON3_PATH /usr/bin
 ENV BAMTOOLS_PATH /opt/bamtools/build/src
 ENV DIAMOND_PATH /opt

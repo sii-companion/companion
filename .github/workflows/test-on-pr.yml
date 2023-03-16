@@ -1,0 +1,26 @@
+name: Automated testing
+
+on:
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+
+  container-test-job:
+    runs-on: ubuntu-20.04
+    env:
+      GM_KEY: ${{ secrets.GM_KEY }}
+    container:
+      image: uofgiii/companion:latest
+      options: --user root
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run testsuite
+        run: cd test/testsuite; ./testsuite.rb -threads 2
+      - name: Install nextflow
+        run: |
+          apt-get -y update; apt-get -y install curl
+          apt-get -y install openjdk-11-jre-headless; apt-get clean
+          curl -fsSL get.nextflow.io | bash
+      - name: Run pipeline
+        run: ./nextflow -c loc_github.config -c params_default.config run annot.nf -ansi-log false --do_circos=false --run_braker=false
