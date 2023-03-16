@@ -14,4 +14,7 @@ example-data/ts24*test*.fasta
 # vagrant stuff
 ubuntu-xenial-*-cloudimg-console.log
 # example data outputs
+example-output
 example-data-*
+# local config files
+*.local.config
