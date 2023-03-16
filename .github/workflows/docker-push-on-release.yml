@@ -1,10 +1,6 @@
 name: Publish Docker image
 
 on:
-  # workflow_run:
-  #   workflows: ["Tag and Release"]
-  #   types:
-  #     - completed
   release:
     types: [published]
 
@@ -24,7 +20,6 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-          # password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
@@ -41,15 +36,3 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             GM_KEY="${{ env.GM_KEY }}"
-            USER_ID=1000
-            GROUP_ID=1000
-
-  # build:
-    # if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    # runs-on: ubuntu-latest
-    # env:
-    #   GM_KEY: ${{ secrets.GM_KEY }}
-    # steps:
-    # - uses: actions/checkout@v3
-    # - name: Build the Docker image
-    #   run: docker build . --file Dockerfile --tag uofg/companion:$(date +%s) --build-arg GM_KEY="$GM_KEY"
