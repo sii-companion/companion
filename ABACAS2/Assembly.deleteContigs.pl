@@ -1,19 +1,22 @@
-#! /usr/bin/perl -w
+#!/usr/bin/env perl
+# Copyright (c) 2011-2015 Genome Research Ltd.
+# Author: Thomas D. Otto <tdo@sanger.ac.uk>
 #
-# File: Assembly.deleteReads.pl
-# Time-stamp: <21-Feb-2011 21:11:13 tdo>
-# $Id: $
+# This file is part of ABACAS2.
 #
-# Copyright (C) 2008 by Meine Eigene Firma
-#
-# Author: Thomas Dan Otto
-#
-# Description: change to without ssaha is the shift in the columns due
-# to the qulatiy
-#
+# ABACAS2 is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; either version 3 of the License, or (at your option) any later
+# version.
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+# details.
+# You should have received a copy of the GNU General Public License along with
+# this program. If not, see <http://www.gnu.org/licenses/>.
 
 use strict;
-
+use warnings;
 
 if (scalar(@ARGV)<2) {
   die "call prog <list> <fasta> <resultName>\n";
@@ -34,9 +37,6 @@ my $ResultName=shift;
 open F,"> $ResultName " or die "Problem $ResultName: $!";
 print F $result;
 close(F);
-
-
-
 
 sub getFastq{
   my $name = shift;

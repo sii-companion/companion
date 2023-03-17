@@ -18,20 +18,39 @@
 use strict;
 use warnings;
 
-my %h;
+### will cut a fasta in individual files with the name >(\S*) A$
+# ARGV[1] will say how much sequences...
+SeparateSequences($ARGV[0],$ARGV[1]);
+sub SeparateSequences{
+  my $FileName = shift;
+  my $Amount = shift;
 
-my $count=0;
-while (<STDIN>){
-	if (/^>/){
-		if ($count){
-			print "\n";
-		}
-		print ;
-		$count++;
-		}
-	else {
-		chomp;
-		print ;
+  if (!defined($Amount)) {
+	$Amount = 99999999999;
+  }
+  open (FILE, $FileName) or die "Couldn't open file to Separate $FileName $!\n";
+
+  my $Counter = 0;
+  my $Out;
+  my @NameFiles;
+  while (<FILE>) {
+	if ($Counter < $Amount) {
+
+	  if (/^>(\S+)/) {
+		print $_,"\n";
+
+		close(FILEOUT);
+		my $Name = $1;#."_$Counter.fasta";
+		open (FILEOUT, "> $Name") or die "Problem do $Name file  $!\n";
+		push @NameFiles, $Name;
+		$Counter++;
+		print FILEOUT $_;
+	  }
+	  else {
+		print FILEOUT $_;
+	  }
 	}
-
+  }
+  print "$Counter Sequences where generated\nDone.\n";
+  return \@NameFiles;
 }

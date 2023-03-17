@@ -1,19 +1,23 @@
-#! /usr/bin/perl -w
+#!/usr/bin/env perl
+# Copyright (c) 2011-2015 Genome Research Ltd.
+# Author: Thomas D. Otto <tdo@sanger.ac.uk>
 #
-# File: aba2.sort.coords.pl
-# Time-stamp: <18-Nov-2009 17:56:03 tdo>
-# $Id: $
+# This file is part of ABACAS2.
 #
-# Copyright (C) 2009 by Pathogene Group, Sanger Center
-#
-# Author: Thomas Dan Otto
-#
-# Description:
-#
+# ABACAS2 is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; either version 3 of the License, or (at your option) any later
+# version.
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+# details.
+# You should have received a copy of the GNU General Public License along with
+# this program. If not, see <http://www.gnu.org/licenses/>.
 
 use strict;
-use Data::Dumper;
-
+use warnings;
+#use Data::Dumper;
 
 my $file=shift;
 my $contigFile = shift;
@@ -35,19 +39,14 @@ if (!defined($method) || $method eq 'nucmer') {
 elsif ($method eq 'promer') {
   print "Using Promer ... \n";
   $minAlignmentLength=50;
-} 
+}
 else {
   die "Please specify method nucmer / promer\n";
-  
-  
 }
 
 if (!defined($contigFile)) {
   die "coords fiel> <contigFile> <step 0 - just order 1 - split>\n";
-  
 }
-
-
 
 open (F,$file) or die "die gimme file.";
 my @F=<F>;
@@ -78,7 +77,7 @@ foreach (@F) {
 	  ($refS,$refE,$contigS,$contigE,$alignRef,$alignContig,$id,$similarity,$dummy,$refLength,$contigLength,$strand1,$strand2,$reference,$contig)
 	  = split(/\s+/);
 	}
-	
+
 	$h{$contig}{$alignContig}=$_;
 	$contigLength{$contig}=$contigLength;
 	if ($strand2==1) {
@@ -89,7 +88,7 @@ foreach (@F) {
 	  #contig is reersed, start und stop also inversted
 	  $h2{$contig}{$contigE}="$reference,$alignContig,$strand2,$contigE,$contigS,$refS";
 	}
-	
+
   }
 }
 
@@ -105,8 +104,6 @@ foreach my $contig (sort keys %h) {
 }
 
 
-
-
 my $res;
 my %FirstLine;
 
@@ -114,7 +111,7 @@ my %contigs2Analyse;
 
 foreach (@ar) {
   if (/^\d/) {
-  
+
 	if ($method eq 'n') {
 	  ($refS,$refE,$contigS,$contigE,$alignRef,$alignContig,$id,$refLength,$contigLength,$strand1,$strand2,$reference,$contig)
 	  = split(/\s+/);
@@ -123,16 +120,16 @@ foreach (@ar) {
 	  ($refS,$refE,$contigS,$contigE,$alignRef,$alignContig,$id,$similarity,$dummy,$refLength,$contigLength,$strand1,$strand2,$reference,$contig)
 	  = split(/\s+/);
 	}
-	
+
 	# save the best it
 	if ($preCo ne $contig) {
 	  $FirstLine{$contig}=$_;
-	  
+
 	  $firstLine=$_;
 	  $preRef=$reference;
 	  $prePos=$refS;
 	  $preCo=$contig;
-	  $preStr=$strand2;	  
+	  $preStr=$strand2;
 	  $res.=$_;
 	  $ContigsTokeep{$contig}=1;
 	}
@@ -142,23 +139,23 @@ foreach (@ar) {
 		  (abs($prePos-$refS)>(2*$contigLength))
 		 ) {
 		$countCut++;
-		
+
 		if ($alignContig>$minAlignmentLength) {
 		  $contigs2Analyse{$contig}=1;
-		  
+
 		}
 	  }
 	  else {
 		$res.=$_;
 	  }
 	}
-	
+
   }
 }
 
 if ($step == 0 ) {
   print "Save the new coords file\n";
-  
+
   open (F,"> $file.ordered") or die "problem to write $file.ordered \n";
   print F $res;
   close(F);
@@ -167,11 +164,11 @@ if ($step == 0 ) {
   print "Contig to splice: ", scalar keys  %contigs2Analyse ,"\n";
   foreach my $contig (keys %contigs2Analyse) {
 	print "$contig\n";
-	
+
   }
 
   exit;
-  
+
 }
 
 
@@ -186,68 +183,68 @@ foreach my $contig ( keys  %contigs2Analyse ){
   my $countit=0;
   $preRef='';
   $prePos='';
-  $preStr=0;	  
+  $preStr=0;
   $preContigMappingEnd=-1;
   #  print Dumper  $h2{$contig};
-  
-  
+
+
   $countit=0;
-  
+
   foreach my $pos (sort {$a <=> $b} keys %{ $h2{$contig} } ){
-	
+
 	my ($ref,$alignLength,$strand,$contigStart,$contigEnd,$refS)=split(/,/,$h2{$contig}{$pos});
-	
+
 #	print ">>> Position ($contig): $pos - $countit : $contigStart - $contigEnd strand: $strand alignLength $alignLength\ncut start: $cutStart, preContigMapping: $preContigMappingEnd\n$ref,$alignLength,$strand,$contigStart,$contigEnd,$refS\n\n";
-	
+
 	# first initialization
 	if (! $countit) {
 	  $preRef=$ref;
 	  $prePos=$refS;
-	  $preStr=$strand;	  
+	  $preStr=$strand;
 	  $preContigMappingEnd=$contigEnd;
 #	  print "Set $contigEnd $preContigMappingEnd\n";
-	  
+
 	}
 	elsif ($preRef ne $ref ||
 		   $preStr != $strand   ||
 		   (abs($prePos-$refS)>(2*$contigLength))
 		  ) {
 	  if ($alignLength>500) {
-		
+
 		push @{$cutContig{$contig}}, "$cutStart,$preContigMappingEnd";
 #		print "put $contig ($cutStart,$contigStart,$preContigMappingEnd) - $strand \n";
-		
+
 		$preRef=$ref;
 		$prePos=$refS;
-		$preStr=$strand;	  
+		$preStr=$strand;
 		$preContigMappingEnd=$contigEnd;
 		$cutStart=$contigStart;
-		
+
 	  }
 	  else {
 #		print "ignoe parte $contig ($cutStart,$contigStart,$preContigMappingEnd) $strand \n";
 	  }
 	}
-	
-	
+
+
 	# same contig strand, update information
 	else {
 	  $preRef=$ref;
 	  $prePos=$refS;
 	  $preStr=$strand;
-	  
+
 	  $preContigMappingEnd=$contigEnd;
 	}
 	$countit++
   }
-  
+
   push @{$cutContig{$contig}}, "$cutStart,".($contigLength-1);
 #  print Dumper $cutContig{$contig};
 #  system ("grep $contig All.morphed.coords")
-	
-	
+
+
 }
- 
+
 my $ref_fasta=loadFasta($contigFile);
 
 $res='';
@@ -280,19 +277,15 @@ print "$countCut contigs alignemt thrown out\n";
 print "$count contigs are going to be doubled\n";
 
 
-
-
-
-
 sub loadFasta{
   my $fasta=shift;
-  
+
   open F, $fasta or die "prob couldn't find fasta file: $fasta $!  \n";
 
   my %h;
   my @ar;
   my $name;
-  
+
   while (<F>) {
         chomp;
         if (/^>(\S+)/){
@@ -305,3 +298,6 @@ sub loadFasta{
 	  }
   return \%h;
 }
+
+
+

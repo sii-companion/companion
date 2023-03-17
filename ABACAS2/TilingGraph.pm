@@ -1,18 +1,28 @@
+# Copyright (c) 2011-2015 Genome Research Ltd.
+# Author: Thomas D. Otto <tdo@sanger.ac.uk>
+#
+# This file is part of ABACAS2.
+#
+# ABACAS2 is free software: you can redistribute it and/or modify it under
+# the terms of the GNU General Public License as published by the Free Software
+# Foundation; either version 3 of the License, or (at your option) any later
+# version.
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+# details.
+# You should have received a copy of the GNU General Public License along with
+# this program. If not, see <http://www.gnu.org/licenses/>.
+
 package TilingGraph;
 
-# tdo 01.11.09: include that when new contig, the contig with max
-# overhang left, is take
-
-
-
-#To DO lkist
-# inlcude %lefthandPosContig
+#To DO list
+# include %lefthandPosContig
 
 use 5.008008;
 use strict;
 use warnings;
 use Data::Dumper;
-
 
 require Exporter;
 
@@ -66,15 +76,15 @@ use Protocols::Assembly::TillingGraph;
 =head1 DESCRIPTION
 
 This model will be able to join contigs of different assemblers to a
-pseudo molecule. The ordering is done by mapping the congitig with
-nucmer (mummer package) against a given Reference: doNumcer()
+pseudo molecule. The ordering is done by mapping the contigs with
+nucmer (mummer package) against a given Reference: doNucmer()
 For better performance the contigs itself will be blasted against each
 others to define there potential overlap, see
 blastOverlaps.pl blast contigs.fasta contigs.fasta output_prefix
 -report_overlaps -minLength 50 -endTolerance 10 -annotate
 of mh12.
 
-This porgram will load the nucmer and the overlap files, and define if
+This program will load the nucmer and the overlap files, and define if
 they overlap, in case they will be joined. if not, a given number of
 nnn's will be included.
 Other programs were tested:
@@ -90,28 +100,6 @@ startTiling
 =head1 SEE ALSO
 
 http://scratchy.internal.sanger.ac.uk/wiki/index.php/Team_133
-
-# Preloaded methods go here.
-
-=head1 FUNCTIONS
-
-=head2 startTilling - This function will call all programs
-
-        Usage           :
-
-        Arg [1]         : LSF queue for jobs
-
-        Arg [2]         : file of mapped lanes to be summarised
-
-        Arg [3]         : faidx index file for reference
-
-        Example         :
-
-        Description     : Summarises the coverage of the mapped lanes specified in the lanes.fofn file
-
-        Returntype      : none
-
-        Author          : Jacqueline McQuillan  E<lt>jm15@sanger.ac.uk<gt>
 
 =cut
 
@@ -194,22 +182,6 @@ sub save{
 
 }
 
-=head2 makeOverlap
-
-        Usage           :
-
-        Arg [1]         : Overlap report
-
-        Example         :
-
-        Description     : generate the overlap of two contigs and returns  %contigOverlaps
-
-        Returntype      : reference to %contigOverlaps
-
-        Author          : Jacqueline McQuillan E<lt>jm15@sanger.ac.uk<gt>
-
-=cut
-
 sub makeOverlap{
   my $contig1 = shift;
   my $contig2 = shift;
@@ -232,11 +204,6 @@ sub makeOverlap{
  	sleep(3);
   ## extract the contigs
   my $call="export PERL5LIB; blastOverlaps.pl blast tmp.$NAME.$countIT.fasta tmp.$NAME.$countIT.fasta tmp.$NAME.$countIT.run -report_overlaps -minLength 50 -endTolerance $MAX_CONTIG_END -annotate -annotate_only";
- # print $call,"\n";
-#  $ENV{PERL5LIB}="/software/badger/lib/perl5:/software/pathogen/psu_cvs/genlib/perl/src:/software/pathogen/external/lib/site_perl:/software/pathogen/external/lib/perl:/software/pathogen/external/lib/perl/lib:/software/pathogen/external/lib/perl/lib/site_perl:/software/pathogen/external/lib/perl5:/software/pubseq/PerlModules/Modules:/software/badger/lib/perl5:/software/noarch/badger/lib/perl5:/nfs/users/nfs_t/tdo/bin/oldPerl:/nfs/users/nfs_t/tdo/pathogen/user/mh12/perl/lib:/software/pathogen/projects/protocols/lib/perl5";
- # system("set ");
-#  print("$call");
-
 
   !system("$call " ) or die "Problem with: $call";
 
@@ -252,21 +219,6 @@ sub makeOverlap{
 
   return ($ref_overlapGraph,$ref_repeatContigs)
 }
-=head2 loadOverlap
-
-        Usage           :
-
-        Arg [1]         : Overlap report
-
-        Example         :
-
-        Description     : load the Overlap into a hash %contigOverlaps
-
-        Returntype      : reference to %contigOverlaps
-
-        Author          : Jacqueline McQuillan E<lt>jm15@sanger.ac.uk<gt>
-
-=cut
 
 sub loadOverlap
 {
@@ -367,20 +319,6 @@ sub loadOverlap
 
   return (\%contigOverlaps,\%repeatContigs)
 }
-
-=head2 loadShowTiling
-
-        Usage           :
-
-        Arg [1]         : Showtiling arquive of all cointigs agianst the reference. IMPORTANT to generate it with with "show-coords -bcloTq -I 95 ALL.Chab.filter.delta > ALL.Chab.filter.coords". The delta-filta should have be done with delta-filter -q. There will be a functino doing this.
-
-        Description     : Load the order of the contigs in a hash(chromsom) of array postion hash which contigs covere
-
-        Returntype      : reference of this structure.
-
-        Author          : Jacqueline McQuillan E<lt>jm15@sanger.ac.uk<gt>
-
-=cut
 
 sub loadShowTiling
 {
@@ -523,19 +461,6 @@ sub loadShowTiling
   return ($ref_positionGraph,\%contigLength,\%contigStrand)
 }
 
-
-=head2
-
-        Usage           : Private
-
-        Description     : Fills the Postion graph
-
-        Returntype      : none
-
-        Author          : Jacqueline McQuillan E<lt>jm15@sanger.ac.uk<gt>
-
-=cut
-
 sub fillPositionGraph
 {
   my $ref_positionGraph      = shift;
@@ -574,25 +499,6 @@ sub fillPositionGraph
 
   return $ref_positionGraph
 }
-=head2
-
-        Usage           :
-
-        Arg [1]         : LSF queue for jobs
-
-        Arg [2]         : file of mapped lanes to be summarised
-
-        Arg [3]         : faidx index file for reference
-
-        Example         :
-
-        Description     : write the poostios of the contigs, in like abacas order
-
-        Returntype      : none
-
-        Author          : Jacqueline McQuillan E<lt>jm15@sanger.ac.uk<gt>
-
-=cut
 
 sub printPositionGraph
 {
@@ -896,27 +802,8 @@ sub loadFasta{
   return \%h;
 }
 
-=head2
-
-        Usage           : debug(level,msg)
-
-        Arg [1]         : level when to printsub
-
-        Arg [2]         : msg as string
-
-       Example         : debug(100,"this ist an error")
-
-        Description     : Prinst debug informat
-
-        Returntype      : none
-
-        Author          : Jacqueline McQuillan E<lt>jm15@sanger.ac.uk<gt>
-
-=cut
-
 sub debug
 {
-
   my $code     = shift;
   my $msg      = shift;
 
@@ -924,28 +811,7 @@ sub debug
 	print $msg."\n";
 
   }
-#code for the function goes here
-
 }
-=head2
-
-        Usage           : privagter
-
-        Arg [1]         : LSF queue for jobs
-
-        Arg [2]         : file of mapped lanes to be summarised
-
-        Arg [3]         : faidx index file for reference
-
-        Example         :
-
-        Description     : Will join two contigs
-
-        Returntype      : string hash, Startposition new contigs
-
-        Author          : Jacqueline McQuillan E<lt>jm15@sanger.ac.uk<gt>
-
-=cut
 
 sub buildOverlap
 {
@@ -966,8 +832,6 @@ sub buildOverlap
 
 
   my $contigUsedLength=0;
-
-#  print Dumper $$ref_contigSeq{$actualContig};
 
   my $contigLength=(scalar(@{$$ref_contigSeq{$actualContig}}));
 
@@ -1212,6 +1076,7 @@ sub checkOverlap{
   return $overlapOK;
 
 }
+
 sub makeN{
   my $num    = shift;
   my $str='';
@@ -1224,6 +1089,7 @@ sub makeN{
   return "$str\n";
 
 }
+
 sub revcomp{
   my $str = shift;
 
@@ -1234,56 +1100,6 @@ sub revcomp{
 
   return $str2;
 }
-=head2
-
-        Usage           :
-
-        Arg [1]         : LSF queue for jobs
-
-        Arg [2]         : file of mapped lanes to be summarised
-
-        Arg [3]         : faidx index file for reference
-
-        Example         :
-
-        Description     : Summarises the coverage of the mapped lanes specified in the lanes.fofn file
-
-        Returntype      : none
-
-        Author          : Jacqueline McQuillan E<lt>jm15@sanger.ac.uk<gt>
-
-=cut
-
-sub get_contig_coverage
-{
-
-#code for the function goes here
-
-}
-
-=head1 AUTHOR
-
-Team 133, E<lt>team133g@sanger.ac.uk<gt>
-
-=head1 COPYRIGHT AND LICENSE
-
-Copyright (C) 2009 Genome Research Limited. All Rights Reserved.
-
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-
-=cut
 
 1;
 __END__
