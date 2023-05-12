@@ -5,45 +5,65 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
+  bump:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Bump version and push tag
+      - name: Calculate new version
         id: tag_version
         uses: mathieudutour/github-tag-action@v6.1
         with:
+          dry_run: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
           custom_release_rules: |
             "fix:patch,hotfix:patch,patch:patch,feature:minor,change:minor,minor:minor,breaking:major,major:major"
     outputs:
       new_tag: ${{ steps.tag_version.outputs.new_tag }}
+      new_version: ${{ steps.tag_version.outputs.new_version}}
       changelog: ${{ steps.tag_version.outputs.changelog }}
       release_type: ${{ steps.tag_version.outputs.release_type }}
 
-  write-version:
-    needs: build
+  write:
+    needs: bump
     runs-on: ubuntu-latest
     name: Write version to file
     steps:
       - uses: actions/checkout@v2
-      - name: Update version
-        uses: sebastian-muthwill/write-version-to-file@master
+      - name: Get current version
+        uses: haessar/write-version-to-file-action@v1
         with:
-          filename: '.version'
-      - name: Commit change
-        uses: stefanzweifel/git-auto-commit-action@v4
+          version: ${{ needs.bump.outputs.new_tag }}
+          path: ./.version
+          file-type: txt
+      - name: Get new sha
+        id: sha
+        run: |
+          sha_new=$(git rev-parse HEAD)
+          echo "SHA=$sha_new" >> $GITHUB_OUTPUT
+    outputs:
+      new_sha: ${{ steps.sha.outputs.SHA }}
+
+  tag:
+    needs: [bump, write]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push tag
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          custom_tag: ${{ needs.bump.outputs.new_version }}
+          commit_sha: ${{ needs.write.outputs.new_sha }}
 
   release:
-    needs: [build, write-version]
-    if: ${{ contains(fromJSON('["minor", "major"]'), needs.build.outputs.release_type) }}
+    needs: [bump, tag]
+    if: ${{ contains(fromJSON('["minor", "major"]'), needs.bump.outputs.release_type) }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
         with:
-          tag: ${{ needs.build.outputs.new_tag }}
-          name: Release ${{ needs.build.outputs.new_tag }}
-          body: ${{ needs.build.outputs.changelog }}
+          tag: ${{ needs.bump.outputs.new_tag }}
+          name: Release ${{ needs.bump.outputs.new_tag }}
+          body: ${{ needs.bump.outputs.changelog }}
           draft: true
