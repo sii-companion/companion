@@ -360,7 +360,7 @@ if (params.transfer_tool == "ratt") {
 
         """
         touch Out.0.Report.txt
-        start.ratt.sh . pseudo.pseudochr.fasta Out ${params.RATT_TRANSFER_TYPE}
+        ratt -p Out -t ${params.RATT_TRANSFER_TYPE} . pseudo.pseudochr.fasta
         """
     }
 
