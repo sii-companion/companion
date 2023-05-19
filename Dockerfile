@@ -198,6 +198,11 @@ ARG GM_KEY
 RUN echo ${GM_KEY} > ~/.gm_key
 
 #
+# install gffread
+#
+RUN apt-get -y install gffread
+
+#
 # set environment variables
 #
 ENV AUGUSTUS_BIN_PATH /opt/Augustus/bin
