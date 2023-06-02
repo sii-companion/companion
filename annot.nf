@@ -491,6 +491,7 @@ if (params.run_braker) {
 
     output:
       file 'braker/braker.gff3' into braker_pseudo_gff3
+      file 'braker/augustus.hints.gff3' into braker_pseudo_gff3_backup
 
     """
     JOB_ID="\$(basename \"${params.dist_dir}\")"
@@ -505,10 +506,11 @@ if (params.run_braker) {
       ${params.is_softmasked}
     """
   }
-
+  // TODO Test this with job parameters that have failed at this process in the past (see companion.ac.uk recent failures).
   process parse_braker_pseudo {
     input:
       path "braker_out.gff3" from braker_pseudo_gff3
+      path "braker_backup.gff3" from braker_pseudo_gff3_backup
 
     output:
       path "braker.gff3" into parsed_braker_pseudo_gff3
@@ -516,8 +518,10 @@ if (params.run_braker) {
 
     """
     echo "##gff-version 3\n" > braker.tmp;
-    gffread braker_out.gff3 | awk '\$3=="transcript" || \$3=="gene"' > missing_transcripts
-    cat missing_transcripts braker_out.gff3 | gt gff3 -sort -tidy | gt uniq > 1
+    # BRAKER outputs a "full" output file (braker_out.gff3 a.k.a. braker.gff3) which includes untested merging with GeneMark output.
+    # This has led to issues in the past (see https://github.com/Gaius-Augustus/BRAKER/issues/457#issuecomment-1028738378)
+    # If such an issue is encountered, use the "backup" output file (braker_backup.gff3 a.k.a. augustus.hints.gff3)
+    clean_braker_output.sh braker_out.gff3 || cp braker_backup.gff3 1
     if [ -s 1 ]; then
         gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
         > braker.tmp;
