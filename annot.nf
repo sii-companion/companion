@@ -506,7 +506,6 @@ if (params.run_braker) {
       ${params.is_softmasked}
     """
   }
-  // TODO Test this with job parameters that have failed at this process in the past (see companion.ac.uk recent failures).
   process parse_braker_pseudo {
     input:
       path "braker_out.gff3" from braker_pseudo_gff3
