@@ -104,7 +104,7 @@ RUN apt-get -y install python3-pip
 RUN cd /opt && \
     git clone https://github.com/agshumate/Liftoff liftoff && \
     cd liftoff && \
-    python3 setup.py install
+    python3.9 setup.py install
 # Numpy 1.24 currently breaks Liftoff
 RUN pip3 install "numpy<1.24"
 
