@@ -106,7 +106,7 @@ RUN cd /opt && \
     cd liftoff && \
     python3.9 setup.py install
 # Numpy 1.24 currently breaks Liftoff
-RUN pip3 install "numpy<1.24"
+RUN python3.9 -m pip install "numpy<1.24"
 
 
 #
