@@ -651,65 +651,65 @@ process run_augustus_pseudo {
   }
 }
 
-process run_augustus_contigs {
-  input:
-    file 'pseudo.contigs.fasta' from contigs_seq
-    file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
-    file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
-    file 'pseudo.pseudochr.agp' from pseudochr_agp_augustus
-    file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
-    val extrinsic_cfg
-    file augustus_modeldir
-    val braker_status
+// process run_augustus_contigs {
+//   input:
+//     file 'pseudo.contigs.fasta' from contigs_seq
+//     file 'pseudo.scaffolds.agp' from scaffolds_agp_augustus
+//     file 'pseudo.scaffolds.fasta' from scaffolds_seq_augustus
+//     file 'pseudo.pseudochr.agp' from pseudochr_agp_augustus
+//     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus_ctg
+//     val extrinsic_cfg
+//     file augustus_modeldir
+//     val braker_status
 
-  output:
-    file 'augustus.scaf.pseudo.mapped.gff3' into parsed_augustus_ctg_gff3
+//   output:
+//     file 'augustus.scaf.pseudo.mapped.gff3' into parsed_augustus_ctg_gff3
 
-  script:
-  if (!params.run_braker | "${braker_status}" == 'FAILED') {
-    """
-    echo "##gff-version 3\n" > augustus.ctg.tmp.2;
-    AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
-        augustus --species=augustus_species \
-            --stopCodonExcludedFromCDS=false \
-            --protein=off --codingseq=off --strand=both --genemodel=partial \
-            --gff3=on \
-            --noInFrameStop=true \
-            --extrinsicCfgFile=${extrinsic_cfg} \
-            pseudo.contigs.fasta > augustus.ctg.tmp
-    augustus_to_gff3.lua < augustus.ctg.tmp \
-        | gt gff3 -sort -tidy -retainids > 1
-    if [ -s 1 ]; then
-        gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
-        > augustus.ctg.tmp.2;
-    fi
-    augustus_mark_partial.lua augustus.ctg.tmp.2 > augustus.ctg.gff3
+//   script:
+//   if (!params.run_braker | "${braker_status}" == 'FAILED') {
+//     """
+//     echo "##gff-version 3\n" > augustus.ctg.tmp.2;
+//     AUGUSTUS_CONFIG_PATH=${augustus_modeldir} \
+//         augustus --species=augustus_species \
+//             --stopCodonExcludedFromCDS=false \
+//             --protein=off --codingseq=off --strand=both --genemodel=partial \
+//             --gff3=on \
+//             --noInFrameStop=true \
+//             --extrinsicCfgFile=${extrinsic_cfg} \
+//             pseudo.contigs.fasta > augustus.ctg.tmp
+//     augustus_to_gff3.lua < augustus.ctg.tmp \
+//         | gt gff3 -sort -tidy -retainids > 1
+//     if [ -s 1 ]; then
+//         gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
+//         > augustus.ctg.tmp.2;
+//     fi
+//     augustus_mark_partial.lua augustus.ctg.tmp.2 > augustus.ctg.gff3
 
-    transform_gff_with_agp.lua \
-        augustus.ctg.gff3 \
-        pseudo.scaffolds.agp \
-        pseudo.contigs.fasta \
-        pseudo.scaffolds.fasta | \
-        gt gff3 -sort -tidy -retainids > \
-        augustus.ctg.scaf.mapped.gff3
-    transform_gff_with_agp.lua \
-        augustus.ctg.scaf.mapped.gff3 \
-        pseudo.pseudochr.agp \
-        pseudo.scaffolds.fasta \
-        pseudo.pseudochr.fasta | \
-        gt gff3 -sort -tidy -retainids > \
-        augustus.scaf.pseudo.mapped.gff3
+//     transform_gff_with_agp.lua \
+//         augustus.ctg.gff3 \
+//         pseudo.scaffolds.agp \
+//         pseudo.contigs.fasta \
+//         pseudo.scaffolds.fasta | \
+//         gt gff3 -sort -tidy -retainids > \
+//         augustus.ctg.scaf.mapped.gff3
+//     transform_gff_with_agp.lua \
+//         augustus.ctg.scaf.mapped.gff3 \
+//         pseudo.pseudochr.agp \
+//         pseudo.scaffolds.fasta \
+//         pseudo.pseudochr.fasta | \
+//         gt gff3 -sort -tidy -retainids > \
+//         augustus.scaf.pseudo.mapped.gff3
 
-    if [ ! -s augustus.scaf.pseudo.mapped.gff3 ]; then
-      echo '##gff-version 3' > augustus.scaf.pseudo.mapped.gff3
-    fi
-    """
-  } else {
-    """
-    echo '##gff-version 3' > augustus.scaf.pseudo.mapped.gff3
-    """
-  }
-}
+//     if [ ! -s augustus.scaf.pseudo.mapped.gff3 ]; then
+//       echo '##gff-version 3' > augustus.scaf.pseudo.mapped.gff3
+//     fi
+//     """
+//   } else {
+//     """
+//     echo '##gff-version 3' > augustus.scaf.pseudo.mapped.gff3
+//     """
+//   }
+// }
 
 if (params.run_snap) {
     snap_model = file(params.ref_dir + "/" + params.ref_species + "/snap.hmm")
@@ -747,7 +747,7 @@ process merge_genemodels {
     input:
     file 'braker.full.gff3' from parsed_braker_pseudo_gff3.ifEmpty('##gff-version 3')
     file 'augustus.full.gff3' from parsed_augustus_pseudo_gff3
-    file 'augustus.ctg.gff3' from parsed_augustus_ctg_gff3
+    // file 'augustus.ctg.gff3' from parsed_augustus_ctg_gff3
     file 'snap.full.gff3' from snap_gff3
     file 'ratt.full.gff3' from ratt_gff3
 
@@ -757,7 +757,7 @@ process merge_genemodels {
     """
     unset GT_RETAINIDS && \
     gt gff3 -fixregionboundaries -retainids no -sort -tidy \
-        braker.full.gff3 augustus.full.gff3 augustus.ctg.gff3 snap.full.gff3 ratt.full.gff3 \
+        braker.full.gff3 augustus.full.gff3 snap.full.gff3 ratt.full.gff3 \
         > merged.pre.gff3 && \
     export GT_RETAINIDS=yes
     if [ ! -s merged.pre.gff3 ]; then
