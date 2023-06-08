@@ -1,7 +1,7 @@
 #!/bin/bash
 
 genome=$1
-annProt=$2
+allHints=$2
 augustusModelPath=$3
 spId=$4
 cores=$5
@@ -21,7 +21,7 @@ if [ "$useExisting" == "true" ]
 then
     args+=(--species=augustus_species)
     args+=(--useexisting)
-    AUGUSTUS_CONFIG_PATH=$augustusModelPath; export AUGUSTUS_CONFIG_PATH 
+    AUGUSTUS_CONFIG_PATH=$augustusModelPath; export AUGUSTUS_CONFIG_PATH
 else
     args+=(--species=$spId)
 fi
@@ -34,4 +34,4 @@ then
 fi
 
 echo "${args[@]}"
-braker.pl --genome=$genome --prot_seq=$annProt --gff3 --cores $cores "${args[@]}"
+braker.pl --genome=$genome --hints=$allHints --gff3 --cores $cores "${args[@]}"

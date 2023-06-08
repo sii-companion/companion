@@ -488,6 +488,7 @@ if (params.run_braker) {
     input:
       file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
       file 'ann_prot.fasta' from ref_ann_prot
+      set val(hintsline), file('augustus.hints') from all_hints
 
     output:
       file 'braker/braker.gff3' into braker_pseudo_gff3
@@ -497,7 +498,7 @@ if (params.run_braker) {
     JOB_ID="\$(basename \"${params.dist_dir}\")"
     run_braker.sh \
       pseudo.pseudochr.fasta \
-      ann_prot.fasta \
+      augustus.hints \
       ${augustus_modeldir} \
       \$JOB_ID \
       ${cpus} \
