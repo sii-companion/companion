@@ -530,7 +530,7 @@ if (params.run_braker) {
     """
   }
 
-  braker_status = braker_pseudo_gff3.ifEmpty('FAILED')
+  // braker_status = braker_pseudo_gff3.ifEmpty('FAILED')
 
   contigs_seq.into{ contigs_seq_in
                     contigs_seq_out }
