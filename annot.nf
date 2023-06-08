@@ -614,7 +614,7 @@ process run_augustus_pseudo {
   cache 'deep'
 
   input:
-    set val(hintsline), file('augustus.hints') from all_hints
+    // set val(hintsline), file('augustus.hints') from all_hints
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
     val extrinsic_cfg
     file augustus_modeldir
@@ -633,7 +633,6 @@ process run_augustus_pseudo {
             --stopCodonExcludedFromCDS=false \
             --protein=off --codingseq=off --strand=both \
             --genemodel=${params.AUGUSTUS_GENEMODEL} --gff3=on \
-            ${hintsline} \
             --noInFrameStop=true \
             --extrinsicCfgFile=${extrinsic_cfg} \
             pseudo.pseudochr.fasta > augustus.full.tmp
