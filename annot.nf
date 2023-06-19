@@ -520,7 +520,7 @@ if (params.run_braker) {
     # BRAKER outputs a "full" output file (braker_out.gff3 a.k.a. braker.gff3) which includes untested merging with GeneMark output.
     # This has led to issues in the past (see https://github.com/Gaius-Augustus/BRAKER/issues/457#issuecomment-1028738378)
     # If such an issue is encountered, use the "backup" output file (braker_backup.gff3 a.k.a. augustus.hints.gff3)
-    clean_braker_output.sh braker_out.gff3 2> braker_parsing.err || cp braker_backup.gff3 1
+    clean_braker_output.sh braker_out.gff3 2> braker_parsing.err || gt gff3 -sort -tidy braker_backup.gff3 > 1
     if [ -s 1 ]; then
         gt select -mingenescore ${params.AUGUSTUS_SCORE_THRESHOLD} 1 \
         > braker.tmp;
