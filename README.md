@@ -1,8 +1,8 @@
 # Companion
 A portable, scalable eukaryotic genome annotation pipeline implemented in Nextflow.
 
-![Tests](https://github.com/iii-companion/companion/actions/workflows/test-on-pr.yml/badge.svg)
-[![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen.svg)](https://github.com/iii-companion/companion/blob/master/LICENSE)
+![Tests](https://github.com/sii-companion/companion/actions/workflows/test-on-pr.yml/badge.svg)
+[![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen.svg)](https://github.com/sii-companion/companion/blob/master/LICENSE)
 [![status](https://img.shields.io/badge/NAR-10.1093%2Fnar.gkw292-brightgreen.svg)](https://doi.org/10.1093/nar/gkw292)
 
 This software is a comprehensive computational pipeline for the annotation of eukaryotic genomes (like protozoan parasites). It performs the following tasks:
@@ -87,7 +87,7 @@ On Linux, you can also run the following command to activate the changes to grou
 Execute these commands in the directory you want to keep your _Companion_ work in.  Do this as a normal user, i.e. not as root or using sudo.
 Use a name that is meaningful to you in place of `<my-companion-project>`
 ```
-curl -L -o companion-master.zip https://github.com/iii-companion/companion/archive/master.zip && \
+curl -L -o companion-master.zip https://github.com/sii-companion/companion/archive/master.zip && \
    unzip companion-master.zip && \
    mv companion-master <my-companion-project>
 docker pull uofgiii/companion
@@ -228,7 +228,7 @@ usermod -aG docker <username>
 
 ### Installation
 
-There are a number of ways to install Companion; details for an installation using Docker are described below. If you encounter an issue when installing Companion please contact your local system administrator. If you encounter a bug please log it [here](https://github.com/iii-companion/companion/issues) or email us at iii-companion@glasgow.ac.uk.
+There are a number of ways to install Companion; details for an installation using Docker are described below. If you encounter an issue when installing Companion please contact your local system administrator. If you encounter a bug please log it [here](https://github.com/sii-companion/companion/issues) or email us at sii-companion@glasgow.ac.uk.
 
 The easiest way to use the pipeline is to use the prepared [Docker image](https://hub.docker.com/repository/docker/uofgiii/companion/) which contains all external dependencies.
 ```
@@ -242,7 +242,7 @@ docker pull uofgiii/companion
 To create a local copy of companion, you can download this repo from github (if you are familiar with github, you may
 of course prefer to _clone_ or _fork_ it).
 ```
-curl -L -o companion-master.zip https://github.com/iii-companion/companion/archive/master.zip  # or click the green button on the guthub web page
+curl -L -o companion-master.zip https://github.com/sii-companion/companion/archive/master.zip  # or click the green button on the guthub web page
 unzip companion-master.zip
 mv companion-master my-companion-project # renaming it to something meaningful to you is a good idea
 ```
@@ -260,10 +260,10 @@ the `nextflow.config` file (and files referenced within it) define the docker pr
 If you run nextflow with the name of a github repository, it will pull (download) the contents of the repository and run with those.
 For example, the following command will do the same as the "local copy" example above:
 ```
-nextflow run iii-companion/companion -profile docker
+nextflow run sii-companion/companion -profile docker
 ```
 It is best to use this with some caution.  After the command above is
-run, nextflow will have stored a local copy of the repository in `.nextflow/assets/iii-companion`
+run, nextflow will have stored a local copy of the repository in `.nextflow/assets/sii-companion`
 (note that `.nextflow` is a hidden directory, and will not usually be visible; use the command `ls -la .nextflow` to see it).
 
 If you run the same command again it will this time use the _local_ copy instead of pulling a copy from the repository.  You can
@@ -278,17 +278,17 @@ If you are not familiar with git repositories, it can become quite confusing, an
 #### Preparing reference annotations
 
 Further documentation on preparing reference data can be found in the
-[GitHub wiki](https://github.com/iii-companion/companion/wiki/Preparing-reference-data-sets).
+[GitHub wiki](https://github.com/sii-companion/companion/wiki/Preparing-reference-data-sets).
 
 
 ## License
-Companion is free software, licensed under [ISC](https://github.com/iii-companion/companion/blob/master/LICENSE).
+Companion is free software, licensed under [ISC](https://github.com/sii-companion/companion/blob/master/LICENSE).
 
 ## Feedback/Issues
-Please report any issues to the [issues page](https://github.com/iii-companion/companion/issues)
+Please report any issues to the [issues page](https://github.com/sii-companion/companion/issues)
 ## Citation
 If you use this software please cite:
 __Companion: a web server for annotation and analysis of parasite genomes.__
 Steinbiss S, Silva-Franco F, Brunk B, Foth B, Hertz-Fowler C et al.
-Nucleic Acids Research, 44:W29-W34, 2016.  
+Nucleic Acids Research, 44:W29-W34, 2016.
 DOI: [10.1093/nar/gkw292](http://dx.doi.org/10.1093/nar/gkw292)
