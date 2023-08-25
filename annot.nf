@@ -371,8 +371,10 @@ if (params.transfer_tool == "ratt") {
 
         output:
         file 'ratt.gff3' into ratt_gff3
+        file 'ncrna.gff3' into transferred_ncrnas
 
         """
+        echo '##gff-version 3' > ncrna.gff3
         echo '##gff-version 3' > ratt.gff3
         ratt_embl_to_gff3.lua in*.embl | \
           gt gff3 -sort -retainids -tidy > \
@@ -393,20 +395,42 @@ if (params.transfer_tool == "ratt") {
         file 'pseudo.pseudochr.fasta' from pseudochr_seq_ratt
 
         output:
-        file 'liftoff.gff3' into ratt_gff3
+        file 'liftoff.gff3' into liftoff_gff3
 
         """
         bgzip -d genome.fasta.gz
         liftoff -g ${ref_annot} pseudo.pseudochr.fasta genome.fasta -o liftoff.gff3 -exclude_partial
         """
     }
+
+    liftoff_gff3.into{ ratt_gff3
+                       liftoff_gff3_ncrna }
+
+    process ncrna_from_liftoff {
+      input:
+      file 'liftoff.gff3' from liftoff_gff3_ncrna
+
+      output:
+      file 'ncrna.gff3' into transferred_ncrnas
+
+      """
+      echo '##gff-version 3' > ncrna.tmp
+      awk '\$3=="rRNA" || \$3=="tRNA"' liftoff.gff3  | grep -oP  "Parent=\\K(?:[^;])*" || true > ncRNA_gene_ids
+      if [ -s ncRNA_gene_ids ]; then
+        grep -Ff ncRNA_gene_ids liftoff.gff3 | gt gff3 -sort -tidy -retainids > ncrna.tmp;
+      fi
+      cp ncrna.tmp ncrna.gff3
+      """
+    }
 } else {
     process ratt_empty_models {
     output:
     file 'result.gff3' into ratt_gff3
+    file 'ncrna.gff3' into transferred_ncrnas
 
     """
     echo '##gff-version 3' > result.gff3
+    echo '##gff-version 3' > ncrna.gff3
     """
   }
 }
@@ -899,12 +923,13 @@ process merge_structural {
     file 'ncrna.gff3' from ncrnafile
     file 'trna.gff3' from trnas
     file 'integrated.gff3' from gff3_with_pseudogenes
+    file 'transferred_ncrna.gff3' from transferred_ncrnas
 
     output:
     file 'structural.full.gff3' into genemodels_gff3
 
     """
-    gt gff3 -sort -tidy ncrna.gff3 integrated.gff3 trna.gff3 \
+    gt gff3 -sort -tidy ncrna.gff3 integrated.gff3 trna.gff3 transferred_ncrna.gff3 \
         > structural.full.gff3
     """
 }
