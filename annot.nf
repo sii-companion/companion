@@ -415,7 +415,7 @@ if (params.transfer_tool == "ratt") {
 
       """
       echo '##gff-version 3' > ncrna.tmp
-      awk '\$3=="rRNA" || \$3=="tRNA"' liftoff.gff3  | grep -oP  "Parent=\\K(?:[^;])*" || true > ncRNA_gene_ids
+      awk '\$3=="rRNA" || \$3=="tRNA"' liftoff.gff3  | grep -oP  "Parent=\\K(?:[^;])*" > ncRNA_gene_ids || true
       if [ -s ncRNA_gene_ids ]; then
         grep -Ff ncRNA_gene_ids liftoff.gff3 | gt gff3 -sort -tidy -retainids > ncrna.tmp;
       fi
