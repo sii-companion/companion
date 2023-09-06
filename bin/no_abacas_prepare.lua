@@ -75,6 +75,7 @@ scaf_agp_out:write("##agp-version\t2.0\n")
 ctg_fasta_out = io.open(outfileprefix .. ".contigs.fasta", "w+")
 ctg_agp_out = io.open(outfileprefix .. ".scafs.agp", "w+")
 ctg_agp_out:write("##agp-version\t2.0\n")
+ref_target_mapping_out = io.open("ref_target_mapping.json", "w+")
 
 -- do the output
 scaf_i = 1

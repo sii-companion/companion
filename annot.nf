@@ -105,7 +105,9 @@ if (params.do_contiguation) {
         file 'pseudo.scafs.fasta' into scaffolds_seq
         file 'pseudo.scafs.agp' into scaffolds_agp
         file 'pseudo.contigs.fasta' into contigs_seq
-        file 'ref_target_mapping.txt' into ref_target_mapping
+        // TODO If upgrading to DSL2, can just use json output and splitJson operator before circos_run_chrs process.
+        file 'ref_target_mapping.txt' into ref_target_mapping_circos
+        file 'ref_target_mapping.json' into ref_target_mapping_integrate
 
         """
         abacas2.nonparallel.sh \
@@ -127,6 +129,7 @@ if (params.do_contiguation) {
         file 'pseudo.scafs.fasta' into scaffolds_seq
         file 'pseudo.scafs.agp' into scaffolds_agp
         file 'pseudo.contigs.fasta' into contigs_seq
+        file 'ref_target_mapping.json' into ref_target_mapping_integrate
 
         """
         no_abacas_prepare.lua ${sanitized_genome_file} pseudo
@@ -800,6 +803,7 @@ process integrate_genemodels {
     input:
     file 'merged.gff3' from merged_gff3
     file 'sequence.fasta' from pseudochr_seq_integrate
+    file 'ref_target_mapping.json' from ref_target_mapping_integrate
 
     output:
     file 'integrated.gff3' into integrated_gff3
@@ -807,12 +811,14 @@ process integrate_genemodels {
     script:
     if (params.WEIGHT_FILE.length() > 0)
         """
-        integrate_gene_calls.lua -w ${params.WEIGHT_FILE} -s sequence.fasta < merged.gff3 | \
+        integrate_gene_calls.lua -w ${params.WEIGHT_FILE} -s sequence.fasta \
+            -m ref_target_mapping.json -o ${params.APICOPLAST_OVERLAP} < merged.gff3 | \
             gt gff3 -sort -tidy -retainids > integrated.gff3
         """
     else
         """
-        integrate_gene_calls.lua -s sequence.fasta < merged.gff3 | \
+        integrate_gene_calls.lua -s sequence.fasta \
+            -m ref_target_mapping.json -o ${params.APICOPLAST_OVERLAP} < merged.gff3 | \
             gt gff3 -sort -tidy -retainids > integrated.gff3
         """
 }
@@ -1437,7 +1443,7 @@ if (params.do_contiguation && params.do_circos) {
 
     circos_input_gaps.into{ circos_input_gaps_chr; circos_input_gaps_bin }
 
-    ref_target_mapping.splitCsv(sep: "\t").set { circos_chromosomes }
+    ref_target_mapping_circos.splitCsv(sep: "\t").set { circos_chromosomes }
     circos_conffile = file(params.CIRCOS_CONFIG_FILE)
 
     process circos_run_chrs {

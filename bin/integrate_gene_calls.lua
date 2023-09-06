@@ -21,6 +21,7 @@ package.path = gt.script_dir .. "/?.lua;" .. package.path
 require("lib")
 require("SimpleChainer")
 require("optparse")
+local json = require ("dkjson")
 
 op = OptionParser:new({usage="%prog <options> < merged.gff3",
                        oneliner="Selects the 'best' gene models "
@@ -30,7 +31,11 @@ op:option{"-w", action='store', dest='weight_func',
                 help="Lua script defining the weight function 'get_weight()'"}
 op:option{"-s", action='store', dest='sequence',
                 help="sequence file for the given annotation"}
-options,args = op:parse({weight_func=nil, sequence=nil})
+op:option{"-m", action='store', dest='mapping',
+                help="reference target chromosome mapping"}
+op:option{"-o", action='store', dest='overlap', default=0,
+                help="number of bases to allow two adjacent genes to overlap by"}
+options,args = op:parse({weight_func=nil, sequence=nil, mapping=nil})
 
 function usage()
   op:help()
@@ -41,6 +46,18 @@ if not options.sequence then
   usage()
 end
 regmap = gt.region_mapping_new_seqfile_matchdescstart(options.sequence)
+
+if options.mapping then
+  local mapfile = io.open(options.mapping, "rb")
+  if not mapfile then
+    error("could not open reference target mapping file")
+  end
+  local mapcontent = mapfile:read("*all")
+  mapfile:close()
+  ref_target_mapping = json.decode(mapcontent)
+else
+  ref_target_mapping = nil
+end
 
 -- default weight function: gene length
 -- this should most of the time be overridden by a more specific,
@@ -79,6 +96,18 @@ function stream:process_current_cluster()
   end
 end
 
+function stream:conditional_overlap(new_rng)
+  if ref_target_mapping then
+    -- allow short overlaps for apicoplasts
+    if ref_target_mapping.API and self.last_seqid == ref_target_mapping.API[2] then
+      local ext = options.overlap
+      local ext_rng = gt.range_new(new_rng:get_start() + ext, new_rng:get_end() - ext)
+      return self.curr_rng:overlap(ext_rng)
+    end
+  end
+  return self.curr_rng:overlap(new_rng)
+end
+
 function stream:next_tree()
   local complete_cluster = false
   local mygn = nil
@@ -102,7 +131,7 @@ function stream:next_tree()
             self.curr_rng = new_rng
           else
             if self.last_seqid == fn:get_seqid()
-                and self.curr_rng:overlap(new_rng) then
+                and self:conditional_overlap(new_rng) then
               table.insert(self.curr_gene_set, fn)
               self.curr_rng = self.curr_rng:join(new_rng)
             else
