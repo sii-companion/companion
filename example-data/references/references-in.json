@@ -7,7 +7,6 @@
       "gaf" : "../genomes/LmjF_01.gaf",
       "name" : "Leishmania major Friedlin chromosome 1",
       "augustus_model" : "../../data/augustus/species/leishmania_major_sampled/",
-      "snap_model" : "../../data/snap/LmjF.hmm",
       "chromosome_pattern" : "LmjF.(%d+)"
     },
     "LbrM_01" : {

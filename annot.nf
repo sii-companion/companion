@@ -143,7 +143,6 @@ pseudochr_seq.into{ pseudochr_seq_tRNA
 					pseudochr_seq_ratt
 					pseudochr_seq_augustus
 					pseudochr_seq_augustus_ctg
-                    pseudochr_seq_snap
                     pseudochr_seq_make_gaps
                     pseudochr_seq_make_dist_1
                     pseudochr_seq_make_dist_2
@@ -739,36 +738,6 @@ process run_augustus_contigs {
   }
 }
 
-if (params.run_snap) {
-    snap_model = file(params.ref_dir + "/" + params.ref_species + "/snap.hmm")
-    process run_snap {
-        input:
-        file 'pseudo.pseudochr.fasta' from pseudochr_seq_snap
-        file 'snap.hmm' from snap_model
-
-        output:
-        file 'snap.gff3' into snap_gff3
-
-        """
-        echo '##gff-version 3' > snap.gff3
-        snap -gff -quiet snap.hmm pseudo.pseudochr.fasta > snap.tmp
-        snap_gff_to_gff3.lua snap.tmp > snap.tmp.2
-        if [ -s 1 ]; then
-            gt gff3 -sort -tidy -retainids snap.tmp.2 > snap.gff3;
-        fi
-        """
-    }
-} else {
-    process make_empty_snap {
-        output:
-        file 'snap.gff3' into snap_gff3
-
-        """
-        echo '##gff-version 3' > snap.gff3
-        """
-    }
-}
-
 process merge_genemodels {
     cache 'deep'
 
@@ -776,7 +745,6 @@ process merge_genemodels {
     file 'braker.full.gff3' from parsed_braker_pseudo_gff3.ifEmpty('##gff-version 3')
     file 'augustus.full.gff3' from parsed_augustus_pseudo_gff3
     file 'augustus.ctg.gff3' from parsed_augustus_ctg_gff3
-    file 'snap.full.gff3' from snap_gff3
     file 'ratt.full.gff3' from ratt_gff3
 
     output:
@@ -785,7 +753,7 @@ process merge_genemodels {
     """
     unset GT_RETAINIDS && \
     gt gff3 -fixregionboundaries -retainids no -sort -tidy \
-        braker.full.gff3 augustus.full.gff3 augustus.ctg.gff3 snap.full.gff3 ratt.full.gff3 \
+        braker.full.gff3 augustus.full.gff3 augustus.ctg.gff3 ratt.full.gff3 \
         > merged.pre.gff3 && \
     export GT_RETAINIDS=yes
     if [ ! -s merged.pre.gff3 ]; then

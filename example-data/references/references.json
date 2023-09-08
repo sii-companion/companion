@@ -12,7 +12,6 @@
       "nof_coding_genes":85,
       "augustus_model":true,
       "name":"Leishmania major Friedlin chromosome 1",
-      "snap_model":true,
       "nof_chromosomes":1,
       "nof_regions":1,
       "chromosome_pattern":"LmjF.(%d+)"
