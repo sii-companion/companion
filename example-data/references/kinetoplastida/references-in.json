@@ -1,0 +1,35 @@
+{
+ "species" : {
+    "LmjF_01" : {
+      "gff" : "../../genomes/LmjF_01.gff3",
+      "genome" : "../../genomes/LmjF_01_Genome.fasta",
+      "proteins": "../../genomes/LmjF_01_Proteins.fasta",
+      "gaf" : "../../genomes/LmjF_01.gaf",
+      "name" : "Leishmania major Friedlin chromosome 1",
+      "augustus_model" : "../../../data/augustus/species/leishmania_major_sampled/",
+      "chromosome_pattern" : "LmjF.(%d+)"
+    },
+    "LbrM_01" : {
+      "gff" : "../../genomes/LbrM_01.gff3",
+      "genome" : "../../genomes/LbrM_01_Genome.fasta",
+      "gaf" : "../../genomes/LbrM_01.gaf",
+      "proteins": "../../genomes/LbrM_01_Proteins.fasta",
+      "name" : "Leishmania braziliensis chromosome 1",
+      "augustus_model": "../../../data/augustus/species/leishmania_braziliensis_sampled/",
+      "chromosome_pattern" : "LbrM.([0-9.]+)$"
+    },
+    "Tb927_01" : {
+      "gff" : "../../genomes/Tb927_01.gff3",
+      "genome" : "../../genomes/Tb927_01_Genome.fasta",
+      "proteins": "../../genomes/Tb927_01_Proteins.fasta",
+      "gaf" : "../../genomes/Tb927_01.gaf",
+      "name" : "Trypanosoma brucei TREU927 chromosome 1",
+      "augustus_model": "../../../data/augustus/species/trypanosoma_brucei_927_sampled/",
+      "chromosome_pattern" : "Tb927_(%d+)_v%d"
+    }
+  },
+  "groups" : {
+    "Leishmania" : ["LmjF_01", "LbrM_01"],
+    "Trypanosoma" : ["Tb927_01"]
+  }
+}
