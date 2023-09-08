@@ -23,4 +23,4 @@ jobs:
           apt-get -y install openjdk-11-jre-headless; apt-get clean
           curl -fsSL get.nextflow.io | bash
       - name: Run pipeline
-        run: NXF_VER=22.10.0 ./nextflow -c loc_github.config -c params_default.config run annot.nf -ansi-log false --do_circos=false --run_braker=false
+        run: NXF_VER=22.10.0 ./nextflow -c loc_github.config -c params_default_kinetoplastid.config run annot.nf -ansi-log false --do_circos=false --run_braker=false
