@@ -781,13 +781,13 @@ process integrate_genemodels {
     if (params.WEIGHT_FILE.length() > 0)
         """
         integrate_gene_calls.lua -w ${params.WEIGHT_FILE} -s sequence.fasta \
-            -m ref_target_mapping.json -o ${params.APICOPLAST_OVERLAP} < merged.gff3 | \
+            -m ref_target_mapping.json -o ${params.MAX_OVERLAP} < merged.gff3 | \
             gt gff3 -sort -tidy -retainids > integrated.gff3
         """
     else
         """
         integrate_gene_calls.lua -s sequence.fasta \
-            -m ref_target_mapping.json -o ${params.APICOPLAST_OVERLAP} < merged.gff3 | \
+            -m ref_target_mapping.json -o ${params.MAX_OVERLAP} < merged.gff3 | \
             gt gff3 -sort -tidy -retainids > integrated.gff3
         """
 }

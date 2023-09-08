@@ -99,8 +99,9 @@ end
 
 function stream:conditional_overlap(new_rng)
   if ref_target_mapping then
-    -- allow short overlaps for apicoplasts
-    if ref_target_mapping.API and self.last_seqid == ref_target_mapping.API[2] then
+    -- allow short overlaps for apicoplasts and mitochondria
+    if (ref_target_mapping.API and self.last_seqid == ref_target_mapping.API[2])
+      or (ref_target_mapping.MIT and self.last_seqid == ref_target_mapping.MIT[2]) then
       local ext = options.overlap
       local ext_rng = gt.range_new(new_rng:get_start() + ext, new_rng:get_end() - ext)
       return self.curr_rng:overlap(ext_rng)
