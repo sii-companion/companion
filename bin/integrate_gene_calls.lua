@@ -84,6 +84,7 @@ stream.outqueue = {}
 stream.curr_gene_set = {}
 stream.curr_rng = nil
 stream.last_seqid = nil
+stream.last_strand = nil
 function stream:process_current_cluster()
   local bestset = nil
   local max = 0
@@ -131,6 +132,7 @@ function stream:next_tree()
             self.curr_rng = new_rng
           else
             if self.last_seqid == fn:get_seqid()
+                and self.last_strand == fn:get_strand()
                 and self:conditional_overlap(new_rng) then
               table.insert(self.curr_gene_set, fn)
               self.curr_rng = self.curr_rng:join(new_rng)
@@ -147,6 +149,7 @@ function stream:next_tree()
             end
           end
           self.last_seqid = mygn:get_seqid()
+          self.last_strand = mygn:get_strand()
         end
       else
         -- no feature node
