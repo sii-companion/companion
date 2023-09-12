@@ -175,7 +175,7 @@ stream.outqueue = {}
 stream.curr_gene_set = {}
 stream.curr_rng = nil
 stream.last_seqid = nil
-stream.last_strand
+stream.last_strand = nil
 function stream:find_best_by_length(set)
   if not set or #set == 0 then
     return nil
