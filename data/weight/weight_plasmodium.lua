@@ -114,6 +114,9 @@ function get_weight(gene, regionmapping)
     if gene:get_attribute("is_pseudo_in_ref") == 'true' then
       fac = 0
     end
+  -- apply constant reward for being annotated by Liftoff
+  elseif gene:get_source() == "Liftoff" then
+    fac = 1.1
   end
   return gene:get_range():length() * fac
 end
