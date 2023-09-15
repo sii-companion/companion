@@ -385,14 +385,6 @@ for name, values in pairs(refs.species) do
   values.proteins = nil
 
   -- prepare models
-  -- SNAP
-  if values.snap_model and file_exists(values.snap_model) then
-    os.execute("cp " .. values.snap_model .. " " .. name .. "/snap.hmm")
-    values.snap_model = true
-  else
-    values.snap_model = nil
-  end
-
   -- AUGUSTUS
   AUG_MODEL_FILES = {'_parameters.cfg', '_parameters.cfg.orig1'}
   if values.augustus_model and file_exists(values.augustus_model) then

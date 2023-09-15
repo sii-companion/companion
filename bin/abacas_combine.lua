@@ -190,6 +190,7 @@ ctg_fasta_out = io.open(outfileprefix .. ".contigs.fasta", "w+")
 ctg_agp_out = io.open(outfileprefix .. ".scafs.agp", "w+")
 ctg_agp_out:write("##agp-version\t2.0\n")
 ref_target_mapping_out = io.open("ref_target_mapping.txt", "w+")
+ref_target_mapping_json = io.open("ref_target_mapping.json", "w+")
 
 -- do the output
 scaf_i = 1
@@ -253,3 +254,6 @@ end
 for k,v in pairs(ref_target_chromosome_map) do
   ref_target_mapping_out:write(k .. "\t" .. v[1] .. "\t" .. v[2] .. "\n")
 end
+
+local chr_map = json.encode(ref_target_chromosome_map, {indent=true})
+ref_target_mapping_json:write(chr_map)

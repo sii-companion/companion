@@ -105,7 +105,9 @@ if (params.do_contiguation) {
         file 'pseudo.scafs.fasta' into scaffolds_seq
         file 'pseudo.scafs.agp' into scaffolds_agp
         file 'pseudo.contigs.fasta' into contigs_seq
-        file 'ref_target_mapping.txt' into ref_target_mapping
+        // TODO If upgrading to DSL2, can just use json output and splitJson operator before circos_run_chrs process.
+        file 'ref_target_mapping.txt' into ref_target_mapping_circos
+        file 'ref_target_mapping.json' into ref_target_mapping_integrate
 
         """
         abacas2.nonparallel.sh \
@@ -127,6 +129,7 @@ if (params.do_contiguation) {
         file 'pseudo.scafs.fasta' into scaffolds_seq
         file 'pseudo.scafs.agp' into scaffolds_agp
         file 'pseudo.contigs.fasta' into contigs_seq
+        file 'ref_target_mapping.json' into ref_target_mapping_integrate
 
         """
         no_abacas_prepare.lua ${sanitized_genome_file} pseudo
@@ -140,7 +143,6 @@ pseudochr_seq.into{ pseudochr_seq_tRNA
 					pseudochr_seq_ratt
 					pseudochr_seq_augustus
 					pseudochr_seq_augustus_ctg
-                    pseudochr_seq_snap
                     pseudochr_seq_make_gaps
                     pseudochr_seq_make_dist_1
                     pseudochr_seq_make_dist_2
@@ -371,8 +373,10 @@ if (params.transfer_tool == "ratt") {
 
         output:
         file 'ratt.gff3' into ratt_gff3
+        file 'ncrna.gff3' into transferred_ncrnas
 
         """
+        echo '##gff-version 3' > ncrna.gff3
         echo '##gff-version 3' > ratt.gff3
         ratt_embl_to_gff3.lua in*.embl | \
           gt gff3 -sort -retainids -tidy > \
@@ -393,20 +397,43 @@ if (params.transfer_tool == "ratt") {
         file 'pseudo.pseudochr.fasta' from pseudochr_seq_ratt
 
         output:
-        file 'liftoff.gff3' into ratt_gff3
+        file 'liftoff.gff3' into liftoff_gff3
 
         """
         bgzip -d genome.fasta.gz
         liftoff -g ${ref_annot} pseudo.pseudochr.fasta genome.fasta -o liftoff.gff3 -exclude_partial
         """
     }
+
+    liftoff_gff3.into{ ratt_gff3
+                       liftoff_gff3_ncrna }
+
+    process ncrna_from_liftoff {
+      input:
+      file 'liftoff.gff3' from liftoff_gff3_ncrna
+
+      output:
+      file 'ncrna.gff3' into transferred_ncrnas
+
+      """
+      echo '##gff-version 3' > ncrna.tmp
+      # TODO removed "tRNA" as they were getting duplicated with the ones found by Aragorn. Should be a more robust way to define ncRNAs here.
+      awk '\$3=="rRNA"' liftoff.gff3  | grep -oP  "Parent=\\K(?:[^;])*" > ncRNA_gene_ids || true
+      if [ -s ncRNA_gene_ids ]; then
+        grep -Ff ncRNA_gene_ids liftoff.gff3 | gt gff3 -sort -tidy -retainids > ncrna.tmp;
+      fi
+      cp ncrna.tmp ncrna.gff3
+      """
+    }
 } else {
     process ratt_empty_models {
     output:
     file 'result.gff3' into ratt_gff3
+    file 'ncrna.gff3' into transferred_ncrnas
 
     """
     echo '##gff-version 3' > result.gff3
+    echo '##gff-version 3' > ncrna.gff3
     """
   }
 }
@@ -711,36 +738,6 @@ process run_augustus_contigs {
   }
 }
 
-if (params.run_snap) {
-    snap_model = file(params.ref_dir + "/" + params.ref_species + "/snap.hmm")
-    process run_snap {
-        input:
-        file 'pseudo.pseudochr.fasta' from pseudochr_seq_snap
-        file 'snap.hmm' from snap_model
-
-        output:
-        file 'snap.gff3' into snap_gff3
-
-        """
-        echo '##gff-version 3' > snap.gff3
-        snap -gff -quiet snap.hmm pseudo.pseudochr.fasta > snap.tmp
-        snap_gff_to_gff3.lua snap.tmp > snap.tmp.2
-        if [ -s 1 ]; then
-            gt gff3 -sort -tidy -retainids snap.tmp.2 > snap.gff3;
-        fi
-        """
-    }
-} else {
-    process make_empty_snap {
-        output:
-        file 'snap.gff3' into snap_gff3
-
-        """
-        echo '##gff-version 3' > snap.gff3
-        """
-    }
-}
-
 process merge_genemodels {
     cache 'deep'
 
@@ -748,7 +745,6 @@ process merge_genemodels {
     file 'braker.full.gff3' from parsed_braker_pseudo_gff3.ifEmpty('##gff-version 3')
     file 'augustus.full.gff3' from parsed_augustus_pseudo_gff3
     file 'augustus.ctg.gff3' from parsed_augustus_ctg_gff3
-    file 'snap.full.gff3' from snap_gff3
     file 'ratt.full.gff3' from ratt_gff3
 
     output:
@@ -757,7 +753,7 @@ process merge_genemodels {
     """
     unset GT_RETAINIDS && \
     gt gff3 -fixregionboundaries -retainids no -sort -tidy \
-        braker.full.gff3 augustus.full.gff3 augustus.ctg.gff3 snap.full.gff3 ratt.full.gff3 \
+        braker.full.gff3 augustus.full.gff3 augustus.ctg.gff3 ratt.full.gff3 \
         > merged.pre.gff3 && \
     export GT_RETAINIDS=yes
     if [ ! -s merged.pre.gff3 ]; then
@@ -776,6 +772,7 @@ process integrate_genemodels {
     input:
     file 'merged.gff3' from merged_gff3
     file 'sequence.fasta' from pseudochr_seq_integrate
+    file 'ref_target_mapping.json' from ref_target_mapping_integrate
 
     output:
     file 'integrated.gff3' into integrated_gff3
@@ -783,12 +780,14 @@ process integrate_genemodels {
     script:
     if (params.WEIGHT_FILE.length() > 0)
         """
-        integrate_gene_calls.lua -w ${params.WEIGHT_FILE} -s sequence.fasta < merged.gff3 | \
+        integrate_gene_calls.lua -w ${params.WEIGHT_FILE} -s sequence.fasta \
+            -m ref_target_mapping.json -o ${params.MAX_OVERLAP} < merged.gff3 | \
             gt gff3 -sort -tidy -retainids > integrated.gff3
         """
     else
         """
-        integrate_gene_calls.lua -s sequence.fasta < merged.gff3 | \
+        integrate_gene_calls.lua -s sequence.fasta \
+            -m ref_target_mapping.json -o ${params.MAX_OVERLAP} < merged.gff3 | \
             gt gff3 -sort -tidy -retainids > integrated.gff3
         """
 }
@@ -899,12 +898,13 @@ process merge_structural {
     file 'ncrna.gff3' from ncrnafile
     file 'trna.gff3' from trnas
     file 'integrated.gff3' from gff3_with_pseudogenes
+    file 'transferred_ncrna.gff3' from transferred_ncrnas
 
     output:
     file 'structural.full.gff3' into genemodels_gff3
 
     """
-    gt gff3 -sort -tidy ncrna.gff3 integrated.gff3 trna.gff3 \
+    gt gff3 -sort -tidy ncrna.gff3 integrated.gff3 trna.gff3 transferred_ncrna.gff3 \
         > structural.full.gff3
     """
 }
@@ -1412,7 +1412,7 @@ if (params.do_contiguation && params.do_circos) {
 
     circos_input_gaps.into{ circos_input_gaps_chr; circos_input_gaps_bin }
 
-    ref_target_mapping.splitCsv(sep: "\t").set { circos_chromosomes }
+    ref_target_mapping_circos.splitCsv(sep: "\t").set { circos_chromosomes }
     circos_conffile = file(params.CIRCOS_CONFIG_FILE)
 
     process circos_run_chrs {

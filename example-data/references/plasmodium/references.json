@@ -1,0 +1,23 @@
+{
+  "groups":{
+    "Plasmodium":["Pf3D7_05"]
+  },
+  "species":{
+    "Pf3D7_05":{
+      "chr_mapping":{
+        "Pf3D7_05_v3":"05"
+      },
+      "nof_genes":322,
+      "is_reference_strain":true,
+      "nof_coding_genes":310,
+      "chromosome_pattern":"Pf3D7_([0-9][0-9])_v3$",
+      "name":"Plasmodium falciparum 3D7 chromosome 5",
+      "nof_chromosomes":1,
+      "nof_regions":1,
+      "metadata":{
+        "Release":"51"
+      },
+      "augustus_model":true
+    }
+  }
+}

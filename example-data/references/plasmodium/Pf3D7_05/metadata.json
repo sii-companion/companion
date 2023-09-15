@@ -1,0 +1,13 @@
+{
+  "chr_mapping":{
+    "Pf3D7_05_v3":"05"
+  },
+  "nof_genes":322,
+  "is_reference_strain":true,
+  "nof_coding_genes":310,
+  "chromosome_pattern":"Pf3D7_([0-9][0-9])_v3$",
+  "name":"Pf3D7 05",
+  "nof_chromosomes":1,
+  "nof_regions":1,
+  "augustus_model":true
+}

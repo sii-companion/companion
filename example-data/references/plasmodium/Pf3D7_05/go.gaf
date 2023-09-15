@@ -1,0 +1,1272 @@
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0009405	GO_REF:0000002	IEA		P	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0009405	GO_REF:0000002	IEA		P	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0533100.1	PF3D7_0533100.1		GO:0009405	GO_REF:0000002	IEA		P	erythrocyte membrane protein 1 (PfEMP1), pseudogene		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0533100.1	PF3D7_0533100.1		GO:0009405	GO_REF:0000002	IEA		P	erythrocyte membrane protein 1 (PfEMP1), pseudogene		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0020013	GO_REF:0000002	TAS		P	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500400.1	PF3D7_0500400.1		GO:0020013	GO_REF:0000002	IDA		P	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0020033	GO_REF:0000002	TAS		P	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500400.1	PF3D7_0500400.1		GO:0020033	GO_REF:0000002	TAS		P	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500500.1	PF3D7_0500500.1		GO:0020033	GO_REF:0000002	TAS		P	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532900.1	PF3D7_0532900.1		GO:0020033	GO_REF:0000002	TAS		P	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0020035	GO_REF:0000002	TAS		P	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500400.1	PF3D7_0500400.1		GO:0020035	GO_REF:0000002	IDA		P	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532400.1	PF3D7_0532400.1		GO:0020035	GO_REF:0000002	IMP		P	lysine-rich membrane-associated PHISTb protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0098609	GO_REF:0000002	TAS		P	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0016021	GO_REF:0000002	IEA		C	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0016021	GO_REF:0000002	IEA		C	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0501300.1	PF3D7_0501300.1		GO:0016021	GO_REF:0000002	IDA		C	skeleton-binding protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502200.1	PF3D7_0502200.1		GO:0016021	GO_REF:0000002	IEA		C	protein Mpv17, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502200.1	PF3D7_0502200.1		GO:0016021	GO_REF:0000002	IEA		C	protein Mpv17, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0504000.1	PF3D7_0504000.1		GO:0016021	GO_REF:0000002	ISM		C	cation transporting P-ATPase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504000.1	PF3D7_0504000.1		GO:0016021	GO_REF:0000002	IEA		C	cation transporting P-ATPase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0504900.1	PF3D7_0504900.1		GO:0016021	GO_REF:0000002	IEA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505300.1	PF3D7_0505300.1		GO:0016021	GO_REF:0000002	IEA		C	UDP-N-acetylglucosamine transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505300.1	PF3D7_0505300.1		GO:0016021	GO_REF:0000002	IEA		C	UDP-N-acetylglucosamine transporter, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0506900.1	PF3D7_0506900.1		GO:0016021	GO_REF:0000002	IEA		C	rhomboid protease ROM4		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506900.1	PF3D7_0506900.1		GO:0016021	GO_REF:0000002	IEA		C	rhomboid protease ROM4		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0508200.1	PF3D7_0508200.1		GO:0016021	GO_REF:0000002	IEA		C	longevity-assurance (LAG1) protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508200.1	PF3D7_0508200.1		GO:0016021	GO_REF:0000002	IEA		C	longevity-assurance (LAG1) protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511200.1	PF3D7_0511200.1		GO:0016021	GO_REF:0000002	ISM		C	stearoyl-CoA desaturase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513500.1	PF3D7_0513500.1		GO:0016021	GO_REF:0000002	IEA		C	mitochondrial import inner membrane translocase subunit TIM16, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515100.1	PF3D7_0515100.1		GO:0016021	GO_REF:0000002	IEA		C	rhomboid protease ROM9		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515100.1	PF3D7_0515100.1		GO:0016021	GO_REF:0000002	IEA		C	rhomboid protease ROM9		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0515500.1	PF3D7_0515500.1		GO:0016021	GO_REF:0000002	ISM		C	amino acid transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515500.1	PF3D7_0515500.1		GO:0016021	GO_REF:0000002	IEA		C	amino acid transporter, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0515700.1	PF3D7_0515700.1		GO:0016021	GO_REF:0000002	ISM		C	glideosome-associated protein 40, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516100.1	PF3D7_0516100.1		GO:0016021	GO_REF:0000002	ISM		C	cation-transporting ATPase 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516100.1	PF3D7_0516100.1		GO:0016021	GO_REF:0000002	IEA		C	cation-transporting ATPase 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516500.1	PF3D7_0516500.1		GO:0016021	GO_REF:0000002	ISM		C	major facilitator superfamily domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516500.1	PF3D7_0516500.1		GO:0016021	GO_REF:0000002	IEA		C	major facilitator superfamily domain-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517200.1	PF3D7_0517200.1		GO:0016021	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519300.1	PF3D7_0519300.1		GO:0016021	GO_REF:0000002	IEA		C	protoheme IX farnesyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519300.1	PF3D7_0519300.1		GO:0016021	GO_REF:0000002	IEA		C	protoheme IX farnesyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522600.1	PF3D7_0522600.1		GO:0016021	GO_REF:0000002	IEA		C	inner membrane complex protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522600.1	PF3D7_0522600.1		GO:0016021	GO_REF:0000002	IEA		C	inner membrane complex protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0016021	GO_REF:0000002	ISM		C	multidrug resistance protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0016021	GO_REF:0000002	IEA		C	multidrug resistance protein 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523800.1	PF3D7_0523800.1		GO:0016021	GO_REF:0000002	ISM		C	divalent metal transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523900.1	PF3D7_0523900.1		GO:0016021	GO_REF:0000002	ISM		C	MerC domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524200.1	PF3D7_0524200.1		GO:0016021	GO_REF:0000002	IEA		C	conserved Plasmodium membrane protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526900.1	PF3D7_0526900.1		GO:0016021	GO_REF:0000002	IEA		C	transmembrane emp24 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527400.1	PF3D7_0527400.1		GO:0016021	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529200.1	PF3D7_0529200.1		GO:0016021	GO_REF:0000002	ISM		C	sugar transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529300.1	PF3D7_0529300.1		GO:0016021	GO_REF:0000002	IDA		C	apicoplast TIC22 protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530300.1	PF3D7_0530300.1		GO:0016021	GO_REF:0000002	ISM		C	conserved Plasmodium membrane protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530500.1	PF3D7_0530500.1		GO:0016021	GO_REF:0000002	ISM		C	conserved Plasmodium membrane protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531000.1	PF3D7_0531000.1		GO:0016021	GO_REF:0000002	IEA		C	SURF1 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0533100.1	PF3D7_0533100.1		GO:0016021	GO_REF:0000002	IEA		C	erythrocyte membrane protein 1 (PfEMP1), pseudogene		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0533100.1	PF3D7_0533100.1		GO:0016021	GO_REF:0000002	IEA		C	erythrocyte membrane protein 1 (PfEMP1), pseudogene		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0020002	GO_REF:0000002	TAS		C	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500400.1	PF3D7_0500400.1		GO:0020002	GO_REF:0000002	IDA		C	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500500.1	PF3D7_0500500.1		GO:0020002	GO_REF:0000002	IDA		C	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500800.1	PF3D7_0500800.1		GO:0020002	GO_REF:0000002	IDA		C	mature parasite-infected erythrocyte surface antigen		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532900.1	PF3D7_0532900.1		GO:0020002	GO_REF:0000002	IDA		C	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0020030	GO_REF:0000002	TAS		C	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500800.1	PF3D7_0500800.1		GO:0020030	GO_REF:0000002	IDA		C	mature parasite-infected erythrocyte surface antigen		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532400.1	PF3D7_0532400.1		GO:0020030	GO_REF:0000002	IDA		C	lysine-rich membrane-associated PHISTb protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532400.1	PF3D7_0532400.1		GO:0020030	GO_REF:0000002	IDA		C	lysine-rich membrane-associated PHISTb protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0046789	GO_REF:0000002	IEA		F	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0046789	GO_REF:0000002	IEA		F	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0533100.1	PF3D7_0533100.1		GO:0046789	GO_REF:0000002	IEA		F	erythrocyte membrane protein 1 (PfEMP1), pseudogene		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0533100.1	PF3D7_0533100.1		GO:0046789	GO_REF:0000002	IEA		F	erythrocyte membrane protein 1 (PfEMP1), pseudogene		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0500100.1	PF3D7_0500100.1		GO:0050839	GO_REF:0000002	TAS		F	erythrocyte membrane protein 1, PfEMP1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500400.1	PF3D7_0500400.1		GO:0020003	GO_REF:0000002	IDA		C	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502400.1	PF3D7_0502400.1		GO:0020003	GO_REF:0000002	IDA		C	merozoite surface protein 8		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507500.1	PF3D7_0507500.1		GO:0020003	GO_REF:0000002	IDA		C	subtilisin-like protease 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0020003	GO_REF:0000002	IDA		C	sporozoite surface antigen MB2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500400.1	PF3D7_0500400.1		GO:0020036	GO_REF:0000002	IDA		C	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501000.1	PF3D7_0501000.1		GO:0020036	GO_REF:0000002	IDA		C	Plasmodium exported protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501200.1	PF3D7_0501200.1		GO:0020036	GO_REF:0000002	IDA		C	parasite-infected erythrocyte surface protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501200.1	PF3D7_0501200.1		GO:0020036	GO_REF:0000002	IDA		C	parasite-infected erythrocyte surface protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501300.1	PF3D7_0501300.1		GO:0020036	GO_REF:0000002	IDA		C	skeleton-binding protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515200.1	PF3D7_0515200.1		GO:0020036	GO_REF:0000002	RCA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532400.1	PF3D7_0532400.1		GO:0020036	GO_REF:0000002	IDA		C	lysine-rich membrane-associated PHISTb protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508000.1	PF3D7_0508000.1		GO:0046812	GO_REF:0000002	IDA		F	6-cysteine protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500500.1	PF3D7_0500500.1		GO:0016020	GO_REF:0000002	IEA		C	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502000.1	PF3D7_0502000.1		GO:0016020	GO_REF:0000002	ISS		C	vacuolar protein sorting-associated protein 11, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502400.1	PF3D7_0502400.1		GO:0016020	GO_REF:0000002	TAS		C	merozoite surface protein 8		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504900.1	PF3D7_0504900.1		GO:0016020	GO_REF:0000002	IEA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508300.1	PF3D7_0508300.1		GO:0016020	GO_REF:0000002	ISS		C	triose phosphate transporter		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510000.1	PF3D7_0510000.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512600.1	PF3D7_0512600.1		GO:0016020	GO_REF:0000002	ISS		C	ras-related protein Rab-1B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513900.1	PF3D7_0513900.1		GO:0016020	GO_REF:0000002	IEA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514200.1	PF3D7_0514200.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514500.1	PF3D7_0514500.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium membrane protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515600.1	PF3D7_0515600.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517200.1	PF3D7_0517200.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522600.1	PF3D7_0522600.1		GO:0016020	GO_REF:0000002	IEA		C	inner membrane complex protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523800.1	PF3D7_0523800.1		GO:0016020	GO_REF:0000002	IEA		C	divalent metal transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523800.1	PF3D7_0523800.1		GO:0016020	GO_REF:0000002	IEA		C	divalent metal transporter, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523900.1	PF3D7_0523900.1		GO:0016020	GO_REF:0000002	IEA		C	MerC domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523900.1	PF3D7_0523900.1		GO:0016020	GO_REF:0000002	IEA		C	MerC domain-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0524200.1	PF3D7_0524200.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium membrane protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526100.1	PF3D7_0526100.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium membrane protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526400.1	PF3D7_0526400.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526900.1	PF3D7_0526900.1		GO:0016020	GO_REF:0000002	ISS		C	transmembrane emp24 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527400.1	PF3D7_0527400.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529400.1	PF3D7_0529400.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530400.1	PF3D7_0530400.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531000.1	PF3D7_0531000.1		GO:0016020	GO_REF:0000002	IEA		C	SURF1 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531000.1	PF3D7_0531000.1		GO:0016020	GO_REF:0000002	IEA		C	SURF1 domain-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0531400.1	PF3D7_0531400.1		GO:0016020	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532900.1	PF3D7_0532900.1		GO:0016020	GO_REF:0000002	IEA		C	rifin		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501700.1	PF3D7_0501700.1		GO:0005737	GO_REF:0000002	ISO		C	anaphase-promoting complex subunit 3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502600.1	PF3D7_0502600.1		GO:0005737	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504300.1	PF3D7_0504300.1		GO:0005737	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504800.1	PF3D7_0504800.1		GO:0005737	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505100.1	PF3D7_0505100.1		GO:0005737	GO_REF:0000002	IEA		C	trafficking protein particle complex subunit 8, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506000.1	PF3D7_0506000.1		GO:0005737	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506500.1	PF3D7_0506500.1		GO:0005737	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506800.1	PF3D7_0506800.1		GO:0005737	GO_REF:0000002	IEA		C	transcription factor 25, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507200.1	PF3D7_0507200.1		GO:0005737	GO_REF:0000002	IDA		C	subtilisin-like protease 3		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507400.1	PF3D7_0507400.1		GO:0005737	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507800.1	PF3D7_0507800.1		GO:0005737	GO_REF:0000002	IEA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0005737	GO_REF:0000002	IEA		C	asparagine--tRNA ligase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0005737	GO_REF:0000002	IEA		C	asparagine--tRNA ligase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0510400.1	PF3D7_0510400.1		GO:0005737	GO_REF:0000002	IEA		C	PDCD2 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510400.1	PF3D7_0510400.1		GO:0005737	GO_REF:0000002	IEA		C	PDCD2 domain-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511000.1	PF3D7_0511000.1		GO:0005737	GO_REF:0000002	IDA		C	translationally-controlled tumor protein homolog		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511700.1	PF3D7_0511700.1		GO:0005737	GO_REF:0000002	IDA		C	EKC/KEOPS complex subunit CGI121		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511900.1	PF3D7_0511900.1		GO:0005737	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512900.1	PF3D7_0512900.1		GO:0005737	GO_REF:0000002	IDA		C	AKAP-like protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0005737	GO_REF:0000002	IDA		C	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515600.1	PF3D7_0515600.1		GO:0005737	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515700.1	PF3D7_0515700.1		GO:0005737	GO_REF:0000002	IDA		C	glideosome-associated protein 40, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515900.1	PF3D7_0515900.1		GO:0005737	GO_REF:0000002	ISO		C	NLI interacting factor-like phosphatase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516400.1	PF3D7_0516400.1		GO:0005737	GO_REF:0000002	IEA		C	phosducin-like protein 1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0005737	GO_REF:0000002	IDA		C	sporozoite surface antigen MB2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517200.1	PF3D7_0517200.1		GO:0005737	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517300.1	PF3D7_0517300.1		GO:0005737	GO_REF:0000002	IDA		C	serine/arginine-rich splicing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517500.1	PF3D7_0517500.1		GO:0005737	GO_REF:0000002	IEA		C	UTP--glucose-1-phosphate uridylyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518700.1	PF3D7_0518700.1		GO:0005737	GO_REF:0000002	IDA		C	mRNA-binding protein PUF1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519000.1	PF3D7_0519000.1		GO:0005737	GO_REF:0000002	IEA		C	histone RNA hairpin-binding protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519500.1	PF3D7_0519500.1		GO:0005737	GO_REF:0000002	ISO		C	CCR4 domain-containing protein 1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521200.1	PF3D7_0521200.1		GO:0005737	GO_REF:0000002	IEA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523600.1	PF3D7_0523600.1		GO:0005737	GO_REF:0000002	IEA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524000.1	PF3D7_0524000.1		GO:0005737	GO_REF:0000002	TAS		C	karyopherin beta		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526700.1	PF3D7_0526700.1		GO:0005737	GO_REF:0000002	IEA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528000.1	PF3D7_0528000.1		GO:0005737	GO_REF:0000002	IEA		C	proteasome maturation factor UMP1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528200.1	PF3D7_0528200.1		GO:0005737	GO_REF:0000002	IEA		C	eukaryotic translation initiation factor 3 subunit E, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528200.1	PF3D7_0528200.1		GO:0005737	GO_REF:0000002	IEA		C	eukaryotic translation initiation factor 3 subunit E, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528300.1	PF3D7_0528300.1		GO:0005737	GO_REF:0000002	IEA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529700.1	PF3D7_0529700.1		GO:0005737	GO_REF:0000002	IEA		C	heptatricopeptide repeat-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529800.1	PF3D7_0529800.1		GO:0005737	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501500.1	PF3D7_0501500.1		GO:0020020	GO_REF:0000002	HDA		C	rhoptry-associated protein 3		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501600.1	PF3D7_0501600.1		GO:0020020	GO_REF:0000002	HDA		C	rhoptry-associated protein 2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502400.1	PF3D7_0502400.1		GO:0020020	GO_REF:0000002	IDA		C	merozoite surface protein 8		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511000.1	PF3D7_0511000.1		GO:0020020	GO_REF:0000002	IDA		C	translationally-controlled tumor protein homolog		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512600.1	PF3D7_0512600.1		GO:0020020	GO_REF:0000002	HDA		C	ras-related protein Rab-1B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0020020	GO_REF:0000002	IDA		C	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0020020	GO_REF:0000002	HDA		C	multidrug resistance protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0020020	GO_REF:0000002	IDA		C	multidrug resistance protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524000.1	PF3D7_0524000.1		GO:0020020	GO_REF:0000002	HDA		C	karyopherin beta		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507500.1	PF3D7_0507500.1		GO:0020026	GO_REF:0000002	IDA		C	subtilisin-like protease 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501000.1	PF3D7_0501000.1		GO:1903561	GO_REF:0000002	HDA		C	Plasmodium exported protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501300.1	PF3D7_0501300.1		GO:1903561	GO_REF:0000002	HDA		C	skeleton-binding protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501500.1	PF3D7_0501500.1		GO:1903561	GO_REF:0000002	HDA		C	rhoptry-associated protein 3		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501600.1	PF3D7_0501600.1		GO:1903561	GO_REF:0000002	HDA		C	rhoptry-associated protein 2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516200.1	PF3D7_0516200.1		GO:1903561	GO_REF:0000002	HDA		C	40S ribosomal protein S11		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500800.1	PF3D7_0500800.1		GO:0005515	GO_REF:0000002	IPI		F	mature parasite-infected erythrocyte surface antigen		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500800.1	PF3D7_0500800.1		GO:0005515	GO_REF:0000002	IPI		F	mature parasite-infected erythrocyte surface antigen		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501100.1	PF3D7_0501100.1		GO:0005515	GO_REF:0000002	IPI		F	heat shock protein 40, type II		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501200.1	PF3D7_0501200.1		GO:0005515	GO_REF:0000002	IPI		F	parasite-infected erythrocyte surface protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501300.1	PF3D7_0501300.1		GO:0005515	GO_REF:0000002	IPI		F	skeleton-binding protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501300.1	PF3D7_0501300.1		GO:0005515	GO_REF:0000002	IPI		F	skeleton-binding protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501300.1	PF3D7_0501300.1		GO:0005515	GO_REF:0000002	IPI		F	skeleton-binding protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501300.1	PF3D7_0501300.1		GO:0005515	GO_REF:0000002	IPI		F	skeleton-binding protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501300.1	PF3D7_0501300.1		GO:0005515	GO_REF:0000002	IPI		F	skeleton-binding protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501600.1	PF3D7_0501600.1		GO:0005515	GO_REF:0000002	IPI		F	rhoptry-associated protein 2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501700.1	PF3D7_0501700.1		GO:0005515	GO_REF:0000002	IEA		F	anaphase-promoting complex subunit 3, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0501800.1	PF3D7_0501800.1		GO:0005515	GO_REF:0000002	IPI		F	chromatin assembly factor 1 subunit A		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501800.1	PF3D7_0501800.1		GO:0005515	GO_REF:0000002	IEA		F	chromatin assembly factor 1 subunit A		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503600.1	PF3D7_0503600.1		GO:0005515	GO_REF:0000002	IPI		F	myosin B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503600.1	PF3D7_0503600.1		GO:0005515	GO_REF:0000002	IPI		F	myosin B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0005515	GO_REF:0000002	IPI		F	ATP-dependent helicase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505800.1	PF3D7_0505800.1		GO:0005515	GO_REF:0000002	IEA		F	small ubiquitin-related modifier		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0507200.1	PF3D7_0507200.1		GO:0005515	GO_REF:0000002	IPI		F	subtilisin-like protease 3		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507700.1	PF3D7_0507700.1		GO:0005515	GO_REF:0000002	IEA		F	nuclear protein localization protein 4, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0508000.1	PF3D7_0508000.1		GO:0005515	GO_REF:0000002	IPI		F	6-cysteine protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508100.1	PF3D7_0508100.1		GO:0005515	GO_REF:0000002	IEA		F	SET domain protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0508800.1	PF3D7_0508800.1		GO:0005515	GO_REF:0000002	IPI		F	single-stranded DNA-binding protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509000.1	PF3D7_0509000.1		GO:0005515	GO_REF:0000002	IEA		F	alpha-soluble NSF attachment protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509100.1	PF3D7_0509100.1		GO:0005515	GO_REF:0000002	IEA		F	structural maintenance of chromosomes protein 4, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509200.1	PF3D7_0509200.1		GO:0005515	GO_REF:0000002	IEA		F	leucine-rich repeat protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0510200.1	PF3D7_0510200.1		GO:0005515	GO_REF:0000002	IEA		F	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0510800.1	PF3D7_0510800.1		GO:0005515	GO_REF:0000002	IEA		F	WD repeat-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511500.1	PF3D7_0511500.1		GO:0005515	GO_REF:0000002	IEA		F	RNA pseudouridylate synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511700.1	PF3D7_0511700.1		GO:0005515	GO_REF:0000002	IPI		F	EKC/KEOPS complex subunit CGI121		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512300.1	PF3D7_0512300.1		GO:0005515	GO_REF:0000002	IPI		F	CDK-activating kinase assembly factor MAT1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512700.1	PF3D7_0512700.1		GO:0005515	GO_REF:0000002	IPI		F	orotate phosphoribosyltransferase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512900.1	PF3D7_0512900.1		GO:0005515	GO_REF:0000002	IPI		F	AKAP-like protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514100.1	PF3D7_0514100.1		GO:0005515	GO_REF:0000002	IPI		F	ATP-dependent DNA helicase UvrD		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0005515	GO_REF:0000002	IPI		F	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517200.1	PF3D7_0517200.1		GO:0005515	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518200.1	PF3D7_0518200.1		GO:0005515	GO_REF:0000002	IPI		F	SWIB/MDM2 domain-containing protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518200.1	PF3D7_0518200.1		GO:0005515	GO_REF:0000002	IEA		F	SWIB/MDM2 domain-containing protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518600.1	PF3D7_0518600.1		GO:0005515	GO_REF:0000002	IEA		F	WD repeat-containing protein 26, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0521700.1	PF3D7_0521700.1		GO:0005515	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX1, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0525400.1	PF3D7_0525400.1		GO:0005515	GO_REF:0000002	IPI		F	7-helix-1 protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525500.1	PF3D7_0525500.1		GO:0005515	GO_REF:0000002	IEA		F	WD repeat-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0526300.1	PF3D7_0526300.1		GO:0005515	GO_REF:0000002	IEA		F	WD repeat-containing protein 55, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0526500.1	PF3D7_0526500.1		GO:0005515	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527200.1	PF3D7_0527200.1		GO:0005515	GO_REF:0000002	IEA		F	ubiquitin carboxyl-terminal hydrolase 14		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527500.1	PF3D7_0527500.1		GO:0005515	GO_REF:0000002	IEA		F	Hsc70-interacting protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0530900.1	PF3D7_0530900.1		GO:0005515	GO_REF:0000002	IEA		F	formin 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0532100.1	PF3D7_0532100.1		GO:0005515	GO_REF:0000002	IPI		F	early transcribed membrane protein 5		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532100.1	PF3D7_0532100.1		GO:0005515	GO_REF:0000002	IPI		F	early transcribed membrane protein 5		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532400.1	PF3D7_0532400.1		GO:0005515	GO_REF:0000002	IPI		F	lysine-rich membrane-associated PHISTb protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532400.1	PF3D7_0532400.1		GO:0005515	GO_REF:0000002	IPI		F	lysine-rich membrane-associated PHISTb protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503100.1	PF3D7_0503100.1		GO:0020011	GO_REF:0000002	HDA		C	4-diphosphocytidyl-2-C-methyl-D-erythritol kinase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503100.1	PF3D7_0503100.1		GO:0020011	GO_REF:0000002	IDA		C	4-diphosphocytidyl-2-C-methyl-D-erythritol kinase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504000.1	PF3D7_0504000.1		GO:0020011	GO_REF:0000002	ISO		C	cation transporting P-ATPase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504200.1	PF3D7_0504200.1		GO:0020011	GO_REF:0000002	HDA		C	ATP-dependent RNA helicase DDX27, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0020011	GO_REF:0000002	HDA		C	ATP-dependent helicase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0020011	GO_REF:0000002	IDA		C	ATP-dependent helicase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505400.1	PF3D7_0505400.1		GO:0020011	GO_REF:0000002	HDA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505700.1	PF3D7_0505700.1		GO:0020011	GO_REF:0000002	HDA		C	conserved Plasmodium membrane protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507200.1	PF3D7_0507200.1		GO:0020011	GO_REF:0000002	HDA		C	subtilisin-like protease 3		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508200.1	PF3D7_0508200.1		GO:0020011	GO_REF:0000002	HDA		C	longevity-assurance (LAG1) protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508300.1	PF3D7_0508300.1		GO:0020011	GO_REF:0000002	HDA		C	triose phosphate transporter		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508300.1	PF3D7_0508300.1		GO:0020011	GO_REF:0000002	IDA		C	triose phosphate transporter		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508800.1	PF3D7_0508800.1		GO:0020011	GO_REF:0000002	HDA		C	single-stranded DNA-binding protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508800.1	PF3D7_0508800.1		GO:0020011	GO_REF:0000002	IDA		C	single-stranded DNA-binding protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0020011	GO_REF:0000002	HDA		C	asparagine--tRNA ligase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514200.1	PF3D7_0514200.1		GO:0020011	GO_REF:0000002	HDA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514300.1	PF3D7_0514300.1		GO:0020011	GO_REF:0000002	HDA		C	aspartate--tRNA ligase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516300.1	PF3D7_0516300.1		GO:0020011	GO_REF:0000002	HDA		C	tRNA pseudouridine synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0020011	GO_REF:0000002	HDA		C	sporozoite surface antigen MB2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517100.1	PF3D7_0517100.1		GO:0020011	GO_REF:0000002	HDA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518100.1	PF3D7_0518100.1		GO:0020011	GO_REF:0000002	HDA		C	protein AMR2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518100.1	PF3D7_0518100.1		GO:0020011	GO_REF:0000002	IDA		C	protein AMR2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519900.1	PF3D7_0519900.1		GO:0020011	GO_REF:0000002	HDA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520800.1	PF3D7_0520800.1		GO:0020011	GO_REF:0000002	HDA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521400.1	PF3D7_0521400.1		GO:0020011	GO_REF:0000002	IDA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522500.1	PF3D7_0522500.1		GO:0020011	GO_REF:0000002	HDA		C	50S ribosomal protein L17, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522700.1	PF3D7_0522700.1		GO:0020011	GO_REF:0000002	HDA		C	iron-sulfur assembly protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522700.1	PF3D7_0522700.1		GO:0020011	GO_REF:0000002	ISO		C	iron-sulfur assembly protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524600.1	PF3D7_0524600.1		GO:0020011	GO_REF:0000002	HDA		C	50S ribosomal protein L12, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525700.1	PF3D7_0525700.1		GO:0020011	GO_REF:0000002	HDA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526700.1	PF3D7_0526700.1		GO:0020011	GO_REF:0000002	HDA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529000.1	PF3D7_0529000.1		GO:0020011	GO_REF:0000002	HDA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529100.1	PF3D7_0529100.1		GO:0020011	GO_REF:0000002	HDA		C	thioredoxin-like protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529100.1	PF3D7_0529100.1		GO:0020011	GO_REF:0000002	ISO		C	thioredoxin-like protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529300.1	PF3D7_0529300.1		GO:0020011	GO_REF:0000002	HDA		C	apicoplast TIC22 protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529300.1	PF3D7_0529300.1		GO:0020011	GO_REF:0000002	IDA		C	apicoplast TIC22 protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530200.1	PF3D7_0530200.1		GO:0020011	GO_REF:0000002	HDA		C	phosphoenolpyruvate/phosphate translocator		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530200.1	PF3D7_0530200.1		GO:0020011	GO_REF:0000002	IDA		C	phosphoenolpyruvate/phosphate translocator		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532200.1	PF3D7_0532200.1		GO:0043657	GO_REF:0000002	RCA		C	Plasmodium exported protein (PHISTc), unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532500.1	PF3D7_0532500.1		GO:0043657	GO_REF:0000002	RCA		C	Plasmodium exported protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501600.1	PF3D7_0501600.1		GO:0030260	GO_REF:0000002	IMP		P	rhoptry-associated protein 2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517600.1	PF3D7_0517600.1		GO:0030260	GO_REF:0000002	ISO		P	F-actin-capping protein subunit beta, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528400.1	PF3D7_0528400.1		GO:0030260	GO_REF:0000002	ISO		P	palmitoyltransferase DHHC7		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508000.1	PF3D7_0508000.1		GO:0020009	GO_REF:0000002	ISO		C	6-cysteine protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500900.1	PF3D7_0500900.1		GO:0006468	GO_REF:0000002	ISS		P	serine/threonine protein kinase, FIKK family		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500900.1	PF3D7_0500900.1		GO:0006468	GO_REF:0000002	IEA		P	serine/threonine protein kinase, FIKK family		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503500.1	PF3D7_0503500.1		GO:0006468	GO_REF:0000002	ISS		P	protein kinase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525900.1	PF3D7_0525900.1		GO:0006468	GO_REF:0000002	ISS		P	NIMA related kinase 2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525900.1	PF3D7_0525900.1		GO:0006468	GO_REF:0000002	IEA		P	NIMA related kinase 2		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0530500.1	PF3D7_0530500.1		GO:0006468	GO_REF:0000002	IEA		P	conserved Plasmodium membrane protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500900.1	PF3D7_0500900.1		GO:0004672	GO_REF:0000002	IEA		F	serine/threonine protein kinase, FIKK family		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500900.1	PF3D7_0500900.1		GO:0004672	GO_REF:0000002	IEA		F	serine/threonine protein kinase, FIKK family		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503500.1	PF3D7_0503500.1		GO:0004672	GO_REF:0000002	ISS		F	protein kinase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525900.1	PF3D7_0525900.1		GO:0004672	GO_REF:0000002	IEA		F	NIMA related kinase 2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525900.1	PF3D7_0525900.1		GO:0004672	GO_REF:0000002	IEA		F	NIMA related kinase 2		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0500900.1	PF3D7_0500900.1		GO:0005524	GO_REF:0000002	IEA		F	serine/threonine protein kinase, FIKK family		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0500900.1	PF3D7_0500900.1		GO:0005524	GO_REF:0000002	IEA		F	serine/threonine protein kinase, FIKK family		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503200.1	PF3D7_0503200.1		GO:0005524	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503200.1	PF3D7_0503200.1		GO:0005524	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503600.1	PF3D7_0503600.1		GO:0005524	GO_REF:0000002	ISS		F	myosin B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503600.1	PF3D7_0503600.1		GO:0005524	GO_REF:0000002	IEA		F	myosin B		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0504200.1	PF3D7_0504200.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX27, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504200.1	PF3D7_0504200.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX27, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent helicase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent helicase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0505400.1	PF3D7_0505400.1		GO:0005524	GO_REF:0000002	IEA		F	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505500.1	PF3D7_0505500.1		GO:0005524	GO_REF:0000002	IEA		F	DNA mismatch repair protein MSH6, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505500.1	PF3D7_0505500.1		GO:0005524	GO_REF:0000002	IEA		F	DNA mismatch repair protein MSH6, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0506500.1	PF3D7_0506500.1		GO:0005524	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508700.1	PF3D7_0508700.1		GO:0005524	GO_REF:0000002	IEA		F	pre-mRNA-processing ATP-dependent RNA helicase PRP5, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508700.1	PF3D7_0508700.1		GO:0005524	GO_REF:0000002	IEA		F	pre-mRNA-processing ATP-dependent RNA helicase PRP5, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509100.1	PF3D7_0509100.1		GO:0005524	GO_REF:0000002	IEA		F	structural maintenance of chromosomes protein 4, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509100.1	PF3D7_0509100.1		GO:0005524	GO_REF:0000002	IEA		F	structural maintenance of chromosomes protein 4, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0005524	GO_REF:0000002	IEA		F	asparagine--tRNA ligase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0005524	GO_REF:0000002	IEA		F	asparagine--tRNA ligase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0512200.1	PF3D7_0512200.1		GO:0005524	GO_REF:0000002	ISS		F	glutathione synthetase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512200.1	PF3D7_0512200.1		GO:0005524	GO_REF:0000002	IEA		F	glutathione synthetase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0514100.1	PF3D7_0514100.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent DNA helicase UvrD		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514100.1	PF3D7_0514100.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent DNA helicase UvrD		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0514300.1	PF3D7_0514300.1		GO:0005524	GO_REF:0000002	IEA		F	aspartate--tRNA ligase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514300.1	PF3D7_0514300.1		GO:0005524	GO_REF:0000002	IEA		F	aspartate--tRNA ligase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518500.1	PF3D7_0518500.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX23, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518500.1	PF3D7_0518500.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX23, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0521100.1	PF3D7_0521100.1		GO:0005524	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521300.1	PF3D7_0521300.1		GO:0005524	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521700.1	PF3D7_0521700.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521700.1	PF3D7_0521700.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX1, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0521800.1	PF3D7_0521800.1		GO:0005524	GO_REF:0000002	IEA		F	AFG1-like ATPase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521800.1	PF3D7_0521800.1		GO:0005524	GO_REF:0000002	IEA		F	AFG1-like ATPase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0005524	GO_REF:0000002	IEA		F	multidrug resistance protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0005524	GO_REF:0000002	IEA		F	multidrug resistance protein 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0525900.1	PF3D7_0525900.1		GO:0005524	GO_REF:0000002	IEA		F	NIMA related kinase 2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525900.1	PF3D7_0525900.1		GO:0005524	GO_REF:0000002	IEA		F	NIMA related kinase 2		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527000.1	PF3D7_0527000.1		GO:0005524	GO_REF:0000002	IEA		F	DNA replication licensing factor MCM3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527000.1	PF3D7_0527000.1		GO:0005524	GO_REF:0000002	IEA		F	DNA replication licensing factor MCM3, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527900.1	PF3D7_0527900.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX41, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527900.1	PF3D7_0527900.1		GO:0005524	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX41, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0529800.1	PF3D7_0529800.1		GO:0005524	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530500.1	PF3D7_0530500.1		GO:0005524	GO_REF:0000002	IEA		F	conserved Plasmodium membrane protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501200.1	PF3D7_0501200.1		GO:0009986	GO_REF:0000002	IDA		C	parasite-infected erythrocyte surface protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506900.1	PF3D7_0506900.1		GO:0009986	GO_REF:0000002	HDA		C	rhomboid protease ROM4		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507300.1	PF3D7_0507300.1		GO:0009986	GO_REF:0000002	ISO		C	subtilisin-like ookinete protein SOPT		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508000.1	PF3D7_0508000.1		GO:0009986	GO_REF:0000002	HDA		C	6-cysteine protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508000.1	PF3D7_0508000.1		GO:0009986	GO_REF:0000002	IDA		C	6-cysteine protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508200.1	PF3D7_0508200.1		GO:0009986	GO_REF:0000002	HDA		C	longevity-assurance (LAG1) protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511400.1	PF3D7_0511400.1		GO:0009986	GO_REF:0000002	IDA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513700.1	PF3D7_0513700.1		GO:0009986	GO_REF:0000002	ISO		C	secreted ookinete protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515700.1	PF3D7_0515700.1		GO:0009986	GO_REF:0000002	HDA		C	glideosome-associated protein 40, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515700.1	PF3D7_0515700.1		GO:0009986	GO_REF:0000002	IDA		C	glideosome-associated protein 40, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0006418	GO_REF:0000002	IEA		P	asparagine--tRNA ligase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0006418	GO_REF:0000002	IEA		P	asparagine--tRNA ligase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0514300.1	PF3D7_0514300.1		GO:0006418	GO_REF:0000002	IEA		P	aspartate--tRNA ligase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514300.1	PF3D7_0514300.1		GO:0006418	GO_REF:0000002	IEA		P	aspartate--tRNA ligase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0514300.1	PF3D7_0514300.1		GO:0006422	GO_REF:0000002	ISS		P	aspartate--tRNA ligase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502600.1	PF3D7_0502600.1		GO:0000166	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504000.1	PF3D7_0504000.1		GO:0000166	GO_REF:0000002	IEA		F	cation transporting P-ATPase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504000.1	PF3D7_0504000.1		GO:0000166	GO_REF:0000002	IEA		F	cation transporting P-ATPase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0000166	GO_REF:0000002	IEA		F	asparagine--tRNA ligase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0000166	GO_REF:0000002	IEA		F	asparagine--tRNA ligase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511900.1	PF3D7_0511900.1		GO:0000166	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514300.1	PF3D7_0514300.1		GO:0000166	GO_REF:0000002	IEA		F	aspartate--tRNA ligase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514300.1	PF3D7_0514300.1		GO:0000166	GO_REF:0000002	IEA		F	aspartate--tRNA ligase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516100.1	PF3D7_0516100.1		GO:0000166	GO_REF:0000002	IEA		F	cation-transporting ATPase 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516100.1	PF3D7_0516100.1		GO:0000166	GO_REF:0000002	IEA		F	cation-transporting ATPase 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517800.1	PF3D7_0517800.1		GO:0000166	GO_REF:0000002	IEA		F	apicortin, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520800.1	PF3D7_0520800.1		GO:0000166	GO_REF:0000002	IEA		F	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524500.1	PF3D7_0524500.1		GO:0000166	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526400.1	PF3D7_0526400.1		GO:0000166	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528600.1	PF3D7_0528600.1		GO:0000166	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503300.1	PF3D7_0503300.1		GO:0003676	GO_REF:0000002	ISS		F	serine/arginine-rich splicing factor 12		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503300.1	PF3D7_0503300.1		GO:0003676	GO_REF:0000002	IEA		F	serine/arginine-rich splicing factor 12		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0504200.1	PF3D7_0504200.1		GO:0003676	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX27, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504200.1	PF3D7_0504200.1		GO:0003676	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX27, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0003676	GO_REF:0000002	IEA		F	ATP-dependent helicase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0003676	GO_REF:0000002	IEA		F	ATP-dependent helicase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0508700.1	PF3D7_0508700.1		GO:0003676	GO_REF:0000002	IEA		F	pre-mRNA-processing ATP-dependent RNA helicase PRP5, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508700.1	PF3D7_0508700.1		GO:0003676	GO_REF:0000002	IEA		F	pre-mRNA-processing ATP-dependent RNA helicase PRP5, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0003676	GO_REF:0000002	IEA		F	asparagine--tRNA ligase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0003676	GO_REF:0000002	IEA		F	asparagine--tRNA ligase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0513200.1	PF3D7_0513200.1		GO:0003676	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513200.1	PF3D7_0513200.1		GO:0003676	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0515000.1	PF3D7_0515000.1		GO:0003676	GO_REF:0000002	IEA		F	pre-mRNA-splicing factor CWC2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515000.1	PF3D7_0515000.1		GO:0003676	GO_REF:0000002	IEA		F	pre-mRNA-splicing factor CWC2, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0003676	GO_REF:0000002	IEA		F	sporozoite surface antigen MB2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0003676	GO_REF:0000002	IEA		F	sporozoite surface antigen MB2		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517300.1	PF3D7_0517300.1		GO:0003676	GO_REF:0000002	IEA		F	serine/arginine-rich splicing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517300.1	PF3D7_0517300.1		GO:0003676	GO_REF:0000002	IEA		F	serine/arginine-rich splicing factor 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0003676	GO_REF:0000002	IEA		F	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0003676	GO_REF:0000002	IEA		F	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518500.1	PF3D7_0518500.1		GO:0003676	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX23, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518500.1	PF3D7_0518500.1		GO:0003676	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX23, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0521700.1	PF3D7_0521700.1		GO:0003676	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521700.1	PF3D7_0521700.1		GO:0003676	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX1, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527900.1	PF3D7_0527900.1		GO:0003676	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX41, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527900.1	PF3D7_0527900.1		GO:0003676	GO_REF:0000002	IEA		F	ATP-dependent RNA helicase DDX41, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0531400.1	PF3D7_0531400.1		GO:0003676	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531400.1	PF3D7_0531400.1		GO:0003676	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0004812	GO_REF:0000002	IEA		F	asparagine--tRNA ligase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0004812	GO_REF:0000002	IEA		F	asparagine--tRNA ligase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0514300.1	PF3D7_0514300.1		GO:0004812	GO_REF:0000002	IEA		F	aspartate--tRNA ligase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514300.1	PF3D7_0514300.1		GO:0004812	GO_REF:0000002	IEA		F	aspartate--tRNA ligase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0514300.1	PF3D7_0514300.1		GO:0004815	GO_REF:0000002	ISS		F	aspartate--tRNA ligase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501300.1	PF3D7_0501300.1		GO:0015031	GO_REF:0000002	IDA		P	skeleton-binding protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522400.1	PF3D7_0522400.1		GO:0015031	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526900.1	PF3D7_0526900.1		GO:0015031	GO_REF:0000002	IEA		P	transmembrane emp24 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0015031	GO_REF:0000002	IEA		P	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0015031	GO_REF:0000002	IEA		P	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0529300.1	PF3D7_0529300.1		GO:0015031	GO_REF:0000002	IEA		P	apicoplast TIC22 protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529300.1	PF3D7_0529300.1		GO:0015031	GO_REF:0000002	IEA		P	apicoplast TIC22 protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0526900.1	PF3D7_0526900.1		GO:0005794	GO_REF:0000002	IEA		C	transmembrane emp24 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503000.1	PF3D7_0503000.1		GO:0005622	GO_REF:0000002	IEA		C	50S ribosomal protein L28, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503000.1	PF3D7_0503000.1		GO:0005622	GO_REF:0000002	IEA		C	50S ribosomal protein L28, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503400.1	PF3D7_0503400.1		GO:0005622	GO_REF:0000002	IEA		C	actin-depolymerizing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503400.1	PF3D7_0503400.1		GO:0005622	GO_REF:0000002	IEA		C	actin-depolymerizing factor 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503800.1	PF3D7_0503800.1		GO:0005622	GO_REF:0000002	IEA		C	60S ribosomal protein L31		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516900.1	PF3D7_0516900.1		GO:0005622	GO_REF:0000002	IEA		C	60S ribosomal protein L2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516900.1	PF3D7_0516900.1		GO:0005622	GO_REF:0000002	IEA		C	60S ribosomal protein L2		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517900.1	PF3D7_0517900.1		GO:0005622	GO_REF:0000002	IEA		C	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517900.1	PF3D7_0517900.1		GO:0005622	GO_REF:0000002	IEA		C	zinc finger protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519400.1	PF3D7_0519400.1		GO:0005622	GO_REF:0000002	IEA		C	40S ribosomal protein S24		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519400.1	PF3D7_0519400.1		GO:0005622	GO_REF:0000002	IEA		C	40S ribosomal protein S24		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0005622	GO_REF:0000002	IEA		C	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0005622	GO_REF:0000002	IEA		C	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0520300.1	PF3D7_0520300.1		GO:0005622	GO_REF:0000002	ISO		C	U6 snRNA-associated Sm-like protein LSm2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520400.1	PF3D7_0520400.1		GO:0005622	GO_REF:0000002	ISO		C	single-stranded DNA-binding protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520900.1	PF3D7_0520900.1		GO:0005622	GO_REF:0000002	ISO		C	adenosylhomocysteinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522500.1	PF3D7_0522500.1		GO:0005622	GO_REF:0000002	IEA		C	50S ribosomal protein L17, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522500.1	PF3D7_0522500.1		GO:0005622	GO_REF:0000002	IEA		C	50S ribosomal protein L17, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0524600.1	PF3D7_0524600.1		GO:0005622	GO_REF:0000002	IEA		C	50S ribosomal protein L12, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524600.1	PF3D7_0524600.1		GO:0005622	GO_REF:0000002	IEA		C	50S ribosomal protein L12, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0526500.1	PF3D7_0526500.1		GO:0005622	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528800.1	PF3D7_0528800.1		GO:0005622	GO_REF:0000002	ISS		C	nucleolar preribosomal GTPase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531200.1	PF3D7_0531200.1		GO:0005622	GO_REF:0000002	IEA		C	ribosomal protein S16, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531200.1	PF3D7_0531200.1		GO:0005622	GO_REF:0000002	IEA		C	ribosomal protein S16, mitochondrial, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0512300.1	PF3D7_0512300.1		GO:0046872	GO_REF:0000002	IEA		F	CDK-activating kinase assembly factor MAT1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512300.1	PF3D7_0512300.1		GO:0046872	GO_REF:0000002	IEA		F	CDK-activating kinase assembly factor MAT1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0515000.1	PF3D7_0515000.1		GO:0046872	GO_REF:0000002	IEA		F	pre-mRNA-splicing factor CWC2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515000.1	PF3D7_0515000.1		GO:0046872	GO_REF:0000002	IEA		F	pre-mRNA-splicing factor CWC2, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522900.1	PF3D7_0522900.1		GO:0046872	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522900.1	PF3D7_0522900.1		GO:0046872	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523100.1	PF3D7_0523100.1		GO:0046872	GO_REF:0000002	IEA		F	mitochondrial-processing peptidase subunit alpha, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523100.1	PF3D7_0523100.1		GO:0046872	GO_REF:0000002	IEA		F	mitochondrial-processing peptidase subunit alpha, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0525000.1	PF3D7_0525000.1		GO:0046872	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525000.1	PF3D7_0525000.1		GO:0046872	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528300.1	PF3D7_0528300.1		GO:0046872	GO_REF:0000002	IEA		F	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504800.1	PF3D7_0504800.1		GO:0006817	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515600.1	PF3D7_0515600.1		GO:0006817	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504800.1	PF3D7_0504800.1		GO:0005576	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504800.1	PF3D7_0504800.1		GO:0005198	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522700.1	PF3D7_0522700.1		GO:0005198	GO_REF:0000002	IEA		F	iron-sulfur assembly protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522700.1	PF3D7_0522700.1		GO:0005198	GO_REF:0000002	IEA		F	iron-sulfur assembly protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509800.1	PF3D7_0509800.1		GO:0016301	GO_REF:0000002	IEA		F	phosphatidylinositol 4-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514800.1	PF3D7_0514800.1		GO:0016301	GO_REF:0000002	IEA		F	inositol polyphosphate multikinase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514800.1	PF3D7_0514800.1		GO:0016301	GO_REF:0000002	IEA		F	inositol polyphosphate multikinase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0016301	GO_REF:0000002	IEA		F	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520500.1	PF3D7_0520500.1		GO:0016301	GO_REF:0000002	ISS		F	phosphomethylpyrimidine kinase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503600.1	PF3D7_0503600.1		GO:0045177	GO_REF:0000002	IDA		C	myosin B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530900.1	PF3D7_0530900.1		GO:0045177	GO_REF:0000002	IDA		C	formin 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505200.1	PF3D7_0505200.1		GO:0005200	GO_REF:0000002	ISS		F	actin-like protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503600.1	PF3D7_0503600.1		GO:0016459	GO_REF:0000002	IEA		C	myosin B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503600.1	PF3D7_0503600.1		GO:0016459	GO_REF:0000002	IEA		C	myosin B		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0506500.1	PF3D7_0506500.1		GO:0016459	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521300.1	PF3D7_0521300.1		GO:0016459	GO_REF:0000002	IEA		C	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529800.1	PF3D7_0529800.1		GO:0016459	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503600.1	PF3D7_0503600.1		GO:0003774	GO_REF:0000002	IEA		F	myosin B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503600.1	PF3D7_0503600.1		GO:0003774	GO_REF:0000002	IEA		F	myosin B		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0506500.1	PF3D7_0506500.1		GO:0003774	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521300.1	PF3D7_0521300.1		GO:0003774	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529800.1	PF3D7_0529800.1		GO:0003774	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503400.1	PF3D7_0503400.1		GO:0003779	GO_REF:0000002	IEA		F	actin-depolymerizing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503400.1	PF3D7_0503400.1		GO:0003779	GO_REF:0000002	IEA		F	actin-depolymerizing factor 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503600.1	PF3D7_0503600.1		GO:0003779	GO_REF:0000002	ISS		F	myosin B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506500.1	PF3D7_0506500.1		GO:0003779	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521300.1	PF3D7_0521300.1		GO:0003779	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529800.1	PF3D7_0529800.1		GO:0003779	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530900.1	PF3D7_0530900.1		GO:0003779	GO_REF:0000002	IDA		F	formin 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506500.1	PF3D7_0506500.1		GO:0005516	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521300.1	PF3D7_0521300.1		GO:0005516	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529800.1	PF3D7_0529800.1		GO:0005516	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516500.1	PF3D7_0516500.1		GO:0006810	GO_REF:0000002	ISS		P	major facilitator superfamily domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526400.1	PF3D7_0526400.1		GO:0006810	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501100.1	PF3D7_0501100.1		GO:0044164	GO_REF:0000002	IDA		C	heat shock protein 40, type II		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532400.1	PF3D7_0532400.1		GO:0044164	GO_REF:0000002	IDA		C	lysine-rich membrane-associated PHISTb protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532600.1	PF3D7_0532600.1		GO:0044164	GO_REF:0000002	IDA		C	Plasmodium exported protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507700.1	PF3D7_0507700.1		GO:0006511	GO_REF:0000002	IEA		P	nuclear protein localization protein 4, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507700.1	PF3D7_0507700.1		GO:0006511	GO_REF:0000002	IEA		P	nuclear protein localization protein 4, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516700.1	PF3D7_0516700.1		GO:0006511	GO_REF:0000002	IEA		P	ubiquitin carboxyl-terminal hydrolase 2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518300.1	PF3D7_0518300.1		GO:0006511	GO_REF:0000002	ISS		P	proteasome subunit beta type-1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524800.1	PF3D7_0524800.1		GO:0006511	GO_REF:0000002	IEA		P	ubiquitin fusion degradation protein 1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524800.1	PF3D7_0524800.1		GO:0006511	GO_REF:0000002	IEA		P	ubiquitin fusion degradation protein 1, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527200.1	PF3D7_0527200.1		GO:0006511	GO_REF:0000002	IEA		P	ubiquitin carboxyl-terminal hydrolase 14		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516700.1	PF3D7_0516700.1		GO:0036459	GO_REF:0000002	IEA		F	ubiquitin carboxyl-terminal hydrolase 2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516700.1	PF3D7_0516700.1		GO:0036459	GO_REF:0000002	IEA		F	ubiquitin carboxyl-terminal hydrolase 2, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527200.1	PF3D7_0527200.1		GO:0036459	GO_REF:0000002	IEA		F	ubiquitin carboxyl-terminal hydrolase 14		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527200.1	PF3D7_0527200.1		GO:0036459	GO_REF:0000002	IEA		F	ubiquitin carboxyl-terminal hydrolase 14		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0507300.1	PF3D7_0507300.1		GO:0071944	GO_REF:0000002	IDA		C	subtilisin-like ookinete protein SOPT		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510300.1	PF3D7_0510300.1		GO:0071944	GO_REF:0000002	ISO		C	stripes inner membrane complex protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513500.1	PF3D7_0513500.1		GO:0005739	GO_REF:0000002	IEA		C	mitochondrial import inner membrane translocase subunit TIM16, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518200.1	PF3D7_0518200.1		GO:0005739	GO_REF:0000002	IDA		C	SWIB/MDM2 domain-containing protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521800.1	PF3D7_0521800.1		GO:0005739	GO_REF:0000002	ISO		C	AFG1-like ATPase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523100.1	PF3D7_0523100.1		GO:0005739	GO_REF:0000002	ISS		C	mitochondrial-processing peptidase subunit alpha, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524700.1	PF3D7_0524700.1		GO:0005739	GO_REF:0000002	IDA		C	mitochondrial import receptor subunit TOM22, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531000.1	PF3D7_0531000.1		GO:0005739	GO_REF:0000002	IEA		C	SURF1 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511500.1	PF3D7_0511500.1		GO:0003729	GO_REF:0000002	HDA		F	RNA pseudouridylate synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515000.1	PF3D7_0515000.1		GO:0003729	GO_REF:0000002	HDA		F	pre-mRNA-splicing factor CWC2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518700.1	PF3D7_0518700.1		GO:0003729	GO_REF:0000002	IDA		F	mRNA-binding protein PUF1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527300.1	PF3D7_0527300.1		GO:0003729	GO_REF:0000002	ISS		F	methionine aminopeptidase 1a, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528200.1	PF3D7_0528200.1		GO:0003729	GO_REF:0000002	HDA		F	eukaryotic translation initiation factor 3 subunit E, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505200.1	PF3D7_0505200.1		GO:0007010	GO_REF:0000002	ISS		P	actin-like protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503400.1	PF3D7_0503400.1		GO:0003785	GO_REF:0000002	IDA		F	actin-depolymerizing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512700.1	PF3D7_0512700.1		GO:0046983	GO_REF:0000002	IDA		F	orotate phosphoribosyltransferase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522000.1	PF3D7_0522000.1		GO:0046983	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521500.1	PF3D7_0521500.1		GO:0006364	GO_REF:0000002	ISS		P	ribosomal large subunit pseudouridylate synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526300.1	PF3D7_0526300.1		GO:0006364	GO_REF:0000002	ISS		P	WD repeat-containing protein 55, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522300.1	PF3D7_0522300.1		GO:0008168	GO_REF:0000002	IEA		F	18S rRNA (guanine-N(7))-methyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522300.1	PF3D7_0522300.1		GO:0008168	GO_REF:0000002	IEA		F	18S rRNA (guanine-N(7))-methyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0530700.1	PF3D7_0530700.1		GO:0008168	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526500.1	PF3D7_0526500.1		GO:0007049	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530700.1	PF3D7_0530700.1		GO:0007049	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519200.1	PF3D7_0519200.1		GO:0015991	GO_REF:0000002	IEA		P	V-type proton ATPase 16 kDa proteolipid subunit		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519200.1	PF3D7_0519200.1		GO:0015991	GO_REF:0000002	IEA		P	V-type proton ATPase 16 kDa proteolipid subunit		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0500800.1	PF3D7_0500800.1		GO:0005634	GO_REF:0000002	HDA		C	mature parasite-infected erythrocyte surface antigen		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501000.1	PF3D7_0501000.1		GO:0005634	GO_REF:0000002	HDA		C	Plasmodium exported protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501200.1	PF3D7_0501200.1		GO:0005634	GO_REF:0000002	HDA		C	parasite-infected erythrocyte surface protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501300.1	PF3D7_0501300.1		GO:0005634	GO_REF:0000002	HDA		C	skeleton-binding protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501500.1	PF3D7_0501500.1		GO:0005634	GO_REF:0000002	HDA		C	rhoptry-associated protein 3		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501600.1	PF3D7_0501600.1		GO:0005634	GO_REF:0000002	HDA		C	rhoptry-associated protein 2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501800.1	PF3D7_0501800.1		GO:0005634	GO_REF:0000002	IDA		C	chromatin assembly factor 1 subunit A		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502100.1	PF3D7_0502100.1		GO:0005634	GO_REF:0000002	ISM		C	HCNGP-like protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503300.1	PF3D7_0503300.1		GO:0005634	GO_REF:0000002	HDA		C	serine/arginine-rich splicing factor 12		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503300.1	PF3D7_0503300.1		GO:0005634	GO_REF:0000002	IDA		C	serine/arginine-rich splicing factor 12		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503800.1	PF3D7_0503800.1		GO:0005634	GO_REF:0000002	HDA		C	60S ribosomal protein L31		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0005634	GO_REF:0000002	IEA		C	ATP-dependent helicase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0005634	GO_REF:0000002	IEA		C	ATP-dependent helicase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0505100.1	PF3D7_0505100.1		GO:0005634	GO_REF:0000002	IEA		C	trafficking protein particle complex subunit 8, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505800.1	PF3D7_0505800.1		GO:0005634	GO_REF:0000002	HDA		C	small ubiquitin-related modifier		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505800.1	PF3D7_0505800.1		GO:0005634	GO_REF:0000002	IDA		C	small ubiquitin-related modifier		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506200.1	PF3D7_0506200.1		GO:0005634	GO_REF:0000002	IDA		C	TATA-box-binding protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506800.1	PF3D7_0506800.1		GO:0005634	GO_REF:0000002	IEA		C	transcription factor 25, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507100.1	PF3D7_0507100.1		GO:0005634	GO_REF:0000002	HDA		C	60S ribosomal protein L4		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508100.1	PF3D7_0508100.1		GO:0005634	GO_REF:0000002	IEA		C	SET domain protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508500.1	PF3D7_0508500.1		GO:0005634	GO_REF:0000002	TAS		C	guanidine nucleotide exchange factor		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508800.1	PF3D7_0508800.1		GO:0005634	GO_REF:0000002	HDA		C	single-stranded DNA-binding protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509300.1	PF3D7_0509300.1		GO:0005634	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509500.1	PF3D7_0509500.1		GO:0005634	GO_REF:0000002	IEA		C	ERCC4 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510000.1	PF3D7_0510000.1		GO:0005634	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510500.1	PF3D7_0510500.1		GO:0005634	GO_REF:0000002	RCA		C	topoisomerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512200.1	PF3D7_0512200.1		GO:0005634	GO_REF:0000002	HDA		C	glutathione synthetase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512900.1	PF3D7_0512900.1		GO:0005634	GO_REF:0000002	IDA		C	AKAP-like protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513200.1	PF3D7_0513200.1		GO:0005634	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513200.1	PF3D7_0513200.1		GO:0005634	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0513600.1	PF3D7_0513600.1		GO:0005634	GO_REF:0000002	HDA		C	deoxyribodipyrimidine photo-lyase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514100.1	PF3D7_0514100.1		GO:0005634	GO_REF:0000002	IDA		C	ATP-dependent DNA helicase UvrD		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515700.1	PF3D7_0515700.1		GO:0005634	GO_REF:0000002	HDA		C	glideosome-associated protein 40, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516200.1	PF3D7_0516200.1		GO:0005634	GO_REF:0000002	HDA		C	40S ribosomal protein S11		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0005634	GO_REF:0000002	IDA		C	sporozoite surface antigen MB2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516800.1	PF3D7_0516800.1		GO:0005634	GO_REF:0000002	ISO		C	AP2 domain transcription factor AP2-O2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516900.1	PF3D7_0516900.1		GO:0005634	GO_REF:0000002	HDA		C	60S ribosomal protein L2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517000.1	PF3D7_0517000.1		GO:0005634	GO_REF:0000002	HDA		C	60S ribosomal protein L12, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517300.1	PF3D7_0517300.1		GO:0005634	GO_REF:0000002	HDA		C	serine/arginine-rich splicing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517300.1	PF3D7_0517300.1		GO:0005634	GO_REF:0000002	IDA		C	serine/arginine-rich splicing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517400.1	PF3D7_0517400.1		GO:0005634	GO_REF:0000002	HDA		C	FACT complex subunit SPT16, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517400.1	PF3D7_0517400.1		GO:0005634	GO_REF:0000002	ISO		C	FACT complex subunit SPT16, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0005634	GO_REF:0000002	HDA		C	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518200.1	PF3D7_0518200.1		GO:0005634	GO_REF:0000002	HDA		C	SWIB/MDM2 domain-containing protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518300.1	PF3D7_0518300.1		GO:0005634	GO_REF:0000002	HDA		C	proteasome subunit beta type-1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518400.1	PF3D7_0518400.1		GO:0005634	GO_REF:0000002	ISO		C	cyclin, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518800.1	PF3D7_0518800.1		GO:0005634	GO_REF:0000002	IEA		C	secreted ookinete protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519000.1	PF3D7_0519000.1		GO:0005634	GO_REF:0000002	IEA		C	histone RNA hairpin-binding protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519400.1	PF3D7_0519400.1		GO:0005634	GO_REF:0000002	HDA		C	40S ribosomal protein S24		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519600.1	PF3D7_0519600.1		GO:0005634	GO_REF:0000002	IEA		C	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519600.1	PF3D7_0519600.1		GO:0005634	GO_REF:0000002	IEA		C	zinc finger protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519700.1	PF3D7_0519700.1		GO:0005634	GO_REF:0000002	HDA		C	FoP domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519800.1	PF3D7_0519800.1		GO:0005634	GO_REF:0000002	IDA		C	EELM2 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0005634	GO_REF:0000002	HDA		C	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520400.1	PF3D7_0520400.1		GO:0005634	GO_REF:0000002	HDA		C	single-stranded DNA-binding protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520700.1	PF3D7_0520700.1		GO:0005634	GO_REF:0000002	IEA		C	CDC73 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520800.1	PF3D7_0520800.1		GO:0005634	GO_REF:0000002	IEA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521000.1	PF3D7_0521000.1		GO:0005634	GO_REF:0000002	ISO		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522800.1	PF3D7_0522800.1		GO:0005634	GO_REF:0000002	HDA		C	pre-mRNA-splicing factor BUD31, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522800.1	PF3D7_0522800.1		GO:0005634	GO_REF:0000002	IEA		C	pre-mRNA-splicing factor BUD31, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522900.1	PF3D7_0522900.1		GO:0005634	GO_REF:0000002	IEA		C	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0005634	GO_REF:0000002	HDA		C	multidrug resistance protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524000.1	PF3D7_0524000.1		GO:0005634	GO_REF:0000002	HDA		C	karyopherin beta		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524100.1	PF3D7_0524100.1		GO:0005634	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524400.1	PF3D7_0524400.1		GO:0005634	GO_REF:0000002	HDA		C	ribosome-interacting GTPase 1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526500.1	PF3D7_0526500.1		GO:0005634	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526500.1	PF3D7_0526500.1		GO:0005634	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0526700.1	PF3D7_0526700.1		GO:0005634	GO_REF:0000002	IEA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526800.1	PF3D7_0526800.1		GO:0005634	GO_REF:0000002	IDA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527000.1	PF3D7_0527000.1		GO:0005634	GO_REF:0000002	HDA		C	DNA replication licensing factor MCM3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527500.1	PF3D7_0527500.1		GO:0005634	GO_REF:0000002	HDA		C	Hsc70-interacting protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528300.1	PF3D7_0528300.1		GO:0005634	GO_REF:0000002	IEA		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530000.1	PF3D7_0530000.1		GO:0005634	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530600.1	PF3D7_0530600.1		GO:0005634	GO_REF:0000002	ISM		C	XAP-5 DNA binding protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530600.1	PF3D7_0530600.1		GO:0005634	GO_REF:0000002	IEA		C	XAP-5 DNA binding protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0532300.1	PF3D7_0532300.1		GO:0005634	GO_REF:0000002	HDA		C	Plasmodium exported protein (PHISTb), unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532400.1	PF3D7_0532400.1		GO:0005634	GO_REF:0000002	HDA		C	lysine-rich membrane-associated PHISTb protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519200.1	PF3D7_0519200.1		GO:0015078	GO_REF:0000002	IEA		F	V-type proton ATPase 16 kDa proteolipid subunit		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519200.1	PF3D7_0519200.1		GO:0015078	GO_REF:0000002	IEA		F	V-type proton ATPase 16 kDa proteolipid subunit		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509800.1	PF3D7_0509800.1		GO:0042493	GO_REF:0000002	IDA		P	phosphatidylinositol 4-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509800.1	PF3D7_0509800.1		GO:0042493	GO_REF:0000002	IDA		P	phosphatidylinositol 4-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510500.1	PF3D7_0510500.1		GO:0042493	GO_REF:0000002	IDA		P	topoisomerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513300.1	PF3D7_0513300.1		GO:0042493	GO_REF:0000002	IDA		P	purine nucleoside phosphorylase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513300.1	PF3D7_0513300.1		GO:0042493	GO_REF:0000002	IDA		P	purine nucleoside phosphorylase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0042493	GO_REF:0000002	IDA		P	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0042493	GO_REF:0000002	IDA		P	multidrug resistance protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525100.1	PF3D7_0525100.1		GO:0042493	GO_REF:0000002	IDA		P	acyl-CoA synthetase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506300.1	PF3D7_0506300.1		GO:0016740	GO_REF:0000002	IEA		F	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503000.1	PF3D7_0503000.1		GO:0006412	GO_REF:0000002	ISS		P	50S ribosomal protein L28, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503000.1	PF3D7_0503000.1		GO:0006412	GO_REF:0000002	IEA		P	50S ribosomal protein L28, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503800.1	PF3D7_0503800.1		GO:0006412	GO_REF:0000002	ISS		P	60S ribosomal protein L31		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503800.1	PF3D7_0503800.1		GO:0006412	GO_REF:0000002	IEA		P	60S ribosomal protein L31		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0506100.1	PF3D7_0506100.1		GO:0006412	GO_REF:0000002	ISS		P	60S ribosomal subunit protein L24, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507100.1	PF3D7_0507100.1		GO:0006412	GO_REF:0000002	ISS		P	60S ribosomal protein L4		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507100.1	PF3D7_0507100.1		GO:0006412	GO_REF:0000002	IEA		P	60S ribosomal protein L4		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516200.1	PF3D7_0516200.1		GO:0006412	GO_REF:0000002	ISS		P	40S ribosomal protein S11		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516200.1	PF3D7_0516200.1		GO:0006412	GO_REF:0000002	IEA		P	40S ribosomal protein S11		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0006412	GO_REF:0000002	ISS		P	sporozoite surface antigen MB2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516900.1	PF3D7_0516900.1		GO:0006412	GO_REF:0000002	ISS		P	60S ribosomal protein L2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516900.1	PF3D7_0516900.1		GO:0006412	GO_REF:0000002	IEA		P	60S ribosomal protein L2		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517000.1	PF3D7_0517000.1		GO:0006412	GO_REF:0000002	IEA		P	60S ribosomal protein L12, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517000.1	PF3D7_0517000.1		GO:0006412	GO_REF:0000002	IEA		P	60S ribosomal protein L12, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519100.1	PF3D7_0519100.1		GO:0006412	GO_REF:0000002	IEA		P	50S ribosomal protein L14, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519100.1	PF3D7_0519100.1		GO:0006412	GO_REF:0000002	IEA		P	50S ribosomal protein L14, mitochondrial, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519400.1	PF3D7_0519400.1		GO:0006412	GO_REF:0000002	IEA		P	40S ribosomal protein S24		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519400.1	PF3D7_0519400.1		GO:0006412	GO_REF:0000002	IEA		P	40S ribosomal protein S24		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0006412	GO_REF:0000002	IEA		P	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0006412	GO_REF:0000002	IEA		P	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522500.1	PF3D7_0522500.1		GO:0006412	GO_REF:0000002	ISS		P	50S ribosomal protein L17, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522500.1	PF3D7_0522500.1		GO:0006412	GO_REF:0000002	IEA		P	50S ribosomal protein L17, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0524600.1	PF3D7_0524600.1		GO:0006412	GO_REF:0000002	ISS		P	50S ribosomal protein L12, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524600.1	PF3D7_0524600.1		GO:0006412	GO_REF:0000002	IEA		P	50S ribosomal protein L12, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0531200.1	PF3D7_0531200.1		GO:0006412	GO_REF:0000002	IEA		P	ribosomal protein S16, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531200.1	PF3D7_0531200.1		GO:0006412	GO_REF:0000002	IEA		P	ribosomal protein S16, mitochondrial, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0006413	GO_REF:0000002	IEA		P	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0006413	GO_REF:0000002	IEA		P	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0532400.1	PF3D7_0532400.1		GO:0044538	GO_REF:0000002	IDA		C	lysine-rich membrane-associated PHISTb protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0003743	GO_REF:0000002	IEA		F	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0003743	GO_REF:0000002	IEA		F	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528200.1	PF3D7_0528200.1		GO:0003743	GO_REF:0000002	IEA		F	eukaryotic translation initiation factor 3 subunit E, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528200.1	PF3D7_0528200.1		GO:0003743	GO_REF:0000002	IEA		F	eukaryotic translation initiation factor 3 subunit E, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0512600.1	PF3D7_0512600.1		GO:0003924	GO_REF:0000002	IEA		F	ras-related protein Rab-1B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512600.1	PF3D7_0512600.1		GO:0003924	GO_REF:0000002	IEA		F	ras-related protein Rab-1B		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0513800.1	PF3D7_0513800.1		GO:0003924	GO_REF:0000002	IEA		F	ras-related protein Rab-1A		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513800.1	PF3D7_0513800.1		GO:0003924	GO_REF:0000002	IEA		F	ras-related protein Rab-1A		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0003924	GO_REF:0000002	IEA		F	sporozoite surface antigen MB2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0003924	GO_REF:0000002	IEA		F	sporozoite surface antigen MB2		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0512600.1	PF3D7_0512600.1		GO:0005525	GO_REF:0000002	IEA		F	ras-related protein Rab-1B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512600.1	PF3D7_0512600.1		GO:0005525	GO_REF:0000002	IEA		F	ras-related protein Rab-1B		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0513400.1	PF3D7_0513400.1		GO:0005525	GO_REF:0000002	IEA		F	GTP-binding protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513400.1	PF3D7_0513400.1		GO:0005525	GO_REF:0000002	IEA		F	GTP-binding protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0513800.1	PF3D7_0513800.1		GO:0005525	GO_REF:0000002	IEA		F	ras-related protein Rab-1A		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513800.1	PF3D7_0513800.1		GO:0005525	GO_REF:0000002	IEA		F	ras-related protein Rab-1A		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0005525	GO_REF:0000002	ISS		F	sporozoite surface antigen MB2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0005525	GO_REF:0000002	IEA		F	sporozoite surface antigen MB2		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0524400.1	PF3D7_0524400.1		GO:0005525	GO_REF:0000002	IEA		F	ribosome-interacting GTPase 1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524400.1	PF3D7_0524400.1		GO:0005525	GO_REF:0000002	IEA		F	ribosome-interacting GTPase 1, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528800.1	PF3D7_0528800.1		GO:0005525	GO_REF:0000002	ISS		F	nucleolar preribosomal GTPase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502400.1	PF3D7_0502400.1		GO:0005886	GO_REF:0000002	IDA		C	merozoite surface protein 8		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506900.1	PF3D7_0506900.1		GO:0005886	GO_REF:0000002	IDA		C	rhomboid protease ROM4		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516100.1	PF3D7_0516100.1		GO:0005886	GO_REF:0000002	IDA		C	cation-transporting ATPase 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0005886	GO_REF:0000002	IDA		C	sporozoite surface antigen MB2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512600.1	PF3D7_0512600.1		GO:0060627	GO_REF:0000002	ISS		P	ras-related protein Rab-1B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503100.1	PF3D7_0503100.1		GO:0008299	GO_REF:0000002	ISS		P	4-diphosphocytidyl-2-C-methyl-D-erythritol kinase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504600.1	PF3D7_0504600.1		GO:0003824	GO_REF:0000002	IEA		F	2-oxoisovalerate dehydrogenase subunit beta, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504600.1	PF3D7_0504600.1		GO:0003824	GO_REF:0000002	IEA		F	2-oxoisovalerate dehydrogenase subunit beta, mitochondrial, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0513300.1	PF3D7_0513300.1		GO:0003824	GO_REF:0000002	IEA		F	purine nucleoside phosphorylase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513300.1	PF3D7_0513300.1		GO:0003824	GO_REF:0000002	IEA		F	purine nucleoside phosphorylase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0520100.1	PF3D7_0520100.1		GO:0003824	GO_REF:0000002	ISS		F	protein phosphatase PPM9, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520100.1	PF3D7_0520100.1		GO:0003824	GO_REF:0000002	IEA		F	protein phosphatase PPM9, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523100.1	PF3D7_0523100.1		GO:0003824	GO_REF:0000002	IEA		F	mitochondrial-processing peptidase subunit alpha, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523100.1	PF3D7_0523100.1		GO:0003824	GO_REF:0000002	IEA		F	mitochondrial-processing peptidase subunit alpha, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0524900.1	PF3D7_0524900.1		GO:0003824	GO_REF:0000002	IEA		F	S-adenosyl-L-methionine-dependent tRNA 4-demethylwyosine synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524900.1	PF3D7_0524900.1		GO:0003824	GO_REF:0000002	IEA		F	S-adenosyl-L-methionine-dependent tRNA 4-demethylwyosine synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0525100.1	PF3D7_0525100.1		GO:0003824	GO_REF:0000002	IEA		F	acyl-CoA synthetase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525100.1	PF3D7_0525100.1		GO:0003824	GO_REF:0000002	IEA		F	acyl-CoA synthetase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0504700.1	PF3D7_0504700.1		GO:0005813	GO_REF:0000002	ISS		C	centrosomal protein CEP120, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511000.1	PF3D7_0511000.1		GO:0005509	GO_REF:0000002	IDA		F	translationally-controlled tumor protein homolog		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509500.1	PF3D7_0509500.1		GO:0004518	GO_REF:0000002	IEA		F	ERCC4 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509500.1	PF3D7_0509500.1		GO:0004518	GO_REF:0000002	IEA		F	ERCC4 domain-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0520600.1	PF3D7_0520600.1		GO:0033644	GO_REF:0000002	IDA		C	bis(5'-nucleosyl)-tetraphosphatase [asymmetrical]		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532400.1	PF3D7_0532400.1		GO:0033644	GO_REF:0000002	IDA		C	lysine-rich membrane-associated PHISTb protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505500.1	PF3D7_0505500.1		GO:0006281	GO_REF:0000002	ISS		P	DNA mismatch repair protein MSH6, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509500.1	PF3D7_0509500.1		GO:0006281	GO_REF:0000002	IEA		P	ERCC4 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513600.1	PF3D7_0513600.1		GO:0006281	GO_REF:0000002	ISS		P	deoxyribodipyrimidine photo-lyase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509500.1	PF3D7_0509500.1		GO:0004519	GO_REF:0000002	IEA		F	ERCC4 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518300.1	PF3D7_0518300.1		GO:0051603	GO_REF:0000002	IEA		P	proteasome subunit beta type-1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518300.1	PF3D7_0518300.1		GO:0051603	GO_REF:0000002	IEA		P	proteasome subunit beta type-1, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518300.1	PF3D7_0518300.1		GO:0005839	GO_REF:0000002	ISS		C	proteasome subunit beta type-1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518300.1	PF3D7_0518300.1		GO:0005839	GO_REF:0000002	IEA		C	proteasome subunit beta type-1, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518300.1	PF3D7_0518300.1		GO:0004175	GO_REF:0000002	ISS		F	proteasome subunit beta type-1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518300.1	PF3D7_0518300.1		GO:0004298	GO_REF:0000002	IEA		F	proteasome subunit beta type-1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518300.1	PF3D7_0518300.1		GO:0004298	GO_REF:0000002	IEA		F	proteasome subunit beta type-1, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0501200.1	PF3D7_0501200.1		GO:0030430	GO_REF:0000002	IDA		C	parasite-infected erythrocyte surface protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532300.1	PF3D7_0532300.1		GO:0030430	GO_REF:0000002	IDA		C	Plasmodium exported protein (PHISTb), unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532400.1	PF3D7_0532400.1		GO:0030430	GO_REF:0000002	IDA		C	lysine-rich membrane-associated PHISTb protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501200.1	PF3D7_0501200.1		GO:0044228	GO_REF:0000002	IDA		C	parasite-infected erythrocyte surface protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503200.1	PF3D7_0503200.1		GO:0006260	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508800.1	PF3D7_0508800.1		GO:0006260	GO_REF:0000002	IEA		P	single-stranded DNA-binding protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508800.1	PF3D7_0508800.1		GO:0006260	GO_REF:0000002	IEA		P	single-stranded DNA-binding protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0501100.1	PF3D7_0501100.1		GO:0006457	GO_REF:0000002	IEA		P	heat shock protein 40, type II		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501100.1	PF3D7_0501100.1		GO:0006457	GO_REF:0000002	IEA		P	heat shock protein 40, type II		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0501100.2	PF3D7_0501100.2		GO:0006457	GO_REF:0000002	IEA		P	heat shock protein 40, type II		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501100.2	PF3D7_0501100.2		GO:0006457	GO_REF:0000002	IEA		P	heat shock protein 40, type II		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0510200.1	PF3D7_0510200.1		GO:0006457	GO_REF:0000002	ISS		P	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512000.1	PF3D7_0512000.1		GO:0006457	GO_REF:0000002	IEA		P	prefoldin subunit 6, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512000.1	PF3D7_0512000.1		GO:0006457	GO_REF:0000002	IEA		P	prefoldin subunit 6, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528700.1	PF3D7_0528700.1		GO:0006457	GO_REF:0000002	IDA		P	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529300.1	PF3D7_0529300.1		GO:0006457	GO_REF:0000002	IDA		P	apicoplast TIC22 protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502000.1	PF3D7_0502000.1		GO:0008270	GO_REF:0000002	ISS		F	vacuolar protein sorting-associated protein 11, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504100.1	PF3D7_0504100.1		GO:0008270	GO_REF:0000002	ISM		F	AN1-type zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504100.1	PF3D7_0504100.1		GO:0008270	GO_REF:0000002	IEA		F	AN1-type zinc finger protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0508100.1	PF3D7_0508100.1		GO:0008270	GO_REF:0000002	IEA		F	SET domain protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517900.1	PF3D7_0517900.1		GO:0008270	GO_REF:0000002	ISM		F	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517900.1	PF3D7_0517900.1		GO:0008270	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519600.1	PF3D7_0519600.1		GO:0008270	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519600.1	PF3D7_0519600.1		GO:0008270	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522900.1	PF3D7_0522900.1		GO:0008270	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529900.1	PF3D7_0529900.1		GO:0008270	GO_REF:0000002	IEA		F	RING zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513500.1	PF3D7_0513500.1		GO:0031072	GO_REF:0000002	IEA		F	mitochondrial import inner membrane translocase subunit TIM16, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501100.1	PF3D7_0501100.1		GO:0051082	GO_REF:0000002	ISS		F	heat shock protein 40, type II		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501100.1	PF3D7_0501100.1		GO:0051082	GO_REF:0000002	IEA		F	heat shock protein 40, type II		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0501100.2	PF3D7_0501100.2		GO:0051082	GO_REF:0000002	IEA		F	heat shock protein 40, type II		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501100.2	PF3D7_0501100.2		GO:0051082	GO_REF:0000002	IEA		F	heat shock protein 40, type II		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0512000.1	PF3D7_0512000.1		GO:0051082	GO_REF:0000002	IEA		F	prefoldin subunit 6, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512000.1	PF3D7_0512000.1		GO:0051082	GO_REF:0000002	IEA		F	prefoldin subunit 6, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0502200.1	PF3D7_0502200.1		GO:0005743	GO_REF:0000002	ISS		C	protein Mpv17, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513500.1	PF3D7_0513500.1		GO:0005743	GO_REF:0000002	IEA		C	mitochondrial import inner membrane translocase subunit TIM16, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531000.1	PF3D7_0531000.1		GO:0005743	GO_REF:0000002	IEA		C	SURF1 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516500.1	PF3D7_0516500.1		GO:0005215	GO_REF:0000002	ISS		F	major facilitator superfamily domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510300.1	PF3D7_0510300.1		GO:0070258	GO_REF:0000002	ISO		C	stripes inner membrane complex protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515700.1	PF3D7_0515700.1		GO:0070258	GO_REF:0000002	ISO		C	glideosome-associated protein 40, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518900.1	PF3D7_0518900.1		GO:0070258	GO_REF:0000002	ISO		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522600.1	PF3D7_0522600.1		GO:0070258	GO_REF:0000002	IDA		C	inner membrane complex protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525800.1	PF3D7_0525800.1		GO:0070258	GO_REF:0000002	IDA		C	inner membrane complex protein 1g, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502100.1	PF3D7_0502100.1		GO:0006355	GO_REF:0000002	IEA		P	HCNGP-like protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502100.1	PF3D7_0502100.1		GO:0006355	GO_REF:0000002	IEA		P	HCNGP-like protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516800.1	PF3D7_0516800.1		GO:0006355	GO_REF:0000002	IEA		P	AP2 domain transcription factor AP2-O2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516800.1	PF3D7_0516800.1		GO:0006355	GO_REF:0000002	IEA		P	AP2 domain transcription factor AP2-O2, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0520400.1	PF3D7_0520400.1		GO:0006355	GO_REF:0000002	IEA		P	single-stranded DNA-binding protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520400.1	PF3D7_0520400.1		GO:0006355	GO_REF:0000002	IEA		P	single-stranded DNA-binding protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517800.1	PF3D7_0517800.1		GO:0035556	GO_REF:0000002	IEA		P	apicortin, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517800.1	PF3D7_0517800.1		GO:0035556	GO_REF:0000002	IEA		P	apicortin, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0506200.1	PF3D7_0506200.1		GO:0003677	GO_REF:0000002	IEA		F	TATA-box-binding protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506200.1	PF3D7_0506200.1		GO:0003677	GO_REF:0000002	IEA		F	TATA-box-binding protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509400.1	PF3D7_0509400.1		GO:0003677	GO_REF:0000002	IEA		F	RNA polymerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509400.1	PF3D7_0509400.1		GO:0003677	GO_REF:0000002	IEA		F	RNA polymerase I		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509500.1	PF3D7_0509500.1		GO:0003677	GO_REF:0000002	IEA		F	ERCC4 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509500.1	PF3D7_0509500.1		GO:0003677	GO_REF:0000002	IEA		F	ERCC4 domain-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0510500.1	PF3D7_0510500.1		GO:0003677	GO_REF:0000002	IEA		F	topoisomerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510500.1	PF3D7_0510500.1		GO:0003677	GO_REF:0000002	IEA		F	topoisomerase I		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0520400.1	PF3D7_0520400.1		GO:0003677	GO_REF:0000002	IEA		F	single-stranded DNA-binding protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520400.1	PF3D7_0520400.1		GO:0003677	GO_REF:0000002	IEA		F	single-stranded DNA-binding protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522000.1	PF3D7_0522000.1		GO:0003677	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527000.1	PF3D7_0527000.1		GO:0003677	GO_REF:0000002	IEA		F	DNA replication licensing factor MCM3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527000.1	PF3D7_0527000.1		GO:0003677	GO_REF:0000002	IEA		F	DNA replication licensing factor MCM3, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511200.1	PF3D7_0511200.1		GO:0055114	GO_REF:0000002	IEA		P	stearoyl-CoA desaturase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509400.1	PF3D7_0509400.1		GO:0006351	GO_REF:0000002	IEA		P	RNA polymerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509400.1	PF3D7_0509400.1		GO:0006351	GO_REF:0000002	IEA		P	RNA polymerase I		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517400.1	PF3D7_0517400.1		GO:0006351	GO_REF:0000002	ISS		P	FACT complex subunit SPT16, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522000.1	PF3D7_0522000.1		GO:0006351	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506200.1	PF3D7_0506200.1		GO:0006366	GO_REF:0000002	IDA		P	TATA-box-binding protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522200.1	PF3D7_0522200.1		GO:0006366	GO_REF:0000002	ISS		P	transcription initiation factor TFIID subunit 10, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509400.1	PF3D7_0509400.1		GO:0003899	GO_REF:0000002	TAS		F	RNA polymerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509400.1	PF3D7_0509400.1		GO:0003899	GO_REF:0000002	IEA		F	RNA polymerase I		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522000.1	PF3D7_0522000.1		GO:0003899	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509800.1	PF3D7_0509800.1		GO:0046488	GO_REF:0000002	ISM		P	phosphatidylinositol 4-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0046488	GO_REF:0000002	IEA		P	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501800.1	PF3D7_0501800.1		GO:0042393	GO_REF:0000002	IDA		F	chromatin assembly factor 1 subunit A		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503400.1	PF3D7_0503400.1		GO:0005829	GO_REF:0000002	IDA		C	actin-depolymerizing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513100.1	PF3D7_0513100.1		GO:0005829	GO_REF:0000002	ISO		C	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0005829	GO_REF:0000002	IDA		C	sporozoite surface antigen MB2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518400.1	PF3D7_0518400.1		GO:0005829	GO_REF:0000002	ISO		C	cyclin, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525000.1	PF3D7_0525000.1		GO:0005829	GO_REF:0000002	IDA		C	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525400.1	PF3D7_0525400.1		GO:0005829	GO_REF:0000002	IDA		C	7-helix-1 protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504600.1	PF3D7_0504600.1		GO:0008152	GO_REF:0000002	IEA		P	2-oxoisovalerate dehydrogenase subunit beta, mitochondrial, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517500.1	PF3D7_0517500.1		GO:0008152	GO_REF:0000002	IEA		P	UTP--glucose-1-phosphate uridylyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517500.1	PF3D7_0517500.1		GO:0008152	GO_REF:0000002	IEA		P	UTP--glucose-1-phosphate uridylyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522300.1	PF3D7_0522300.1		GO:0008152	GO_REF:0000002	IEA		P	18S rRNA (guanine-N(7))-methyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0525100.1	PF3D7_0525100.1		GO:0008152	GO_REF:0000002	IEA		P	acyl-CoA synthetase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0512900.1	PF3D7_0512900.1		GO:0016208	GO_REF:0000002	IDA		F	AKAP-like protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518700.1	PF3D7_0518700.1		GO:0006417	GO_REF:0000002	IDA		P	mRNA-binding protein PUF1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0003723	GO_REF:0000002	IEA		F	ATP-dependent helicase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0003723	GO_REF:0000002	IEA		F	ATP-dependent helicase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0510100.1	PF3D7_0510100.1		GO:0003723	GO_REF:0000002	IEA		F	conserved protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510100.1	PF3D7_0510100.1		GO:0003723	GO_REF:0000002	IEA		F	conserved protein, unknown function		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511500.1	PF3D7_0511500.1		GO:0003723	GO_REF:0000002	IEA		F	RNA pseudouridylate synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511500.1	PF3D7_0511500.1		GO:0003723	GO_REF:0000002	IEA		F	RNA pseudouridylate synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0513200.1	PF3D7_0513200.1		GO:0003723	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516200.1	PF3D7_0516200.1		GO:0003723	GO_REF:0000002	ISS		F	40S ribosomal protein S11		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516300.1	PF3D7_0516300.1		GO:0003723	GO_REF:0000002	IEA		F	tRNA pseudouridine synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516300.1	PF3D7_0516300.1		GO:0003723	GO_REF:0000002	IEA		F	tRNA pseudouridine synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517300.1	PF3D7_0517300.1		GO:0003723	GO_REF:0000002	IDA		F	serine/arginine-rich splicing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517300.1	PF3D7_0517300.1		GO:0003723	GO_REF:0000002	IDA		F	serine/arginine-rich splicing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0003723	GO_REF:0000002	IEA		F	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0003723	GO_REF:0000002	IEA		F	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518700.1	PF3D7_0518700.1		GO:0003723	GO_REF:0000002	IEA		F	mRNA-binding protein PUF1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518700.1	PF3D7_0518700.1		GO:0003723	GO_REF:0000002	IEA		F	mRNA-binding protein PUF1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519000.1	PF3D7_0519000.1		GO:0003723	GO_REF:0000002	IEA		F	histone RNA hairpin-binding protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519000.1	PF3D7_0519000.1		GO:0003723	GO_REF:0000002	IEA		F	histone RNA hairpin-binding protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0003723	GO_REF:0000002	IEA		F	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0003723	GO_REF:0000002	IEA		F	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0521500.1	PF3D7_0521500.1		GO:0003723	GO_REF:0000002	IEA		F	ribosomal large subunit pseudouridylate synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521500.1	PF3D7_0521500.1		GO:0003723	GO_REF:0000002	IEA		F	ribosomal large subunit pseudouridylate synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522900.1	PF3D7_0522900.1		GO:0003723	GO_REF:0000002	IEA		F	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525600.1	PF3D7_0525600.1		GO:0003723	GO_REF:0000002	ISS		F	RNA methyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525600.1	PF3D7_0525600.1		GO:0003723	GO_REF:0000002	IEA		F	RNA methyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0529500.1	PF3D7_0529500.1		GO:0003723	GO_REF:0000002	ISS		F	cell cycle regulator protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529500.1	PF3D7_0529500.1		GO:0003723	GO_REF:0000002	IEA		F	cell cycle regulator protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0501300.1	PF3D7_0501300.1		GO:0020005	GO_REF:0000002	IDA		C	skeleton-binding protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503600.1	PF3D7_0503600.1		GO:0020005	GO_REF:0000002	IDA		C	myosin B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511300.1	PF3D7_0511300.1		GO:0020005	GO_REF:0000002	RCA		C	MORN repeat protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0532100.1	PF3D7_0532100.1		GO:0020005	GO_REF:0000002	IDA		C	early transcribed membrane protein 5		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516500.1	PF3D7_0516500.1		GO:0055085	GO_REF:0000002	IEA		P	major facilitator superfamily domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516500.1	PF3D7_0516500.1		GO:0055085	GO_REF:0000002	IEA		P	major facilitator superfamily domain-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0055085	GO_REF:0000002	IEA		P	multidrug resistance protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0055085	GO_REF:0000002	IEA		P	multidrug resistance protein 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0507700.1	PF3D7_0507700.1		GO:0016887	GO_REF:0000002	ISS		F	nuclear protein localization protein 4, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516100.1	PF3D7_0516100.1		GO:0016887	GO_REF:0000002	IEA		F	cation-transporting ATPase 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516100.1	PF3D7_0516100.1		GO:0016887	GO_REF:0000002	IEA		F	cation-transporting ATPase 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0016887	GO_REF:0000002	IEA		F	multidrug resistance protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0016887	GO_REF:0000002	IEA		F	multidrug resistance protein 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527000.1	PF3D7_0527000.1		GO:0016887	GO_REF:0000002	ISS		F	DNA replication licensing factor MCM3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0042626	GO_REF:0000002	ISM		F	multidrug resistance protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0042626	GO_REF:0000002	IEA		F	multidrug resistance protein 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519300.1	PF3D7_0519300.1		GO:0004659	GO_REF:0000002	ISS		F	protoheme IX farnesyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528400.1	PF3D7_0528400.1		GO:0018345	GO_REF:0000002	IDA		P	palmitoyltransferase DHHC7		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528400.1	PF3D7_0528400.1		GO:0016409	GO_REF:0000002	IDA		F	palmitoyltransferase DHHC7		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501500.1	PF3D7_0501500.1		GO:0020008	GO_REF:0000002	IDA		C	rhoptry-associated protein 3		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501600.1	PF3D7_0501600.1		GO:0020008	GO_REF:0000002	IDA		C	rhoptry-associated protein 2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513800.1	PF3D7_0513800.1		GO:0020008	GO_REF:0000002	IDA		C	ras-related protein Rab-1A		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528400.1	PF3D7_0528400.1		GO:0020008	GO_REF:0000002	IDA		C	palmitoyltransferase DHHC7		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525900.1	PF3D7_0525900.1		GO:0004674	GO_REF:0000002	ISS		F	NIMA related kinase 2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509400.1	PF3D7_0509400.1		GO:0005730	GO_REF:0000002	IDA		C	RNA polymerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526300.1	PF3D7_0526300.1		GO:0005730	GO_REF:0000002	ISS		C	WD repeat-containing protein 55, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523500.1	PF3D7_0523500.1		GO:0030286	GO_REF:0000002	ISS		C	dynein light chain Tctex-type, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517600.1	PF3D7_0517600.1		GO:0044310	GO_REF:0000002	HDA		C	F-actin-capping protein subunit beta, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506200.1	PF3D7_0506200.1		GO:0006352	GO_REF:0000002	IEA		P	TATA-box-binding protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506200.1	PF3D7_0506200.1		GO:0006352	GO_REF:0000002	IEA		P	TATA-box-binding protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503500.1	PF3D7_0503500.1		GO:0005488	GO_REF:0000002	IEA		F	protein kinase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0507600.1	PF3D7_0507600.1		GO:0005488	GO_REF:0000002	IEA		F	protein CAF40, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509800.1	PF3D7_0509800.1		GO:0005488	GO_REF:0000002	IEA		F	phosphatidylinositol 4-kinase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511500.1	PF3D7_0511500.1		GO:0005488	GO_REF:0000002	IEA		F	RNA pseudouridylate synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0005488	GO_REF:0000002	IEA		F	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518700.1	PF3D7_0518700.1		GO:0005488	GO_REF:0000002	IEA		F	mRNA-binding protein PUF1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0524000.1	PF3D7_0524000.1		GO:0005488	GO_REF:0000002	IEA		F	karyopherin beta		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0005488	GO_REF:0000002	IEA		F	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517900.1	PF3D7_0517900.1		GO:0000781	GO_REF:0000002	IDA		C	zinc finger protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507500.1	PF3D7_0507500.1		GO:0035891	GO_REF:0000002	IMP		P	subtilisin-like protease 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507500.1	PF3D7_0507500.1		GO:0035891	GO_REF:0000002	IMP		P	subtilisin-like protease 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508000.1	PF3D7_0508000.1		GO:0046658	GO_REF:0000002	IDA		C	6-cysteine protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522700.1	PF3D7_0522700.1		GO:0097428	GO_REF:0000002	IEA		P	iron-sulfur assembly protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522700.1	PF3D7_0522700.1		GO:0097428	GO_REF:0000002	IEA		P	iron-sulfur assembly protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522700.1	PF3D7_0522700.1		GO:0051536	GO_REF:0000002	IEA		F	iron-sulfur assembly protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522700.1	PF3D7_0522700.1		GO:0051536	GO_REF:0000002	IEA		F	iron-sulfur assembly protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0524900.1	PF3D7_0524900.1		GO:0051536	GO_REF:0000002	IEA		F	S-adenosyl-L-methionine-dependent tRNA 4-demethylwyosine synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524900.1	PF3D7_0524900.1		GO:0051536	GO_REF:0000002	IEA		F	S-adenosyl-L-methionine-dependent tRNA 4-demethylwyosine synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0507200.1	PF3D7_0507200.1		GO:0006508	GO_REF:0000002	IDA		P	subtilisin-like protease 3		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507200.1	PF3D7_0507200.1		GO:0006508	GO_REF:0000002	IEA		P	subtilisin-like protease 3		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0507500.1	PF3D7_0507500.1		GO:0006508	GO_REF:0000002	TAS		P	subtilisin-like protease 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507500.1	PF3D7_0507500.1		GO:0006508	GO_REF:0000002	IEA		P	subtilisin-like protease 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527300.1	PF3D7_0527300.1		GO:0006508	GO_REF:0000002	ISM		P	methionine aminopeptidase 1a, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527300.1	PF3D7_0527300.1		GO:0006508	GO_REF:0000002	IEA		P	methionine aminopeptidase 1a, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511200.1	PF3D7_0511200.1		GO:0006633	GO_REF:0000002	ISS		P	stearoyl-CoA desaturase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515500.1	PF3D7_0515500.1		GO:0006836	GO_REF:0000002	IEA		P	amino acid transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515500.1	PF3D7_0515500.1		GO:0006836	GO_REF:0000002	IEA		P	amino acid transporter, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0515500.1	PF3D7_0515500.1		GO:0005328	GO_REF:0000002	IEA		F	amino acid transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515500.1	PF3D7_0515500.1		GO:0005328	GO_REF:0000002	IEA		F	amino acid transporter, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0502000.1	PF3D7_0502000.1		GO:0006886	GO_REF:0000002	ISS		P	vacuolar protein sorting-associated protein 11, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502000.1	PF3D7_0502000.1		GO:0006886	GO_REF:0000002	IEA		P	vacuolar protein sorting-associated protein 11, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509000.1	PF3D7_0509000.1		GO:0006886	GO_REF:0000002	IEA		P	alpha-soluble NSF attachment protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524700.1	PF3D7_0524700.1		GO:0006886	GO_REF:0000002	IEA		P	mitochondrial import receptor subunit TOM22, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524700.1	PF3D7_0524700.1		GO:0006886	GO_REF:0000002	IEA		P	mitochondrial import receptor subunit TOM22, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0006886	GO_REF:0000002	IEA		P	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0006886	GO_REF:0000002	IEA		P	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0530100.1	PF3D7_0530100.1		GO:0006886	GO_REF:0000002	TAS		P	SNARE protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526900.1	PF3D7_0526900.1		GO:0005789	GO_REF:0000002	IEA		C	transmembrane emp24 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503000.1	PF3D7_0503000.1		GO:0005840	GO_REF:0000002	IEA		C	50S ribosomal protein L28, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503000.1	PF3D7_0503000.1		GO:0005840	GO_REF:0000002	IEA		C	50S ribosomal protein L28, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503800.1	PF3D7_0503800.1		GO:0005840	GO_REF:0000002	IEA		C	60S ribosomal protein L31		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503800.1	PF3D7_0503800.1		GO:0005840	GO_REF:0000002	IEA		C	60S ribosomal protein L31		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0507100.1	PF3D7_0507100.1		GO:0005840	GO_REF:0000002	IEA		C	60S ribosomal protein L4		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507100.1	PF3D7_0507100.1		GO:0005840	GO_REF:0000002	IEA		C	60S ribosomal protein L4		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516200.1	PF3D7_0516200.1		GO:0005840	GO_REF:0000002	IEA		C	40S ribosomal protein S11		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516200.1	PF3D7_0516200.1		GO:0005840	GO_REF:0000002	IEA		C	40S ribosomal protein S11		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516900.1	PF3D7_0516900.1		GO:0005840	GO_REF:0000002	IEA		C	60S ribosomal protein L2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516900.1	PF3D7_0516900.1		GO:0005840	GO_REF:0000002	IEA		C	60S ribosomal protein L2		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517000.1	PF3D7_0517000.1		GO:0005840	GO_REF:0000002	IEA		C	60S ribosomal protein L12, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517000.1	PF3D7_0517000.1		GO:0005840	GO_REF:0000002	IEA		C	60S ribosomal protein L12, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519100.1	PF3D7_0519100.1		GO:0005840	GO_REF:0000002	IEA		C	50S ribosomal protein L14, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519100.1	PF3D7_0519100.1		GO:0005840	GO_REF:0000002	IEA		C	50S ribosomal protein L14, mitochondrial, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519400.1	PF3D7_0519400.1		GO:0005840	GO_REF:0000002	IEA		C	40S ribosomal protein S24		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519400.1	PF3D7_0519400.1		GO:0005840	GO_REF:0000002	IEA		C	40S ribosomal protein S24		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522500.1	PF3D7_0522500.1		GO:0005840	GO_REF:0000002	IEA		C	50S ribosomal protein L17, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522500.1	PF3D7_0522500.1		GO:0005840	GO_REF:0000002	IEA		C	50S ribosomal protein L17, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0524600.1	PF3D7_0524600.1		GO:0005840	GO_REF:0000002	IEA		C	50S ribosomal protein L12, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524600.1	PF3D7_0524600.1		GO:0005840	GO_REF:0000002	IEA		C	50S ribosomal protein L12, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0531200.1	PF3D7_0531200.1		GO:0005840	GO_REF:0000002	IEA		C	ribosomal protein S16, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531200.1	PF3D7_0531200.1		GO:0005840	GO_REF:0000002	IEA		C	ribosomal protein S16, mitochondrial, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503000.1	PF3D7_0503000.1		GO:0003735	GO_REF:0000002	ISS		F	50S ribosomal protein L28, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503000.1	PF3D7_0503000.1		GO:0003735	GO_REF:0000002	IEA		F	50S ribosomal protein L28, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503800.1	PF3D7_0503800.1		GO:0003735	GO_REF:0000002	IDA		F	60S ribosomal protein L31		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503800.1	PF3D7_0503800.1		GO:0003735	GO_REF:0000002	IEA		F	60S ribosomal protein L31		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0506100.1	PF3D7_0506100.1		GO:0003735	GO_REF:0000002	ISS		F	60S ribosomal subunit protein L24, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507100.1	PF3D7_0507100.1		GO:0003735	GO_REF:0000002	IDA		F	60S ribosomal protein L4		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507100.1	PF3D7_0507100.1		GO:0003735	GO_REF:0000002	IEA		F	60S ribosomal protein L4		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516200.1	PF3D7_0516200.1		GO:0003735	GO_REF:0000002	IEA		F	40S ribosomal protein S11		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516200.1	PF3D7_0516200.1		GO:0003735	GO_REF:0000002	IEA		F	40S ribosomal protein S11		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516900.1	PF3D7_0516900.1		GO:0003735	GO_REF:0000002	IDA		F	60S ribosomal protein L2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516900.1	PF3D7_0516900.1		GO:0003735	GO_REF:0000002	IEA		F	60S ribosomal protein L2		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517000.1	PF3D7_0517000.1		GO:0003735	GO_REF:0000002	IEA		F	60S ribosomal protein L12, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517000.1	PF3D7_0517000.1		GO:0003735	GO_REF:0000002	IEA		F	60S ribosomal protein L12, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519100.1	PF3D7_0519100.1		GO:0003735	GO_REF:0000002	IEA		F	50S ribosomal protein L14, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519100.1	PF3D7_0519100.1		GO:0003735	GO_REF:0000002	IEA		F	50S ribosomal protein L14, mitochondrial, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519400.1	PF3D7_0519400.1		GO:0003735	GO_REF:0000002	IEA		F	40S ribosomal protein S24		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519400.1	PF3D7_0519400.1		GO:0003735	GO_REF:0000002	IEA		F	40S ribosomal protein S24		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0003735	GO_REF:0000002	ISS		F	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0003735	GO_REF:0000002	IEA		F	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522500.1	PF3D7_0522500.1		GO:0003735	GO_REF:0000002	ISS		F	50S ribosomal protein L17, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522500.1	PF3D7_0522500.1		GO:0003735	GO_REF:0000002	IEA		F	50S ribosomal protein L17, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0524600.1	PF3D7_0524600.1		GO:0003735	GO_REF:0000002	ISS		F	50S ribosomal protein L12, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524600.1	PF3D7_0524600.1		GO:0003735	GO_REF:0000002	IEA		F	50S ribosomal protein L12, apicoplast, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0531200.1	PF3D7_0531200.1		GO:0003735	GO_REF:0000002	ISS		F	ribosomal protein S16, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531200.1	PF3D7_0531200.1		GO:0003735	GO_REF:0000002	IEA		F	ribosomal protein S16, mitochondrial, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503800.1	PF3D7_0503800.1		GO:0022625	GO_REF:0000002	IDA		C	60S ribosomal protein L31		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507100.1	PF3D7_0507100.1		GO:0022625	GO_REF:0000002	IDA		C	60S ribosomal protein L4		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516900.1	PF3D7_0516900.1		GO:0022625	GO_REF:0000002	IDA		C	60S ribosomal protein L2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502000.1	PF3D7_0502000.1		GO:0016192	GO_REF:0000002	ISS		P	vacuolar protein sorting-associated protein 11, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0502000.1	PF3D7_0502000.1		GO:0016192	GO_REF:0000002	IEA		P	vacuolar protein sorting-associated protein 11, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0526900.1	PF3D7_0526900.1		GO:0016192	GO_REF:0000002	IEA		P	transmembrane emp24 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0016192	GO_REF:0000002	ISS		P	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0016192	GO_REF:0000002	IEA		P	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0530100.1	PF3D7_0530100.1		GO:0016192	GO_REF:0000002	TAS		P	SNARE protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530100.1	PF3D7_0530100.1		GO:0031338	GO_REF:0000002	ISS		P	SNARE protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530100.1	PF3D7_0530100.1		GO:0031201	GO_REF:0000002	ISS		C	SNARE protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530100.1	PF3D7_0530100.1		GO:0005484	GO_REF:0000002	ISS		F	SNARE protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0006421	GO_REF:0000002	IDA		P	asparagine--tRNA ligase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0006421	GO_REF:0000002	IEA		P	asparagine--tRNA ligase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0004816	GO_REF:0000002	IDA		F	asparagine--tRNA ligase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509600.1	PF3D7_0509600.1		GO:0004816	GO_REF:0000002	IEA		F	asparagine--tRNA ligase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511500.1	PF3D7_0511500.1		GO:0001522	GO_REF:0000002	IEA		P	RNA pseudouridylate synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511500.1	PF3D7_0511500.1		GO:0001522	GO_REF:0000002	IEA		P	RNA pseudouridylate synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516300.1	PF3D7_0516300.1		GO:0001522	GO_REF:0000002	IEA		P	tRNA pseudouridine synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516300.1	PF3D7_0516300.1		GO:0001522	GO_REF:0000002	IEA		P	tRNA pseudouridine synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0521500.1	PF3D7_0521500.1		GO:0001522	GO_REF:0000002	IEA		P	ribosomal large subunit pseudouridylate synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521500.1	PF3D7_0521500.1		GO:0001522	GO_REF:0000002	IEA		P	ribosomal large subunit pseudouridylate synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511500.1	PF3D7_0511500.1		GO:0009451	GO_REF:0000002	IEA		P	RNA pseudouridylate synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511500.1	PF3D7_0511500.1		GO:0009451	GO_REF:0000002	IEA		P	RNA pseudouridylate synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516300.1	PF3D7_0516300.1		GO:0009451	GO_REF:0000002	IEA		P	tRNA pseudouridine synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516300.1	PF3D7_0516300.1		GO:0009451	GO_REF:0000002	IEA		P	tRNA pseudouridine synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0521500.1	PF3D7_0521500.1		GO:0009451	GO_REF:0000002	IEA		P	ribosomal large subunit pseudouridylate synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521500.1	PF3D7_0521500.1		GO:0009451	GO_REF:0000002	IEA		P	ribosomal large subunit pseudouridylate synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511500.1	PF3D7_0511500.1		GO:0009982	GO_REF:0000002	IEA		F	RNA pseudouridylate synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511500.1	PF3D7_0511500.1		GO:0009982	GO_REF:0000002	IEA		F	RNA pseudouridylate synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516300.1	PF3D7_0516300.1		GO:0009982	GO_REF:0000002	IEA		F	tRNA pseudouridine synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516300.1	PF3D7_0516300.1		GO:0009982	GO_REF:0000002	IEA		F	tRNA pseudouridine synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0521500.1	PF3D7_0521500.1		GO:0009982	GO_REF:0000002	IEA		F	ribosomal large subunit pseudouridylate synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521500.1	PF3D7_0521500.1		GO:0009982	GO_REF:0000002	IEA		F	ribosomal large subunit pseudouridylate synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523000.1	PF3D7_0523000.1		GO:0015238	GO_REF:0000002	ISS		F	multidrug resistance protein 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522500.1	PF3D7_0522500.1		GO:0005762	GO_REF:0000002	ISS		C	50S ribosomal protein L17, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507300.1	PF3D7_0507300.1		GO:0044409	GO_REF:0000002	IMP		P	subtilisin-like ookinete protein SOPT		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511600.1	PF3D7_0511600.1		GO:1990225	GO_REF:0000002	IDA		C	apical rhoptry neck protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525100.1	PF3D7_0525100.1		GO:0006631	GO_REF:0000002	ISS		P	acyl-CoA synthetase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525100.1	PF3D7_0525100.1		GO:0004467	GO_REF:0000002	ISS		F	acyl-CoA synthetase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525900.1	PF3D7_0525900.1		GO:0004713	GO_REF:0000002	ISS		F	NIMA related kinase 2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0030117	GO_REF:0000002	IEA		C	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0030117	GO_REF:0000002	IEA		C	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509500.1	PF3D7_0509500.1		GO:0006974	GO_REF:0000002	IEA		P	ERCC4 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516800.1	PF3D7_0516800.1		GO:0043565	GO_REF:0000002	IDA		F	AP2 domain transcription factor AP2-O2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514100.1	PF3D7_0514100.1		GO:0016787	GO_REF:0000002	IEA		F	ATP-dependent DNA helicase UvrD		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514100.1	PF3D7_0514100.1		GO:0016787	GO_REF:0000002	IEA		F	ATP-dependent DNA helicase UvrD		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0520600.1	PF3D7_0520600.1		GO:0016787	GO_REF:0000002	IEA		F	bis(5'-nucleosyl)-tetraphosphatase [asymmetrical]		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520600.1	PF3D7_0520600.1		GO:0016787	GO_REF:0000002	IEA		F	bis(5'-nucleosyl)-tetraphosphatase [asymmetrical]		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0516200.1	PF3D7_0516200.1		GO:0022627	GO_REF:0000002	IDA		C	40S ribosomal protein S11		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519400.1	PF3D7_0519400.1		GO:0022627	GO_REF:0000002	IDA		C	40S ribosomal protein S24		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525600.1	PF3D7_0525600.1		GO:0006396	GO_REF:0000002	ISS		P	RNA methyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525600.1	PF3D7_0525600.1		GO:0006396	GO_REF:0000002	IEA		P	RNA methyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0526500.1	PF3D7_0526500.1		GO:0006396	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526500.1	PF3D7_0526500.1		GO:0006396	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0525600.1	PF3D7_0525600.1		GO:0008173	GO_REF:0000002	ISS		F	RNA methyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525600.1	PF3D7_0525600.1		GO:0008173	GO_REF:0000002	IEA		F	RNA methyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0515000.1	PF3D7_0515000.1		GO:0000387	GO_REF:0000002	ISS		P	pre-mRNA-splicing factor CWC2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515000.1	PF3D7_0515000.1		GO:0000398	GO_REF:0000002	ISS		P	pre-mRNA-splicing factor CWC2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520300.1	PF3D7_0520300.1		GO:0000398	GO_REF:0000002	ISS		P	U6 snRNA-associated Sm-like protein LSm2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503300.1	PF3D7_0503300.1		GO:0005681	GO_REF:0000002	ISS		C	serine/arginine-rich splicing factor 12		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515000.1	PF3D7_0515000.1		GO:0005681	GO_REF:0000002	ISS		C	pre-mRNA-splicing factor CWC2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517300.1	PF3D7_0517300.1		GO:0005681	GO_REF:0000002	IDA		C	serine/arginine-rich splicing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526500.1	PF3D7_0526500.1		GO:0005681	GO_REF:0000002	IEA		C	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526600.1	PF3D7_0526600.1		GO:0008610	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507700.1	PF3D7_0507700.1		GO:0005783	GO_REF:0000002	ISS		C	nuclear protein localization protein 4, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511200.1	PF3D7_0511200.1		GO:0005783	GO_REF:0000002	IDA		C	stearoyl-CoA desaturase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513800.1	PF3D7_0513800.1		GO:0005783	GO_REF:0000002	IDA		C	ras-related protein Rab-1A		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526900.1	PF3D7_0526900.1		GO:0005783	GO_REF:0000002	IEA		C	transmembrane emp24 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504000.1	PF3D7_0504000.1		GO:0043231	GO_REF:0000002	TAS		C	cation transporting P-ATPase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505300.1	PF3D7_0505300.1		GO:0000139	GO_REF:0000002	IEA		C	UDP-N-acetylglucosamine transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505300.1	PF3D7_0505300.1		GO:0000139	GO_REF:0000002	IEA		C	UDP-N-acetylglucosamine transporter, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0526900.1	PF3D7_0526900.1		GO:0000139	GO_REF:0000002	IEA		C	transmembrane emp24 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528400.1	PF3D7_0528400.1		GO:0016746	GO_REF:0000002	IGI		F	palmitoyltransferase DHHC7		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0006897	GO_REF:0000002	IDA		P	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0019843	GO_REF:0000002	IEA		F	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0019843	GO_REF:0000002	IEA		F	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527100.1	PF3D7_0527100.1		GO:0004842	GO_REF:0000002	ISS		F	ubiquitin-conjugating enzyme E2 N, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513500.1	PF3D7_0513500.1		GO:0065002	GO_REF:0000002	IEA		P	mitochondrial import inner membrane translocase subunit TIM16, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0015935	GO_REF:0000002	IEA		C	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0015935	GO_REF:0000002	IEA		C	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0506900.1	PF3D7_0506900.1		GO:0004252	GO_REF:0000002	IEA		F	rhomboid protease ROM4		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506900.1	PF3D7_0506900.1		GO:0004252	GO_REF:0000002	IEA		F	rhomboid protease ROM4		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0507200.1	PF3D7_0507200.1		GO:0004252	GO_REF:0000002	IEA		F	subtilisin-like protease 3		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507200.1	PF3D7_0507200.1		GO:0004252	GO_REF:0000002	IEA		F	subtilisin-like protease 3		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0507500.1	PF3D7_0507500.1		GO:0004252	GO_REF:0000002	TAS		F	subtilisin-like protease 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507500.1	PF3D7_0507500.1		GO:0004252	GO_REF:0000002	IEA		F	subtilisin-like protease 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0515100.1	PF3D7_0515100.1		GO:0004252	GO_REF:0000002	IEA		F	rhomboid protease ROM9		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515100.1	PF3D7_0515100.1		GO:0004252	GO_REF:0000002	IEA		F	rhomboid protease ROM9		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527100.1	PF3D7_0527100.1		GO:0016567	GO_REF:0000002	ISS		P	ubiquitin-conjugating enzyme E2 N, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522800.1	PF3D7_0522800.1		GO:0005686	GO_REF:0000002	ISS		C	pre-mRNA-splicing factor BUD31, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515900.1	PF3D7_0515900.1		GO:0016791	GO_REF:0000002	IEA		F	NLI interacting factor-like phosphatase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515900.1	PF3D7_0515900.1		GO:0016791	GO_REF:0000002	IEA		F	NLI interacting factor-like phosphatase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503000.1	PF3D7_0503000.1		GO:0015934	GO_REF:0000002	ISS		C	50S ribosomal protein L28, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506100.1	PF3D7_0506100.1		GO:0015934	GO_REF:0000002	ISS		C	60S ribosomal subunit protein L24, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524600.1	PF3D7_0524600.1		GO:0015934	GO_REF:0000002	ISS		C	50S ribosomal protein L12, apicoplast, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0004386	GO_REF:0000002	IEA		F	ATP-dependent helicase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0004386	GO_REF:0000002	IEA		F	ATP-dependent helicase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0513200.1	PF3D7_0513200.1		GO:0006397	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517300.1	PF3D7_0517300.1		GO:0006397	GO_REF:0000002	IDA		P	serine/arginine-rich splicing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519000.1	PF3D7_0519000.1		GO:0006397	GO_REF:0000002	IEA		P	histone RNA hairpin-binding protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520300.1	PF3D7_0520300.1		GO:0006397	GO_REF:0000002	IEA		P	U6 snRNA-associated Sm-like protein LSm2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520300.1	PF3D7_0520300.1		GO:0006397	GO_REF:0000002	IEA		P	U6 snRNA-associated Sm-like protein LSm2, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0526500.1	PF3D7_0526500.1		GO:0006397	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526500.1	PF3D7_0526500.1		GO:0006397	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0530750.1	PF3D7_0530750.1		GO:0006486	GO_REF:0000002	IEA		P	dolichol-phosphate mannosyltransferase subunit 3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530750.1	PF3D7_0530750.1		GO:0006486	GO_REF:0000002	IEA		P	dolichol-phosphate mannosyltransferase subunit 3, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0507700.1	PF3D7_0507700.1		GO:0010564	GO_REF:0000002	ISS		P	nuclear protein localization protein 4, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507700.1	PF3D7_0507700.1		GO:0030433	GO_REF:0000002	ISS		P	nuclear protein localization protein 4, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509500.1	PF3D7_0509500.1		GO:0000287	GO_REF:0000002	IEA		F	ERCC4 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504000.1	PF3D7_0504000.1		GO:0006812	GO_REF:0000002	TAS		P	cation transporting P-ATPase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516100.1	PF3D7_0516100.1		GO:0006812	GO_REF:0000002	IEA		P	cation-transporting ATPase 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516100.1	PF3D7_0516100.1		GO:0006812	GO_REF:0000002	IEA		P	cation-transporting ATPase 1		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0504000.1	PF3D7_0504000.1		GO:0015662	GO_REF:0000002	IDA		F	cation transporting P-ATPase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506900.1	PF3D7_0506900.1		GO:0006465	GO_REF:0000002	IDA		P	rhomboid protease ROM4		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506900.1	PF3D7_0506900.1		GO:0008233	GO_REF:0000002	IDA		F	rhomboid protease ROM4		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524000.1	PF3D7_0524000.1		GO:0046982	GO_REF:0000002	TAS		F	karyopherin beta		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507500.1	PF3D7_0507500.1		GO:0008236	GO_REF:0000002	IDA		F	subtilisin-like protease 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510200.1	PF3D7_0510200.1		GO:0000413	GO_REF:0000002	IEA		P	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510200.1	PF3D7_0510200.1		GO:0000413	GO_REF:0000002	IEA		P	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528700.1	PF3D7_0528700.1		GO:0000413	GO_REF:0000002	IEA		P	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528700.1	PF3D7_0528700.1		GO:0000413	GO_REF:0000002	IEA		P	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0510200.1	PF3D7_0510200.1		GO:0003755	GO_REF:0000002	ISS		F	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510200.1	PF3D7_0510200.1		GO:0003755	GO_REF:0000002	IEA		F	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528700.1	PF3D7_0528700.1		GO:0003755	GO_REF:0000002	IEA		F	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528700.1	PF3D7_0528700.1		GO:0003755	GO_REF:0000002	IEA		F	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0510200.1	PF3D7_0510200.1		GO:0016018	GO_REF:0000002	ISS		F	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528700.1	PF3D7_0528700.1		GO:0016018	GO_REF:0000002	ISS		F	peptidyl-prolyl cis-trans isomerase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516700.1	PF3D7_0516700.1		GO:0016579	GO_REF:0000002	ISS		P	ubiquitin carboxyl-terminal hydrolase 2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516700.1	PF3D7_0516700.1		GO:0016579	GO_REF:0000002	IEA		P	ubiquitin carboxyl-terminal hydrolase 2, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527200.1	PF3D7_0527200.1		GO:0016579	GO_REF:0000002	IDA		P	ubiquitin carboxyl-terminal hydrolase 14		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527200.1	PF3D7_0527200.1		GO:0016579	GO_REF:0000002	IEA		P	ubiquitin carboxyl-terminal hydrolase 14		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527000.1	PF3D7_0527000.1		GO:0006270	GO_REF:0000002	IEA		P	DNA replication licensing factor MCM3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527000.1	PF3D7_0527000.1		GO:0006270	GO_REF:0000002	IEA		P	DNA replication licensing factor MCM3, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0506800.1	PF3D7_0506800.1		GO:0003700	GO_REF:0000002	IEA		F	transcription factor 25, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516800.1	PF3D7_0516800.1		GO:0003700	GO_REF:0000002	IEA		F	AP2 domain transcription factor AP2-O2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516800.1	PF3D7_0516800.1		GO:0003700	GO_REF:0000002	IEA		F	AP2 domain transcription factor AP2-O2, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0046907	GO_REF:0000002	IDA		P	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527300.1	PF3D7_0527300.1		GO:0004177	GO_REF:0000002	IEA		F	methionine aminopeptidase 1a, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527300.1	PF3D7_0527300.1		GO:0004177	GO_REF:0000002	IEA		F	methionine aminopeptidase 1a, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0503300.1	PF3D7_0503300.1		GO:0008380	GO_REF:0000002	ISS		P	serine/arginine-rich splicing factor 12		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517300.1	PF3D7_0517300.1		GO:0008380	GO_REF:0000002	IDA		P	serine/arginine-rich splicing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522800.1	PF3D7_0522800.1		GO:0008380	GO_REF:0000002	ISS		P	pre-mRNA-splicing factor BUD31, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526500.1	PF3D7_0526500.1		GO:0008380	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520000.1	PF3D7_0520000.1		GO:0032040	GO_REF:0000002	ISS		C	40S ribosomal protein S9, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503400.1	PF3D7_0503400.1		GO:0015629	GO_REF:0000002	IDA		C	actin-depolymerizing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505200.1	PF3D7_0505200.1		GO:0015629	GO_REF:0000002	ISS		C	actin-like protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505900.1	PF3D7_0505900.1		GO:0016592	GO_REF:0000002	ISS		C	mediator of RNA polymerase II transcription subunit 11, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520200.1	PF3D7_0520200.1		GO:0016592	GO_REF:0000002	ISS		C	mediator of RNA polymerase II transcription subunit 17, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516700.1	PF3D7_0516700.1		GO:0004843	GO_REF:0000002	ISS		F	ubiquitin carboxyl-terminal hydrolase 2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527200.1	PF3D7_0527200.1		GO:0004843	GO_REF:0000002	IDA		F	ubiquitin carboxyl-terminal hydrolase 14		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509100.1	PF3D7_0509100.1		GO:0051276	GO_REF:0000002	IEA		P	structural maintenance of chromosomes protein 4, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509100.1	PF3D7_0509100.1		GO:0051276	GO_REF:0000002	IEA		P	structural maintenance of chromosomes protein 4, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509100.1	PF3D7_0509100.1		GO:0005694	GO_REF:0000002	IEA		C	structural maintenance of chromosomes protein 4, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509100.1	PF3D7_0509100.1		GO:0005694	GO_REF:0000002	IEA		C	structural maintenance of chromosomes protein 4, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0510500.1	PF3D7_0510500.1		GO:0005694	GO_REF:0000002	IEA		C	topoisomerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510500.1	PF3D7_0510500.1		GO:0005694	GO_REF:0000002	IEA		C	topoisomerase I		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0504200.1	PF3D7_0504200.1		GO:0008026	GO_REF:0000002	ISS		F	ATP-dependent RNA helicase DDX27, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504400.1	PF3D7_0504400.1		GO:0008026	GO_REF:0000002	ISS		F	ATP-dependent helicase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521700.1	PF3D7_0521700.1		GO:0008026	GO_REF:0000002	ISS		F	ATP-dependent RNA helicase DDX1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525400.1	PF3D7_0525400.1		GO:0017148	GO_REF:0000002	IMP		P	7-helix-1 protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0005852	GO_REF:0000002	IEA		C	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0005852	GO_REF:0000002	IEA		C	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528200.1	PF3D7_0528200.1		GO:0005852	GO_REF:0000002	IEA		C	eukaryotic translation initiation factor 3 subunit E, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528200.1	PF3D7_0528200.1		GO:0005852	GO_REF:0000002	IEA		C	eukaryotic translation initiation factor 3 subunit E, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0504500.1	PF3D7_0504500.1		GO:0005892	GO_REF:0000002	IEA		C	MOLO1 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504500.1	PF3D7_0504500.1		GO:0005892	GO_REF:0000002	IEA		C	MOLO1 domain-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517500.1	PF3D7_0517500.1		GO:0016779	GO_REF:0000002	IEA		F	UTP--glucose-1-phosphate uridylyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522000.1	PF3D7_0522000.1		GO:0016779	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503200.1	PF3D7_0503200.1		GO:0017111	GO_REF:0000002	IEA		F	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523100.1	PF3D7_0523100.1		GO:0004222	GO_REF:0000002	ISS		F	mitochondrial-processing peptidase subunit alpha, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501700.1	PF3D7_0501700.1		GO:0000910	GO_REF:0000002	ISO		P	anaphase-promoting complex subunit 3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0501700.1	PF3D7_0501700.1		GO:0030261	GO_REF:0000002	ISO		P	anaphase-promoting complex subunit 3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503100.1	PF3D7_0503100.1		GO:0050515	GO_REF:0000002	ISS		F	4-diphosphocytidyl-2-C-methyl-D-erythritol kinase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503400.1	PF3D7_0503400.1		GO:0030036	GO_REF:0000002	IDA		P	actin-depolymerizing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530900.1	PF3D7_0530900.1		GO:0030036	GO_REF:0000002	ISS		P	formin 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503400.1	PF3D7_0503400.1		GO:0051014	GO_REF:0000002	IDA		P	actin-depolymerizing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0503400.1	PF3D7_0503400.1		GO:0060327	GO_REF:0000002	IDA		P	actin-depolymerizing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504000.1	PF3D7_0504000.1		GO:0008324	GO_REF:0000002	ISS		F	cation transporting P-ATPase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504600.1	PF3D7_0504600.1		GO:0006099	GO_REF:0000002	ISS		P	2-oxoisovalerate dehydrogenase subunit beta, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504600.1	PF3D7_0504600.1		GO:0030062	GO_REF:0000002	ISS		C	2-oxoisovalerate dehydrogenase subunit beta, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0504600.1	PF3D7_0504600.1		GO:0003863	GO_REF:0000002	ISS		F	2-oxoisovalerate dehydrogenase subunit beta, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505300.1	PF3D7_0505300.1		GO:0090481	GO_REF:0000002	IEA		P	UDP-N-acetylglucosamine transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505300.1	PF3D7_0505300.1		GO:0090481	GO_REF:0000002	IEA		P	UDP-N-acetylglucosamine transporter, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0505300.1	PF3D7_0505300.1		GO:0015165	GO_REF:0000002	IEA		F	UDP-N-acetylglucosamine transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505300.1	PF3D7_0505300.1		GO:0015165	GO_REF:0000002	IEA		F	UDP-N-acetylglucosamine transporter, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0505500.1	PF3D7_0505500.1		GO:0006298	GO_REF:0000002	IEA		P	DNA mismatch repair protein MSH6, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505500.1	PF3D7_0505500.1		GO:0006298	GO_REF:0000002	IEA		P	DNA mismatch repair protein MSH6, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0505500.1	PF3D7_0505500.1		GO:0030983	GO_REF:0000002	ISS		F	DNA mismatch repair protein MSH6, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0505500.1	PF3D7_0505500.1		GO:0030983	GO_REF:0000002	IEA		F	DNA mismatch repair protein MSH6, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0505800.1	PF3D7_0505800.1		GO:0019941	GO_REF:0000002	ISS		P	small ubiquitin-related modifier		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506200.1	PF3D7_0506200.1		GO:0005669	GO_REF:0000002	IDA		C	TATA-box-binding protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522200.1	PF3D7_0522200.1		GO:0005669	GO_REF:0000002	ISS		C	transcription initiation factor TFIID subunit 10, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0506800.1	PF3D7_0506800.1		GO:0000122	GO_REF:0000002	IEA		P	transcription factor 25, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507500.1	PF3D7_0507500.1		GO:0044311	GO_REF:0000002	IDA		C	subtilisin-like protease 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0507600.1	PF3D7_0507600.1		GO:0030014	GO_REF:0000002	ISO		C	protein CAF40, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519500.1	PF3D7_0519500.1		GO:0030014	GO_REF:0000002	ISO		C	CCR4 domain-containing protein 1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508300.1	PF3D7_0508300.1		GO:0046323	GO_REF:0000002	TAS		P	triose phosphate transporter		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530200.1	PF3D7_0530200.1		GO:0046323	GO_REF:0000002	TAS		P	phosphoenolpyruvate/phosphate translocator		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508300.1	PF3D7_0508300.1		GO:0031355	GO_REF:0000002	IDA		C	triose phosphate transporter		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508300.1	PF3D7_0508300.1		GO:0008524	GO_REF:0000002	ISS		F	triose phosphate transporter		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530200.1	PF3D7_0530200.1		GO:0008524	GO_REF:0000002	IDA		F	phosphoenolpyruvate/phosphate translocator		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508300.1	PF3D7_0508300.1		GO:0009670	GO_REF:0000002	ISS		F	triose phosphate transporter		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530200.1	PF3D7_0530200.1		GO:0009670	GO_REF:0000002	IDA		F	phosphoenolpyruvate/phosphate translocator		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508500.1	PF3D7_0508500.1		GO:0006323	GO_REF:0000002	ISS		P	guanidine nucleotide exchange factor		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508700.1	PF3D7_0508700.1		GO:0008186	GO_REF:0000002	ISS		F	pre-mRNA-processing ATP-dependent RNA helicase PRP5, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508800.1	PF3D7_0508800.1		GO:0003697	GO_REF:0000002	IDA		F	single-stranded DNA-binding protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0508800.1	PF3D7_0508800.1		GO:0003697	GO_REF:0000002	IEA		F	single-stranded DNA-binding protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0509000.1	PF3D7_0509000.1		GO:0005483	GO_REF:0000002	ISS		F	alpha-soluble NSF attachment protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509400.1	PF3D7_0509400.1		GO:0006360	GO_REF:0000002	TAS		P	RNA polymerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509400.1	PF3D7_0509400.1		GO:0005736	GO_REF:0000002	TAS		C	RNA polymerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509500.1	PF3D7_0509500.1		GO:0006310	GO_REF:0000002	IEA		P	ERCC4 domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0509800.1	PF3D7_0509800.1		GO:0004430	GO_REF:0000002	IGI		F	phosphatidylinositol 4-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510500.1	PF3D7_0510500.1		GO:0006265	GO_REF:0000002	ISS		P	topoisomerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510500.1	PF3D7_0510500.1		GO:0006265	GO_REF:0000002	IEA		P	topoisomerase I		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0510500.1	PF3D7_0510500.1		GO:0003917	GO_REF:0000002	ISS		F	topoisomerase I		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0510500.1	PF3D7_0510500.1		GO:0003917	GO_REF:0000002	IEA		F	topoisomerase I		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511000.1	PF3D7_0511000.1		GO:0032715	GO_REF:0000002	ISO		P	translationally-controlled tumor protein homolog		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511200.1	PF3D7_0511200.1		GO:0004768	GO_REF:0000002	IDA		F	stearoyl-CoA desaturase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511200.1	PF3D7_0511200.1		GO:0016717	GO_REF:0000002	IEA		F	stearoyl-CoA desaturase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511700.1	PF3D7_0511700.1		GO:0000408	GO_REF:0000002	IDA		C	EKC/KEOPS complex subunit CGI121		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511800.1	PF3D7_0511800.1		GO:0006021	GO_REF:0000002	IDA		P	inositol-3-phosphate synthase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511800.1	PF3D7_0511800.1		GO:0006021	GO_REF:0000002	IEA		P	inositol-3-phosphate synthase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511800.1	PF3D7_0511800.1		GO:0008654	GO_REF:0000002	IEA		P	inositol-3-phosphate synthase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511800.1	PF3D7_0511800.1		GO:0008654	GO_REF:0000002	IEA		P	inositol-3-phosphate synthase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0511800.1	PF3D7_0511800.1		GO:0004512	GO_REF:0000002	IDA		F	inositol-3-phosphate synthase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0511800.1	PF3D7_0511800.1		GO:0004512	GO_REF:0000002	IEA		F	inositol-3-phosphate synthase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0512000.1	PF3D7_0512000.1		GO:0016272	GO_REF:0000002	IEA		C	prefoldin subunit 6, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512000.1	PF3D7_0512000.1		GO:0016272	GO_REF:0000002	IEA		C	prefoldin subunit 6, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0512200.1	PF3D7_0512200.1		GO:0006750	GO_REF:0000002	ISS		P	glutathione synthetase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512200.1	PF3D7_0512200.1		GO:0006750	GO_REF:0000002	IEA		P	glutathione synthetase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0512200.1	PF3D7_0512200.1		GO:0006979	GO_REF:0000002	ISS		P	glutathione synthetase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512200.1	PF3D7_0512200.1		GO:0004363	GO_REF:0000002	ISS		F	glutathione synthetase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512200.1	PF3D7_0512200.1		GO:0004363	GO_REF:0000002	IEA		F	glutathione synthetase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0512300.1	PF3D7_0512300.1		GO:0032147	GO_REF:0000002	IDA		P	CDK-activating kinase assembly factor MAT1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512600.1	PF3D7_0512600.1		GO:0005793	GO_REF:0000002	IDA		C	ras-related protein Rab-1B		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512700.1	PF3D7_0512700.1		GO:0009116	GO_REF:0000002	IEA		P	orotate phosphoribosyltransferase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0512700.1	PF3D7_0512700.1		GO:0009116	GO_REF:0000002	IEA		P	orotate phosphoribosyltransferase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0513300.1	PF3D7_0513300.1		GO:0009116	GO_REF:0000002	IEA		P	purine nucleoside phosphorylase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513300.1	PF3D7_0513300.1		GO:0009116	GO_REF:0000002	IEA		P	purine nucleoside phosphorylase		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0512700.1	PF3D7_0512700.1		GO:0004588	GO_REF:0000002	ISS		F	orotate phosphoribosyltransferase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513300.1	PF3D7_0513300.1		GO:0006148	GO_REF:0000002	IDA		P	purine nucleoside phosphorylase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513300.1	PF3D7_0513300.1		GO:0006152	GO_REF:0000002	IDA		P	purine nucleoside phosphorylase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513300.1	PF3D7_0513300.1		GO:0004731	GO_REF:0000002	IDA		F	purine nucleoside phosphorylase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0513600.1	PF3D7_0513600.1		GO:0003904	GO_REF:0000002	ISS		F	deoxyribodipyrimidine photo-lyase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514000.1	PF3D7_0514000.1		GO:0006464	GO_REF:0000002	IEA		P	tubulin--tyrosine ligase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514000.1	PF3D7_0514000.1		GO:0006464	GO_REF:0000002	IEA		P	tubulin--tyrosine ligase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0514100.1	PF3D7_0514100.1		GO:0043140	GO_REF:0000002	IDA		F	ATP-dependent DNA helicase UvrD		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514100.1	PF3D7_0514100.1		GO:0043142	GO_REF:0000002	IDA		F	ATP-dependent DNA helicase UvrD		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514600.1	PF3D7_0514600.1		GO:0008615	GO_REF:0000002	ISS		P	ribose-5-phosphate isomerase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514600.1	PF3D7_0514600.1		GO:0009052	GO_REF:0000002	ISM		P	ribose-5-phosphate isomerase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514600.1	PF3D7_0514600.1		GO:0009052	GO_REF:0000002	IEA		P	ribose-5-phosphate isomerase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0514600.1	PF3D7_0514600.1		GO:0004751	GO_REF:0000002	ISS		F	ribose-5-phosphate isomerase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514600.1	PF3D7_0514600.1		GO:0004751	GO_REF:0000002	IEA		F	ribose-5-phosphate isomerase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0514800.1	PF3D7_0514800.1		GO:0032958	GO_REF:0000002	IEA		P	inositol polyphosphate multikinase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0514800.1	PF3D7_0514800.1		GO:0032958	GO_REF:0000002	IEA		P	inositol polyphosphate multikinase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0515000.1	PF3D7_0515000.1		GO:0045787	GO_REF:0000002	ISS		P	pre-mRNA-splicing factor CWC2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0043656	GO_REF:0000002	IDA		C	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0016303	GO_REF:0000002	IDA		F	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0515300.1	PF3D7_0515300.1		GO:0030492	GO_REF:0000002	IDA		F	phosphatidylinositol 3-kinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0516600.1	PF3D7_0516600.1		GO:0008135	GO_REF:0000002	ISS		F	sporozoite surface antigen MB2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517300.1	PF3D7_0517300.1		GO:0048024	GO_REF:0000002	IDA		P	serine/arginine-rich splicing factor 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517500.1	PF3D7_0517500.1		GO:0003983	GO_REF:0000002	IEA		F	UTP--glucose-1-phosphate uridylyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517500.1	PF3D7_0517500.1		GO:0070569	GO_REF:0000002	IEA		F	UTP--glucose-1-phosphate uridylyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517500.1	PF3D7_0517500.1		GO:0070569	GO_REF:0000002	IEA		F	UTP--glucose-1-phosphate uridylyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517600.1	PF3D7_0517600.1		GO:0051016	GO_REF:0000002	ISS		P	F-actin-capping protein subunit beta, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517600.1	PF3D7_0517600.1		GO:0051016	GO_REF:0000002	IEA		P	F-actin-capping protein subunit beta, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528500.1	PF3D7_0528500.1		GO:0051016	GO_REF:0000002	IEA		P	F-actin-capping protein subunit alpha, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528500.1	PF3D7_0528500.1		GO:0051016	GO_REF:0000002	IEA		P	F-actin-capping protein subunit alpha, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517600.1	PF3D7_0517600.1		GO:0051693	GO_REF:0000002	ISO		P	F-actin-capping protein subunit beta, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528500.1	PF3D7_0528500.1		GO:0051693	GO_REF:0000002	ISO		P	F-actin-capping protein subunit alpha, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517600.1	PF3D7_0517600.1		GO:0008290	GO_REF:0000002	IDA		C	F-actin-capping protein subunit beta, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517600.1	PF3D7_0517600.1		GO:0008290	GO_REF:0000002	IEA		C	F-actin-capping protein subunit beta, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528500.1	PF3D7_0528500.1		GO:0008290	GO_REF:0000002	IEA		C	F-actin-capping protein subunit alpha, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528500.1	PF3D7_0528500.1		GO:0008290	GO_REF:0000002	IEA		C	F-actin-capping protein subunit alpha, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0031369	GO_REF:0000002	IEA		F	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0517700.1	PF3D7_0517700.1		GO:0031369	GO_REF:0000002	IEA		F	eukaryotic translation initiation factor 3 subunit B, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518000.1	PF3D7_0518000.1		GO:0061630	GO_REF:0000002	IEA		F	NOSIP domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518000.1	PF3D7_0518000.1		GO:0061630	GO_REF:0000002	IEA		F	NOSIP domain-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518100.1	PF3D7_0518100.1		GO:0009657	GO_REF:0000002	IMP		P	protein AMR2		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518400.1	PF3D7_0518400.1		GO:0000079	GO_REF:0000002	IEA		P	cyclin, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518400.1	PF3D7_0518400.1		GO:0000079	GO_REF:0000002	IEA		P	cyclin, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518400.1	PF3D7_0518400.1		GO:0045736	GO_REF:0000002	IDA		P	cyclin, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518400.1	PF3D7_0518400.1		GO:0051726	GO_REF:0000002	IDA		P	cyclin, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529500.1	PF3D7_0529500.1		GO:0051726	GO_REF:0000002	ISS		P	cell cycle regulator protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518400.1	PF3D7_0518400.1		GO:0019901	GO_REF:0000002	IEA		F	cyclin, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0518400.1	PF3D7_0518400.1		GO:0019901	GO_REF:0000002	IEA		F	cyclin, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0518700.1	PF3D7_0518700.1		GO:0043487	GO_REF:0000002	IDA		P	mRNA-binding protein PUF1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519200.1	PF3D7_0519200.1		GO:0033177	GO_REF:0000002	IEA		C	V-type proton ATPase 16 kDa proteolipid subunit		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519200.1	PF3D7_0519200.1		GO:0033177	GO_REF:0000002	IEA		C	V-type proton ATPase 16 kDa proteolipid subunit		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519200.1	PF3D7_0519200.1		GO:0033179	GO_REF:0000002	IEA		C	V-type proton ATPase 16 kDa proteolipid subunit		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519200.1	PF3D7_0519200.1		GO:0033179	GO_REF:0000002	IEA		C	V-type proton ATPase 16 kDa proteolipid subunit		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519300.1	PF3D7_0519300.1		GO:0048034	GO_REF:0000002	IEA		P	protoheme IX farnesyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519300.1	PF3D7_0519300.1		GO:0048034	GO_REF:0000002	IEA		P	protoheme IX farnesyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519300.1	PF3D7_0519300.1		GO:0008495	GO_REF:0000002	IEA		F	protoheme IX farnesyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519300.1	PF3D7_0519300.1		GO:0008495	GO_REF:0000002	IEA		F	protoheme IX farnesyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0519300.1	PF3D7_0519300.1		GO:0016765	GO_REF:0000002	IEA		F	protoheme IX farnesyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0519300.1	PF3D7_0519300.1		GO:0016765	GO_REF:0000002	IEA		F	protoheme IX farnesyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0520300.1	PF3D7_0520300.1		GO:0005688	GO_REF:0000002	ISS		C	U6 snRNA-associated Sm-like protein LSm2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520300.1	PF3D7_0520300.1		GO:0005732	GO_REF:0000002	ISS		C	U6 snRNA-associated Sm-like protein LSm2, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520500.1	PF3D7_0520500.1		GO:0009228	GO_REF:0000002	ISS		P	phosphomethylpyrimidine kinase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520600.1	PF3D7_0520600.1		GO:0004081	GO_REF:0000002	IDA		F	bis(5'-nucleosyl)-tetraphosphatase [asymmetrical]		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520600.1	PF3D7_0520600.1		GO:0008796	GO_REF:0000002	IEA		F	bis(5'-nucleosyl)-tetraphosphatase [asymmetrical]		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0520900.1	PF3D7_0520900.1		GO:0004013	GO_REF:0000002	IEA		F	adenosylhomocysteinase		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0521500.1	PF3D7_0521500.1		GO:0004730	GO_REF:0000002	ISS		F	ribosomal large subunit pseudouridylate synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522300.1	PF3D7_0522300.1		GO:0070476	GO_REF:0000002	ISS		P	18S rRNA (guanine-N(7))-methyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522300.1	PF3D7_0522300.1		GO:0070476	GO_REF:0000002	IEA		P	18S rRNA (guanine-N(7))-methyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522300.1	PF3D7_0522300.1		GO:0016435	GO_REF:0000002	ISS		F	18S rRNA (guanine-N(7))-methyltransferase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522300.1	PF3D7_0522300.1		GO:0016435	GO_REF:0000002	IEA		F	18S rRNA (guanine-N(7))-methyltransferase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522400.1	PF3D7_0522400.1		GO:0008104	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531100.1	PF3D7_0531100.1		GO:0008104	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522600.1	PF3D7_0522600.1		GO:0015693	GO_REF:0000002	IEA		P	inner membrane complex protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522600.1	PF3D7_0522600.1		GO:0015693	GO_REF:0000002	IEA		P	inner membrane complex protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522600.1	PF3D7_0522600.1		GO:0015095	GO_REF:0000002	IEA		F	inner membrane complex protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0522600.1	PF3D7_0522600.1		GO:0015095	GO_REF:0000002	IEA		F	inner membrane complex protein		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0522800.1	PF3D7_0522800.1		GO:0000380	GO_REF:0000002	ISS		P	pre-mRNA-splicing factor BUD31, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523100.1	PF3D7_0523100.1		GO:0006627	GO_REF:0000002	ISS		P	mitochondrial-processing peptidase subunit alpha, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523100.1	PF3D7_0523100.1		GO:0017087	GO_REF:0000002	ISS		C	mitochondrial-processing peptidase subunit alpha, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523800.1	PF3D7_0523800.1		GO:0030001	GO_REF:0000002	IEA		P	divalent metal transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523800.1	PF3D7_0523800.1		GO:0030001	GO_REF:0000002	IEA		P	divalent metal transporter, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523800.1	PF3D7_0523800.1		GO:0046873	GO_REF:0000002	IEA		F	divalent metal transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523800.1	PF3D7_0523800.1		GO:0046873	GO_REF:0000002	IEA		F	divalent metal transporter, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523900.1	PF3D7_0523900.1		GO:0015694	GO_REF:0000002	IEA		P	MerC domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523900.1	PF3D7_0523900.1		GO:0015694	GO_REF:0000002	IEA		P	MerC domain-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0523900.1	PF3D7_0523900.1		GO:0015097	GO_REF:0000002	IEA		F	MerC domain-containing protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0523900.1	PF3D7_0523900.1		GO:0015097	GO_REF:0000002	IEA		F	MerC domain-containing protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0524000.1	PF3D7_0524000.1		GO:0006607	GO_REF:0000002	IDA		P	karyopherin beta		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524000.1	PF3D7_0524000.1		GO:0006913	GO_REF:0000002	TAS		P	karyopherin beta		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524000.1	PF3D7_0524000.1		GO:0005643	GO_REF:0000002	TAS		C	karyopherin beta		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524000.1	PF3D7_0524000.1		GO:0044613	GO_REF:0000002	IC		C	karyopherin beta		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524000.1	PF3D7_0524000.1		GO:0019904	GO_REF:0000002	IDA		F	karyopherin beta		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524700.1	PF3D7_0524700.1		GO:0006626	GO_REF:0000002	ISS		P	mitochondrial import receptor subunit TOM22, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524700.1	PF3D7_0524700.1		GO:0005741	GO_REF:0000002	IEA		C	mitochondrial import receptor subunit TOM22, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524700.1	PF3D7_0524700.1		GO:0005741	GO_REF:0000002	IEA		C	mitochondrial import receptor subunit TOM22, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0524700.1	PF3D7_0524700.1		GO:0005742	GO_REF:0000002	ISS		C	mitochondrial import receptor subunit TOM22, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524900.1	PF3D7_0524900.1		GO:0031591	GO_REF:0000002	ISS		P	S-adenosyl-L-methionine-dependent tRNA 4-demethylwyosine synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524900.1	PF3D7_0524900.1		GO:0010181	GO_REF:0000002	IEA		F	S-adenosyl-L-methionine-dependent tRNA 4-demethylwyosine synthase, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0524900.1	PF3D7_0524900.1		GO:0010181	GO_REF:0000002	IEA		F	S-adenosyl-L-methionine-dependent tRNA 4-demethylwyosine synthase, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0525400.1	PF3D7_0525400.1		GO:0010494	GO_REF:0000002	IDA		C	7-helix-1 protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0525400.1	PF3D7_0525400.1		GO:0043021	GO_REF:0000002	IDA		F	7-helix-1 protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526200.1	PF3D7_0526200.1		GO:0043087	GO_REF:0000002	ISS		P	ADP-ribosylation factor GTPase-activating protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526200.1	PF3D7_0526200.1		GO:0005096	GO_REF:0000002	IEA		F	ADP-ribosylation factor GTPase-activating protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526200.1	PF3D7_0526200.1		GO:0005096	GO_REF:0000002	IEA		F	ADP-ribosylation factor GTPase-activating protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0526200.2	PF3D7_0526200.2		GO:0005096	GO_REF:0000002	IEA		F	ADP-ribosylation factor GTPase-activating protein, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0526200.2	PF3D7_0526200.2		GO:0005096	GO_REF:0000002	IEA		F	ADP-ribosylation factor GTPase-activating protein, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0526600.1	PF3D7_0526600.1		GO:0009245	GO_REF:0000002	IEA		P	conserved Plasmodium protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527000.1	PF3D7_0527000.1		GO:0042555	GO_REF:0000002	IEA		C	DNA replication licensing factor MCM3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527200.1	PF3D7_0527200.1		GO:0070628	GO_REF:0000002	IDA		F	ubiquitin carboxyl-terminal hydrolase 14		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527300.1	PF3D7_0527300.1		GO:0008235	GO_REF:0000002	ISM		F	methionine aminopeptidase 1a, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527300.1	PF3D7_0527300.1		GO:0008235	GO_REF:0000002	IEA		F	methionine aminopeptidase 1a, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0527300.1	PF3D7_0527300.1		GO:0070006	GO_REF:0000002	ISS		F	methionine aminopeptidase 1a, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0527500.1	PF3D7_0527500.1		GO:0051085	GO_REF:0000002	IDA		P	Hsc70-interacting protein		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528000.1	PF3D7_0528000.1		GO:0043248	GO_REF:0000002	ISM		P	proteasome maturation factor UMP1, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0030131	GO_REF:0000002	IEA		C	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0030131	GO_REF:0000002	IEA		C	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0030276	GO_REF:0000002	IEA		F	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0528100.1	PF3D7_0528100.1		GO:0030276	GO_REF:0000002	IEA		F	AP-1 complex subunit beta, putative		transcript	taxon:None	20190925	Interpro
+EuPathDB	PF3D7_0528500.1	PF3D7_0528500.1		GO:0051015	GO_REF:0000002	ISO		F	F-actin-capping protein subunit alpha, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529200.1	PF3D7_0529200.1		GO:0008643	GO_REF:0000002	ISS		P	sugar transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0529200.1	PF3D7_0529200.1		GO:0005351	GO_REF:0000002	ISS		F	sugar transporter, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530200.1	PF3D7_0530200.1		GO:0031353	GO_REF:0000002	IDA		C	phosphoenolpyruvate/phosphate translocator		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530500.1	PF3D7_0530500.1		GO:0007169	GO_REF:0000002	IEA		P	conserved Plasmodium membrane protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530500.1	PF3D7_0530500.1		GO:0004714	GO_REF:0000002	IEA		F	conserved Plasmodium membrane protein, unknown function		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530750.1	PF3D7_0530750.1		GO:0006506	GO_REF:0000002	ISM		P	dolichol-phosphate mannosyltransferase subunit 3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530750.1	PF3D7_0530750.1		GO:0033185	GO_REF:0000002	ISM		C	dolichol-phosphate mannosyltransferase subunit 3, putative		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530900.1	PF3D7_0530900.1		GO:0008154	GO_REF:0000002	IDA		P	formin 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530900.1	PF3D7_0530900.1		GO:0045010	GO_REF:0000002	IDA		P	formin 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0530900.1	PF3D7_0530900.1		GO:0005923	GO_REF:0000002	IDA		C	formin 1		transcript	taxon:None	20190925	GeneDB
+EuPathDB	PF3D7_0531200.1	PF3D7_0531200.1		GO:0005763	GO_REF:0000002	ISS		C	ribosomal protein S16, mitochondrial, putative		transcript	taxon:None	20190925	GeneDB
