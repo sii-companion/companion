@@ -126,6 +126,7 @@ for i = 1,#arg do
           for _,n in pairs(ncrnas) do
             gene:add_child(n)
           end
+        end
         table.insert(genes, gene)
         cur_gene = gene
         geneno = geneno + 1
