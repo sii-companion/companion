@@ -50,11 +50,7 @@ for i = 1,#arg do
       end
     elseif seqid and cur_gene and l:match("     /pseudo") then
       cur_gene:set_attribute("is_pseudo_in_ref", "true")
-    elseif seqid and (l:match("%sCDS%s") or l:match("%srRNA%s"))  then
-      local ncrna = false
-      if l:match("%srRNA%s") then
-        ncrna = true
-      end
+    elseif seqid and l:match("%sCDS%s") then
       cur_gene = nil
       if l:match("complement") then
         strand = "-"
@@ -63,7 +59,6 @@ for i = 1,#arg do
       end
       local cds = {}
       local exons = {}
-      local ncrnas = {}
       local totalrange = nil
       local exnr = 1
       for s,e in l:gmatch("(%d+)%.%.(%d+)") do
@@ -74,24 +69,16 @@ for i = 1,#arg do
           else
             totalrange = totalrange:join(thisrng)
           end
-          if ncrna then
-            node = gt.feature_node_new(seqid, "rRNA", tonumber(s), tonumber(e),
+          node = gt.feature_node_new(seqid, "CDS", tonumber(s), tonumber(e),
                                      strand)
-            node:set_attribute("ID",  "RATTgene" .. geneno .. ".rRNA"..exnr)
-            node:set_source("RATT")
-            table.insert(ncrnas, node)
-          else
-            node = gt.feature_node_new(seqid, "CDS", tonumber(s), tonumber(e),
-                                      strand)
-            node:set_attribute("ID",  "RATTgene" .. geneno .. ".CDS"..exnr)
-            node:set_source("RATT")
-            table.insert(cds, node)
-            node = gt.feature_node_new(seqid, "exon", tonumber(s), tonumber(e),
-                                      strand)
-            node:set_attribute("ID", "RATTgene" .. geneno .. ".exon"..exnr)
-            node:set_source("RATT")
-            table.insert(exons, node)
-          end
+          node:set_attribute("ID",  "RATTgene" .. geneno .. ".CDS"..exnr)
+          node:set_source("RATT")
+          table.insert(cds, node)
+          node = gt.feature_node_new(seqid, "exon", tonumber(s), tonumber(e),
+                                     strand)
+          node:set_attribute("ID", "RATTgene" .. geneno .. ".exon"..exnr)
+          node:set_source("RATT")
+          table.insert(exons, node)
           exnr = exnr + 1
         else
           io.stderr:write("error: malformed input range " .. s .. "-"
@@ -108,25 +95,19 @@ for i = 1,#arg do
                                    strand)
         gene:set_attribute("ID", "RATTgene"..geneno)
         gene:set_source("RATT")
-        if not ncrna then
-          mrna = gt.feature_node_new(seqid, "mRNA",
-                                    totalrange:get_start(),
-                                    totalrange:get_end(),
-                                    strand)
-          mrna:set_attribute("ID", "RATTmrna"..geneno)
-          mrna:set_source("RATT")
-          for _,n in pairs(cds) do
-            mrna:add_child(n)
-          end
-          for _,n in pairs(exons) do
-            mrna:add_child(n)
-          end
-          gene:add_child(mrna)
-        else
-          for _,n in pairs(ncrnas) do
-            gene:add_child(n)
-          end
+        mrna = gt.feature_node_new(seqid, "mRNA",
+                                   totalrange:get_start(),
+                                   totalrange:get_end(),
+                                   strand)
+        mrna:set_attribute("ID", "RATTmrna"..geneno)
+        mrna:set_source("RATT")
+        for _,n in pairs(cds) do
+          mrna:add_child(n)
         end
+        for _,n in pairs(exons) do
+          mrna:add_child(n)
+        end
+        gene:add_child(mrna)
         table.insert(genes, gene)
         cur_gene = gene
         geneno = geneno + 1
