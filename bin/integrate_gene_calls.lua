@@ -98,12 +98,19 @@ function stream:process_current_cluster()
 end
 
 function stream:conditional_overlap(new_rng)
+  local ext_rng = nil
+
   if ref_target_mapping then
     -- allow short overlaps for apicoplasts and mitochondria
     if (ref_target_mapping.API and self.last_seqid == ref_target_mapping.API[2])
       or (ref_target_mapping.MIT and self.last_seqid == ref_target_mapping.MIT[2]) then
       local ext = options.overlap
-      local ext_rng = gt.range_new(new_rng:get_start() + ext, new_rng:get_end() - ext)
+      -- ensure consistent start and end bases for new range
+      if self.curr_rng:get_start() < new_rng:get_start() then
+        ext_rng = gt.range_new(math.min(new_rng:get_start() + ext, new_rng:get_end()), new_rng:get_end())
+      else
+        ext_rng = gt.range_new(new_rng:get_start(), math.max(new_rng:get_start(), new_rng:get_end() - ext))
+      end
       return self.curr_rng:overlap(ext_rng)
     end
   end

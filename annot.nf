@@ -366,6 +366,9 @@ if (params.transfer_tool == "ratt") {
         """
     }
 
+    ratt_result.into{ ratt_result
+                      ratt_result_ncrna }
+
     process ratt_to_gff3 {
         input:
         file 'in*.embl' from ratt_result
@@ -373,10 +376,8 @@ if (params.transfer_tool == "ratt") {
 
         output:
         file 'ratt.gff3' into ratt_gff3
-        file 'ncrna.gff3' into transferred_ncrnas
 
         """
-        echo '##gff-version 3' > ncrna.gff3
         echo '##gff-version 3' > ratt.gff3
         ratt_embl_to_gff3.lua in*.embl | \
           gt gff3 -sort -retainids -tidy > \
@@ -386,6 +387,24 @@ if (params.transfer_tool == "ratt") {
           gt gff3 -sort -retainids -tidy > ratt.gff3;
         fi
         """
+    }
+
+    process ncrna_from_ratt {
+      input:
+      file 'in*.embl' from ratt_result_ncrna
+
+      output:
+      file 'ncrna.gff3' into transferred_ncrnas
+
+      """
+      echo '##gff-version 3' > ncrna.gff3
+      ratt_embl_to_ncrna_gff3.lua in*.embl | \
+        gt gff3 -sort -retainids -tidy > \
+        ncrna.tmp.gff3
+      if [ -s ncrna.tmp.gff3 ]; then
+        cp ncrna.tmp.gff3 ncrna.gff3;
+      fi
+      """
     }
 } else if (params.transfer_tool == "liftoff") {
     process run_liftoff {
