@@ -74,16 +74,19 @@ cv.nof_singleton_genes = 0
 cv.nof_singleton_genes_with_function = 0
 cv.nof_regions = 0
 cv.nof_chromosomes = 0
+cv.nof_annotated_regions = 0
 cv.overall_length = 0
 cv.coding_length = 0
 cv.gc_overall = 0
 cv.gc_coding = 0
+cv.is_annotated = {}
 function cv:visit_feature(fn)
   local seqid = fn:get_seqid()
   if fn:get_type() == 'gene' then
     local nof_exons = 0
     local coding = false
     cv.nof_genes = cv.nof_genes + 1
+    cv.is_annotated[seqid] = true
     for n in fn:get_children() do
       if n:get_type() == 'mRNA' then
         if not coding then
@@ -113,6 +116,7 @@ function cv:visit_feature(fn)
     end
   elseif fn:get_type() == 'pseudogene' then
     cv.nof_pseudogenes = cv.nof_pseudogenes + 1
+    cv.is_annotated[seqid] = true
   elseif fn:get_type() == 'polypeptide' then
     local orths = fn:get_attribute("orthologous_to")
     local product = fn:get_attribute("product")
@@ -195,10 +199,13 @@ local gn = visitor_stream:next_tree()
 while (gn) do
   gn = visitor_stream:next_tree()
 end
+for n in pairs(cv.is_annotated) do
+  cv.nof_annotated_regions = cv.nof_annotated_regions + 1
+end
 
 
 print("nof_regions: " .. cv.nof_regions)
---print("nof_chromosomes: " .. cv.nof_chromosomes)
+print("nof_annotated_regions: " .. cv.nof_annotated_regions)
 print("overall_length: " .. cv.overall_length)
 print("gc_overall: " .. string.format("%.2f", cv:calc_gc_overall()*100))
 print("nof_genes: " .. cv.nof_genes)
