@@ -107,7 +107,7 @@ if (params.do_contiguation) {
         file 'pseudo.contigs.fasta' into contigs_seq
         // TODO If upgrading to DSL2, can just use json output and splitJson operator before circos_run_chrs process.
         file 'ref_target_mapping.txt' into ref_target_mapping_circos
-        file 'ref_target_mapping.json' into ref_target_mapping_integrate
+        file 'ref_target_mapping.json' into ref_target_mapping
 
         """
         abacas2.nonparallel.sh \
@@ -129,7 +129,7 @@ if (params.do_contiguation) {
         file 'pseudo.scafs.fasta' into scaffolds_seq
         file 'pseudo.scafs.agp' into scaffolds_agp
         file 'pseudo.contigs.fasta' into contigs_seq
-        file 'ref_target_mapping.json' into ref_target_mapping_integrate
+        file 'ref_target_mapping.json' into ref_target_mapping
 
         """
         no_abacas_prepare.lua ${sanitized_genome_file} pseudo
@@ -169,6 +169,9 @@ pseudochr_agp.into{ pseudochr_agp_augustus
                     pseudochr_agp_rnaseq
 				    pseudochr_agp_make_gaps
                     pseudochr_agp_make_dist }
+
+ref_target_mapping.into{ ref_target_mapping_integrate
+                         ref_target_mapping_pseudo }
 
 // TRNA PREDICTION
 // ===============
@@ -886,6 +889,7 @@ if (params.do_pseudo) {
         file 'pseudochr.fasta' from pseudochr_seq_pseudogene_calling
         file 'genes.gff3' from integrated_gff3_clean
         file 'last.out' from pseudochr_last_out.collectFile()
+        file 'ref_target_mapping.json' from ref_target_mapping_pseudo
 
         output:
         file 'genes_and_pseudo.gff3' into gff3_with_pseudogenes
@@ -899,7 +903,8 @@ if (params.do_pseudo) {
         if [ ! -s last_and_genes.gff3 ]; then
           echo '##gff-version 3' > last_and_genes.gff3
         fi
-        pseudo_merge_with_genes.lua last_and_genes.gff3 pseudochr.fasta > out_tmp.gff3
+        pseudo_merge_with_genes.lua last_and_genes.gff3 pseudochr.fasta \
+          -m ref_target_mapping.json -o ${params.MAX_OVERLAP} > out_tmp.gff3
         gt gff3 -sort -retainids -tidy out_tmp.gff3 > genes_and_pseudo.gff3
         """
     }

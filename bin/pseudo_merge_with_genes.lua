@@ -23,6 +23,7 @@ to_gene = {pseudogene = 'gene', pseudogenic_transcript = 'mRNA',
 package.path = gt.script_dir .. "/?.lua;" .. package.path
 require("lib")
 require("optparse")
+local json = require ("dkjson")
 
 op = OptionParser:new({usage="%prog <options> merged_gff_file.gff3 sequence.fas",
                        oneliner="Adds pseudogene annotations to existing set of gene models.",
@@ -30,7 +31,7 @@ op = OptionParser:new({usage="%prog <options> merged_gff_file.gff3 sequence.fas"
 op:option{"-t", action='store', dest='threshold',
                 help="minimum gene coverage ratio threshold for pseudogene "
                   .. "required to replace a gene (e.g. 0.6 for 60%)"}
-op:option{"-m", action='store', dest='minratio',
+op:option{"-n", action='store', dest='minratio',
                 help="minimal 'stitching' gene coverage ratio "
                   .. "required to replace multiple genes (e.g. 0.8 for 80%)"}
 op:option{"-x", action='store', dest='maxratio',
@@ -44,10 +45,14 @@ op:option{"-r", action='store', dest='rejectfile',
 op:option{"-l", action='store', dest='longest_until',
                 help="pick candidate with median length if at least "
                   .. "<LONGEST_UNTIL> candidates per locus"}
+op:option{"-m", action='store', dest='mapping',
+                help="reference target chromosome mapping"}
+op:option{"-o", action='store', dest='overlap', default=0,
+                help="number of bases to allow two adjacent genes to overlap by"}
 op:option{"-d", action='store_true', dest='debug',
                 help="output debug information on stderr"}
 options,args = op:parse({threshold=0.6, minratio=0.8, maxratio=1.2,
-                         debug=false, rejectfile=nil,
+                         debug=false, rejectfile=nil, mapping=nil,
                          ignore_frame_agreement=false, longest_until=4})
 
 function usage()
@@ -57,6 +62,18 @@ end
 
 if #args < 2 then
   usage()
+end
+
+if options.mapping then
+  local mapfile = io.open(options.mapping, "rb")
+  if not mapfile then
+    error("could not open reference target mapping file")
+  end
+  local mapcontent = mapfile:read("*all")
+  mapfile:close()
+  ref_target_mapping = json.decode(mapcontent)
+else
+  ref_target_mapping = nil
 end
 
 local rejected_pseudogenes = {}
@@ -381,7 +398,7 @@ function stream:next_tree()
           else
             if self.last_seqid == fn:get_seqid()
                 and self.last_strand == fn:get_strand()
-                and self.curr_rng:overlap(new_rng) then
+                and conditional_overlap(ref_target_mapping, self.curr_rng, new_rng, self.last_seqid, options.overlap) then
               table.insert(self.curr_gene_set, fn)
               self.curr_rng = self.curr_rng:join(new_rng)
             else
