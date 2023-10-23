@@ -220,6 +220,7 @@ stat_visitor.stats = {}
 stat_visitor.stats.nof_genes = 0
 stat_visitor.stats.nof_coding_genes = 0
 stat_visitor.stats.nof_regions = 0
+stat_visitor.stats.nof_annotated_regions = 0
 stat_visitor.stats.nof_chromosomes = 0
 function stat_visitor:visit_feature(fn)
   local seqid = fn:get_seqid()
@@ -242,7 +243,7 @@ function stat_visitor:visit_feature(fn)
 end
 function stat_visitor:visit_region(rn)
   local seqid = rn:get_seqid()
-  self.stats.nof_regions = self.stats.nof_regions + 1
+  self.stats.nof_annotated_regions = self.stats.nof_annotated_regions + 1
   -- how many sequences are full chromosomes?
   if self.chromosome_pattern and string.match(seqid, self.chromosome_pattern) then
     self.stats.nof_chromosomes = self.stats.nof_chromosomes + 1
@@ -287,6 +288,7 @@ for name, values in pairs(refs.species) do
   stat_visitor.stats.nof_genes = 0
   stat_visitor.stats.nof_coding_genes = 0
   stat_visitor.stats.nof_regions = 0
+  stat_visitor.stats.nof_annotated_regions = 0
   stat_visitor.stats.nof_chromosomes = 0
   stat_visitor.chromosome_pattern = values.chromosome_pattern
   stat_visitor.chromosome_mapping = values.chr_mapping
@@ -339,6 +341,7 @@ for name, values in pairs(refs.species) do
     if values.chromosome_pattern or has_chr_mapping then
       local outfile = io.open(name .. "/chromosomes.fasta", "w+")
       for hdr, seq in pairs(seqs) do
+        stat_visitor.stats.nof_regions = stat_visitor.stats.nof_regions + 1
         local trans_id = hdr:split(' ')[1]
         local m = nil
         if values.chr_mapping[trans_id] then
@@ -445,6 +448,7 @@ for name, values in pairs(refs.species) do
   values.nof_coding_genes = stat_visitor.stats.nof_coding_genes
   values.nof_regions = stat_visitor.stats.nof_regions
   values.nof_chromosomes = stat_visitor.stats.nof_chromosomes
+  values.nof_annotated_regions = stat_visitor.stats.nof_annotated_regions
 
   -- write out table with metadata (number of genes, etc.)
   metadata_json_out = io.open(name .. "/metadata.json", "w+")
