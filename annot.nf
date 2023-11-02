@@ -1110,7 +1110,7 @@ process run_orthofinder {
       file 'orthofinder_out' into ortho_cluster_out
 
     """
-    orthofinder.py -f . -o results
+    orthofinder.py -f . -o results -og
 
     # filter out clusters with single gene.
     awk 'BEGIN { FS="[ ]" }; { if (\$3) print \$0 }' results/*/Orthogroups/Orthogroups.txt > orthofinder_out
