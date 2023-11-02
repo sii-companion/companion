@@ -1038,12 +1038,12 @@ process add_polypeptides {
     """
 } */
 
-// ORTHOMCL AND FUNCTIONAL TRANSFER
+// ORTHOFINDER AND FUNCTIONAL TRANSFER
 // ================================
 
 genemodels_with_polypeptides_gff3.into{ genemodels_for_omcl_proteins; genemodels_for_omcl_annot }
 
-process get_proteins_for_orthomcl {
+process get_proteins_for_orthofinder {
     input:
     file 'input.gff3' from genemodels_for_omcl_proteins
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_orthomcl
@@ -1064,12 +1064,12 @@ process get_proteins_for_orthomcl {
     """
 }
 
-proteins_target.into{ proteins_orthomcl
-					  proteins_pfam
-					  refcomp_protein_in
+proteins_target.into{ proteins_orthofinder
+					            proteins_pfam
+					            refcomp_protein_in
                       proteins_output }
 
-process make_ref_input_for_orthomcl {
+process make_ref_input_for_orthofinder {
     input:
     file omcl_pepfile
 
@@ -1084,9 +1084,9 @@ process make_ref_input_for_orthomcl {
     """
 }
 
-process make_target_input_for_orthomcl {
+process make_target_input_for_orthofinder {
     input:
-    file 'pepfile.fas' from proteins_orthomcl
+    file 'pepfile.fas' from proteins_orthofinder
 
     output:
     path "${params.GENOME_PREFIX}.fasta" into adjusted_fasta
@@ -1105,25 +1105,25 @@ process run_orthofinder {
     input:
       file "${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_filter
       file "${params.ref_species}.fasta" from adjusted_fasta_ref_for_filter
-    
+
     output:
-      file 'orthomcl_out' into orthomcl_cluster_out
+      file 'orthofinder_out' into ortho_cluster_out
 
     """
     orthofinder.py -f . -o results
 
     # filter out clusters with single gene.
-    awk 'BEGIN { FS="[ ]" }; { if (\$3) print \$0 }' results/*/Orthogroups/Orthogroups.txt > orthomcl_out
+    awk 'BEGIN { FS="[ ]" }; { if (\$3) print \$0 }' results/*/Orthogroups/Orthogroups.txt > orthofinder_out
     """
 }
 
-orthomcl_cluster_out.into{ orthomcl_cluster_out_annot; result_ortho }
+ortho_cluster_out.into{ ortho_cluster_out_annot; result_ortho }
 
 process annotate_orthologs {
     cache 'deep'
 
     input:
-    file 'orthomcl_out' from orthomcl_cluster_out_annot
+    file 'orthofinder_out' from ortho_cluster_out_annot
     file 'input.gff3' from genemodels_for_omcl_annot
     file 'gff_ref.gff3' from omcl_gfffile
     file 'gaf_ref.gaf' from omcl_gaffile
@@ -1137,7 +1137,7 @@ process annotate_orthologs {
     gt gff3 -sort -retainids -tidy input.gff3 > input.gff3.sorted
 
     # annotate GFF with ortholog clusters and members
-    map_clusters_gff.lua input.gff3.sorted orthomcl_out > with_clusters.gff3
+    map_clusters_gff.lua input.gff3.sorted orthofinder_out > with_clusters.gff3
 
     # transfer functional annotation from orthologs
     transfer_annotations_from_gff.lua with_clusters.gff3 \
