@@ -533,6 +533,7 @@ if (params.run_braker) {
   cpus = config.poolSize
   process run_braker_pseudo {
     errorStrategy 'ignore'
+    time '3d'
 
     input:
       file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
