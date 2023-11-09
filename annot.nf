@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
-VERSION = file("$baseDir" + "/.version").getText()
+version_file = file("$baseDir" + "/.version")
+VERSION = version_file.getText()
 
 /*
     Author: Sascha Steinbiss <ss34@sanger.ac.uk>
@@ -31,6 +32,7 @@ omcl_gfffile = file(params.ref_dir + "/" + params.ref_species + "/annotation.gff
 omcl_gaffile = file(params.ref_dir + "/" + params.ref_species + "/go.gaf")
 omcl_pepfile = file(params.ref_dir + "/" + params.ref_species + "/proteins.fasta")
 augustus_modeldir = file(params.ref_dir + "/" + params.ref_species)
+ref_meta_file = file(params.ref_dir + "/" + params.ref_species + "/metadata.json")
 
 log.info ""
 log.info "C O M P A N I O N  ~  " + VERSION
@@ -51,6 +53,9 @@ if (params.dist_dir) {
     log.info "output directory    : ${params.dist_dir}"
 }
 log.info ""
+
+ref_meta_file.copyTo(params.dist_dir + "/reference_metadata.json")
+version_file.copyTo(params.dist_dir + "/companion_version.txt")
 
 // INPUT SANITIZATION
 // ==================
