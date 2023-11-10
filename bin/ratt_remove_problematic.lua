@@ -83,9 +83,11 @@ function vis:visit_feature(fn)
     and problematic_genes[fn:get_attribute("ratt_ortholog")] then
     self.ok = false
   end
-  -- ignore report for mitochondrial genes if desired
-  if ref_target_mapping.MIT and seqid == ref_target_mapping.MIT[2] and options.ignore_report then
-    self.ok = true
+  if ref_target_mapping then
+    -- ignore report for mitochondrial genes if desired
+    if ref_target_mapping.MIT and seqid == ref_target_mapping.MIT[2] and options.ignore_report then
+      self.ok = true
+    end
   end
   -- check for overlapping exons per transcripts -> do not allow those
   if self.ok then
