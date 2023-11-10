@@ -28,9 +28,9 @@ op = OptionParser:new({usage="%prog <options> <GFF annotation> <*.Report.txt> [<
                        version="0.2"})
 op:option{"-m", action='store', dest='mapping',
                 help="reference target chromosome mapping"}
-op:option{"-i", action='store', dest='ignore_report',
+op:option{"-b", action='store', dest='mit_bypass',
                 help="ignore RATT report for problematic mitochondrial genes (default: false)"}
-options,args = op:parse({mapping=nil, ignore_report="false"})
+options,args = op:parse({mapping=nil, mit_bypass="false"})
 
 function usage()
   op:help()
@@ -83,7 +83,7 @@ function vis:visit_feature(fn)
   if ref_target_mapping then
     -- ignore report for mitochondrial genes if desired
     if ref_target_mapping.MIT and fn:get_seqid() == ref_target_mapping.MIT[2]
-      and options.ignore_report == "true" then
+      and options.mit_bypass == "true" then
       self.ok = true
     end
   end

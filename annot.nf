@@ -394,7 +394,7 @@ if (params.transfer_tool == "ratt") {
           ratt.tmp.gff3
         if [ -s ratt.tmp.gff3 ]; then
           ratt_remove_problematic.lua ratt.tmp.gff3 in*report \
-            -m ref_target_mapping.json -i ${params.mit_ignore_ratt_report} | \
+            -m ref_target_mapping.json -b ${params.mit_bypass} | \
           gt gff3 -sort -retainids -tidy > ratt.gff3;
         fi
         """
@@ -812,7 +812,8 @@ process integrate_genemodels {
     if (params.WEIGHT_FILE.length() > 0)
         """
         integrate_gene_calls.lua -w ${params.WEIGHT_FILE} -s sequence.fasta \
-            -m ref_target_mapping.json -o ${params.MAX_OVERLAP} < merged.gff3 | \
+            -m ref_target_mapping.json -o ${params.MAX_OVERLAP} \
+            -b ${params.mit_bypass} < merged.gff3 | \
             gt gff3 -sort -tidy -retainids > integrated.gff3
         """
     else

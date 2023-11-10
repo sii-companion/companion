@@ -35,7 +35,10 @@ op:option{"-m", action='store', dest='mapping',
                 help="reference target chromosome mapping"}
 op:option{"-o", action='store', dest='overlap', default=0,
                 help="number of bases to allow two adjacent genes to overlap by"}
-options,args = op:parse({weight_func=nil, sequence=nil, mapping=nil})
+op:option{"-b", action='store', dest='mit_bypass',
+                help="use default weight function for mitochondria (default: false)"}
+options,args = op:parse({weight_func=nil, sequence=nil,
+                         mapping=nil, mit_bypass="false"})
 
 function usage()
   op:help()
@@ -88,9 +91,16 @@ stream.last_strand = nil
 function stream:process_current_cluster()
   local bestset = nil
   local max = 0
+  local weight = get_weight
+  if ref_target_mapping and options.mit_bypass then
+    -- use default weight for mitochrondria when instructed
+    if ref_target_mapping.MIT and self.last_seqid == ref_target_mapping.MIT[2] then
+      weight = _get_weight
+    end
+  end
 
   -- keep only non-overlapping chain with highest weight
-  bestset = SimpleChainer.new(self.curr_gene_set, get_weight, regmap):chain()
+  bestset = SimpleChainer.new(self.curr_gene_set, weight, regmap):chain()
 
   for _,v in ipairs(bestset) do
     table.insert(self.outqueue, v)
