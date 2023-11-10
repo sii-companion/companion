@@ -175,7 +175,8 @@ pseudochr_agp.into{ pseudochr_agp_augustus
 				    pseudochr_agp_make_gaps
                     pseudochr_agp_make_dist }
 
-ref_target_mapping.into{ ref_target_mapping_integrate
+ref_target_mapping.into{ ref_target_mapping_ratt
+                         ref_target_mapping_integrate
                          ref_target_mapping_pseudo }
 
 // TRNA PREDICTION
@@ -381,6 +382,7 @@ if (params.transfer_tool == "ratt") {
         input:
         file 'in*.embl' from ratt_result
         file 'in*.report' from ratt_reports
+        file 'ref_target_mapping.json' from ref_target_mapping_ratt
 
         output:
         file 'ratt.gff3' into ratt_gff3
@@ -391,7 +393,9 @@ if (params.transfer_tool == "ratt") {
           gt gff3 -sort -retainids -tidy > \
           ratt.tmp.gff3
         if [ -s ratt.tmp.gff3 ]; then
-          ratt_remove_problematic.lua ratt.tmp.gff3 in*report | \
+          ratt_remove_problematic.lua ratt.tmp.gff3 in*report \
+            -m ref_target_mapping.json -o ${params.MAX_OVERLAP} \
+            -i ${params.mit_ignore_ratt_report} | \
           gt gff3 -sort -retainids -tidy > ratt.gff3;
         fi
         """

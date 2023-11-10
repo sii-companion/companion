@@ -26,7 +26,7 @@ local json = require ("dkjson")
 op = OptionParser:new({usage="%prog <options> < merged.gff3",
                        oneliner="Selects the 'best' gene models "
                          .. "from a pooled set of GFF3 annotations.",
-                       version="0.1"})
+                       version="0.2"})
 op:option{"-w", action='store', dest='weight_func',
                 help="Lua script defining the weight function 'get_weight()'"}
 op:option{"-s", action='store', dest='sequence',

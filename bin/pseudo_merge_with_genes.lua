@@ -27,7 +27,7 @@ local json = require ("dkjson")
 
 op = OptionParser:new({usage="%prog <options> merged_gff_file.gff3 sequence.fas",
                        oneliner="Adds pseudogene annotations to existing set of gene models.",
-                       version="0.1"})
+                       version="0.2"})
 op:option{"-t", action='store', dest='threshold',
                 help="minimum gene coverage ratio threshold for pseudogene "
                   .. "required to replace a gene (e.g. 0.6 for 60%)"}
