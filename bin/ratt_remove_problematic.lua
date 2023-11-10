@@ -58,8 +58,8 @@ end
 problematic_genes = {}
 
 -- parse problematic genes from report file
-for i = 2,#arg do
-  for l in io.lines(arg[i]) do
+for i = 2,#args do
+  for l in io.lines(args[i]) do
     geneid,_,_,_,_,_,_,_,errorStill,StartStillBad,StopStillBad,
       frameshiftsStill,JoinExons,PossiblePseudo,CorrectionLog = unpack(split(l, "\t"))
     if geneid ~= 'Gene_ID' and PossiblePseudo then
@@ -132,7 +132,7 @@ end
 -- skip these nodes in output stream
 flt_stream = gt.custom_stream_new_unsorted()
 flt_stream.queue = queue
-flt_stream.instream = gt.gff3_in_stream_new_sorted(arg[1])
+flt_stream.instream = gt.gff3_in_stream_new_sorted(args[1])
 flt_stream.vis = vis
 function flt_stream:next_tree()
   local gn = self.instream:next_tree()
