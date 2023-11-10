@@ -92,7 +92,7 @@ function stream:process_current_cluster()
   local bestset = nil
   local max = 0
   local weight = get_weight
-  if ref_target_mapping and options.mit_bypass then
+  if ref_target_mapping and options.mit_bypass == "true" then
     -- use default weight for mitochrondria when instructed
     if ref_target_mapping.MIT and self.last_seqid == ref_target_mapping.MIT[2] then
       weight = _get_weight
