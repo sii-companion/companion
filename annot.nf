@@ -177,7 +177,8 @@ pseudochr_agp.into{ pseudochr_agp_augustus
 
 ref_target_mapping.into{ ref_target_mapping_ratt
                          ref_target_mapping_integrate
-                         ref_target_mapping_pseudo }
+                         ref_target_mapping_pseudo
+                         ref_target_mapping_split }
 
 // TRNA PREDICTION
 // ===============
@@ -980,6 +981,7 @@ process split_splice_models_at_gaps {
     input:
     file 'input.gff3' from genemodels_with_gaps_gff3
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_splitsplice
+    file 'ref_target_mapping.json' from ref_target_mapping_split
 
     output:
     file 'merged_out.gff3' into genemodels_with_gaps_split_gff3
@@ -999,7 +1001,8 @@ process split_splice_models_at_gaps {
 
     # get rid of genes still having stop codons
     filter_genes_with_stop_codons.lua \
-      tmp4 pseudo.pseudochr.fasta | \
+      tmp4 pseudo.pseudochr.fasta \
+      -m ref_target_mapping.json -b ${params.mit_bypass} | \
       gt gff3 -sort -retainids -tidy > merged_out.gff3
     """
 }
