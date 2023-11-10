@@ -394,8 +394,7 @@ if (params.transfer_tool == "ratt") {
           ratt.tmp.gff3
         if [ -s ratt.tmp.gff3 ]; then
           ratt_remove_problematic.lua ratt.tmp.gff3 in*report \
-            -m ref_target_mapping.json -o ${params.MAX_OVERLAP} \
-            -i ${params.mit_ignore_ratt_report} | \
+            -m ref_target_mapping.json -i ${params.mit_ignore_ratt_report} | \
           gt gff3 -sort -retainids -tidy > ratt.gff3;
         fi
         """

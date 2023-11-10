@@ -28,11 +28,9 @@ op = OptionParser:new({usage="%prog <options> <GFF annotation> <*.Report.txt> [<
                        version="0.2"})
 op:option{"-m", action='store', dest='mapping',
                 help="reference target chromosome mapping"}
-op:option{"-o", action='store', dest='overlap', default=0,
-                help="number of bases to allow two adjacent genes to overlap by"}
 op:option{"-i", action='store', dest='ignore_report',
                 help="ignore RATT report for problematic mitochondrial genes (default: false)"}
-options,args = op:parse({mapping=nil, ignore_report=false})
+options,args = op:parse({mapping=nil, ignore_report="false"})
 
 function usage()
   op:help()
@@ -78,14 +76,14 @@ end
 vis = gt.custom_visitor_new()
 function vis:visit_feature(fn)
   self.ok = true
-  local seqid = fn:get_seqid()
   if fn:get_attribute("ratt_ortholog")
     and problematic_genes[fn:get_attribute("ratt_ortholog")] then
     self.ok = false
   end
   if ref_target_mapping then
     -- ignore report for mitochondrial genes if desired
-    if ref_target_mapping.MIT and seqid == ref_target_mapping.MIT[2] and options.ignore_report then
+    if ref_target_mapping.MIT and fn:get_seqid() == ref_target_mapping.MIT[2]
+      and options.ignore_report == "true" then
       self.ok = true
     end
   end
@@ -103,8 +101,7 @@ function vis:visit_feature(fn)
           if c1:get_type() == 'CDS' then
             for c2 in n:children() do
               if c2:get_type() == 'CDS' then
-                if c1 ~= c2
-                  and conditional_overlap(ref_target_mapping, c1:get_range(), c2:get_range(), seqid, options.overlap) then
+                if c1 ~= c2 and c1:get_range():overlap(c2:get_range()) then
                   self.ok = false
                   break
                 end
