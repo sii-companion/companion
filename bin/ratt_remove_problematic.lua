@@ -18,25 +18,46 @@
 ]]
 
 
+package.path = gt.script_dir .. "/?.lua;" .. package.path
+require("lib")
+require("optparse")
+local json = require ("dkjson")
+
+op = OptionParser:new({usage="%prog <options> <GFF annotation> <*.Report.txt> [<*.Report.txt> ...]",
+                       oneliner="Parses and removes problematic gene annotations from RATT GFF3.",
+                       version="0.2"})
+op:option{"-m", action='store', dest='mapping',
+                help="reference target chromosome mapping"}
+op:option{"-b", action='store', dest='mit_bypass',
+                help="ignore RATT report for problematic mitochondrial genes (default: false)"}
+options,args = op:parse({mapping=nil, mit_bypass="false"})
+
 function usage()
-  io.stderr:write("\n")
-  io.stderr:write(string.format("Usage: %s <GFF annotation> <*.Report.txt> " ..
-                                "[<*.Report.txt> ...]\n" , arg[0]))
+  op:help()
   os.exit(1)
 end
 
-if #arg < 2 then
+if #args < 2 then
   usage()
 end
 
-package.path = gt.script_dir .. "/?.lua;" .. package.path
-require("lib")
+if options.mapping then
+  local mapfile = io.open(options.mapping, "rb")
+  if not mapfile then
+    error("could not open reference target mapping file")
+  end
+  local mapcontent = mapfile:read("*all")
+  mapfile:close()
+  ref_target_mapping = json.decode(mapcontent)
+else
+  ref_target_mapping = nil
+end
 
 problematic_genes = {}
 
 -- parse problematic genes from report file
-for i = 2,#arg do
-  for l in io.lines(arg[i]) do
+for i = 2,#args do
+  for l in io.lines(args[i]) do
     geneid,_,_,_,_,_,_,_,errorStill,StartStillBad,StopStillBad,
       frameshiftsStill,JoinExons,PossiblePseudo,CorrectionLog = unpack(split(l, "\t"))
     if geneid ~= 'Gene_ID' and PossiblePseudo then
@@ -58,6 +79,13 @@ function vis:visit_feature(fn)
   if fn:get_attribute("ratt_ortholog")
     and problematic_genes[fn:get_attribute("ratt_ortholog")] then
     self.ok = false
+  end
+  if ref_target_mapping then
+    -- ignore report for mitochondrial genes if desired
+    if ref_target_mapping.MIT and fn:get_seqid() == ref_target_mapping.MIT[2]
+      and options.mit_bypass == "true" then
+      self.ok = true
+    end
   end
   -- check for overlapping exons per transcripts -> do not allow those
   if self.ok then
@@ -101,7 +129,7 @@ end
 -- skip these nodes in output stream
 flt_stream = gt.custom_stream_new_unsorted()
 flt_stream.queue = queue
-flt_stream.instream = gt.gff3_in_stream_new_sorted(arg[1])
+flt_stream.instream = gt.gff3_in_stream_new_sorted(args[1])
 flt_stream.vis = vis
 function flt_stream:next_tree()
   local gn = self.instream:next_tree()

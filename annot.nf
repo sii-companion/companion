@@ -1,6 +1,7 @@
 #!/usr/bin/env nextflow
 
-VERSION = file("$baseDir" + "/.version").getText()
+version_file = file("$baseDir" + "/.version")
+VERSION = version_file.getText()
 
 /*
     Author: Sascha Steinbiss <ss34@sanger.ac.uk>
@@ -31,6 +32,7 @@ omcl_gfffile = file(params.ref_dir + "/" + params.ref_species + "/annotation.gff
 omcl_gaffile = file(params.ref_dir + "/" + params.ref_species + "/go.gaf")
 omcl_pepfile = file(params.ref_dir + "/" + params.ref_species + "/proteins.fasta")
 augustus_modeldir = file(params.ref_dir + "/" + params.ref_species)
+ref_meta_file = file(params.ref_dir + "/" + params.ref_species + "/metadata.json")
 
 log.info ""
 log.info "C O M P A N I O N  ~  " + VERSION
@@ -51,6 +53,9 @@ if (params.dist_dir) {
     log.info "output directory    : ${params.dist_dir}"
 }
 log.info ""
+
+ref_meta_file.copyTo(params.dist_dir + "/reference_metadata.json")
+version_file.copyTo(params.dist_dir + "/companion_version.txt")
 
 // INPUT SANITIZATION
 // ==================
@@ -107,7 +112,7 @@ if (params.do_contiguation) {
         file 'pseudo.contigs.fasta' into contigs_seq
         // TODO If upgrading to DSL2, can just use json output and splitJson operator before circos_run_chrs process.
         file 'ref_target_mapping.txt' into ref_target_mapping_circos
-        file 'ref_target_mapping.json' into ref_target_mapping_integrate
+        file 'ref_target_mapping.json' into ref_target_mapping
 
         """
         abacas2.nonparallel.sh \
@@ -129,7 +134,7 @@ if (params.do_contiguation) {
         file 'pseudo.scafs.fasta' into scaffolds_seq
         file 'pseudo.scafs.agp' into scaffolds_agp
         file 'pseudo.contigs.fasta' into contigs_seq
-        file 'ref_target_mapping.json' into ref_target_mapping_integrate
+        file 'ref_target_mapping.json' into ref_target_mapping
 
         """
         no_abacas_prepare.lua ${sanitized_genome_file} pseudo
@@ -169,6 +174,11 @@ pseudochr_agp.into{ pseudochr_agp_augustus
                     pseudochr_agp_rnaseq
 				    pseudochr_agp_make_gaps
                     pseudochr_agp_make_dist }
+
+ref_target_mapping.into{ ref_target_mapping_ratt
+                         ref_target_mapping_integrate
+                         ref_target_mapping_pseudo
+                         ref_target_mapping_split }
 
 // TRNA PREDICTION
 // ===============
@@ -373,6 +383,7 @@ if (params.transfer_tool == "ratt") {
         input:
         file 'in*.embl' from ratt_result
         file 'in*.report' from ratt_reports
+        file 'ref_target_mapping.json' from ref_target_mapping_ratt
 
         output:
         file 'ratt.gff3' into ratt_gff3
@@ -383,7 +394,8 @@ if (params.transfer_tool == "ratt") {
           gt gff3 -sort -retainids -tidy > \
           ratt.tmp.gff3
         if [ -s ratt.tmp.gff3 ]; then
-          ratt_remove_problematic.lua ratt.tmp.gff3 in*report | \
+          ratt_remove_problematic.lua ratt.tmp.gff3 in*report \
+            -m ref_target_mapping.json -b ${params.mit_bypass} | \
           gt gff3 -sort -retainids -tidy > ratt.gff3;
         fi
         """
@@ -530,6 +542,7 @@ if (params.run_braker) {
   cpus = config.poolSize
   process run_braker_pseudo {
     errorStrategy 'ignore'
+    time '3d'
 
     input:
       file 'pseudo.pseudochr.fasta' from pseudochr_seq_augustus
@@ -800,7 +813,8 @@ process integrate_genemodels {
     if (params.WEIGHT_FILE.length() > 0)
         """
         integrate_gene_calls.lua -w ${params.WEIGHT_FILE} -s sequence.fasta \
-            -m ref_target_mapping.json -o ${params.MAX_OVERLAP} < merged.gff3 | \
+            -m ref_target_mapping.json -o ${params.MAX_OVERLAP} \
+            -b ${params.mit_bypass} < merged.gff3 | \
             gt gff3 -sort -tidy -retainids > integrated.gff3
         """
     else
@@ -886,6 +900,7 @@ if (params.do_pseudo) {
         file 'pseudochr.fasta' from pseudochr_seq_pseudogene_calling
         file 'genes.gff3' from integrated_gff3_clean
         file 'last.out' from pseudochr_last_out.collectFile()
+        file 'ref_target_mapping.json' from ref_target_mapping_pseudo
 
         output:
         file 'genes_and_pseudo.gff3' into gff3_with_pseudogenes
@@ -899,7 +914,8 @@ if (params.do_pseudo) {
         if [ ! -s last_and_genes.gff3 ]; then
           echo '##gff-version 3' > last_and_genes.gff3
         fi
-        pseudo_merge_with_genes.lua last_and_genes.gff3 pseudochr.fasta > out_tmp.gff3
+        pseudo_merge_with_genes.lua last_and_genes.gff3 pseudochr.fasta \
+          -m ref_target_mapping.json -o ${params.MAX_OVERLAP} > out_tmp.gff3
         gt gff3 -sort -retainids -tidy out_tmp.gff3 > genes_and_pseudo.gff3
         """
     }
@@ -965,6 +981,7 @@ process split_splice_models_at_gaps {
     input:
     file 'input.gff3' from genemodels_with_gaps_gff3
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_splitsplice
+    file 'ref_target_mapping.json' from ref_target_mapping_split
 
     output:
     file 'merged_out.gff3' into genemodels_with_gaps_split_gff3
@@ -984,7 +1001,8 @@ process split_splice_models_at_gaps {
 
     # get rid of genes still having stop codons
     filter_genes_with_stop_codons.lua \
-      tmp4 pseudo.pseudochr.fasta | \
+      tmp4 pseudo.pseudochr.fasta \
+      -m ref_target_mapping.json -b ${params.mit_bypass} | \
       gt gff3 -sort -retainids -tidy > merged_out.gff3
     """
 }
@@ -1032,12 +1050,12 @@ process add_polypeptides {
     """
 } */
 
-// ORTHOMCL AND FUNCTIONAL TRANSFER
+// ORTHOFINDER AND FUNCTIONAL TRANSFER
 // ================================
 
 genemodels_with_polypeptides_gff3.into{ genemodels_for_omcl_proteins; genemodels_for_omcl_annot }
 
-process get_proteins_for_orthomcl {
+process get_proteins_for_orthofinder {
     input:
     file 'input.gff3' from genemodels_for_omcl_proteins
     file 'pseudo.pseudochr.fasta' from pseudochr_seq_orthomcl
@@ -1058,12 +1076,12 @@ process get_proteins_for_orthomcl {
     """
 }
 
-proteins_target.into{ proteins_orthomcl
-					  proteins_pfam
-					  refcomp_protein_in
+proteins_target.into{ proteins_orthofinder
+					            proteins_pfam
+					            refcomp_protein_in
                       proteins_output }
 
-process make_ref_input_for_orthomcl {
+process make_ref_input_for_orthofinder {
     input:
     file omcl_pepfile
 
@@ -1078,9 +1096,9 @@ process make_ref_input_for_orthomcl {
     """
 }
 
-process make_target_input_for_orthomcl {
+process make_target_input_for_orthofinder {
     input:
-    file 'pepfile.fas' from proteins_orthomcl
+    file 'pepfile.fas' from proteins_orthofinder
 
     output:
     path "${params.GENOME_PREFIX}.fasta" into adjusted_fasta
@@ -1099,25 +1117,25 @@ process run_orthofinder {
     input:
       file "${params.GENOME_PREFIX}.fasta" from adjusted_fasta_for_filter
       file "${params.ref_species}.fasta" from adjusted_fasta_ref_for_filter
-    
+
     output:
-      file 'orthomcl_out' into orthomcl_cluster_out
+      file 'orthofinder_out' into ortho_cluster_out
 
     """
-    orthofinder.py -f . -o results
+    orthofinder.py -f . -o results -og
 
     # filter out clusters with single gene.
-    awk 'BEGIN { FS="[ ]" }; { if (\$3) print \$0 }' results/*/Orthogroups/Orthogroups.txt > orthomcl_out
+    awk 'BEGIN { FS="[ ]" }; { if (\$3) print \$0 }' results/*/Orthogroups/Orthogroups.txt > orthofinder_out
     """
 }
 
-orthomcl_cluster_out.into{ orthomcl_cluster_out_annot; result_ortho }
+ortho_cluster_out.into{ ortho_cluster_out_annot; result_ortho }
 
 process annotate_orthologs {
     cache 'deep'
 
     input:
-    file 'orthomcl_out' from orthomcl_cluster_out_annot
+    file 'orthofinder_out' from ortho_cluster_out_annot
     file 'input.gff3' from genemodels_for_omcl_annot
     file 'gff_ref.gff3' from omcl_gfffile
     file 'gaf_ref.gaf' from omcl_gaffile
@@ -1131,7 +1149,7 @@ process annotate_orthologs {
     gt gff3 -sort -retainids -tidy input.gff3 > input.gff3.sorted
 
     # annotate GFF with ortholog clusters and members
-    map_clusters_gff.lua input.gff3.sorted orthomcl_out > with_clusters.gff3
+    map_clusters_gff.lua input.gff3.sorted orthofinder_out > with_clusters.gff3
 
     # transfer functional annotation from orthologs
     transfer_annotations_from_gff.lua with_clusters.gff3 \

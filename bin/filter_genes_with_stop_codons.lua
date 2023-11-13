@@ -17,16 +17,41 @@
   OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ]]
 
+package.path = gt.script_dir .. "/?.lua;" .. package.path
+require("optparse")
+local json = require ("dkjson")
+
+op = OptionParser:new({usage="%prog <options> <GFF annotation> <sequence>",
+                       oneliner="Convert any remaining genes with stop codons to pseudogene.",
+                       version="0.2"})
+op:option{"-m", action='store', dest='mapping',
+                help="reference target chromosome mapping"}
+op:option{"-b", action='store', dest='mit_bypass',
+                help="prevent removal for mitochondrial genes (default: false)"}
+options,args = op:parse({mapping=nil, mit_bypass="false"})
+
 function usage()
-  io.stderr:write(string.format("Usage: %s <GFF annotation> <sequence>\n" , arg[0]))
+  op:help()
   os.exit(1)
 end
 
-if #arg < 2 then
+if #args < 2 then
   usage()
 end
 
-region_mapping = gt.region_mapping_new_seqfile_matchdescstart(arg[2])
+if options.mapping then
+  local mapfile = io.open(options.mapping, "rb")
+  if not mapfile then
+    error("could not open reference target mapping file")
+  end
+  local mapcontent = mapfile:read("*all")
+  mapfile:close()
+  ref_target_mapping = json.decode(mapcontent)
+else
+  ref_target_mapping = nil
+end
+
+region_mapping = gt.region_mapping_new_seqfile_matchdescstart(args[2])
 
 outvis = gt.gff3_visitor_new()
 
@@ -35,6 +60,13 @@ visitor.last_seqid = nil
 function visitor:visit_feature(fn)
   local has_stop = false
   local protseq = nil
+  local bypass = false
+  if ref_target_mapping and options.mit_bypass == "true" then
+    -- bypass conversion to pseudogene if required for mitochondrial gene
+    if ref_target_mapping.MIT and fn:get_seqid() == ref_target_mapping.MIT[2] then
+      bypass = true
+    end
+  end
   for node in fn:children() do
     if node:get_type() == "mRNA" then
       -- catch invalid sequence accesses here to make sure we don't fail hard
@@ -55,7 +87,7 @@ function visitor:visit_feature(fn)
     end
   end
   -- make this a pseudogene
-  if has_stop then
+  if has_stop and not bypass then
     local npseudogene = nil
     local nptranscript = nil
     local npexon = nil
@@ -118,7 +150,7 @@ function visitor_stream:next_tree()
   return node
 end
 
-visitor_stream.instream = gt.gff3_in_stream_new_sorted(arg[1])
+visitor_stream.instream = gt.gff3_in_stream_new_sorted(args[1])
 visitor_stream.vis = visitor
 local gn = visitor_stream:next_tree()
 while (gn) do

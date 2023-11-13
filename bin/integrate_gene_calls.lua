@@ -26,7 +26,7 @@ local json = require ("dkjson")
 op = OptionParser:new({usage="%prog <options> < merged.gff3",
                        oneliner="Selects the 'best' gene models "
                          .. "from a pooled set of GFF3 annotations.",
-                       version="0.1"})
+                       version="0.2"})
 op:option{"-w", action='store', dest='weight_func',
                 help="Lua script defining the weight function 'get_weight()'"}
 op:option{"-s", action='store', dest='sequence',
@@ -35,7 +35,10 @@ op:option{"-m", action='store', dest='mapping',
                 help="reference target chromosome mapping"}
 op:option{"-o", action='store', dest='overlap', default=0,
                 help="number of bases to allow two adjacent genes to overlap by"}
-options,args = op:parse({weight_func=nil, sequence=nil, mapping=nil})
+op:option{"-b", action='store', dest='mit_bypass',
+                help="use default weight function for mitochondria (default: false)"}
+options,args = op:parse({weight_func=nil, sequence=nil,
+                         mapping=nil, mit_bypass="false"})
 
 function usage()
   op:help()
@@ -88,33 +91,20 @@ stream.last_strand = nil
 function stream:process_current_cluster()
   local bestset = nil
   local max = 0
+  local weight = get_weight
+  if ref_target_mapping and options.mit_bypass == "true" then
+    -- use default weight for mitochrondria when instructed
+    if ref_target_mapping.MIT and self.last_seqid == ref_target_mapping.MIT[2] then
+      weight = _get_weight
+    end
+  end
 
   -- keep only non-overlapping chain with highest weight
-  bestset = SimpleChainer.new(self.curr_gene_set, get_weight, regmap):chain()
+  bestset = SimpleChainer.new(self.curr_gene_set, weight, regmap):chain()
 
   for _,v in ipairs(bestset) do
     table.insert(self.outqueue, v)
   end
-end
-
-function stream:conditional_overlap(new_rng)
-  local ext_rng = nil
-
-  if ref_target_mapping then
-    -- allow short overlaps for apicoplasts and mitochondria
-    if (ref_target_mapping.API and self.last_seqid == ref_target_mapping.API[2])
-      or (ref_target_mapping.MIT and self.last_seqid == ref_target_mapping.MIT[2]) then
-      local ext = options.overlap
-      -- ensure consistent start and end bases for new range
-      if self.curr_rng:get_start() < new_rng:get_start() then
-        ext_rng = gt.range_new(math.min(new_rng:get_start() + ext, new_rng:get_end()), new_rng:get_end())
-      else
-        ext_rng = gt.range_new(new_rng:get_start(), math.max(new_rng:get_start(), new_rng:get_end() - ext))
-      end
-      return self.curr_rng:overlap(ext_rng)
-    end
-  end
-  return self.curr_rng:overlap(new_rng)
 end
 
 function stream:next_tree()
@@ -141,7 +131,7 @@ function stream:next_tree()
           else
             if self.last_seqid == fn:get_seqid()
                 and self.last_strand == fn:get_strand()
-                and self:conditional_overlap(new_rng) then
+                and conditional_overlap(ref_target_mapping, self.curr_rng, new_rng, self.last_seqid, options.overlap) then
               table.insert(self.curr_gene_set, fn)
               self.curr_rng = self.curr_rng:join(new_rng)
             else

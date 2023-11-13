@@ -594,3 +594,23 @@ function infernal_in_stream_new(myio)
   end
   return s
 end
+
+function conditional_overlap(ref_target_mapping, curr_rng, new_rng, last_seqid, overlap)
+  local ext_rng = nil
+
+  if ref_target_mapping then
+    -- allow short overlaps for apicoplasts and mitochondria
+    if (ref_target_mapping.API and last_seqid == ref_target_mapping.API[2])
+      or (ref_target_mapping.MIT and last_seqid == ref_target_mapping.MIT[2]) then
+      local ext = overlap
+      -- ensure consistent start and end bases for new range
+      if curr_rng:get_start() < new_rng:get_start() then
+        ext_rng = gt.range_new(math.min(new_rng:get_start() + ext, new_rng:get_end()), new_rng:get_end())
+      else
+        ext_rng = gt.range_new(new_rng:get_start(), math.max(new_rng:get_start(), new_rng:get_end() - ext))
+      end
+      return curr_rng:overlap(ext_rng)
+    end
+  end
+  return curr_rng:overlap(new_rng)
+end
