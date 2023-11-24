@@ -196,7 +196,7 @@ yum install java-1.8.0-openjdk
 
 The latest version of Java we recommend installing is 17, i.e.:
 ```
-apt-get install openjdk-18-jre
+apt-get install openjdk-17-jre
 ```
 
 #### Nextflow
