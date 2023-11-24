@@ -52,7 +52,7 @@ This should get you up & running on an Ubuntu system, but please read the full d
 
 Execute these commands as root, e.g. using `sudo`
 ```
-apt-get install default-jre
+apt-get install openjdk-17-jre
 curl -fsSL get.nextflow.io | bash && \
    mv nextflow /usr/local/bin
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - && \
@@ -98,7 +98,7 @@ docker pull uofgiii/companion
 _Companion_ is distributed with configuration and data (including a few pregenerated reference annotations) for a small test run.  Run
 the following command (using the name you chose for your project directory in place of `my-companion-project`).
 ```
-nextflow run my-companion-project -profile docker
+NXF_VER=21.10.6 nextflow run my-companion-project -profile docker
 ```
 This will create a directory `my-companion-project/example-output` with the results of the run.
 
@@ -176,7 +176,7 @@ nextflow run my-companion-project -profile docker
 
 Companion has the following dependencies:
 
-  - [Java](https://openjdk.java.net/) 8 or later
+  - [Java](https://openjdk.java.net/) 8 to 17
   - [Nextflow](http://nextflow.io)
   - [Docker](https://www.docker.com/) (if using the Docker image to satisfy dependencies)
 
@@ -194,6 +194,11 @@ On Fedora, Centos or Red Hat (etc.) systems:
 yum install java-1.8.0-openjdk
 ```
 
+The latest version of Java we recommend installing is 17, i.e.:
+```
+apt-get install openjdk-18-jre
+```
+
 #### Nextflow
 
 To install Nextflow, run:
@@ -205,6 +210,13 @@ This will create an executable called 'nextflow', which should be moved to a sui
 mv nextflow /usr/local/bin/
 ```
 Use the command `which nextflow` to check that it is found in your path.
+
+By default, when running Nextflow the latest stable version will be used. It is important to note that since Nextflow v23 all support
+for DSL1 (which the Companion pipeline uses) has been dropped in favour of DSL2. Therefore when running Nextflow locally, it is best
+to set the environment variable NXF_VER to a version < 23 explicitly beforehand, e.g.:
+```
+NXF_VER=21.10.6 nextflow run ...
+```
 
 #### Docker
 
