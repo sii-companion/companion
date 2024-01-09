@@ -50,6 +50,10 @@ function clear_partial_attribs(cur_gene)
   end
 end
 
+function remove_leaf(node, leaf)
+  node:remove_leaf(leaf)
+end
+
 package.path = gt.script_dir .. "/?.lua;" .. package.path
 require("lib")
 
@@ -91,11 +95,7 @@ function stream:process_current_cluster()
         local rest = clone_cc(cur_gene)
         for c in cur_gene:children() do
           if c:get_range():get_start() > g:get_range():get_end() then
-            -- ensure c is a leaf by removing any children
-            for cc in c:direct_children() do
-              c:remove_leaf(cc)
-            end
-            cur_gene:remove_leaf(c)
+            pcall(remove_leaf, cur_gene, c)
           elseif c:get_range():overlap(g:get_range()) then
             if c:get_range():get_start() > g:get_range():get_start() - 1 then
               io.stderr:write("splitting would create invalid gene model, " ..
@@ -117,11 +117,7 @@ function stream:process_current_cluster()
         end
         for c in rest:children() do
           if c:get_range():get_end() < g:get_range():get_start() then
-            -- ensure c is a leaf by removing any children
-            for cc in c:direct_children() do
-              c:remove_leaf(cc)
-            end
-            rest:remove_leaf(c)
+            pcall(remove_leaf, rest, c)
           elseif c:get_range():overlap(g:get_range()) then
             -- XXX make sure we don't create invalid genes
             if g:get_range():get_end() + 1 > c:get_range():get_end() then
@@ -176,7 +172,7 @@ function stream:process_current_cluster()
         local gaplen = 0
         -- account for bug with get_phase returning non-integer phase
         if phase == "." then phase = 0 end
-        -- determine starting phase (mostly 0, but you never know...)        
+        -- determine starting phase (mostly 0, but you never know...)
         phase = (3 - (cdslist[1]:get_range():length() - phase) % 3) % 3
         for i = 2,#cdslist do
           if cdslist[i]:get_type() == "gap" then
