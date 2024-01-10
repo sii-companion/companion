@@ -25,7 +25,7 @@ RUN apt-get update -qq
 RUN apt-get install build-essential hmmer lua5.1 ncbi-blast+ blast2 \
                     unzip mummer infernal exonerate mafft fasttree \
                     circos libsvg-perl libgd-svg-perl python-setuptools \
-                    libc6-i386 lib32stdc++6 lib32gcc1 netcat genometools \
+                    libc6-i386 lib32stdc++6 lib32gcc1 netcat \
                     last-align libboost-iostreams-dev libgslcblas0 libgsl-dev \
                     libcolamd2 liblpsolve55-dev libstdc++6 aragorn tantan \
                     libstorable-perl libbio-perl-perl libsqlite3-dev git \
@@ -48,9 +48,16 @@ RUN cd /opt && \
     make install
 
 #
-# Install GenomeTools
+# Install GenomeTools from source
 #
-RUN apt-get install genometools --yes
+ADD https://github.com/genometools/genometools/archive/refs/tags/v1.6.3.tar.gz /opt/genometools-1.6.3.tar.gz
+RUN cd /opt && \
+    tar xzf genometools-1.6.3.tar.gz && \
+    cd genometools-1.6.3/ && \
+    make cairo=no && \
+    make prefix=/usr cairo=no install && \
+    cd .. && \
+    rm -f genometools-1.6.3.tar.gz
 
 #
 # get GO OBO file
@@ -123,6 +130,7 @@ RUN cd /opt && \
     ./configure --prefix=/usr && \
     make && \
     make install && \
+    cd .. && \
     rm -f mummer-4.0.0rc1.tar.gz
 
 #
@@ -190,7 +198,9 @@ RUN pip3 install scipy
 RUN cd /opt && \
     tar xzf OrthoFinder_source.tar.gz && \
     cd OrthoFinder_source && \
-    chmod +x orthofinder.py
+    chmod +x orthofinder.py && \
+    cd .. && \
+    rm -f OrthoFinder_source.tar.gz
 
 ## Make sure to build with 'docker build --build-arg GM_KEY=<GM_KEY> .' to populate this arg.
 ARG GM_KEY
