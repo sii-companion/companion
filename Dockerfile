@@ -198,7 +198,9 @@ RUN pip3 install scipy
 RUN cd /opt && \
     tar xzf OrthoFinder_source.tar.gz && \
     cd OrthoFinder_source && \
-    chmod +x orthofinder.py
+    chmod +x orthofinder.py && \
+    cd .. && \
+    rm -f OrthoFinder_source.tar.gz
 
 ## Make sure to build with 'docker build --build-arg GM_KEY=<GM_KEY> .' to populate this arg.
 ARG GM_KEY
