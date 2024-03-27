@@ -163,7 +163,7 @@ RUN cpanm File::Spec::Functions && \
     cpanm File::HomeDir && \
     cpanm threads
 RUN cd /opt && \
-    git clone https://github.com/Gaius-Augustus/BRAKER.git --branch v2.1.6 && \
+    git clone https://github.com/Gaius-Augustus/BRAKER.git --branch v3.06 && \
     cd BRAKER/scripts
 ADD http://topaz.gatech.edu/GeneMark/etp.for_braker.tar.gz /opt/etp.for_braker.tar.gz
 RUN cd /opt && \
@@ -189,6 +189,8 @@ ADD https://genomethreader.org/distributions/gth-1.7.3-Linux_x86_64-64bit.tar.gz
 RUN cd /opt && \
     tar xzf gth-1.7.3-Linux_x86_64-64bit.tar.gz && \
     rm -f gth-1.7.3-Linux_x86_64-64bit.tar.gz
+RUN cd /opt && \
+    git clone https://github.com/Gaius-Augustus/TSEBRA
 
 #
 # install orthofinder
@@ -201,10 +203,6 @@ RUN cd /opt && \
     chmod +x orthofinder.py && \
     cd .. && \
     rm -f OrthoFinder_source.tar.gz
-
-## Make sure to build with 'docker build --build-arg GM_KEY=<GM_KEY> .' to populate this arg.
-ARG GM_KEY
-RUN echo ${GM_KEY} > ~/.gm_key
 
 #
 # install gffread
@@ -228,3 +226,4 @@ ENV PROTHINT_PATH /opt/ProtHint/bin
 ENV BSSMDIR /opt/gth-1.7.3-Linux_x86_64-64bit/bin/bssm
 ENV GTHDATADIR /opt/gth-1.7.3-Linux_x86_64-64bit/bin/gthdata
 ENV ALIGNMENT_TOOL_PATH /opt/gth-1.7.3-Linux_x86_64-64bit/bin/
+ENV TSEBRA_PATH /opt/TSEBRA/bin
