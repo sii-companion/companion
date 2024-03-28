@@ -550,7 +550,7 @@ if (params.run_braker) {
 
     output:
       file 'braker/braker.gff3' into braker_pseudo_gff3
-      file 'braker/augustus.hints.gff3' into braker_pseudo_gff3_backup
+      file 'braker/Augustus/augustus.hints.gff3' into braker_pseudo_gff3_backup
 
     """
     JOB_ID="\$(basename \"${params.dist_dir}\")"
