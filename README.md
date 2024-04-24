@@ -4,6 +4,7 @@ A portable, scalable eukaryotic genome annotation pipeline implemented in Nextfl
 ![Tests](https://github.com/sii-companion/companion/actions/workflows/test-on-pr.yml/badge.svg)
 [![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen.svg)](https://github.com/sii-companion/companion/blob/master/LICENSE)
 [![status](https://img.shields.io/badge/NAR-10.1093%2Fnar.gkw292-brightgreen.svg)](https://doi.org/10.1093/nar/gkw292)
+[![DOI](https://zenodo.org/badge/376799286.svg)](https://zenodo.org/badge/latestdoi/376799286)
 
 This software is a comprehensive computational pipeline for the annotation of eukaryotic genomes (like protozoan parasites). It performs the following tasks:
 
