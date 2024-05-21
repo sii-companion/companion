@@ -3,7 +3,7 @@ A portable, scalable eukaryotic genome annotation pipeline implemented in Nextfl
 
 ![Tests](https://github.com/sii-companion/companion/actions/workflows/test-on-pr.yml/badge.svg)
 [![License: ISC](https://img.shields.io/badge/License-ISC-brightgreen.svg)](https://github.com/sii-companion/companion/blob/master/LICENSE)
-[![status](https://img.shields.io/badge/NAR-10.1093%2Fnar.gkw292-brightgreen.svg)](https://doi.org/10.1093/nar/gkw292)
+[![status](https://img.shields.io/badge/NAR-10.1093%2Fnar.gkw292-brightgreen.svg)](https://doi.org/10.1093/nar/gkae378)
 [![DOI](https://zenodo.org/badge/376799286.svg)](https://zenodo.org/badge/latestdoi/376799286)
 
 This software is a comprehensive computational pipeline for the annotation of eukaryotic genomes (like protozoan parasites). It performs the following tasks:
@@ -301,7 +301,7 @@ Companion is free software, licensed under [ISC](https://github.com/sii-companio
 Please report any issues to the [issues page](https://github.com/sii-companion/companion/issues)
 ## Citation
 If you use this software please cite:
-__Companion: a web server for annotation and analysis of parasite genomes.__
-Steinbiss S, Silva-Franco F, Brunk B, Foth B, Hertz-Fowler C et al.
-Nucleic Acids Research, 44:W29-W34, 2016.
-DOI: [10.1093/nar/gkw292](http://dx.doi.org/10.1093/nar/gkw292)
+__Annotation and visualization of parasite, fungi and arthropod genomes with Companion__.
+William Haese-Hill, Kathryn Crouch, Thomas D Otto.
+Nucleic Acids Research, 2024; gkae378,
+DOI: [10.1093/nar/gkae378](https://doi.org/10.1093/nar/gkae378)
