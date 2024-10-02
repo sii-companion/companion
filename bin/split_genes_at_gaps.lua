@@ -95,6 +95,10 @@ function stream:process_current_cluster()
         local rest = clone_cc(cur_gene)
         for c in cur_gene:children() do
           if c:get_range():get_start() > g:get_range():get_end() then
+            -- ensure c is a leaf by removing any children
+            for cc in c:direct_children() do
+              pcall(remove_leaf, c, cc)
+            end
             pcall(remove_leaf, cur_gene, c)
           elseif c:get_range():overlap(g:get_range()) then
             if c:get_range():get_start() > g:get_range():get_start() - 1 then
@@ -117,6 +121,10 @@ function stream:process_current_cluster()
         end
         for c in rest:children() do
           if c:get_range():get_end() < g:get_range():get_start() then
+            -- ensure c is a leaf by removing any children
+            for cc in c:direct_children() do
+              pcall(remove_leaf, c, cc)
+            end
             pcall(remove_leaf, rest, c)
           elseif c:get_range():overlap(g:get_range()) then
             -- XXX make sure we don't create invalid genes
