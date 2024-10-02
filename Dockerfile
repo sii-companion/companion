@@ -93,7 +93,7 @@ RUN apt-get install tabix --yes
 #
 RUN apt-get install software-properties-common --yes
 RUN add-apt-repository ppa:deadsnakes/ppa --yes
-RUN apt-get install python3.9 python3-setuptools libpython3.9-dev libz-dev libbz2-dev \
+RUN apt-get install python3.10 python3-setuptools python3.10-distutils libpython3.10-dev libz-dev libbz2-dev \
                     liblzma-dev libcurl4-openssl-dev pkg-config \
                     --yes
 
@@ -107,13 +107,7 @@ RUN cd /opt && \
     cp minimap2-2.17_x64-linux/minimap2 /usr/local/bin/minimap2 && \
     chmod 755 /usr/local/bin/minimap2
 RUN apt-get -y install python3-pip
-RUN cd /opt && \
-    git clone https://github.com/agshumate/Liftoff liftoff && \
-    cd liftoff && \
-    python3.9 setup.py install
-# Numpy 1.24 currently breaks Liftoff
-RUN python3.9 -m pip install "numpy<1.24"
-
+RUN pip3 install Liftoff
 
 #
 # install ABACAS (keep up to date from build directory)
